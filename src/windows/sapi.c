@@ -94,7 +94,7 @@ static inline BOOL sapiInit2() {
     //if (!SUCCEEDED(hr)) MessageBeep(MB_ICONEXCLAMATION);
 
     curVoice = -1;
-    ISpObjectToken* vc, * p1;
+    ISpObjectToken* vc;
     hr = pVoice->lpVtbl->GetVoice(pVoice, &vc);
     if (SUCCEEDED(hr)) {
         wchar_t* s1 = NULL;
