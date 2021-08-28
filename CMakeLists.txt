@@ -44,7 +44,8 @@ if(WIN32)
 endif(WIN32)
 
 if(MSVC)
-  add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
+  add_compile_definitions(_MSVC
+                          _CRT_SECURE_NO_WARNINGS)
 endif(MSVC)
 
 # Collect our source files
