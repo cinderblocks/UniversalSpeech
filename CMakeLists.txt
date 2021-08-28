@@ -22,10 +22,6 @@ set(VERSION_MINOR 0)
 set(VERSION_PATCH 0)
 set(VERSION_DATE 20210827)
 
-if(WIN32)
-  add_compile_definitions(_WIN32)
-endif(WIN32)
-
 # set architecture
 if(NOT ${CMAKE_GENERATOR} MATCHES "Visual Studio")
     if("${ARCH_TYPE}" STREQUAL "32")
@@ -41,6 +37,16 @@ if(NOT CMAKE_BUILD_TYPE)
     message("-- CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
 endif(NOT CMAKE_BUILD_TYPE)
 
+# setup compiler definitions
+if(WIN32)
+  add_compile_definitions(_WIN32)
+endif(WIN32)
+
+if(MSVC)
+  add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
+endif(MSVC)
+
+# Collect our source files
 set(SOURCE_FILES
     src/UniversalSpeech.c
     )
