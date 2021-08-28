@@ -76,8 +76,9 @@ DLLEXPORT BOOL jfwRunFunctionW(const wchar_t* scriptName) {
 }
 
 DLLEXPORT BOOL jfwBrailleA(const char* str) {
-	int len = strlen(str);
-	char buf[len + 20];
+	size_t len = strlen(str);
+	char* buf = malloc(len + 20);
+	if (buf == NULL) { return FALSE; }
 	buf[0] = 0;
 	strcat(buf, "BrailleString(\"");
 	strcat(buf, str);
@@ -86,12 +87,15 @@ DLLEXPORT BOOL jfwBrailleA(const char* str) {
 	while (++c < end) {
 		if (*c == 34 || *c == 92 || *c < 32) *c = 32;
 	}
-	return jfwRunFunctionA(buf);
+	BOOL ret = jfwRunFunctionA(buf);
+	free(buf);
+	return ret;
 }
 
 DLLEXPORT BOOL jfwBrailleW(const wchar_t* str) {
-	int len = wcslen(str);
-	wchar_t buf[len + 20];
+	size_t len = wcslen(str);
+	wchar_t* buf = malloc(len + 20);
+	if (buf == NULL) { return FALSE; }
 	buf[0] = 0;
 	wcscat(buf, L"BrailleString(\"");
 	wcscat(buf, str);
@@ -100,7 +104,9 @@ DLLEXPORT BOOL jfwBrailleW(const wchar_t* str) {
 	while (++c < end) {
 		if (*c == 34 || *c == 92 || *c < 32) *c = 32;
 	}
-	return jfwRunFunctionW(buf);
+	BOOL ret = jfwRunFunctionW(buf);
+	free(buf);
+	return ret;
 }
 
 DLLEXPORT BOOL jfwStopSpeech() {
