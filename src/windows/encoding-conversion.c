@@ -7,6 +7,7 @@ Please refer to the readme file provided with the package for more information.
 
 #include "encoding-conversion.h"
 
+#include <Windows.h>
 #include <malloc.h>
 #include <wchar.h>
 

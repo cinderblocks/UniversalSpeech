@@ -7,6 +7,10 @@ Please refer to the readme file provided with the package for more information.
 
 #include "private.h"
 
+#ifdef _WIN32
+#  include <Windows.h>
+#endif // _WIN32
+
 char* toEncoding(const wchar_t* unicode, int targetEncoding);
 wchar_t* fromEncoding(const char* str, int encoding);
 

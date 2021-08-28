@@ -39,7 +39,8 @@ endif(NOT CMAKE_BUILD_TYPE)
 
 # setup compiler definitions
 if(WIN32)
-  add_compile_definitions(_WIN32)
+  add_compile_definitions(_WIN32
+                          WIN32_LEAN_AND_MEAN)
 endif(WIN32)
 
 if(MSVC)
