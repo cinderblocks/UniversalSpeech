@@ -36,6 +36,8 @@ HANDLE __declspec(dllexport) getProcessHandle(const char* needle, char* pfn, siz
 	static BOOL(*WINAPI LPQueryFullProcessImageNameA)(HANDLE, DWORD, LPSTR, PDWORD) = NULL;
 	if (!LPQueryFullProcessImageNameA) {
 		HANDLE kernel32 = LoadLibrary("kernel32");
+		if (kernel32 == NULL) { return NULL; }
+
 		LPQueryFullProcessImageNameA = GetProcAddress(kernel32, "QueryFullProcessImageNameA");
 		FreeLibrary(kernel32);
 	}
