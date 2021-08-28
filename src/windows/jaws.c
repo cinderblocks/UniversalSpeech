@@ -77,7 +77,7 @@ DLLEXPORT BOOL jfwRunFunctionW(const wchar_t* scriptName) {
 
 DLLEXPORT BOOL jfwBrailleA(const char* str) {
 	size_t len = strlen(str);
-	char* buf = malloc(len + 20);
+	char* buf = malloc((len + 20) * sizeof(char));
 	if (buf == NULL) { return FALSE; }
 	buf[0] = 0;
 	strcat(buf, "BrailleString(\"");
@@ -94,7 +94,7 @@ DLLEXPORT BOOL jfwBrailleA(const char* str) {
 
 DLLEXPORT BOOL jfwBrailleW(const wchar_t* str) {
 	size_t len = wcslen(str);
-	wchar_t* buf = malloc(len + 20);
+	wchar_t* buf = malloc((len + 20) * sizeof(char));
 	if (buf == NULL) { return FALSE; }
 	buf[0] = 0;
 	wcscat(buf, L"BrailleString(\"");
