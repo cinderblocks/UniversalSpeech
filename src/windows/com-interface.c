@@ -4,16 +4,17 @@ This code is part of universal speech which is under multiple licenses.
 Please refer to the readme file provided with the package for more information.
 */
 // cominterface.c: COM interface for Universal Speech
-#undef UNICODE
-#include <initguid.h>
-#include <windows.h>
-#include <objbase.h>
-#include<stdio.h>
-#include<stdlib.h>
-#include "../../include/UniversalSpeech.h"
-// COM interface for use from JScript, VBScript, powershell, and other COM clients
 
-#pragma GCC diagnostic ignored "-Wincompatible-pointer-types"
+#undef UNICODE
+
+#include "../../include/UniversalSpeech.h"
+
+#include <initguid.h>
+#include <objbase.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+// COM interface for use from JScript, VBScript, powershell, and other COM clients
 
 // Universal speech library GUID
 // {4EB1B5DE-592E-4CBA-8230-D21D7456C38C}
@@ -30,24 +31,24 @@ DEFINE_GUID(IID_UniversalSpeech, 0xC0BC1432, 0x993C, 0x4D7B, 0xA4, 0xBB, 0xA4, 0
 // Universal speech VTable
 #undef  INTERFACE
 #define INTERFACE IUniversalSpeech
-DECLARE_INTERFACE_ (INTERFACE, IDispatch)
+DECLARE_INTERFACE_(INTERFACE, IDispatch)
 {
 	// IUnknown functions
-	STDMETHOD  (QueryInterface)		(THIS_ REFIID, void **) PURE;
-	STDMETHOD_ (ULONG, AddRef)		(THIS) PURE;
-	STDMETHOD_ (ULONG, Release)		(THIS) PURE;
+	STDMETHOD(QueryInterface)		(THIS_ REFIID, void**) PURE;
+	STDMETHOD_(ULONG, AddRef)		(THIS) PURE;
+	STDMETHOD_(ULONG, Release)		(THIS) PURE;
 	// IDispatch functions
-	STDMETHOD_ (ULONG, GetTypeInfoCount)(THIS_ UINT *) PURE;
-	STDMETHOD_ (ULONG, GetTypeInfo)		(THIS_ UINT, LCID, ITypeInfo **) PURE;
-	STDMETHOD_ (ULONG, GetIDsOfNames)	(THIS_ REFIID, LPOLESTR *, UINT, LCID, DISPID *) PURE;
-	STDMETHOD_ (ULONG, Invoke)			(THIS_ DISPID, REFIID, LCID, WORD, DISPPARAMS *, VARIANT *, EXCEPINFO *, UINT *) PURE;
+	STDMETHOD_(ULONG, GetTypeInfoCount)(THIS_ UINT*) PURE;
+	STDMETHOD_(ULONG, GetTypeInfo)		(THIS_ UINT, LCID, ITypeInfo**) PURE;
+	STDMETHOD_(ULONG, GetIDsOfNames)	(THIS_ REFIID, LPOLESTR*, UINT, LCID, DISPID*) PURE;
+	STDMETHOD_(ULONG, Invoke)			(THIS_ DISPID, REFIID, LCID, WORD, DISPPARAMS*, VARIANT*, EXCEPINFO*, UINT*) PURE;
 	// Extra functions
-	STDMETHOD  (Say)			(THIS_ BSTR, BOOL) PURE;
-	STDMETHOD  (Stop)			(void*) PURE;
-	STDMETHOD  (SetValue)			(THIS_ int, int) PURE;
-	STDMETHOD  (GetValue)			(THIS_ int) PURE;
-	STDMETHOD  (SetString)			(THIS_ int, BSTR) PURE;
-	STDMETHOD_  (BSTR, GetString)			(THIS_ int) PURE;
+	STDMETHOD(Say)			(THIS_ BSTR, BOOL) PURE;
+	STDMETHOD(Stop)			(void*) PURE;
+	STDMETHOD(SetValue)			(THIS_ int, int) PURE;
+	STDMETHOD(GetValue)			(THIS_ int) PURE;
+	STDMETHOD(SetString)			(THIS_ int, BSTR) PURE;
+	STDMETHOD_(BSTR, GetString)			(THIS_ int) PURE;
 };
 
 // A count of how many objects our DLL has created (by some
@@ -60,12 +61,12 @@ static DWORD		OutstandingObjects;
 static DWORD		LockCount;
 
 // Where I store a pointer to my type library's TYPEINFO
-static ITypeInfo	*MyTypeInfo;
+static ITypeInfo* MyTypeInfo;
 
 // The UniversalSpeech object
 //##
 typedef struct {
-IUniversalSpeechVtbl	*lpVtbl;
+	IUniversalSpeechVtbl* lpVtbl;
 	DWORD			count;
 } UniversalSpeech;
 
@@ -75,7 +76,7 @@ IUniversalSpeechVtbl	*lpVtbl;
 // AddRef(), and Release().
 
 // QueryInterface()
-static HRESULT STDMETHODCALLTYPE QueryInterface(IUniversalSpeech *this, REFIID vTableGuid, void **ppv)
+static HRESULT STDMETHODCALLTYPE QueryInterface(IUniversalSpeech* this, REFIID vTableGuid, void** ppv)
 {
 	// Check if the GUID matches IExample2 VTable's GUID. We gave the C variable name
 	// IID_IExample2 to our VTable GUID. We can use an OLE function called
@@ -86,10 +87,10 @@ static HRESULT STDMETHODCALLTYPE QueryInterface(IUniversalSpeech *this, REFIID v
 	// as an IDispatch too
 	if (!IsEqualIID(vTableGuid, &IID_IUnknown) && !IsEqualIID(vTableGuid, &IID_UniversalSpeech) && !IsEqualIID(vTableGuid, &IID_IDispatch))
 	{
-      // We don't recognize the GUID passed to us. Let the caller know this,
-      // by clearing his handle, and returning E_NOINTERFACE.
-      *ppv = 0;
-      return(E_NOINTERFACE);
+		// We don't recognize the GUID passed to us. Let the caller know this,
+		// by clearing his handle, and returning E_NOINTERFACE.
+		*ppv = 0;
+		return(E_NOINTERFACE);
 	}
 
 	// Fill in the caller's handle
@@ -102,18 +103,18 @@ static HRESULT STDMETHODCALLTYPE QueryInterface(IUniversalSpeech *this, REFIID v
 }
 
 // AddRef()
-static ULONG STDMETHODCALLTYPE AddRef(IUniversalSpeech *this)
+static ULONG STDMETHODCALLTYPE AddRef(IUniversalSpeech* this)
 {
 	// Increment reference count, and return the updated value.
 	return++(((UniversalSpeech*)this)->count);
 }
 
 // Release()
-static ULONG STDMETHODCALLTYPE Release(IUniversalSpeech *this)
+static ULONG STDMETHODCALLTYPE Release(IUniversalSpeech* this)
 {
 	// Decrement IExample2's reference count. If 0, then we can safely free
 	// this IExample2 now
-if (((UniversalSpeech*)this)->count <= 0) 
+	if (((UniversalSpeech*)this)->count <= 0)
 	{
 		GlobalFree(this);
 		InterlockedDecrement(&OutstandingObjects);
@@ -156,20 +157,20 @@ static HRESULT loadMyTypeInfo(void)
 }
 
 // GetTypeInfoCount()
-static ULONG STDMETHODCALLTYPE GetTypeInfoCount(IUniversalSpeech *this, UINT *pCount)
+static ULONG STDMETHODCALLTYPE GetTypeInfoCount(IUniversalSpeech* this, UINT* pCount)
 {
 	*pCount = 1;
 	return(S_OK);
 }
 
 // GetTypeInfo()
-static ULONG STDMETHODCALLTYPE GetTypeInfo(IUniversalSpeech *this, UINT itinfo, LCID lcid, ITypeInfo **pTypeInfo)
+static ULONG STDMETHODCALLTYPE GetTypeInfo(IUniversalSpeech* this, UINT itinfo, LCID lcid, ITypeInfo** pTypeInfo)
 {
 	register HRESULT	hr;
 
 	// Assume an error
 	*pTypeInfo = 0;
-	
+
 	if (itinfo)
 		hr = ResultFromScode(DISP_E_BADINDEX);
 
@@ -196,7 +197,7 @@ static ULONG STDMETHODCALLTYPE GetTypeInfo(IUniversalSpeech *this, UINT itinfo, 
 }
 
 // GetIDsOfNames()
-static ULONG STDMETHODCALLTYPE GetIDsOfNames(IUniversalSpeech *this, REFIID riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgdispid)
+static ULONG STDMETHODCALLTYPE GetIDsOfNames(IUniversalSpeech* this, REFIID riid, LPOLESTR* rgszNames, UINT cNames, LCID lcid, DISPID* rgdispid)
 {
 	if (!MyTypeInfo)
 	{
@@ -204,18 +205,18 @@ static ULONG STDMETHODCALLTYPE GetIDsOfNames(IUniversalSpeech *this, REFIID riid
 
 		if ((hr = loadMyTypeInfo())) return(hr);
 	}
-	
+
 	// Let OLE32.DLL's DispGetIDsOfNames() do all the real work of using our type
 	// library to look up the DISPID of the requested function in our object
 	return(DispGetIDsOfNames(MyTypeInfo, rgszNames, cNames, rgdispid));
 }
 
 // Invoke()
-static ULONG STDMETHODCALLTYPE Invoke(IUniversalSpeech *this, DISPID dispid, REFIID riid, LCID lcid, WORD wFlags, DISPPARAMS *params, VARIANT *result, EXCEPINFO *pexcepinfo, UINT *puArgErr)
+static ULONG STDMETHODCALLTYPE Invoke(IUniversalSpeech* this, DISPID dispid, REFIID riid, LCID lcid, WORD wFlags, DISPPARAMS* params, VARIANT* result, EXCEPINFO* pexcepinfo, UINT* puArgErr)
 {
-   // We implement only a "default" interface
-   if (!IsEqualIID(riid, 0/*&IID_NULL*/)) //todo
-      return(DISP_E_UNKNOWNINTERFACE);
+	// We implement only a "default" interface
+	if (!IsEqualIID(riid, 0/*&IID_NULL*/)) //todo
+		return(DISP_E_UNKNOWNINTERFACE);
 
 	// We need our type lib's TYPEINFO (to pass to DispInvoke)
 	if (!MyTypeInfo)
@@ -232,36 +233,36 @@ static ULONG STDMETHODCALLTYPE Invoke(IUniversalSpeech *this, DISPID dispid, REF
 
 // ================== Extra functions
 
-static HRESULT STDMETHODCALLTYPE Say (IUniversalSpeech *this, BSTR str, BOOL interrupt)
+static HRESULT STDMETHODCALLTYPE Say(IUniversalSpeech* this, BSTR str, BOOL interrupt)
 {
-return speechSay(str, interrupt);
+	return speechSay(str, interrupt);
 }
 
-static HRESULT STDMETHODCALLTYPE StopSpeech(IUniversalSpeech *this)
+static HRESULT STDMETHODCALLTYPE StopSpeech(IUniversalSpeech* this)
 {
-return speechStop();
+	return speechStop();
 }
 
-static HRESULT STDMETHODCALLTYPE GetValue (IUniversalSpeech *this, int what)
+static HRESULT STDMETHODCALLTYPE GetValue(IUniversalSpeech* this, int what)
 {
-return speechGetValue(what);
+	return speechGetValue(what);
 }
 
-static HRESULT STDMETHODCALLTYPE SetValue (IUniversalSpeech *this, int what, int value)
+static HRESULT STDMETHODCALLTYPE SetValue(IUniversalSpeech* this, int what, int value)
 {
-return speechSetValue(what, value);
+	return speechSetValue(what, value);
 }
 
-static HRESULT STDMETHODCALLTYPE SetString  (IUniversalSpeech *this, int what, BSTR value)
+static HRESULT STDMETHODCALLTYPE SetString(IUniversalSpeech* this, int what, BSTR value)
 {
-return speechSetString(what, value);
+	return speechSetString(what, value);
 }
 
-static BSTR STDMETHODCALLTYPE GetString (IUniversalSpeech *this, int what) 
+static BSTR STDMETHODCALLTYPE GetString(IUniversalSpeech* this, int what)
 {
-const wchar_t* w = speechGetString(what);
-if (!w) return NULL;
-return SysAllocString(w);
+	const wchar_t* w = speechGetString(what);
+	if (!w) return NULL;
+	return SysAllocString(w);
 }
 
 // Here's UniversalSpeech VTable. It never changes so we can declare it
@@ -284,7 +285,7 @@ SetString, GetString
 static IClassFactory	MyIClassFactoryObj;
 
 // IClassFactory's AddRef()
-static ULONG STDMETHODCALLTYPE classAddRef(IClassFactory *this)
+static ULONG STDMETHODCALLTYPE classAddRef(IClassFactory* this)
 {
 	// Someone is obtaining my IClassFactory, so inc the count of
 	// pointers that I've returned which some app needs to Release()
@@ -298,7 +299,7 @@ static ULONG STDMETHODCALLTYPE classAddRef(IClassFactory *this)
 }
 
 // IClassFactory's QueryInterface()
-static HRESULT STDMETHODCALLTYPE classQueryInterface(IClassFactory *this, REFIID factoryGuid, void **ppv)
+static HRESULT STDMETHODCALLTYPE classQueryInterface(IClassFactory* this, REFIID factoryGuid, void** ppv)
 {
 	// Make sure the caller wants either an IUnknown or an IClassFactory.
 	// In either case, we return the same IClassFactory pointer passed to
@@ -320,7 +321,7 @@ static HRESULT STDMETHODCALLTYPE classQueryInterface(IClassFactory *this, REFIID
 }
 
 // IClassFactory's Release()
-static ULONG STDMETHODCALLTYPE classRelease(IClassFactory *this)
+static ULONG STDMETHODCALLTYPE classRelease(IClassFactory* this)
 {
 	// One less object that an app has not yet Release()'ed
 	return(InterlockedDecrement(&OutstandingObjects));
@@ -329,10 +330,10 @@ static ULONG STDMETHODCALLTYPE classRelease(IClassFactory *this)
 // IClassFactory's CreateInstance() function. It is called by
 // someone who has a pointer to our IClassFactory object and now
 // wants to create and retrieve a pointer to our IExample2
-static HRESULT STDMETHODCALLTYPE classCreateInstance(IClassFactory *this, IUnknown *punkOuter, REFIID vTableGuid, void **objHandle)
+static HRESULT STDMETHODCALLTYPE classCreateInstance(IClassFactory* this, IUnknown* punkOuter, REFIID vTableGuid, void** objHandle)
 {
 	HRESULT				hr;
-	register IUniversalSpeech	*thisobj;
+	register IUniversalSpeech* thisobj;
 
 	// Assume an error by clearing caller's handle
 	*objHandle = 0;
@@ -343,16 +344,16 @@ static HRESULT STDMETHODCALLTYPE classCreateInstance(IClassFactory *this, IUnkno
 	else
 	{
 		// Allocate our object 
-		if (!(thisobj = (IUniversalSpeech *)GlobalAlloc(GMEM_FIXED, sizeof(UniversalSpeech))))
+		if (!(thisobj = (IUniversalSpeech*)GlobalAlloc(GMEM_FIXED, sizeof(UniversalSpeech))))
 			hr = E_OUTOFMEMORY;
 		else
 		{
 			// Store IExample2's VTable in the object
-			thisobj->lpVtbl = (IUniversalSpeechVtbl *)&UniversalSpeech_Vtbl;
+			thisobj->lpVtbl = (IUniversalSpeechVtbl*)&UniversalSpeech_Vtbl;
 
 			// Increment the reference count so we can call Release() below and
 			// it will deallocate only if there is an error with QueryInterface()
-			((UniversalSpeech *)thisobj)->count = 1;
+			((UniversalSpeech*)thisobj)->count = 1;
 
 			// Fill in the caller's handle with a pointer to the UniversalSpeech we just
 			// allocated above. We'll let QueryInterface do that, because
@@ -364,7 +365,7 @@ static HRESULT STDMETHODCALLTYPE classCreateInstance(IClassFactory *this, IUnkno
 			// then Release() will be decrementing the count back to 0 and will free the
 			// IExample for us. One error that may occur is that the caller is asking for
 			// some sort of object that we don't support (ie, it's a GUID we don't recognize)
-UniversalSpeech_Vtbl.Release(thisobj);
+			UniversalSpeech_Vtbl.Release(thisobj);
 
 			// If success, inc static object count to keep this DLL loaded
 			if (!hr) InterlockedIncrement(&OutstandingObjects);
@@ -376,7 +377,7 @@ UniversalSpeech_Vtbl.Release(thisobj);
 
 // IClassFactory's LockServer(). It is called by someone
 // who wants to lock this DLL in memory
-static HRESULT STDMETHODCALLTYPE classLockServer(IClassFactory *this, BOOL flock)
+static HRESULT STDMETHODCALLTYPE classLockServer(IClassFactory* this, BOOL flock)
 {
 	if (flock) InterlockedIncrement(&LockCount);
 	else InterlockedDecrement(&LockCount);
@@ -385,17 +386,17 @@ static HRESULT STDMETHODCALLTYPE classLockServer(IClassFactory *this, BOOL flock
 }
 
 // IClassFactory's VTable
-static const IClassFactoryVtbl IClassFactory_Vtbl = {classQueryInterface,
+static const IClassFactoryVtbl IClassFactory_Vtbl = { classQueryInterface,
 classAddRef,
 classRelease,
 classCreateInstance,
-classLockServer};
+classLockServer };
 
 // Miscellaneous functions ///////////////////////////////////////////////////////
 
 /************************ DllGetClassObject() ***********************
  * This is called by the OLE functions CoGetClassObject() or
- * CoCreateInstance() in order to get our DLL's IClassFactory object 
+ * CoCreateInstance() in order to get our DLL's IClassFactory object
  * (and return it to someone who wants to use it to get ahold of one
  * of our IExample objects). Our IClassFactory's CreateInstance() can
  * be used to allocate/retrieve our IExample object.
@@ -404,7 +405,7 @@ classLockServer};
  * will typically call its CreateInstance() function.
  */
 
-HRESULT PASCAL DllGetClassObject(REFCLSID objGuid, REFIID factoryGuid, void **factoryHandle)
+HRESULT PASCAL DllGetClassObject(REFCLSID objGuid, REFIID factoryGuid, void** factoryHandle)
 {
 	register HRESULT		hr;
 
@@ -457,27 +458,27 @@ BOOL WINAPI DllMain(HINSTANCE instance, DWORD fdwReason, LPVOID lpvReserved)
 {
 	switch (fdwReason)
 	{
-		case DLL_PROCESS_ATTACH:
-		{
-			// No TypeInfo yet loaded
-			MyTypeInfo = 0;
+	case DLL_PROCESS_ATTACH:
+	{
+		// No TypeInfo yet loaded
+		MyTypeInfo = 0;
 
-			// Clear global counts
-			OutstandingObjects = LockCount = 0;
+		// Clear global counts
+		OutstandingObjects = LockCount = 0;
 
-			// Initialize my IClassFactory with the pointer to its vtable
-			MyIClassFactoryObj.lpVtbl = (IClassFactoryVtbl *)&IClassFactory_Vtbl;
+		// Initialize my IClassFactory with the pointer to its vtable
+		MyIClassFactoryObj.lpVtbl = (IClassFactoryVtbl*)&IClassFactory_Vtbl;
 
-			// We don't need to do any thread initialization
-			DisableThreadLibraryCalls(instance);
-			break;
-		}
+		// We don't need to do any thread initialization
+		DisableThreadLibraryCalls(instance);
+		break;
+	}
 
-		case DLL_PROCESS_DETACH:
-		{
-			// Release any TYPEINFO that my IDispatch functions got
-			if (MyTypeInfo) MyTypeInfo->lpVtbl->Release(MyTypeInfo);
-		}
+	case DLL_PROCESS_DETACH:
+	{
+		// Release any TYPEINFO that my IDispatch functions got
+		if (MyTypeInfo) MyTypeInfo->lpVtbl->Release(MyTypeInfo);
+	}
 	}
 
 	return(1);
@@ -498,7 +499,7 @@ static void stringFromCLSID(LPTSTR buffer, REFCLSID ri)
 
 
 
-static void registerDllCleanup (void)
+static void registerDllCleanup(void)
 {
 	HKEY		rootKey;
 	HKEY		hKey;
@@ -523,7 +524,7 @@ static void registerDllCleanup (void)
 				if (!RegOpenKeyEx(hKey, &buffer[0], 0, KEY_ALL_ACCESS, &hKey2))
 				{
 					RegDeleteKey(hKey2, "InprocServer32");
-				RegDeleteKey(hKey2, &PROG_ID[0]);
+					RegDeleteKey(hKey2, &PROG_ID[0]);
 					RegCloseKey(hKey2);
 					RegDeleteKey(hKey, &buffer[0]);
 				}
@@ -535,103 +536,103 @@ static void registerDllCleanup (void)
 		RegCloseKey(rootKey);
 
 		// Unregister type library
-		UnRegisterTypeLib(&CLSID_TypeLib, 1, 0, LOCALE_NEUTRAL, SYS_WIN32);
+		(void)UnRegisterTypeLib(&CLSID_TypeLib, 1, 0, LOCALE_NEUTRAL, SYS_WIN32);
 	}
 }
 
-static BOOL registerDll (const char* filename) {
-		HKEY		rootKey;
-		HKEY		hKey;
-		HKEY		hKey2;
-		HKEY		hkExtra;
-		TCHAR		buffer[39];
-		DWORD		disposition;
-DWORD result = 1;
+static BOOL registerDll(const char* filename) {
+	HKEY		rootKey;
+	HKEY		hKey;
+	HKEY		hKey2;
+	HKEY		hkExtra;
+	TCHAR		buffer[39];
+	DWORD		disposition;
+	DWORD result = 1;
 
 
-		if (!RegOpenKeyEx(HKEY_LOCAL_MACHINE, "Software\\Classes", 0, KEY_WRITE, &rootKey))
+	if (!RegOpenKeyEx(HKEY_LOCAL_MACHINE, "Software\\Classes", 0, KEY_WRITE, &rootKey))
+	{
+		// For a script engine to call the OLE function CLSIDFromProgID() (passing
+		// our registered ProgID in order to get our IExample2 object's GUID), then 
+		// we need to create a subkey named with our IExample2 ProgID string. We've
+		// decided to use the ProgID "IExample2.object"
+		if (!RegCreateKeyEx(rootKey, &PROG_ID[0], 0, 0, REG_OPTION_NON_VOLATILE, KEY_WRITE, 0, &hKey, &disposition))
 		{
-			// For a script engine to call the OLE function CLSIDFromProgID() (passing
-			// our registered ProgID in order to get our IExample2 object's GUID), then 
-			// we need to create a subkey named with our IExample2 ProgID string. We've
-			// decided to use the ProgID "IExample2.object"
-			if (!RegCreateKeyEx(rootKey, &PROG_ID[0], 0, 0, REG_OPTION_NON_VOLATILE, KEY_WRITE, 0, &hKey, &disposition))
+			// Set its default value to some "friendly" string that helps
+			// a user identify what this COM DLL is for. Setting this value
+			// is optional. You don't need to do it
+			RegSetValueEx(hKey, 0, 0, REG_SZ, &ObjectDescription[0], sizeof(ObjectDescription));
+
+			// Create a "CLSID" subkey whose default value is our IExample2 object's GUID (in ascii string format)
+			if (!(disposition = RegCreateKeyEx(hKey, "CLSID", 0, 0, REG_OPTION_NON_VOLATILE, KEY_WRITE, 0, &hKey2, &disposition)))
 			{
-				// Set its default value to some "friendly" string that helps
-				// a user identify what this COM DLL is for. Setting this value
-				// is optional. You don't need to do it
-				RegSetValueEx(hKey, 0, 0, REG_SZ, &ObjectDescription[0], sizeof(ObjectDescription));
+				stringFromCLSID(&buffer[0], (REFCLSID)(&CLSID_UniversalSpeech));
+				disposition = RegSetValueEx(hKey2, 0, 0, REG_SZ, (const BYTE*)&buffer[0], lstrlen(&buffer[0]) + 1);
+				RegCloseKey(hKey2);
+			}
+			RegCloseKey(hKey);
 
-				// Create a "CLSID" subkey whose default value is our IExample2 object's GUID (in ascii string format)
-				if (!(disposition = RegCreateKeyEx(hKey, "CLSID", 0, 0, REG_OPTION_NON_VOLATILE, KEY_WRITE, 0, &hKey2, &disposition)))
+			if (!disposition)
+			{
+				// Open "HKEY_LOCAL_MACHINE\Software\Classes\CLSID"
+				if (!RegOpenKeyEx(rootKey, "CLSID", 0, KEY_ALL_ACCESS, &hKey))
 				{
-					stringFromCLSID(&buffer[0], (REFCLSID)(&CLSID_UniversalSpeech));
-					disposition = RegSetValueEx(hKey2, 0, 0, REG_SZ, (const BYTE *)&buffer[0], lstrlen(&buffer[0]) + 1);
-					RegCloseKey(hKey2);
-				}
-				RegCloseKey(hKey);
-
-				if (!disposition)
-				{
-					// Open "HKEY_LOCAL_MACHINE\Software\Classes\CLSID"
-					if (!RegOpenKeyEx(rootKey, "CLSID", 0, KEY_ALL_ACCESS, &hKey))
+					// Create a subkey whose name is the ascii string that represents
+					// our IExample2 object's GUID
+					if (!RegCreateKeyEx(hKey, &buffer[0], 0, 0, REG_OPTION_NON_VOLATILE, KEY_WRITE, 0, &hKey2, &disposition))
 					{
-						// Create a subkey whose name is the ascii string that represents
-						// our IExample2 object's GUID
-						if (!RegCreateKeyEx(hKey, &buffer[0], 0, 0, REG_OPTION_NON_VOLATILE, KEY_WRITE, 0, &hKey2, &disposition))
+						// Set its default value to some "friendly" string that helps
+						// a user identify what this COM DLL is for. Setting this value
+						// is optional. You don't need to do it
+						RegSetValueEx(hKey2, 0, 0, REG_SZ, (const BYTE*)&ObjectDescription[0], sizeof(ObjectDescription));
+
+						// Create an "InprocServer32" key whose default value is the path of this DLL
+						if (!RegCreateKeyEx(hKey2, "InprocServer32", 0, 0, REG_OPTION_NON_VOLATILE, KEY_WRITE, 0, &hkExtra, &disposition))
 						{
-							// Set its default value to some "friendly" string that helps
-							// a user identify what this COM DLL is for. Setting this value
-							// is optional. You don't need to do it
-							RegSetValueEx(hKey2, 0, 0, REG_SZ, (const BYTE *)&ObjectDescription[0], sizeof(ObjectDescription));
-
-							// Create an "InprocServer32" key whose default value is the path of this DLL
-							if (!RegCreateKeyEx(hKey2, "InprocServer32", 0, 0, REG_OPTION_NON_VOLATILE, KEY_WRITE, 0, &hkExtra, &disposition))
+							disposition = 1;
+							if (!RegSetValueEx(hkExtra, 0, 0, REG_SZ, (const BYTE*)&filename[0], lstrlen(&filename[0]) + 1))
 							{
-								disposition = 1;
-								if (!RegSetValueEx(hkExtra, 0, 0, REG_SZ, (const BYTE *)&filename[0], lstrlen(&filename[0]) + 1))
-								{
-									// Create a "ThreadingModel" value set to the string "both" (ie, we don't need to restrict an
-									// application to calling this DLL's functions only from a single thread. We don't use global
-									// data in our IExample2 functions, so we're thread-safe)
-									disposition = RegSetValueEx(hkExtra, "ThreadingModel", 0, REG_SZ, (const BYTE *)"both", sizeof("both"));
-								}
-
-								RegCloseKey(hkExtra);
-
-								// Create a "ProgID" subkey whose default value is our ProgID. This allows the app to call ProgIDFromCLSID()
-								if (!disposition && !(disposition = RegCreateKeyEx(hKey2, "ProgID", 0, 0, REG_OPTION_NON_VOLATILE, KEY_WRITE, 0, &hkExtra, &disposition)))
-								{
-									disposition = RegSetValueEx(hkExtra, 0, 0, REG_SZ, (const BYTE *)&PROG_ID[0], sizeof(PROG_ID));
-									RegCloseKey(hkExtra);
-									if (!disposition) result = 0;
-								}
+								// Create a "ThreadingModel" value set to the string "both" (ie, we don't need to restrict an
+								// application to calling this DLL's functions only from a single thread. We don't use global
+								// data in our IExample2 functions, so we're thread-safe)
+								disposition = RegSetValueEx(hkExtra, "ThreadingModel", 0, REG_SZ, (const BYTE*)"both", sizeof("both"));
 							}
 
-							RegCloseKey(hKey2);
+							RegCloseKey(hkExtra);
+
+							// Create a "ProgID" subkey whose default value is our ProgID. This allows the app to call ProgIDFromCLSID()
+							if (!disposition && !(disposition = RegCreateKeyEx(hKey2, "ProgID", 0, 0, REG_OPTION_NON_VOLATILE, KEY_WRITE, 0, &hkExtra, &disposition)))
+							{
+								disposition = RegSetValueEx(hkExtra, 0, 0, REG_SZ, (const BYTE*)&PROG_ID[0], sizeof(PROG_ID));
+								RegCloseKey(hkExtra);
+								if (!disposition) result = 0;
+							}
 						}
 
-						RegCloseKey(hKey);
+						RegCloseKey(hKey2);
 					}
 
-					// Register the type lib (which is assumed to be a .TLB file in the same dir as this DLL)
-					if (!result)
+					RegCloseKey(hKey);
+				}
+
+				// Register the type lib (which is assumed to be a .TLB file in the same dir as this DLL)
+				if (!result)
+				{
+					ITypeLib* pTypeLib;
+					LPTSTR		str;
+
+					str = &filename[0] + lstrlen(&filename[0]);
+					while (str > &filename[0] && *(str - 1) != '\\') --str;
+					lstrcpy(str, "UniversalSpeech.tlb");
+
+#ifdef UNICODE
+					if (!(result = LoadTypeLib(&filename[0], &pTypeLib)))
 					{
-						ITypeLib	*pTypeLib;
-						LPTSTR		str;
-
-						str = &filename[0] + lstrlen(&filename[0]);
-						while (str > &filename[0] && *(str - 1) != '\\') --str;
-						lstrcpy(str, "UniversalSpeech.tlb");
-
-					#ifdef UNICODE
-						if (!(result = LoadTypeLib(&filename[0], &pTypeLib)))
-						{
-							result = RegisterTypeLib(pTypeLib, &filename[0], 0);
-							pTypeLib->lpVtbl->Release(pTypeLib);
-						}
-					#else
-						{
+						result = RegisterTypeLib(pTypeLib, &filename[0], 0);
+						pTypeLib->lpVtbl->Release(pTypeLib);
+					}
+#else
+					{
 						wchar_t		wbuffer[MAX_PATH];
 
 						MultiByteToWideChar(CP_ACP, 0, &filename[0], -1, &wbuffer[0], MAX_PATH);
@@ -640,28 +641,28 @@ DWORD result = 1;
 							result = RegisterTypeLib(pTypeLib, &wbuffer[0], 0);
 							pTypeLib->lpVtbl->Release(pTypeLib);
 						}
-						}
-					#endif
 					}
-
-					if (!result)
-return TRUE;
+#endif
 				}
+
+				if (!result)
+					return TRUE;
 			}
-
-			RegCloseKey(rootKey);
 		}
 
-		// If an error, make sure we clean everything up
-		if (result)
-		{
-registerDllCleanup();
-return FALSE;
-		}
+		RegCloseKey(rootKey);
 	}
 
+	// If an error, make sure we clean everything up
+	if (result)
+	{
+		registerDllCleanup();
+		return FALSE;
+	}
+}
+
 HRESULT __stdcall DllRegisterServer(void) {
-char filename[320]={0};
-GetFullPathName("UniversalSpeech.dll", 319, filename, NULL);
-return registerDll(filename)? S_OK : E_UNEXPECTED;
+	char filename[320] = { 0 };
+	GetFullPathName("UniversalSpeech.dll", 319, filename, NULL);
+	return registerDll(filename) ? S_OK : E_UNEXPECTED;
 }

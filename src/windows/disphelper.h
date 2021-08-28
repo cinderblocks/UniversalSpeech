@@ -26,36 +26,36 @@
 extern "C" {
 #endif
 
-HRESULT dhCreateObject(LPCOLESTR szProgId, LPCWSTR szMachine, IDispatch ** ppDisp);
-HRESULT dhGetObject(LPCOLESTR szFile, LPCOLESTR szProgId, IDispatch ** ppDisp);
+	HRESULT dhCreateObject(LPCOLESTR szProgId, LPCWSTR szMachine, IDispatch** ppDisp);
+	HRESULT dhGetObject(LPCOLESTR szFile, LPCOLESTR szProgId, IDispatch** ppDisp);
 
-HRESULT dhCreateObjectEx(LPCOLESTR szProgId, REFIID riid, DWORD dwClsContext, COSERVERINFO * pServerInfo, void ** ppv);
-HRESULT dhGetObjectEx(LPCOLESTR szFile, LPCOLESTR szProgId, REFIID riid, DWORD dwClsContext, LPVOID lpvReserved, void ** ppv);
+	HRESULT dhCreateObjectEx(LPCOLESTR szProgId, REFIID riid, DWORD dwClsContext, COSERVERINFO* pServerInfo, void** ppv);
+	HRESULT dhGetObjectEx(LPCOLESTR szFile, LPCOLESTR szProgId, REFIID riid, DWORD dwClsContext, LPVOID lpvReserved, void** ppv);
 
-HRESULT dhCallMethod(IDispatch * pDisp, LPCOLESTR szMember, ...);
-HRESULT dhPutValue(IDispatch * pDisp, LPCOLESTR szMember, ...);
-HRESULT dhPutRef(IDispatch * pDisp, LPCOLESTR szMember, ...);
-HRESULT dhGetValue(LPCWSTR szIdentifier, void * pResult, IDispatch * pDisp, LPCOLESTR szMember, ...);
+	HRESULT dhCallMethod(IDispatch* pDisp, LPCOLESTR szMember, ...);
+	HRESULT dhPutValue(IDispatch* pDisp, LPCOLESTR szMember, ...);
+	HRESULT dhPutRef(IDispatch* pDisp, LPCOLESTR szMember, ...);
+	HRESULT dhGetValue(LPCWSTR szIdentifier, void* pResult, IDispatch* pDisp, LPCOLESTR szMember, ...);
 
-HRESULT dhInvoke(int invokeType, VARTYPE returnType, VARIANT * pvResult, IDispatch * pDisp, LPCOLESTR szMember, ...);
-HRESULT dhInvokeArray(int invokeType, VARIANT * pvResult, UINT cArgs, IDispatch * pDisp, LPCOLESTR szMember, VARIANT * pArgs);
+	HRESULT dhInvoke(int invokeType, VARTYPE returnType, VARIANT* pvResult, IDispatch* pDisp, LPCOLESTR szMember, ...);
+	HRESULT dhInvokeArray(int invokeType, VARIANT* pvResult, UINT cArgs, IDispatch* pDisp, LPCOLESTR szMember, VARIANT* pArgs);
 
-HRESULT dhCallMethodV(IDispatch * pDisp, LPCOLESTR szMember, va_list * marker);
-HRESULT dhPutValueV(IDispatch * pDisp, LPCOLESTR szMember, va_list * marker);
-HRESULT dhPutRefV(IDispatch * pDisp, LPCOLESTR szMember, va_list * marker);
-HRESULT dhGetValueV(LPCWSTR szIdentifier, void * pResult, IDispatch * pDisp, LPCOLESTR szMember, va_list * marker);
-HRESULT dhInvokeV(int invokeType, VARTYPE returnType, VARIANT * pvResult, IDispatch * pDisp, LPCOLESTR szMember, va_list * marker);
+	HRESULT dhCallMethodV(IDispatch* pDisp, LPCOLESTR szMember, va_list* marker);
+	HRESULT dhPutValueV(IDispatch* pDisp, LPCOLESTR szMember, va_list* marker);
+	HRESULT dhPutRefV(IDispatch* pDisp, LPCOLESTR szMember, va_list* marker);
+	HRESULT dhGetValueV(LPCWSTR szIdentifier, void* pResult, IDispatch* pDisp, LPCOLESTR szMember, va_list* marker);
+	HRESULT dhInvokeV(int invokeType, VARTYPE returnType, VARIANT* pvResult, IDispatch* pDisp, LPCOLESTR szMember, va_list* marker);
 
-HRESULT dhAutoWrap(int invokeType, VARIANT * pvResult, IDispatch * pDisp, LPCOLESTR szMember, UINT cArgs, ...);
-HRESULT dhParseProperties(IDispatch * pDisp, LPCWSTR szProperties, UINT * lpcPropsSet);
+	HRESULT dhAutoWrap(int invokeType, VARIANT* pvResult, IDispatch* pDisp, LPCOLESTR szMember, UINT cArgs, ...);
+	HRESULT dhParseProperties(IDispatch* pDisp, LPCWSTR szProperties, UINT* lpcPropsSet);
 
-HRESULT dhEnumBegin(IEnumVARIANT ** ppEnum, IDispatch * pDisp, LPCOLESTR szMember, ...);
-HRESULT dhEnumBeginV(IEnumVARIANT ** ppEnum, IDispatch * pDisp, LPCOLESTR szMember, va_list * marker);
-HRESULT dhEnumNextObject(IEnumVARIANT * pEnum, IDispatch ** ppDisp);
-HRESULT dhEnumNextVariant(IEnumVARIANT * pEnum, VARIANT * pvResult);
+	HRESULT dhEnumBegin(IEnumVARIANT** ppEnum, IDispatch* pDisp, LPCOLESTR szMember, ...);
+	HRESULT dhEnumBeginV(IEnumVARIANT** ppEnum, IDispatch* pDisp, LPCOLESTR szMember, va_list* marker);
+	HRESULT dhEnumNextObject(IEnumVARIANT* pEnum, IDispatch** ppDisp);
+	HRESULT dhEnumNextVariant(IEnumVARIANT* pEnum, VARIANT* pvResult);
 
-HRESULT dhInitializeImp(BOOL bInitializeCOM, BOOL bUnicode);
-void dhUninitialize(BOOL bUninitializeCOM);
+	HRESULT dhInitializeImp(BOOL bInitializeCOM, BOOL bUnicode);
+	void dhUninitialize(BOOL bUninitializeCOM);
 
 #define dhInitializeA(bInitializeCOM) dhInitializeImp(bInitializeCOM, FALSE)
 #define dhInitializeW(bInitializeCOM) dhInitializeImp(bInitializeCOM, TRUE)
@@ -83,7 +83,7 @@ void dhUninitialize(BOOL bUninitializeCOM);
 
 
 
-/* ===================================================================== */
+	/* ===================================================================== */
 #ifndef DISPHELPER_NO_WITH
 
 #define WITH0(objName, pDisp, szMember) { \
@@ -167,54 +167,54 @@ void dhUninitialize(BOOL bUninitializeCOM);
 #ifndef DISPHELPER_NO_EXCEPTIONS
 
 /* Structure to store a DispHelper exception */
-typedef struct tagDH_EXCEPTION
-{
-	LPCWSTR szInitialFunction;
-	LPCWSTR szErrorFunction;
+	typedef struct tagDH_EXCEPTION
+	{
+		LPCWSTR szInitialFunction;
+		LPCWSTR szErrorFunction;
 
-	HRESULT hr;
+		HRESULT hr;
 
-	WCHAR szMember[64];
-	WCHAR szCompleteMember[256];
+		WCHAR szMember[64];
+		WCHAR szCompleteMember[256];
 
-	UINT swCode;
-	LPWSTR szDescription;
-	LPWSTR szSource;
-	LPWSTR szHelpFile;
-	DWORD dwHelpContext;
+		UINT swCode;
+		LPWSTR szDescription;
+		LPWSTR szSource;
+		LPWSTR szHelpFile;
+		DWORD dwHelpContext;
 
-	UINT iArgError;
+		UINT iArgError;
 
-	BOOL bDispatchError;
+		BOOL bDispatchError;
 
 #ifdef DISPHELPER_INTERNAL_BUILD
-	BOOL bOld;
+		BOOL bOld;
 #endif
-} DH_EXCEPTION, * PDH_EXCEPTION;
+	} DH_EXCEPTION, * PDH_EXCEPTION;
 
-typedef void (*DH_EXCEPTION_CALLBACK) (PDH_EXCEPTION);
+	typedef void (*DH_EXCEPTION_CALLBACK) (PDH_EXCEPTION);
 
-/* Structure to store exception options. */
-typedef struct tagDH_EXCEPTION_OPTIONS
-{
-	HWND hwnd;
-	LPCWSTR szAppName;
-	BOOL bShowExceptions;
-	BOOL bDisableRecordExceptions;
-	DH_EXCEPTION_CALLBACK pfnExceptionCallback;
-} DH_EXCEPTION_OPTIONS, * PDH_EXCEPTION_OPTIONS;
+	/* Structure to store exception options. */
+	typedef struct tagDH_EXCEPTION_OPTIONS
+	{
+		HWND hwnd;
+		LPCWSTR szAppName;
+		BOOL bShowExceptions;
+		BOOL bDisableRecordExceptions;
+		DH_EXCEPTION_CALLBACK pfnExceptionCallback;
+	} DH_EXCEPTION_OPTIONS, * PDH_EXCEPTION_OPTIONS;
 
-/* Functions to manipulate global exception options */
-HRESULT dhToggleExceptions(BOOL bShow);
-HRESULT dhSetExceptionOptions(PDH_EXCEPTION_OPTIONS pExceptionOptions);
-HRESULT dhGetExceptionOptions(PDH_EXCEPTION_OPTIONS pExceptionOptions);
+	/* Functions to manipulate global exception options */
+	HRESULT dhToggleExceptions(BOOL bShow);
+	HRESULT dhSetExceptionOptions(PDH_EXCEPTION_OPTIONS pExceptionOptions);
+	HRESULT dhGetExceptionOptions(PDH_EXCEPTION_OPTIONS pExceptionOptions);
 
-/* Functions to show an exception, format an exception into a string
- * and get a copy of the last exception */
-HRESULT dhShowException(PDH_EXCEPTION pException);
-HRESULT dhGetLastException(PDH_EXCEPTION * pException);
-HRESULT dhFormatExceptionW(PDH_EXCEPTION pException, LPWSTR szBuffer, UINT cchBufferSize, BOOL bFixedFont);
-HRESULT dhFormatExceptionA(PDH_EXCEPTION pException, LPSTR szBuffer, UINT cchBufferSize, BOOL bFixedFont);
+	/* Functions to show an exception, format an exception into a string
+	 * and get a copy of the last exception */
+	HRESULT dhShowException(PDH_EXCEPTION pException);
+	HRESULT dhGetLastException(PDH_EXCEPTION* pException);
+	HRESULT dhFormatExceptionW(PDH_EXCEPTION pException, LPWSTR szBuffer, UINT cchBufferSize, BOOL bFixedFont);
+	HRESULT dhFormatExceptionA(PDH_EXCEPTION pException, LPSTR szBuffer, UINT cchBufferSize, BOOL bFixedFont);
 
 #ifdef UNICODE
 #define dhFormatException dhFormatExceptionW
@@ -224,9 +224,9 @@ HRESULT dhFormatExceptionA(PDH_EXCEPTION pException, LPSTR szBuffer, UINT cchBuf
 
 #ifdef DISPHELPER_INTERNAL_BUILD
 
-void dhEnter(void);
-HRESULT dhExitEx(HRESULT hr, BOOL bDispatchError, LPCWSTR szMember, LPCWSTR szCompleteMember, EXCEPINFO * pExcepInfo, UINT iArgError, LPCWSTR szFunctionName);
-void dhCleanupThreadException(void);
+	void dhEnter(void);
+	HRESULT dhExitEx(HRESULT hr, BOOL bDispatchError, LPCWSTR szMember, LPCWSTR szCompleteMember, EXCEPINFO* pExcepInfo, UINT iArgError, LPCWSTR szFunctionName);
+	void dhCleanupThreadException(void);
 
 #define DH_ENTER(szFunctionName) static LPCWSTR xx_szFunctionName_xx = szFunctionName; \
 				    dhEnter()
@@ -276,9 +276,9 @@ void dhCleanupThreadException(void);
 #endif
 
 /* Are we in unicode mode? */
-extern BOOL dh_g_bIsUnicodeMode;
+	extern BOOL dh_g_bIsUnicodeMode;
 
-/* Number of objects in an array */
+	/* Number of objects in an array */
 #undef ARRAYSIZE
 #define ARRAYSIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
@@ -330,13 +330,13 @@ DBG_CODE( { \
 
 
 #ifdef __cplusplus
-}
+		}
 #endif
 
 
 
 
-/* ===================================================================== */
+	/* ===================================================================== */
 #if defined(__cplusplus) && !defined(DISPHELPER_NO_CPP_EXTENSIONS)
 
 #include <iostream>
@@ -348,283 +348,283 @@ DBG_CODE( { \
 
 #ifndef DISPHELPER_USE_MS_SMART_PTR
 
-template <class T>
-class CDhComPtr
-{
-public:
-	CDhComPtr() throw() : m_pInterface (NULL) {}
-
-	CDhComPtr(T* pInterface) throw() : m_pInterface (pInterface)
+	template <class T>
+	class CDhComPtr
 	{
-		if (m_pInterface) m_pInterface->AddRef();
-	}
+	public:
+		CDhComPtr() throw() : m_pInterface(NULL) {}
 
-	CDhComPtr(const CDhComPtr& original) throw() : m_pInterface (original.m_pInterface)
-	{
-		if (m_pInterface) m_pInterface->AddRef();
-	}
-
-	~CDhComPtr() throw()
-	{
-		Dispose();
-	}
-
-	void Dispose() throw()
-	{
-		if (m_pInterface)
+		CDhComPtr(T* pInterface) throw() : m_pInterface(pInterface)
 		{
-			m_pInterface->Release();
+			if (m_pInterface) m_pInterface->AddRef();
+		}
+
+		CDhComPtr(const CDhComPtr& original) throw() : m_pInterface(original.m_pInterface)
+		{
+			if (m_pInterface) m_pInterface->AddRef();
+		}
+
+		~CDhComPtr() throw()
+		{
+			Dispose();
+		}
+
+		void Dispose() throw()
+		{
+			if (m_pInterface)
+			{
+				m_pInterface->Release();
+				m_pInterface = NULL;
+			}
+		}
+
+		T* Detach() throw()
+		{
+			T* temp = m_pInterface;
 			m_pInterface = NULL;
+			return temp;
 		}
-	}
 
-	T* Detach() throw()
-	{
-		T* temp = m_pInterface;
-		m_pInterface = NULL;
-		return temp;
-	}
-
-	inline operator T*() const throw()
-	{
-        	return m_pInterface;
-	}
-
-	T** operator&() throw()
-	{
-		Dispose();
-        	return &m_pInterface;
-	}
-
-	T* operator->() const throw(HRESULT)
-	{
-		if (!m_pInterface) throw E_POINTER;
-		return m_pInterface;
-	}
-
-	CDhComPtr& operator=(T* pInterface) throw()
-	{
-		if (m_pInterface != pInterface)
+		inline operator T* () const throw()
 		{
-			T* pOldInterface = m_pInterface;
-			m_pInterface = pInterface;
-			if (m_pInterface)  m_pInterface->AddRef();
-			if (pOldInterface) pOldInterface->Release();
+			return m_pInterface;
 		}
 
-		return *this;
-	}
+		T** operator&() throw()
+		{
+			Dispose();
+			return &m_pInterface;
+		}
 
-	CDhComPtr& operator=(const int null) throw(HRESULT)
-	{
-		if (null != 0) throw(E_POINTER);
-		return operator=((T*) NULL);
-	}
+		T* operator->() const throw(HRESULT)
+		{
+			if (!m_pInterface) throw E_POINTER;
+			return m_pInterface;
+		}
 
-	CDhComPtr& operator=(const CDhComPtr& rhs) throw()
-	{
-		return operator=(rhs.m_pInterface);
-	}
+		CDhComPtr& operator=(T* pInterface) throw()
+		{
+			if (m_pInterface != pInterface)
+			{
+				T* pOldInterface = m_pInterface;
+				m_pInterface = pInterface;
+				if (m_pInterface)  m_pInterface->AddRef();
+				if (pOldInterface) pOldInterface->Release();
+			}
 
-private:
-	T* m_pInterface;
-};
+			return *this;
+		}
 
-typedef CDhComPtr<IDispatch>    CDispPtr;
-typedef CDhComPtr<IEnumVARIANT> CEnumPtr;
-typedef CDhComPtr<IUnknown>     CUnknownPtr;
+		CDhComPtr& operator=(const int null) throw(HRESULT)
+		{
+			if (null != 0) throw(E_POINTER);
+			return operator=((T*)NULL);
+		}
+
+		CDhComPtr& operator=(const CDhComPtr& rhs) throw()
+		{
+			return operator=(rhs.m_pInterface);
+		}
+
+	private:
+		T* m_pInterface;
+	};
+
+	typedef CDhComPtr<IDispatch>    CDispPtr;
+	typedef CDhComPtr<IEnumVARIANT> CEnumPtr;
+	typedef CDhComPtr<IUnknown>     CUnknownPtr;
 
 #else /* DISPHELPER_USE_MS_SMART_PTR */
 
 #include <comdef.h> 
-typedef IDispatchPtr    CDispPtr;
-typedef IEnumVARIANTPtr CEnumPtr;
-typedef IUnknownPtr     CUnknownPtr;
+	typedef IDispatchPtr    CDispPtr;
+	typedef IEnumVARIANTPtr CEnumPtr;
+	typedef IUnknownPtr     CUnknownPtr;
 
 #endif /* DISPHELPER_USE_MS_SMART_PTR */
 
 
 
 
-/* ===================================================================== */
-template <class T>
-class CDhStringTemplate
-{
-public:
-	CDhStringTemplate() throw() : m_strptr (NULL) {}
-
-	CDhStringTemplate(const CDhStringTemplate& original) throw()
+	/* ===================================================================== */
+	template <class T>
+	class CDhStringTemplate
 	{
-		Copy(original.m_strptr);
-	}
+	public:
+		CDhStringTemplate() throw() : m_strptr(NULL) {}
 
-	CDhStringTemplate(const int null) throw(HRESULT) : m_strptr (NULL)
-	{
-		if (null != 0) throw(E_POINTER);
-	}
-
-	~CDhStringTemplate() throw()
-	{
-		Dispose();
-	}
-
-	void Dispose() throw()
-	{
-		dhFreeString(m_strptr);
-		m_strptr = NULL;
-	}
-
-	T* Detach() throw()
-	{
-		T* temp = m_strptr;
-		m_strptr = NULL;
-		return temp;
-	}
-
-	T** operator&() throw()
-	{
-		Dispose();
-		return &m_strptr;
-	}
-
-	inline operator T*() const throw()
-	{
-		return m_strptr;
-	}
-
-	inline T& operator[](int nIndex) const throw()
-	{
-		return m_strptr[nIndex];
-	}
-
-	CDhStringTemplate& operator=(const CDhStringTemplate& rhs)
-	{
-		if (m_strptr != rhs.m_strptr)
+		CDhStringTemplate(const CDhStringTemplate& original) throw()
 		{
-			T* temp = m_strptr;
-			Copy(rhs.m_strptr);
-			dhFreeString(temp);
+			Copy(original.m_strptr);
 		}
 
-		return *this;
-	}
-
-	CDhStringTemplate& operator=(const int null) throw(HRESULT)
-	{
-		if (null != 0) throw(E_POINTER);
-		Dispose();
-		return *this;
-	}
-
-private:
-	void Copy(const T* rhs)
-	{
-		if (rhs == NULL)
+		CDhStringTemplate(const int null) throw(HRESULT) : m_strptr(NULL)
 		{
+			if (null != 0) throw(E_POINTER);
+		}
+
+		~CDhStringTemplate() throw()
+		{
+			Dispose();
+		}
+
+		void Dispose() throw()
+		{
+			dhFreeString(m_strptr);
 			m_strptr = NULL;
 		}
-		else if (sizeof(T) == sizeof(CHAR))
+
+		T* Detach() throw()
 		{
-			m_strptr = (T*) SysAllocStringByteLen((LPCSTR) rhs, SysStringByteLen((BSTR) rhs));
+			T* temp = m_strptr;
+			m_strptr = NULL;
+			return temp;
 		}
-		else
+
+		T** operator&() throw()
 		{
-			m_strptr = (T*) SysAllocStringLen((OLECHAR *) rhs, SysStringLen((BSTR) rhs));
+			Dispose();
+			return &m_strptr;
 		}
-	}
 
-	T* m_strptr;
-};
+		inline operator T* () const throw()
+		{
+			return m_strptr;
+		}
 
-typedef CDhStringTemplate<CHAR>    CDhStringA;  /* Ansi string - LPSTR */
-typedef CDhStringTemplate<WCHAR>   CDhStringW;  /* Unicode string - LPWSTR */
-typedef CDhStringTemplate<OLECHAR> CDhStringB;  /* Unicode bstring - BSTR */
-typedef CDhStringTemplate<TCHAR>   CDhStringT;  /* T string - LPTSTR */
-typedef CDhStringTemplate<TCHAR>   CDhString;   /* T string - LPTSTR */
+		inline T& operator[](int nIndex) const throw()
+		{
+			return m_strptr[nIndex];
+		}
 
-inline std::ostream& operator<<(std::ostream& os, const CDhStringA& s)
-{
-	return os << (s ? s : (char*) "(null)");
-}
+		CDhStringTemplate& operator=(const CDhStringTemplate& rhs)
+		{
+			if (m_strptr != rhs.m_strptr)
+			{
+				T* temp = m_strptr;
+				Copy(rhs.m_strptr);
+				dhFreeString(temp);
+			}
 
-inline std::wostream& operator<<(std::wostream& os, const CDhStringW& s)
-{
-	return os << (s ? s : (wchar_t*) L"(null)");
-}
+			return *this;
+		}
 
+		CDhStringTemplate& operator=(const int null) throw(HRESULT)
+		{
+			if (null != 0) throw(E_POINTER);
+			Dispose();
+			return *this;
+		}
 
+	private:
+		void Copy(const T* rhs)
+		{
+			if (rhs == NULL)
+			{
+				m_strptr = NULL;
+			}
+			else if (sizeof(T) == sizeof(CHAR))
+			{
+				m_strptr = (T*)SysAllocStringByteLen((LPCSTR)rhs, SysStringByteLen((BSTR)rhs));
+			}
+			else
+			{
+				m_strptr = (T*)SysAllocStringLen((OLECHAR*)rhs, SysStringLen((BSTR)rhs));
+			}
+		}
 
+		T* m_strptr;
+	};
 
-/* ===================================================================== */
-class CDhInitialize
-{
-public:
-	CDhInitialize(const BOOL bInitCom = TRUE) throw() : m_bInitCom (bInitCom)
+	typedef CDhStringTemplate<CHAR>    CDhStringA;  /* Ansi string - LPSTR */
+	typedef CDhStringTemplate<WCHAR>   CDhStringW;  /* Unicode string - LPWSTR */
+	typedef CDhStringTemplate<OLECHAR> CDhStringB;  /* Unicode bstring - BSTR */
+	typedef CDhStringTemplate<TCHAR>   CDhStringT;  /* T string - LPTSTR */
+	typedef CDhStringTemplate<TCHAR>   CDhString;   /* T string - LPTSTR */
+
+	inline std::ostream& operator<<(std::ostream& os, const CDhStringA& s)
 	{
-		dhInitialize(m_bInitCom);
+		return os << (s ? s : (char*)"(null)");
 	}
 
-	~CDhInitialize() throw()
+	inline std::wostream& operator<<(std::wostream& os, const CDhStringW& s)
 	{
-		dhUninitialize(m_bInitCom);
+		return os << (s ? s : (wchar_t*)L"(null)");
 	}
-private:
-	BOOL m_bInitCom;
-};
 
 
 
 
-/* ===================================================================== */
+	/* ===================================================================== */
+	class CDhInitialize
+	{
+	public:
+		CDhInitialize(const BOOL bInitCom = TRUE) throw() : m_bInitCom(bInitCom)
+		{
+			dhInitialize(m_bInitCom);
+		}
+
+		~CDhInitialize() throw()
+		{
+			dhUninitialize(m_bInitCom);
+		}
+	private:
+		BOOL m_bInitCom;
+	};
+
+
+
+
+	/* ===================================================================== */
 #ifndef DISPHELPER_NO_EXCEPTIONS
-class dhThrowFunctions
-{
-public:
-	static void throw_string() throw(std::string)
+	class dhThrowFunctions
 	{
-		CHAR szMessage[512];
-		dhFormatExceptionA(NULL, szMessage, sizeof(szMessage)/sizeof(szMessage[0]), TRUE);
-		throw std::string(szMessage);
-	}
+	public:
+		static void throw_string() throw(std::string)
+		{
+			CHAR szMessage[512];
+			dhFormatExceptionA(NULL, szMessage, sizeof(szMessage) / sizeof(szMessage[0]), TRUE);
+			throw std::string(szMessage);
+		}
 
-	static void throw_wstring() throw(std::wstring)
-	{
-		WCHAR szMessage[512];
-		dhFormatExceptionW(NULL, szMessage, sizeof(szMessage)/sizeof(szMessage[0]), TRUE);
-		throw std::wstring(szMessage);
-	}
-	
-	static void throw_dhexception() throw(PDH_EXCEPTION)
-	{
-		PDH_EXCEPTION pException = NULL;
-		dhGetLastException(&pException);
-		throw pException;
-	}
-};
+		static void throw_wstring() throw(std::wstring)
+		{
+			WCHAR szMessage[512];
+			dhFormatExceptionW(NULL, szMessage, sizeof(szMessage) / sizeof(szMessage[0]), TRUE);
+			throw std::wstring(szMessage);
+		}
+
+		static void throw_dhexception() throw(PDH_EXCEPTION)
+		{
+			PDH_EXCEPTION pException = NULL;
+			dhGetLastException(&pException);
+			throw pException;
+		}
+	};
 #endif /* DISPHELPER_NO_EXCEPTIONS */
 
 
 
 
-/* ===================================================================== */
+	/* ===================================================================== */
 #ifndef DISPHELPER_NO_EXCEPTIONS
-inline bool dhIfFailThrowString(HRESULT hr) throw(std::string)
-{
-	if (FAILED(hr)) dhThrowFunctions::throw_string();
-	return true;
-}
+	inline bool dhIfFailThrowString(HRESULT hr) throw(std::string)
+	{
+		if (FAILED(hr)) dhThrowFunctions::throw_string();
+		return true;
+	}
 
-inline bool dhIfFailThrowWString(HRESULT hr) throw(std::wstring)
-{
-	if (FAILED(hr)) dhThrowFunctions::throw_wstring();
-	return true;
-}
+	inline bool dhIfFailThrowWString(HRESULT hr) throw(std::wstring)
+	{
+		if (FAILED(hr)) dhThrowFunctions::throw_wstring();
+		return true;
+	}
 
-inline bool dhIfFailThrowDhException(HRESULT hr) throw(PDH_EXCEPTION)
-{
-	if (FAILED(hr)) dhThrowFunctions::throw_dhexception();
-	return true;
-}
+	inline bool dhIfFailThrowDhException(HRESULT hr) throw(PDH_EXCEPTION)
+	{
+		if (FAILED(hr)) dhThrowFunctions::throw_dhexception();
+		return true;
+	}
 
 #define dhCheck dhIfFailThrowString
 
@@ -633,7 +633,7 @@ inline bool dhIfFailThrowDhException(HRESULT hr) throw(PDH_EXCEPTION)
 
 
 
-/* ===================================================================== */
+	/* ===================================================================== */
 #ifndef DISPHELPER_NO_WITH
 
 #undef WITH0

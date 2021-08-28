@@ -6,15 +6,15 @@
  /* File created by MIDL compiler version 8.00.0595 */
 /* at Fri Sep 06 10:20:35 2013
  */
-/* Compiler settings for ..\..\Zt.IDL:
-    Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.00.0595 
-    protocol : dce , ms_ext, c_ext, robust
-    error checks: allocation ref bounds_check enum stub_data 
-    VC __declspec() decoration level: 
-         __declspec(uuid()), __declspec(selectany), __declspec(novtable)
-         DECLSPEC_UUID(), MIDL_INTERFACE()
-*/
-/* @@MIDL_FILE_HEADING(  ) */
+ /* Compiler settings for ..\..\Zt.IDL:
+     Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.00.0595
+     protocol : dce , ms_ext, c_ext, robust
+     error checks: allocation ref bounds_check enum stub_data
+     VC __declspec() decoration level:
+          __declspec(uuid()), __declspec(selectany), __declspec(novtable)
+          DECLSPEC_UUID(), MIDL_INTERFACE()
+ */
+ /* @@MIDL_FILE_HEADING(  ) */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -39,7 +39,7 @@
 #pragma once
 #endif
 
-/* Forward Declarations */ 
+/* Forward Declarations */
 
 #ifndef __IZTCommand_FWD_DEFINED__
 #define __IZTCommand_FWD_DEFINED__
@@ -726,7 +726,7 @@ typedef struct ZoomText ZoomText;
 
 
 #ifdef __cplusplus
-extern "C"{
+extern "C" {
 #endif 
 
 
@@ -734,8 +734,8 @@ extern "C"{
 #ifndef __AiSquared_LIBRARY_DEFINED__
 #define __AiSquared_LIBRARY_DEFINED__
 
-/* library AiSquared */
-/* [custom][custom][custom][helpstring][version][uuid] */ 
+    /* library AiSquared */
+    /* [custom][custom][custom][helpstring][version][uuid] */
 
 
 
@@ -833,123 +833,123 @@ extern "C"{
 
 
 
-typedef /* [public] */ 
-enum __MIDL___MIDL_itf_Zt_0000_0000_0001
+    typedef /* [public] */
+        enum __MIDL___MIDL_itf_Zt_0000_0000_0001
     {
-        TypeLibMajorVersion	= 1,
-        TypeLibMinorVersion	= 2
+        TypeLibMajorVersion = 1,
+        TypeLibMinorVersion = 2
     } 	AiSquaredLibraryVersion;
 
-typedef struct tagtagAHOIOBJECTID
+    typedef struct tagtagAHOIOBJECTID
     {
-    short Provider;
-    short Type;
-    long Id;
+        short Provider;
+        short Type;
+        long Id;
     } 	tagAHOIOBJECTID;
 
 
-EXTERN_C const IID LIBID_AiSquared;
+    EXTERN_C const IID LIBID_AiSquared;
 
 #ifndef __IZTCommand_INTERFACE_DEFINED__
 #define __IZTCommand_INTERFACE_DEFINED__
 
-/* interface IZTCommand */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IZTCommand */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IZTCommand;
+    EXTERN_C const IID IID_IZTCommand;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("CC675E9B-D54B-4752-AEBE-20F1B6496201")
-    IZTCommand : public IDispatch
+        IZTCommand : public IDispatch
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Command( 
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Command(
             /* [in] */ int iCommand,
             /* [in] */ long lParam) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CommandString( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CommandString(
             /* [in] */ int iCommand,
             /* [in] */ BSTR strParam) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IZTCommandVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IZTCommand * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IZTCommand * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IZTCommand * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IZTCommand * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IZTCommand * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IZTCommand* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IZTCommand* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IZTCommand* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IZTCommand* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IZTCommand* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IZTCommand * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IZTCommand* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IZTCommand * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IZTCommand* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Command )( 
-            IZTCommand * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Command)(
+            IZTCommand* This,
             /* [in] */ int iCommand,
             /* [in] */ long lParam);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *CommandString )( 
-            IZTCommand * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* CommandString)(
+            IZTCommand* This,
             /* [in] */ int iCommand,
             /* [in] */ BSTR strParam);
-        
+
         END_INTERFACE
     } IZTCommandVtbl;
 
     interface IZTCommand
     {
-        CONST_VTBL struct IZTCommandVtbl *lpVtbl;
+        CONST_VTBL struct IZTCommandVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -997,239 +997,239 @@ EXTERN_C const IID IID_IZTCommand;
 #ifndef __IZoomText_INTERFACE_DEFINED__
 #define __IZoomText_INTERFACE_DEFINED__
 
-/* interface IZoomText */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IZoomText */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IZoomText;
+    EXTERN_C const IID IID_IZoomText;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("DE188A1C-7426-46F4-95E2-4004A5F664D9")
-    IZoomText : public IDispatch
+        IZoomText : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ActiveToolMode( 
-            /* [retval][out] */ BSTR *pstrToolMode) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_AhoiManager( 
-            /* [retval][out] */ IAhoiManager2 **ppObj) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateObject( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ActiveToolMode(
+            /* [retval][out] */ BSTR * pstrToolMode) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_AhoiManager(
+            /* [retval][out] */ IAhoiManager2** ppObj) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateObject(
             /* [in] */ BSTR bstrObjName,
-            /* [retval][out] */ IUnknown **ppObj) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled( 
-            /* [retval][out] */ VARIANT_BOOL *pEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled( 
+            /* [retval][out] */ IUnknown** ppObj) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled(
+            /* [retval][out] */ VARIANT_BOOL* pEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled(
             /* [in] */ VARIANT_BOOL pEnabled) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_EventManager( 
-            /* [retval][out] */ IEventManager2 **ppObj) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetEventData( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_EventManager(
+            /* [retval][out] */ IEventManager2** ppObj) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetEventData(
             /* [in] */ BSTR bstrDataHandle,
-            /* [retval][out] */ IUnknown **ppObj) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Hotkeys( 
-            /* [retval][out] */ IHotkeys **ppObj) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Keyboard( 
-            /* [retval][out] */ IKeyboard **ppObj) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Magnification( 
-            /* [retval][out] */ IMagnification3 **ppObj) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Mouse( 
-            /* [retval][out] */ IMouse **ppObj) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Reader( 
-            /* [retval][out] */ IReader3 **ppObj) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ScriptConfiguration( 
-            /* [retval][out] */ IScriptConfiguration **ppObj) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Settings( 
-            /* [retval][out] */ IZoomTextSettings4 **ppObj) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Speech( 
-            /* [retval][out] */ ISpeech2 **ppObj) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Version( 
-            /* [retval][out] */ BSTR *pVersion) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ZTCommand( 
-            /* [retval][out] */ IZTCommand **ppObj) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateObjectFromAhoiId( 
+            /* [retval][out] */ IUnknown** ppObj) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Hotkeys(
+            /* [retval][out] */ IHotkeys** ppObj) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Keyboard(
+            /* [retval][out] */ IKeyboard** ppObj) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Magnification(
+            /* [retval][out] */ IMagnification3** ppObj) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Mouse(
+            /* [retval][out] */ IMouse** ppObj) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Reader(
+            /* [retval][out] */ IReader3** ppObj) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ScriptConfiguration(
+            /* [retval][out] */ IScriptConfiguration** ppObj) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Settings(
+            /* [retval][out] */ IZoomTextSettings4** ppObj) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Speech(
+            /* [retval][out] */ ISpeech2** ppObj) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Version(
+            /* [retval][out] */ BSTR* pVersion) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ZTCommand(
+            /* [retval][out] */ IZTCommand** ppObj) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateObjectFromAhoiId(
             /* [in] */ BSTR bstrObjName,
             /* [in] */ tagAHOIOBJECTID AhoiId,
-            /* [retval][out] */ IUnknown **ppObj) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateSpeechEventObject( 
+            /* [retval][out] */ IUnknown** ppObj) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateSpeechEventObject(
             /* [in] */ BSTR bstrClient,
             /* [in] */ BSTR bstrText,
             /* [in] */ unsigned long dwFlags,
-            /* [retval][out] */ IUnknown **ppObj) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ScriptManager( 
-            /* [retval][out] */ IScriptManager **ppObj) = 0;
-        
+            /* [retval][out] */ IUnknown** ppObj) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ScriptManager(
+            /* [retval][out] */ IScriptManager** ppObj) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IZoomTextVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IZoomText * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IZoomText * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IZoomText * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IZoomText * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IZoomText * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IZoomText* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IZoomText* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IZoomText* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IZoomText* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IZoomText* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IZoomText * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IZoomText* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IZoomText * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IZoomText* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ActiveToolMode )( 
-            IZoomText * This,
-            /* [retval][out] */ BSTR *pstrToolMode);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AhoiManager )( 
-            IZoomText * This,
-            /* [retval][out] */ IAhoiManager2 **ppObj);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *CreateObject )( 
-            IZoomText * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ActiveToolMode)(
+            IZoomText* This,
+            /* [retval][out] */ BSTR* pstrToolMode);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_AhoiManager)(
+            IZoomText* This,
+            /* [retval][out] */ IAhoiManager2** ppObj);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* CreateObject)(
+            IZoomText* This,
             /* [in] */ BSTR bstrObjName,
-            /* [retval][out] */ IUnknown **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IZoomText * This,
-            /* [retval][out] */ VARIANT_BOOL *pEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
-            IZoomText * This,
+            /* [retval][out] */ IUnknown** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IZoomText* This,
+            /* [retval][out] */ VARIANT_BOOL* pEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Enabled)(
+            IZoomText* This,
             /* [in] */ VARIANT_BOOL pEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EventManager )( 
-            IZoomText * This,
-            /* [retval][out] */ IEventManager2 **ppObj);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *GetEventData )( 
-            IZoomText * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_EventManager)(
+            IZoomText* This,
+            /* [retval][out] */ IEventManager2** ppObj);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* GetEventData)(
+            IZoomText* This,
             /* [in] */ BSTR bstrDataHandle,
-            /* [retval][out] */ IUnknown **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkeys )( 
-            IZoomText * This,
-            /* [retval][out] */ IHotkeys **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Keyboard )( 
-            IZoomText * This,
-            /* [retval][out] */ IKeyboard **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Magnification )( 
-            IZoomText * This,
-            /* [retval][out] */ IMagnification3 **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Mouse )( 
-            IZoomText * This,
-            /* [retval][out] */ IMouse **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Reader )( 
-            IZoomText * This,
-            /* [retval][out] */ IReader3 **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScriptConfiguration )( 
-            IZoomText * This,
-            /* [retval][out] */ IScriptConfiguration **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Settings )( 
-            IZoomText * This,
-            /* [retval][out] */ IZoomTextSettings4 **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Speech )( 
-            IZoomText * This,
-            /* [retval][out] */ ISpeech2 **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Version )( 
-            IZoomText * This,
-            /* [retval][out] */ BSTR *pVersion);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ZTCommand )( 
-            IZoomText * This,
-            /* [retval][out] */ IZTCommand **ppObj);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *CreateObjectFromAhoiId )( 
-            IZoomText * This,
+            /* [retval][out] */ IUnknown** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkeys)(
+            IZoomText* This,
+            /* [retval][out] */ IHotkeys** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Keyboard)(
+            IZoomText* This,
+            /* [retval][out] */ IKeyboard** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Magnification)(
+            IZoomText* This,
+            /* [retval][out] */ IMagnification3** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Mouse)(
+            IZoomText* This,
+            /* [retval][out] */ IMouse** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Reader)(
+            IZoomText* This,
+            /* [retval][out] */ IReader3** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ScriptConfiguration)(
+            IZoomText* This,
+            /* [retval][out] */ IScriptConfiguration** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Settings)(
+            IZoomText* This,
+            /* [retval][out] */ IZoomTextSettings4** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Speech)(
+            IZoomText* This,
+            /* [retval][out] */ ISpeech2** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Version)(
+            IZoomText* This,
+            /* [retval][out] */ BSTR* pVersion);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ZTCommand)(
+            IZoomText* This,
+            /* [retval][out] */ IZTCommand** ppObj);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* CreateObjectFromAhoiId)(
+            IZoomText* This,
             /* [in] */ BSTR bstrObjName,
             /* [in] */ tagAHOIOBJECTID AhoiId,
-            /* [retval][out] */ IUnknown **ppObj);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *CreateSpeechEventObject )( 
-            IZoomText * This,
+            /* [retval][out] */ IUnknown** ppObj);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* CreateSpeechEventObject)(
+            IZoomText* This,
             /* [in] */ BSTR bstrClient,
             /* [in] */ BSTR bstrText,
             /* [in] */ unsigned long dwFlags,
-            /* [retval][out] */ IUnknown **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScriptManager )( 
-            IZoomText * This,
-            /* [retval][out] */ IScriptManager **ppObj);
-        
+            /* [retval][out] */ IUnknown** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ScriptManager)(
+            IZoomText* This,
+            /* [retval][out] */ IScriptManager** ppObj);
+
         END_INTERFACE
     } IZoomTextVtbl;
 
     interface IZoomText
     {
-        CONST_VTBL struct IZoomTextVtbl *lpVtbl;
+        CONST_VTBL struct IZoomTextVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -1331,131 +1331,131 @@ EXTERN_C const IID IID_IZoomText;
 #ifndef __IAhoiManager_INTERFACE_DEFINED__
 #define __IAhoiManager_INTERFACE_DEFINED__
 
-/* interface IAhoiManager */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IAhoiManager */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IAhoiManager;
+    EXTERN_C const IID IID_IAhoiManager;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("CCB88338-5D06-4D72-8E08-526EABED4458")
-    IAhoiManager : public IDispatch
+        IAhoiManager : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled(
+            /* [retval][out] */ VARIANT_BOOL * pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE EnableModule( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE EnableModule(
             /* [in] */ BSTR bstrAhoiModuleName) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DisableModule( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DisableModule(
             /* [in] */ BSTR bstrAhoiModuleName) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE IsModuleEnabled( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE IsModuleEnabled(
             /* [in] */ BSTR bstrAhoiModuleName,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE IsModuleRegistered( 
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE IsModuleRegistered(
             /* [in] */ BSTR bstrAhoiModuleName,
-            /* [retval][out] */ VARIANT_BOOL *pbRegistered) = 0;
-        
+            /* [retval][out] */ VARIANT_BOOL* pbRegistered) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IAhoiManagerVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IAhoiManager * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IAhoiManager * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IAhoiManager * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IAhoiManager * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IAhoiManager * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IAhoiManager* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IAhoiManager* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IAhoiManager* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IAhoiManager* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IAhoiManager* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IAhoiManager * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IAhoiManager* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IAhoiManager * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IAhoiManager* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IAhoiManager * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
-            IAhoiManager * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IAhoiManager* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Enabled)(
+            IAhoiManager* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *EnableModule )( 
-            IAhoiManager * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* EnableModule)(
+            IAhoiManager* This,
             /* [in] */ BSTR bstrAhoiModuleName);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *DisableModule )( 
-            IAhoiManager * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* DisableModule)(
+            IAhoiManager* This,
             /* [in] */ BSTR bstrAhoiModuleName);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *IsModuleEnabled )( 
-            IAhoiManager * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* IsModuleEnabled)(
+            IAhoiManager* This,
             /* [in] */ BSTR bstrAhoiModuleName,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *IsModuleRegistered )( 
-            IAhoiManager * This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* IsModuleRegistered)(
+            IAhoiManager* This,
             /* [in] */ BSTR bstrAhoiModuleName,
-            /* [retval][out] */ VARIANT_BOOL *pbRegistered);
-        
+            /* [retval][out] */ VARIANT_BOOL* pbRegistered);
+
         END_INTERFACE
     } IAhoiManagerVtbl;
 
     interface IAhoiManager
     {
-        CONST_VTBL struct IAhoiManagerVtbl *lpVtbl;
+        CONST_VTBL struct IAhoiManagerVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -1515,139 +1515,139 @@ EXTERN_C const IID IID_IAhoiManager;
 #ifndef __IAhoiManager2_INTERFACE_DEFINED__
 #define __IAhoiManager2_INTERFACE_DEFINED__
 
-/* interface IAhoiManager2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IAhoiManager2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IAhoiManager2;
+    EXTERN_C const IID IID_IAhoiManager2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("BA722D2B-4323-495D-84FF-39D694D170BB")
-    IAhoiManager2 : public IAhoiManager
+        IAhoiManager2 : public IAhoiManager
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FocusEventsEnabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_FocusEventsEnabled( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FocusEventsEnabled(
+            /* [retval][out] */ VARIANT_BOOL * pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_FocusEventsEnabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_CursorEventsEnabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_CursorEventsEnabled( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_CursorEventsEnabled(
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_CursorEventsEnabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IAhoiManager2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IAhoiManager2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IAhoiManager2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IAhoiManager2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IAhoiManager2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IAhoiManager2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IAhoiManager2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IAhoiManager2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IAhoiManager2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IAhoiManager2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IAhoiManager2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IAhoiManager2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IAhoiManager2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IAhoiManager2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IAhoiManager2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IAhoiManager2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
-            IAhoiManager2 * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IAhoiManager2* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Enabled)(
+            IAhoiManager2* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *EnableModule )( 
-            IAhoiManager2 * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* EnableModule)(
+            IAhoiManager2* This,
             /* [in] */ BSTR bstrAhoiModuleName);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *DisableModule )( 
-            IAhoiManager2 * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* DisableModule)(
+            IAhoiManager2* This,
             /* [in] */ BSTR bstrAhoiModuleName);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *IsModuleEnabled )( 
-            IAhoiManager2 * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* IsModuleEnabled)(
+            IAhoiManager2* This,
             /* [in] */ BSTR bstrAhoiModuleName,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *IsModuleRegistered )( 
-            IAhoiManager2 * This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* IsModuleRegistered)(
+            IAhoiManager2* This,
             /* [in] */ BSTR bstrAhoiModuleName,
-            /* [retval][out] */ VARIANT_BOOL *pbRegistered);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FocusEventsEnabled )( 
-            IAhoiManager2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_FocusEventsEnabled )( 
-            IAhoiManager2 * This,
+            /* [retval][out] */ VARIANT_BOOL* pbRegistered);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FocusEventsEnabled)(
+            IAhoiManager2* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_FocusEventsEnabled)(
+            IAhoiManager2* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CursorEventsEnabled )( 
-            IAhoiManager2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_CursorEventsEnabled )( 
-            IAhoiManager2 * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_CursorEventsEnabled)(
+            IAhoiManager2* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_CursorEventsEnabled)(
+            IAhoiManager2* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
+
         END_INTERFACE
     } IAhoiManager2Vtbl;
 
     interface IAhoiManager2
     {
-        CONST_VTBL struct IAhoiManager2Vtbl *lpVtbl;
+        CONST_VTBL struct IAhoiManager2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -1720,99 +1720,99 @@ EXTERN_C const IID IID_IAhoiManager2;
 #ifndef __IEventManager_INTERFACE_DEFINED__
 #define __IEventManager_INTERFACE_DEFINED__
 
-/* interface IEventManager */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IEventManager */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IEventManager;
+    EXTERN_C const IID IID_IEventManager;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("5D2381CF-0B7D-4554-B3A6-E67F6E98DFB3")
-    IEventManager : public IDispatch
+        IEventManager : public IDispatch
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE RegisterForEvent( 
-            /* [in] */ IEventDefinition *pEventDef) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE UnregisterFromEvent( 
-            /* [in] */ IEventDefinition *pEventDef) = 0;
-        
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE RegisterForEvent(
+            /* [in] */ IEventDefinition * pEventDef) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE UnregisterFromEvent(
+            /* [in] */ IEventDefinition* pEventDef) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IEventManagerVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IEventManager * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IEventManager * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IEventManager * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IEventManager * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IEventManager * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IEventManager* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IEventManager* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IEventManager* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IEventManager* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IEventManager* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IEventManager * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IEventManager* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IEventManager * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IEventManager* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *RegisterForEvent )( 
-            IEventManager * This,
-            /* [in] */ IEventDefinition *pEventDef);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *UnregisterFromEvent )( 
-            IEventManager * This,
-            /* [in] */ IEventDefinition *pEventDef);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* RegisterForEvent)(
+            IEventManager* This,
+            /* [in] */ IEventDefinition* pEventDef);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* UnregisterFromEvent)(
+            IEventManager* This,
+            /* [in] */ IEventDefinition* pEventDef);
+
         END_INTERFACE
     } IEventManagerVtbl;
 
     interface IEventManager
     {
-        CONST_VTBL struct IEventManagerVtbl *lpVtbl;
+        CONST_VTBL struct IEventManagerVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -1860,100 +1860,100 @@ EXTERN_C const IID IID_IEventManager;
 #ifndef __IEventManager2_INTERFACE_DEFINED__
 #define __IEventManager2_INTERFACE_DEFINED__
 
-/* interface IEventManager2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IEventManager2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IEventManager2;
+    EXTERN_C const IID IID_IEventManager2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("E0140240-FBA2-4E2B-A4ED-E7AD176E7BC6")
-    IEventManager2 : public IEventManager
+        IEventManager2 : public IEventManager
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CancelEvent( 
-            /* [in] */ IEventDefinition *pEventDef) = 0;
-        
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CancelEvent(
+            /* [in] */ IEventDefinition * pEventDef) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IEventManager2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IEventManager2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IEventManager2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IEventManager2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IEventManager2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IEventManager2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IEventManager2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IEventManager2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IEventManager2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IEventManager2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IEventManager2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IEventManager2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IEventManager2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IEventManager2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IEventManager2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *RegisterForEvent )( 
-            IEventManager2 * This,
-            /* [in] */ IEventDefinition *pEventDef);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *UnregisterFromEvent )( 
-            IEventManager2 * This,
-            /* [in] */ IEventDefinition *pEventDef);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *CancelEvent )( 
-            IEventManager2 * This,
-            /* [in] */ IEventDefinition *pEventDef);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* RegisterForEvent)(
+            IEventManager2* This,
+            /* [in] */ IEventDefinition* pEventDef);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* UnregisterFromEvent)(
+            IEventManager2* This,
+            /* [in] */ IEventDefinition* pEventDef);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* CancelEvent)(
+            IEventManager2* This,
+            /* [in] */ IEventDefinition* pEventDef);
+
         END_INTERFACE
     } IEventManager2Vtbl;
 
     interface IEventManager2
     {
-        CONST_VTBL struct IEventManager2Vtbl *lpVtbl;
+        CONST_VTBL struct IEventManager2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -2005,166 +2005,166 @@ EXTERN_C const IID IID_IEventManager2;
 #ifndef __IEventDefinition_INTERFACE_DEFINED__
 #define __IEventDefinition_INTERFACE_DEFINED__
 
-/* interface IEventDefinition */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IEventDefinition */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IEventDefinition;
+    EXTERN_C const IID IID_IEventDefinition;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("83012579-FEC8-4B8A-A6B6-9E9144A7E47F")
-    IEventDefinition : public IDispatch
+        IEventDefinition : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Event( 
-            /* [retval][out] */ BSTR *pbstrEvent) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Event( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Event(
+            /* [retval][out] */ BSTR * pbstrEvent) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Event(
             /* [in] */ BSTR pbstrEvent) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ScriptPath( 
-            /* [retval][out] */ BSTR *pbstrScriptPath) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ScriptPath( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ScriptPath(
+            /* [retval][out] */ BSTR* pbstrScriptPath) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ScriptPath(
             /* [in] */ BSTR pbstrScriptPath) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ProgramID( 
-            /* [retval][out] */ BSTR *pbstrProgramID) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ProgramID( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ProgramID(
+            /* [retval][out] */ BSTR* pbstrProgramID) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ProgramID(
             /* [in] */ BSTR pbstrProgramID) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_AlternateMethod( 
-            /* [retval][out] */ BSTR *pbstrMethod) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_AlternateMethod( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_AlternateMethod(
+            /* [retval][out] */ BSTR* pbstrMethod) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_AlternateMethod(
             /* [in] */ BSTR pbstrMethod) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_CancelEventOnAlert( 
-            /* [retval][out] */ VARIANT_BOOL *pbCancel) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_CancelEventOnAlert( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_CancelEventOnAlert(
+            /* [retval][out] */ VARIANT_BOOL* pbCancel) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_CancelEventOnAlert(
             /* [in] */ VARIANT_BOOL pbCancel) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE AddFilterItem( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE AddFilterItem(
             /* [in] */ BSTR bstrName,
             /* [in] */ VARIANT value,
             /* [optional][in] */ VARIANT comparisonType) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IEventDefinitionVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IEventDefinition * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IEventDefinition * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IEventDefinition * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IEventDefinition * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IEventDefinition * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IEventDefinition* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IEventDefinition* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IEventDefinition* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IEventDefinition* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IEventDefinition* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IEventDefinition * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IEventDefinition* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IEventDefinition * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IEventDefinition* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Event )( 
-            IEventDefinition * This,
-            /* [retval][out] */ BSTR *pbstrEvent);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Event )( 
-            IEventDefinition * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Event)(
+            IEventDefinition* This,
+            /* [retval][out] */ BSTR* pbstrEvent);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Event)(
+            IEventDefinition* This,
             /* [in] */ BSTR pbstrEvent);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScriptPath )( 
-            IEventDefinition * This,
-            /* [retval][out] */ BSTR *pbstrScriptPath);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ScriptPath )( 
-            IEventDefinition * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ScriptPath)(
+            IEventDefinition* This,
+            /* [retval][out] */ BSTR* pbstrScriptPath);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_ScriptPath)(
+            IEventDefinition* This,
             /* [in] */ BSTR pbstrScriptPath);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ProgramID )( 
-            IEventDefinition * This,
-            /* [retval][out] */ BSTR *pbstrProgramID);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ProgramID )( 
-            IEventDefinition * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ProgramID)(
+            IEventDefinition* This,
+            /* [retval][out] */ BSTR* pbstrProgramID);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_ProgramID)(
+            IEventDefinition* This,
             /* [in] */ BSTR pbstrProgramID);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AlternateMethod )( 
-            IEventDefinition * This,
-            /* [retval][out] */ BSTR *pbstrMethod);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_AlternateMethod )( 
-            IEventDefinition * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_AlternateMethod)(
+            IEventDefinition* This,
+            /* [retval][out] */ BSTR* pbstrMethod);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_AlternateMethod)(
+            IEventDefinition* This,
             /* [in] */ BSTR pbstrMethod);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CancelEventOnAlert )( 
-            IEventDefinition * This,
-            /* [retval][out] */ VARIANT_BOOL *pbCancel);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_CancelEventOnAlert )( 
-            IEventDefinition * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_CancelEventOnAlert)(
+            IEventDefinition* This,
+            /* [retval][out] */ VARIANT_BOOL* pbCancel);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_CancelEventOnAlert)(
+            IEventDefinition* This,
             /* [in] */ VARIANT_BOOL pbCancel);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *AddFilterItem )( 
-            IEventDefinition * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* AddFilterItem)(
+            IEventDefinition* This,
             /* [in] */ BSTR bstrName,
             /* [in] */ VARIANT value,
             /* [optional][in] */ VARIANT comparisonType);
-        
+
         END_INTERFACE
     } IEventDefinitionVtbl;
 
     interface IEventDefinition
     {
-        CONST_VTBL struct IEventDefinitionVtbl *lpVtbl;
+        CONST_VTBL struct IEventDefinitionVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -2239,112 +2239,112 @@ EXTERN_C const IID IID_IEventDefinition;
 #ifndef __IHotkeys_INTERFACE_DEFINED__
 #define __IHotkeys_INTERFACE_DEFINED__
 
-/* interface IHotkeys */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IHotkeys */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IHotkeys;
+    EXTERN_C const IID IID_IHotkeys;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("F8D5580B-BB40-4FBC-A88D-D4EE782BEE0E")
-    IHotkeys : public IDispatch
+        IHotkeys : public IDispatch
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateHotkey( 
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateHotkey(
             /* [in] */ BSTR bstrCommandName,
             /* [in] */ BSTR bstrDescription,
             /* [in] */ BSTR bstrDefaultKeyCombination) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DeleteHotkey( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DeleteHotkey(
             /* [in] */ BSTR bstrCommandName) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Execute( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Execute(
             /* [in] */ BSTR bstrCommandName,
             /* [optional][in] */ VARIANT bSilent) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IHotkeysVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IHotkeys * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IHotkeys * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IHotkeys * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IHotkeys * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IHotkeys * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IHotkeys* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IHotkeys* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IHotkeys* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IHotkeys* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IHotkeys* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IHotkeys * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IHotkeys* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IHotkeys * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IHotkeys* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *CreateHotkey )( 
-            IHotkeys * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* CreateHotkey)(
+            IHotkeys* This,
             /* [in] */ BSTR bstrCommandName,
             /* [in] */ BSTR bstrDescription,
             /* [in] */ BSTR bstrDefaultKeyCombination);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *DeleteHotkey )( 
-            IHotkeys * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* DeleteHotkey)(
+            IHotkeys* This,
             /* [in] */ BSTR bstrCommandName);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Execute )( 
-            IHotkeys * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Execute)(
+            IHotkeys* This,
             /* [in] */ BSTR bstrCommandName,
             /* [optional][in] */ VARIANT bSilent);
-        
+
         END_INTERFACE
     } IHotkeysVtbl;
 
     interface IHotkeys
     {
-        CONST_VTBL struct IHotkeysVtbl *lpVtbl;
+        CONST_VTBL struct IHotkeysVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -2395,121 +2395,121 @@ EXTERN_C const IID IID_IHotkeys;
 #ifndef __IKeyboard_INTERFACE_DEFINED__
 #define __IKeyboard_INTERFACE_DEFINED__
 
-/* interface IKeyboard */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IKeyboard */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IKeyboard;
+    EXTERN_C const IID IID_IKeyboard;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("04972FBC-5254-11DC-8314-0800200C9A66")
-    IKeyboard : public IDispatch
+        IKeyboard : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_KeysPressed( 
-            /* [retval][out] */ BSTR *bstr) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE PressKeys( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_KeysPressed(
+            /* [retval][out] */ BSTR * bstr) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE PressKeys(
             /* [in] */ BSTR bstr) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetKeyCode( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetKeyCode(
             /* [in] */ BSTR bstr,
-            /* [retval][out] */ unsigned long *pdwKeyCode) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetKeyName( 
+            /* [retval][out] */ unsigned long* pdwKeyCode) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetKeyName(
             /* [in] */ unsigned short wModifier,
             /* [in] */ unsigned short wVkCode,
             /* [in] */ unsigned short wUC,
-            /* [retval][out] */ BSTR *keyString) = 0;
-        
+            /* [retval][out] */ BSTR* keyString) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IKeyboardVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IKeyboard * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IKeyboard * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IKeyboard * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IKeyboard * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IKeyboard * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IKeyboard* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IKeyboard* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IKeyboard* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IKeyboard* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IKeyboard* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IKeyboard * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IKeyboard* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IKeyboard * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IKeyboard* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_KeysPressed )( 
-            IKeyboard * This,
-            /* [retval][out] */ BSTR *bstr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *PressKeys )( 
-            IKeyboard * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_KeysPressed)(
+            IKeyboard* This,
+            /* [retval][out] */ BSTR* bstr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* PressKeys)(
+            IKeyboard* This,
             /* [in] */ BSTR bstr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *GetKeyCode )( 
-            IKeyboard * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* GetKeyCode)(
+            IKeyboard* This,
             /* [in] */ BSTR bstr,
-            /* [retval][out] */ unsigned long *pdwKeyCode);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *GetKeyName )( 
-            IKeyboard * This,
+            /* [retval][out] */ unsigned long* pdwKeyCode);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* GetKeyName)(
+            IKeyboard* This,
             /* [in] */ unsigned short wModifier,
             /* [in] */ unsigned short wVkCode,
             /* [in] */ unsigned short wUC,
-            /* [retval][out] */ BSTR *keyString);
-        
+            /* [retval][out] */ BSTR* keyString);
+
         END_INTERFACE
     } IKeyboardVtbl;
 
     interface IKeyboard
     {
-        CONST_VTBL struct IKeyboardVtbl *lpVtbl;
+        CONST_VTBL struct IKeyboardVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -2563,174 +2563,174 @@ EXTERN_C const IID IID_IKeyboard;
 #ifndef __IMagnification_INTERFACE_DEFINED__
 #define __IMagnification_INTERFACE_DEFINED__
 
-/* interface IMagnification */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IMagnification */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IMagnification;
+    EXTERN_C const IID IID_IMagnification;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("33FBE571-A41D-49CF-84C7-5E2207E37E98")
-    IMagnification : public IDispatch
+        IMagnification : public IDispatch
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CaptureScreen( void) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_CaretEnhancements( 
-            /* [retval][out] */ ICaretEnhancements2 **ppCaretEnhancements) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ColorEnhancements( 
-            /* [retval][out] */ IColorEnhancements **ppColorEnhancements) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_DualMonitor( 
-            /* [retval][out] */ IDualMonitor **ppDualMonitor) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FocusEnhancements( 
-            /* [retval][out] */ IFocusEnhancements2 **ppFocusEnhancements) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FontEnhancements( 
-            /* [retval][out] */ IFontEnhancements **ppFontEnhancements) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FreezeUsesPrimaryPower( 
-            /* [retval][out] */ VARIANT_BOOL *pVariantBool) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_FreezeUsesPrimaryPower( 
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CaptureScreen(void) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_CaretEnhancements(
+            /* [retval][out] */ ICaretEnhancements2** ppCaretEnhancements) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ColorEnhancements(
+            /* [retval][out] */ IColorEnhancements** ppColorEnhancements) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_DualMonitor(
+            /* [retval][out] */ IDualMonitor** ppDualMonitor) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FocusEnhancements(
+            /* [retval][out] */ IFocusEnhancements2** ppFocusEnhancements) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FontEnhancements(
+            /* [retval][out] */ IFontEnhancements** ppFontEnhancements) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FreezeUsesPrimaryPower(
+            /* [retval][out] */ VARIANT_BOOL* pVariantBool) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_FreezeUsesPrimaryPower(
             /* [in] */ VARIANT_BOOL pVariantBool) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FreezeWindow( 
-            /* [retval][out] */ IZoomWindow **ppFreezeWindow) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_PointerEnhancements( 
-            /* [retval][out] */ IPointerEnhancements **ppPointerEnhancements) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_PrimaryWindow( 
-            /* [retval][out] */ IZoomWindow **ppPrimaryWindow) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Tracking( 
-            /* [retval][out] */ ITracking2 **ppTracking) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ViewLocator( 
-            /* [retval][out] */ IViewLocator **ppViewLocator) = 0;
-        
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FreezeWindow(
+            /* [retval][out] */ IZoomWindow** ppFreezeWindow) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_PointerEnhancements(
+            /* [retval][out] */ IPointerEnhancements** ppPointerEnhancements) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_PrimaryWindow(
+            /* [retval][out] */ IZoomWindow** ppPrimaryWindow) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Tracking(
+            /* [retval][out] */ ITracking2** ppTracking) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ViewLocator(
+            /* [retval][out] */ IViewLocator** ppViewLocator) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IMagnificationVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IMagnification * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IMagnification * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IMagnification * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IMagnification * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IMagnification * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IMagnification* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IMagnification* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IMagnification* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IMagnification* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IMagnification* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IMagnification * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IMagnification* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IMagnification * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IMagnification* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *CaptureScreen )( 
-            IMagnification * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CaretEnhancements )( 
-            IMagnification * This,
-            /* [retval][out] */ ICaretEnhancements2 **ppCaretEnhancements);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ColorEnhancements )( 
-            IMagnification * This,
-            /* [retval][out] */ IColorEnhancements **ppColorEnhancements);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DualMonitor )( 
-            IMagnification * This,
-            /* [retval][out] */ IDualMonitor **ppDualMonitor);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FocusEnhancements )( 
-            IMagnification * This,
-            /* [retval][out] */ IFocusEnhancements2 **ppFocusEnhancements);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FontEnhancements )( 
-            IMagnification * This,
-            /* [retval][out] */ IFontEnhancements **ppFontEnhancements);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FreezeUsesPrimaryPower )( 
-            IMagnification * This,
-            /* [retval][out] */ VARIANT_BOOL *pVariantBool);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_FreezeUsesPrimaryPower )( 
-            IMagnification * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* CaptureScreen)(
+            IMagnification* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_CaretEnhancements)(
+            IMagnification* This,
+            /* [retval][out] */ ICaretEnhancements2** ppCaretEnhancements);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ColorEnhancements)(
+            IMagnification* This,
+            /* [retval][out] */ IColorEnhancements** ppColorEnhancements);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_DualMonitor)(
+            IMagnification* This,
+            /* [retval][out] */ IDualMonitor** ppDualMonitor);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FocusEnhancements)(
+            IMagnification* This,
+            /* [retval][out] */ IFocusEnhancements2** ppFocusEnhancements);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FontEnhancements)(
+            IMagnification* This,
+            /* [retval][out] */ IFontEnhancements** ppFontEnhancements);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FreezeUsesPrimaryPower)(
+            IMagnification* This,
+            /* [retval][out] */ VARIANT_BOOL* pVariantBool);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_FreezeUsesPrimaryPower)(
+            IMagnification* This,
             /* [in] */ VARIANT_BOOL pVariantBool);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FreezeWindow )( 
-            IMagnification * This,
-            /* [retval][out] */ IZoomWindow **ppFreezeWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PointerEnhancements )( 
-            IMagnification * This,
-            /* [retval][out] */ IPointerEnhancements **ppPointerEnhancements);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PrimaryWindow )( 
-            IMagnification * This,
-            /* [retval][out] */ IZoomWindow **ppPrimaryWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Tracking )( 
-            IMagnification * This,
-            /* [retval][out] */ ITracking2 **ppTracking);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ViewLocator )( 
-            IMagnification * This,
-            /* [retval][out] */ IViewLocator **ppViewLocator);
-        
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FreezeWindow)(
+            IMagnification* This,
+            /* [retval][out] */ IZoomWindow** ppFreezeWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PointerEnhancements)(
+            IMagnification* This,
+            /* [retval][out] */ IPointerEnhancements** ppPointerEnhancements);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PrimaryWindow)(
+            IMagnification* This,
+            /* [retval][out] */ IZoomWindow** ppPrimaryWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Tracking)(
+            IMagnification* This,
+            /* [retval][out] */ ITracking2** ppTracking);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ViewLocator)(
+            IMagnification* This,
+            /* [retval][out] */ IViewLocator** ppViewLocator);
+
         END_INTERFACE
     } IMagnificationVtbl;
 
     interface IMagnification
     {
-        CONST_VTBL struct IMagnificationVtbl *lpVtbl;
+        CONST_VTBL struct IMagnificationVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -2811,143 +2811,143 @@ EXTERN_C const IID IID_IMagnification;
 #ifndef __IMagnification2_INTERFACE_DEFINED__
 #define __IMagnification2_INTERFACE_DEFINED__
 
-/* interface IMagnification2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IMagnification2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IMagnification2;
+    EXTERN_C const IID IID_IMagnification2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("B8EE8CBB-6357-44EF-A024-0B756D0D7730")
-    IMagnification2 : public IMagnification
+        IMagnification2 : public IMagnification
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ScreenHighlight( 
-            /* [retval][out] */ IScreenHighlight2 **ppScreenHighlight) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ScreenHighlight(
+            /* [retval][out] */ IScreenHighlight2 * *ppScreenHighlight) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IMagnification2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IMagnification2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IMagnification2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IMagnification2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IMagnification2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IMagnification2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IMagnification2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IMagnification2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IMagnification2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IMagnification2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IMagnification2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IMagnification2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IMagnification2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IMagnification2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IMagnification2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *CaptureScreen )( 
-            IMagnification2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CaretEnhancements )( 
-            IMagnification2 * This,
-            /* [retval][out] */ ICaretEnhancements2 **ppCaretEnhancements);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ColorEnhancements )( 
-            IMagnification2 * This,
-            /* [retval][out] */ IColorEnhancements **ppColorEnhancements);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DualMonitor )( 
-            IMagnification2 * This,
-            /* [retval][out] */ IDualMonitor **ppDualMonitor);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FocusEnhancements )( 
-            IMagnification2 * This,
-            /* [retval][out] */ IFocusEnhancements2 **ppFocusEnhancements);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FontEnhancements )( 
-            IMagnification2 * This,
-            /* [retval][out] */ IFontEnhancements **ppFontEnhancements);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FreezeUsesPrimaryPower )( 
-            IMagnification2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVariantBool);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_FreezeUsesPrimaryPower )( 
-            IMagnification2 * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* CaptureScreen)(
+            IMagnification2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_CaretEnhancements)(
+            IMagnification2* This,
+            /* [retval][out] */ ICaretEnhancements2** ppCaretEnhancements);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ColorEnhancements)(
+            IMagnification2* This,
+            /* [retval][out] */ IColorEnhancements** ppColorEnhancements);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_DualMonitor)(
+            IMagnification2* This,
+            /* [retval][out] */ IDualMonitor** ppDualMonitor);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FocusEnhancements)(
+            IMagnification2* This,
+            /* [retval][out] */ IFocusEnhancements2** ppFocusEnhancements);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FontEnhancements)(
+            IMagnification2* This,
+            /* [retval][out] */ IFontEnhancements** ppFontEnhancements);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FreezeUsesPrimaryPower)(
+            IMagnification2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVariantBool);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_FreezeUsesPrimaryPower)(
+            IMagnification2* This,
             /* [in] */ VARIANT_BOOL pVariantBool);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FreezeWindow )( 
-            IMagnification2 * This,
-            /* [retval][out] */ IZoomWindow **ppFreezeWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PointerEnhancements )( 
-            IMagnification2 * This,
-            /* [retval][out] */ IPointerEnhancements **ppPointerEnhancements);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PrimaryWindow )( 
-            IMagnification2 * This,
-            /* [retval][out] */ IZoomWindow **ppPrimaryWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Tracking )( 
-            IMagnification2 * This,
-            /* [retval][out] */ ITracking2 **ppTracking);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ViewLocator )( 
-            IMagnification2 * This,
-            /* [retval][out] */ IViewLocator **ppViewLocator);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScreenHighlight )( 
-            IMagnification2 * This,
-            /* [retval][out] */ IScreenHighlight2 **ppScreenHighlight);
-        
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FreezeWindow)(
+            IMagnification2* This,
+            /* [retval][out] */ IZoomWindow** ppFreezeWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PointerEnhancements)(
+            IMagnification2* This,
+            /* [retval][out] */ IPointerEnhancements** ppPointerEnhancements);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PrimaryWindow)(
+            IMagnification2* This,
+            /* [retval][out] */ IZoomWindow** ppPrimaryWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Tracking)(
+            IMagnification2* This,
+            /* [retval][out] */ ITracking2** ppTracking);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ViewLocator)(
+            IMagnification2* This,
+            /* [retval][out] */ IViewLocator** ppViewLocator);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ScreenHighlight)(
+            IMagnification2* This,
+            /* [retval][out] */ IScreenHighlight2** ppScreenHighlight);
+
         END_INTERFACE
     } IMagnification2Vtbl;
 
     interface IMagnification2
     {
-        CONST_VTBL struct IMagnification2Vtbl *lpVtbl;
+        CONST_VTBL struct IMagnification2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -3032,147 +3032,147 @@ EXTERN_C const IID IID_IMagnification2;
 #ifndef __IMagnification3_INTERFACE_DEFINED__
 #define __IMagnification3_INTERFACE_DEFINED__
 
-/* interface IMagnification3 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IMagnification3 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IMagnification3;
+    EXTERN_C const IID IID_IMagnification3;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("7FECB1F1-C6D4-4F80-87B4-06DCAABEBF57")
-    IMagnification3 : public IMagnification2
+        IMagnification3 : public IMagnification2
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_CCTV( 
-            /* [retval][out] */ ICCTV **ppCCTV) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_CCTV(
+            /* [retval][out] */ ICCTV * *ppCCTV) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IMagnification3Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IMagnification3 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IMagnification3 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IMagnification3 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IMagnification3 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IMagnification3 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IMagnification3* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IMagnification3* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IMagnification3* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IMagnification3* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IMagnification3* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IMagnification3 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IMagnification3* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IMagnification3 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IMagnification3* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *CaptureScreen )( 
-            IMagnification3 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CaretEnhancements )( 
-            IMagnification3 * This,
-            /* [retval][out] */ ICaretEnhancements2 **ppCaretEnhancements);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ColorEnhancements )( 
-            IMagnification3 * This,
-            /* [retval][out] */ IColorEnhancements **ppColorEnhancements);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DualMonitor )( 
-            IMagnification3 * This,
-            /* [retval][out] */ IDualMonitor **ppDualMonitor);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FocusEnhancements )( 
-            IMagnification3 * This,
-            /* [retval][out] */ IFocusEnhancements2 **ppFocusEnhancements);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FontEnhancements )( 
-            IMagnification3 * This,
-            /* [retval][out] */ IFontEnhancements **ppFontEnhancements);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FreezeUsesPrimaryPower )( 
-            IMagnification3 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVariantBool);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_FreezeUsesPrimaryPower )( 
-            IMagnification3 * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* CaptureScreen)(
+            IMagnification3* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_CaretEnhancements)(
+            IMagnification3* This,
+            /* [retval][out] */ ICaretEnhancements2** ppCaretEnhancements);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ColorEnhancements)(
+            IMagnification3* This,
+            /* [retval][out] */ IColorEnhancements** ppColorEnhancements);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_DualMonitor)(
+            IMagnification3* This,
+            /* [retval][out] */ IDualMonitor** ppDualMonitor);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FocusEnhancements)(
+            IMagnification3* This,
+            /* [retval][out] */ IFocusEnhancements2** ppFocusEnhancements);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FontEnhancements)(
+            IMagnification3* This,
+            /* [retval][out] */ IFontEnhancements** ppFontEnhancements);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FreezeUsesPrimaryPower)(
+            IMagnification3* This,
+            /* [retval][out] */ VARIANT_BOOL* pVariantBool);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_FreezeUsesPrimaryPower)(
+            IMagnification3* This,
             /* [in] */ VARIANT_BOOL pVariantBool);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FreezeWindow )( 
-            IMagnification3 * This,
-            /* [retval][out] */ IZoomWindow **ppFreezeWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PointerEnhancements )( 
-            IMagnification3 * This,
-            /* [retval][out] */ IPointerEnhancements **ppPointerEnhancements);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PrimaryWindow )( 
-            IMagnification3 * This,
-            /* [retval][out] */ IZoomWindow **ppPrimaryWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Tracking )( 
-            IMagnification3 * This,
-            /* [retval][out] */ ITracking2 **ppTracking);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ViewLocator )( 
-            IMagnification3 * This,
-            /* [retval][out] */ IViewLocator **ppViewLocator);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScreenHighlight )( 
-            IMagnification3 * This,
-            /* [retval][out] */ IScreenHighlight2 **ppScreenHighlight);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CCTV )( 
-            IMagnification3 * This,
-            /* [retval][out] */ ICCTV **ppCCTV);
-        
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FreezeWindow)(
+            IMagnification3* This,
+            /* [retval][out] */ IZoomWindow** ppFreezeWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PointerEnhancements)(
+            IMagnification3* This,
+            /* [retval][out] */ IPointerEnhancements** ppPointerEnhancements);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PrimaryWindow)(
+            IMagnification3* This,
+            /* [retval][out] */ IZoomWindow** ppPrimaryWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Tracking)(
+            IMagnification3* This,
+            /* [retval][out] */ ITracking2** ppTracking);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ViewLocator)(
+            IMagnification3* This,
+            /* [retval][out] */ IViewLocator** ppViewLocator);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ScreenHighlight)(
+            IMagnification3* This,
+            /* [retval][out] */ IScreenHighlight2** ppScreenHighlight);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_CCTV)(
+            IMagnification3* This,
+            /* [retval][out] */ ICCTV** ppCCTV);
+
         END_INTERFACE
     } IMagnification3Vtbl;
 
     interface IMagnification3
     {
-        CONST_VTBL struct IMagnification3Vtbl *lpVtbl;
+        CONST_VTBL struct IMagnification3Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -3261,99 +3261,99 @@ EXTERN_C const IID IID_IMagnification3;
 #ifndef __ICaretEnhancements_INTERFACE_DEFINED__
 #define __ICaretEnhancements_INTERFACE_DEFINED__
 
-/* interface ICaretEnhancements */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ICaretEnhancements */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ICaretEnhancements;
+    EXTERN_C const IID IID_ICaretEnhancements;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("D0433F69-0D8C-4775-83F9-1F04F97C3A72")
-    ICaretEnhancements : public IDispatch
+        ICaretEnhancements : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled(
+            /* [retval][out] */ VARIANT_BOOL * pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ICaretEnhancementsVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ICaretEnhancements * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ICaretEnhancements * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ICaretEnhancements * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ICaretEnhancements * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ICaretEnhancements * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ICaretEnhancements* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ICaretEnhancements* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ICaretEnhancements* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ICaretEnhancements* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ICaretEnhancements* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ICaretEnhancements * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ICaretEnhancements* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ICaretEnhancements * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ICaretEnhancements* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            ICaretEnhancements * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
-            ICaretEnhancements * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            ICaretEnhancements* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Enabled)(
+            ICaretEnhancements* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
+
         END_INTERFACE
     } ICaretEnhancementsVtbl;
 
     interface ICaretEnhancements
     {
-        CONST_VTBL struct ICaretEnhancementsVtbl *lpVtbl;
+        CONST_VTBL struct ICaretEnhancementsVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -3401,121 +3401,121 @@ EXTERN_C const IID IID_ICaretEnhancements;
 #ifndef __ICaretEnhancements2_INTERFACE_DEFINED__
 #define __ICaretEnhancements2_INTERFACE_DEFINED__
 
-/* interface ICaretEnhancements2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ICaretEnhancements2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ICaretEnhancements2;
+    EXTERN_C const IID IID_ICaretEnhancements2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("92EFD367-80CC-4DDC-A841-EA000C531D39")
-    ICaretEnhancements2 : public ICaretEnhancements
+        ICaretEnhancements2 : public ICaretEnhancements
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Location( 
-            /* [retval][out] */ IRectangle **pLocation) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Location( 
-            /* [in] */ IRectangle *pLocation) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Visible( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Visible( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Location(
+            /* [retval][out] */ IRectangle * *pLocation) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Location(
+            /* [in] */ IRectangle* pLocation) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Visible(
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Visible(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ICaretEnhancements2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ICaretEnhancements2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ICaretEnhancements2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ICaretEnhancements2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ICaretEnhancements2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ICaretEnhancements2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ICaretEnhancements2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ICaretEnhancements2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ICaretEnhancements2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ICaretEnhancements2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ICaretEnhancements2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ICaretEnhancements2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ICaretEnhancements2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ICaretEnhancements2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ICaretEnhancements2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            ICaretEnhancements2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
-            ICaretEnhancements2 * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            ICaretEnhancements2* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Enabled)(
+            ICaretEnhancements2* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            ICaretEnhancements2 * This,
-            /* [retval][out] */ IRectangle **pLocation);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Location )( 
-            ICaretEnhancements2 * This,
-            /* [in] */ IRectangle *pLocation);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            ICaretEnhancements2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Visible )( 
-            ICaretEnhancements2 * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            ICaretEnhancements2* This,
+            /* [retval][out] */ IRectangle** pLocation);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Location)(
+            ICaretEnhancements2* This,
+            /* [in] */ IRectangle* pLocation);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            ICaretEnhancements2* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Visible)(
+            ICaretEnhancements2* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
+
         END_INTERFACE
     } ICaretEnhancements2Vtbl;
 
     interface ICaretEnhancements2
     {
-        CONST_VTBL struct ICaretEnhancements2Vtbl *lpVtbl;
+        CONST_VTBL struct ICaretEnhancements2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -3576,182 +3576,182 @@ EXTERN_C const IID IID_ICaretEnhancements2;
 #ifndef __IRectangle_INTERFACE_DEFINED__
 #define __IRectangle_INTERFACE_DEFINED__
 
-/* interface IRectangle */
-/* [object][oleautomation][dual][uuid] */ 
+    /* interface IRectangle */
+    /* [object][oleautomation][dual][uuid] */
 
 
-EXTERN_C const IID IID_IRectangle;
+    EXTERN_C const IID IID_IRectangle;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("22AB4F67-91C3-4DD9-9BC0-5BD1D5AB9B90")
-    IRectangle : public IDispatch
+        IRectangle : public IDispatch
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Empty( 
-            /* [retval][out] */ VARIANT_BOOL *pRetVal) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Clear( void) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Set( 
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Empty(
+            /* [retval][out] */ VARIANT_BOOL * pRetVal) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Clear(void) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Set(
             /* [in] */ long left,
             /* [in] */ long top,
             /* [in] */ long right,
             /* [in] */ long bottom) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Copy( 
-            /* [in] */ IRectangle *copyRect) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Equals( 
-            /* [in] */ IRectangle *rhsRect,
-            /* [retval][out] */ VARIANT_BOOL *pRetVal) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_left( 
-            /* [retval][out] */ long *pRetVal) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_left( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Copy(
+            /* [in] */ IRectangle* copyRect) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Equals(
+            /* [in] */ IRectangle* rhsRect,
+            /* [retval][out] */ VARIANT_BOOL* pRetVal) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_left(
+            /* [retval][out] */ long* pRetVal) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_left(
             /* [in] */ long pRetVal) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_top( 
-            /* [retval][out] */ long *pRetVal) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_top( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_top(
+            /* [retval][out] */ long* pRetVal) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_top(
             /* [in] */ long pRetVal) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_right( 
-            /* [retval][out] */ long *pRetVal) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_right( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_right(
+            /* [retval][out] */ long* pRetVal) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_right(
             /* [in] */ long pRetVal) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_bottom( 
-            /* [retval][out] */ long *pRetVal) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_bottom( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_bottom(
+            /* [retval][out] */ long* pRetVal) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_bottom(
             /* [in] */ long pRetVal) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IRectangleVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IRectangle * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IRectangle * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IRectangle * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IRectangle * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IRectangle * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IRectangle* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IRectangle* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IRectangle* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IRectangle* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IRectangle* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IRectangle * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IRectangle* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IRectangle * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IRectangle* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Empty )( 
-            IRectangle * This,
-            /* [retval][out] */ VARIANT_BOOL *pRetVal);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Clear )( 
-            IRectangle * This);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Set )( 
-            IRectangle * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Empty)(
+            IRectangle* This,
+            /* [retval][out] */ VARIANT_BOOL* pRetVal);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Clear)(
+            IRectangle* This);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Set)(
+            IRectangle* This,
             /* [in] */ long left,
             /* [in] */ long top,
             /* [in] */ long right,
             /* [in] */ long bottom);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Copy )( 
-            IRectangle * This,
-            /* [in] */ IRectangle *copyRect);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Equals )( 
-            IRectangle * This,
-            /* [in] */ IRectangle *rhsRect,
-            /* [retval][out] */ VARIANT_BOOL *pRetVal);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_left )( 
-            IRectangle * This,
-            /* [retval][out] */ long *pRetVal);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_left )( 
-            IRectangle * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Copy)(
+            IRectangle* This,
+            /* [in] */ IRectangle* copyRect);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Equals)(
+            IRectangle* This,
+            /* [in] */ IRectangle* rhsRect,
+            /* [retval][out] */ VARIANT_BOOL* pRetVal);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_left)(
+            IRectangle* This,
+            /* [retval][out] */ long* pRetVal);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_left)(
+            IRectangle* This,
             /* [in] */ long pRetVal);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_top )( 
-            IRectangle * This,
-            /* [retval][out] */ long *pRetVal);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_top )( 
-            IRectangle * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_top)(
+            IRectangle* This,
+            /* [retval][out] */ long* pRetVal);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_top)(
+            IRectangle* This,
             /* [in] */ long pRetVal);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_right )( 
-            IRectangle * This,
-            /* [retval][out] */ long *pRetVal);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_right )( 
-            IRectangle * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_right)(
+            IRectangle* This,
+            /* [retval][out] */ long* pRetVal);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_right)(
+            IRectangle* This,
             /* [in] */ long pRetVal);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_bottom )( 
-            IRectangle * This,
-            /* [retval][out] */ long *pRetVal);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_bottom )( 
-            IRectangle * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_bottom)(
+            IRectangle* This,
+            /* [retval][out] */ long* pRetVal);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_bottom)(
+            IRectangle* This,
             /* [in] */ long pRetVal);
-        
+
         END_INTERFACE
     } IRectangleVtbl;
 
     interface IRectangle
     {
-        CONST_VTBL struct IRectangleVtbl *lpVtbl;
+        CONST_VTBL struct IRectangleVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -3832,253 +3832,253 @@ EXTERN_C const IID IID_IRectangle;
 #ifndef __IColorEnhancements_INTERFACE_DEFINED__
 #define __IColorEnhancements_INTERFACE_DEFINED__
 
-/* interface IColorEnhancements */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IColorEnhancements */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IColorEnhancements;
+    EXTERN_C const IID IID_IColorEnhancements;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("0370FAD7-0E6B-46F1-A008-C6D689493FCE")
-    IColorEnhancements : public IDispatch
+        IColorEnhancements : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled(
+            /* [retval][out] */ VARIANT_BOOL * pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Type( 
-            /* [retval][out] */ BSTR *pbstrType) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Type( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Type(
+            /* [retval][out] */ BSTR* pbstrType) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Type(
             /* [in] */ BSTR pbstrType) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_InvertBrightness( 
-            /* [retval][out] */ VARIANT_BOOL *pbInvertBrightness) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_InvertBrightness( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_InvertBrightness(
+            /* [retval][out] */ VARIANT_BOOL* pbInvertBrightness) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_InvertBrightness(
             /* [in] */ VARIANT_BOOL pbInvertBrightness) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Brightness( 
-            /* [retval][out] */ long *plBrightness) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Brightness( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Brightness(
+            /* [retval][out] */ long* plBrightness) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Brightness(
             /* [in] */ long plBrightness) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Contrast( 
-            /* [retval][out] */ long *plContrast) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Contrast( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Contrast(
+            /* [retval][out] */ long* plContrast) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Contrast(
             /* [in] */ long plContrast) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_DyeColor( 
-            /* [retval][out] */ long *plDyeColor) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_DyeColor( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_DyeColor(
+            /* [retval][out] */ long* plDyeColor) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_DyeColor(
             /* [in] */ long plDyeColor) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ForegroundColor( 
-            /* [retval][out] */ long *plForegroundColor) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ForegroundColor( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ForegroundColor(
+            /* [retval][out] */ long* plForegroundColor) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ForegroundColor(
             /* [in] */ long plForegroundColor) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_BackgroundColor( 
-            /* [retval][out] */ long *plBackgroundColor) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_BackgroundColor( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_BackgroundColor(
+            /* [retval][out] */ long* plBackgroundColor) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_BackgroundColor(
             /* [in] */ long plBackgroundColor) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ColorToReplace( 
-            /* [retval][out] */ long *plColorToReplace) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ColorToReplace( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ColorToReplace(
+            /* [retval][out] */ long* plColorToReplace) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ColorToReplace(
             /* [in] */ long plColorToReplace) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ReplaceWithColor( 
-            /* [retval][out] */ long *plReplaceWithColor) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ReplaceWithColor( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ReplaceWithColor(
+            /* [retval][out] */ long* plReplaceWithColor) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ReplaceWithColor(
             /* [in] */ long plReplaceWithColor) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Bandwidth( 
-            /* [retval][out] */ long *plBandwidth) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Bandwidth( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Bandwidth(
+            /* [retval][out] */ long* plBandwidth) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Bandwidth(
             /* [in] */ long plBandwidth) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ColorToRemove( 
-            /* [retval][out] */ long *plColorToRemove) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ColorToRemove( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ColorToRemove(
+            /* [retval][out] */ long* plColorToRemove) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ColorToRemove(
             /* [in] */ long plColorToRemove) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IColorEnhancementsVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IColorEnhancements * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IColorEnhancements * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IColorEnhancements * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IColorEnhancements * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IColorEnhancements * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IColorEnhancements* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IColorEnhancements* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IColorEnhancements* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IColorEnhancements* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IColorEnhancements* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IColorEnhancements * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IColorEnhancements* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IColorEnhancements * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IColorEnhancements* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IColorEnhancements * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
-            IColorEnhancements * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IColorEnhancements* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Enabled)(
+            IColorEnhancements* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IColorEnhancements * This,
-            /* [retval][out] */ BSTR *pbstrType);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Type )( 
-            IColorEnhancements * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IColorEnhancements* This,
+            /* [retval][out] */ BSTR* pbstrType);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Type)(
+            IColorEnhancements* This,
             /* [in] */ BSTR pbstrType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_InvertBrightness )( 
-            IColorEnhancements * This,
-            /* [retval][out] */ VARIANT_BOOL *pbInvertBrightness);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_InvertBrightness )( 
-            IColorEnhancements * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_InvertBrightness)(
+            IColorEnhancements* This,
+            /* [retval][out] */ VARIANT_BOOL* pbInvertBrightness);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_InvertBrightness)(
+            IColorEnhancements* This,
             /* [in] */ VARIANT_BOOL pbInvertBrightness);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Brightness )( 
-            IColorEnhancements * This,
-            /* [retval][out] */ long *plBrightness);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Brightness )( 
-            IColorEnhancements * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Brightness)(
+            IColorEnhancements* This,
+            /* [retval][out] */ long* plBrightness);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Brightness)(
+            IColorEnhancements* This,
             /* [in] */ long plBrightness);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Contrast )( 
-            IColorEnhancements * This,
-            /* [retval][out] */ long *plContrast);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Contrast )( 
-            IColorEnhancements * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Contrast)(
+            IColorEnhancements* This,
+            /* [retval][out] */ long* plContrast);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Contrast)(
+            IColorEnhancements* This,
             /* [in] */ long plContrast);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DyeColor )( 
-            IColorEnhancements * This,
-            /* [retval][out] */ long *plDyeColor);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_DyeColor )( 
-            IColorEnhancements * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_DyeColor)(
+            IColorEnhancements* This,
+            /* [retval][out] */ long* plDyeColor);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_DyeColor)(
+            IColorEnhancements* This,
             /* [in] */ long plDyeColor);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ForegroundColor )( 
-            IColorEnhancements * This,
-            /* [retval][out] */ long *plForegroundColor);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ForegroundColor )( 
-            IColorEnhancements * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ForegroundColor)(
+            IColorEnhancements* This,
+            /* [retval][out] */ long* plForegroundColor);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_ForegroundColor)(
+            IColorEnhancements* This,
             /* [in] */ long plForegroundColor);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BackgroundColor )( 
-            IColorEnhancements * This,
-            /* [retval][out] */ long *plBackgroundColor);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_BackgroundColor )( 
-            IColorEnhancements * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_BackgroundColor)(
+            IColorEnhancements* This,
+            /* [retval][out] */ long* plBackgroundColor);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_BackgroundColor)(
+            IColorEnhancements* This,
             /* [in] */ long plBackgroundColor);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ColorToReplace )( 
-            IColorEnhancements * This,
-            /* [retval][out] */ long *plColorToReplace);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ColorToReplace )( 
-            IColorEnhancements * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ColorToReplace)(
+            IColorEnhancements* This,
+            /* [retval][out] */ long* plColorToReplace);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_ColorToReplace)(
+            IColorEnhancements* This,
             /* [in] */ long plColorToReplace);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReplaceWithColor )( 
-            IColorEnhancements * This,
-            /* [retval][out] */ long *plReplaceWithColor);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ReplaceWithColor )( 
-            IColorEnhancements * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ReplaceWithColor)(
+            IColorEnhancements* This,
+            /* [retval][out] */ long* plReplaceWithColor);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_ReplaceWithColor)(
+            IColorEnhancements* This,
             /* [in] */ long plReplaceWithColor);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Bandwidth )( 
-            IColorEnhancements * This,
-            /* [retval][out] */ long *plBandwidth);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Bandwidth )( 
-            IColorEnhancements * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Bandwidth)(
+            IColorEnhancements* This,
+            /* [retval][out] */ long* plBandwidth);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Bandwidth)(
+            IColorEnhancements* This,
             /* [in] */ long plBandwidth);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ColorToRemove )( 
-            IColorEnhancements * This,
-            /* [retval][out] */ long *plColorToRemove);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ColorToRemove )( 
-            IColorEnhancements * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ColorToRemove)(
+            IColorEnhancements* This,
+            /* [retval][out] */ long* plColorToRemove);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_ColorToRemove)(
+            IColorEnhancements* This,
             /* [in] */ long plColorToRemove);
-        
+
         END_INTERFACE
     } IColorEnhancementsVtbl;
 
     interface IColorEnhancements
     {
-        CONST_VTBL struct IColorEnhancementsVtbl *lpVtbl;
+        CONST_VTBL struct IColorEnhancementsVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -4192,113 +4192,113 @@ EXTERN_C const IID IID_IColorEnhancements;
 #ifndef __IDualMonitor_INTERFACE_DEFINED__
 #define __IDualMonitor_INTERFACE_DEFINED__
 
-/* interface IDualMonitor */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IDualMonitor */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IDualMonitor;
+    EXTERN_C const IID IID_IDualMonitor;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("71C6BC10-CA7B-4812-8B1F-B64CB7A509E7")
-    IDualMonitor : public IDispatch
+        IDualMonitor : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled(
+            /* [retval][out] */ VARIANT_BOOL * pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Mode( 
-            /* [retval][out] */ BSTR *pstrMode) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Mode( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Mode(
+            /* [retval][out] */ BSTR* pstrMode) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Mode(
             /* [in] */ BSTR pstrMode) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IDualMonitorVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IDualMonitor * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IDualMonitor * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IDualMonitor * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IDualMonitor * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IDualMonitor * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IDualMonitor* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IDualMonitor* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IDualMonitor* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IDualMonitor* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IDualMonitor* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IDualMonitor * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IDualMonitor* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IDualMonitor * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IDualMonitor* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IDualMonitor * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
-            IDualMonitor * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IDualMonitor* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Enabled)(
+            IDualMonitor* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Mode )( 
-            IDualMonitor * This,
-            /* [retval][out] */ BSTR *pstrMode);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Mode )( 
-            IDualMonitor * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Mode)(
+            IDualMonitor* This,
+            /* [retval][out] */ BSTR* pstrMode);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Mode)(
+            IDualMonitor* This,
             /* [in] */ BSTR pstrMode);
-        
+
         END_INTERFACE
     } IDualMonitorVtbl;
 
     interface IDualMonitor
     {
-        CONST_VTBL struct IDualMonitorVtbl *lpVtbl;
+        CONST_VTBL struct IDualMonitorVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -4352,99 +4352,99 @@ EXTERN_C const IID IID_IDualMonitor;
 #ifndef __IFocusEnhancements_INTERFACE_DEFINED__
 #define __IFocusEnhancements_INTERFACE_DEFINED__
 
-/* interface IFocusEnhancements */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IFocusEnhancements */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IFocusEnhancements;
+    EXTERN_C const IID IID_IFocusEnhancements;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("2E51ED2F-589A-4C74-B955-273FF8A04177")
-    IFocusEnhancements : public IDispatch
+        IFocusEnhancements : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled(
+            /* [retval][out] */ VARIANT_BOOL * pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IFocusEnhancementsVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IFocusEnhancements * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IFocusEnhancements * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IFocusEnhancements * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IFocusEnhancements * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IFocusEnhancements * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IFocusEnhancements* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IFocusEnhancements* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IFocusEnhancements* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IFocusEnhancements* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IFocusEnhancements* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IFocusEnhancements * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IFocusEnhancements* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IFocusEnhancements * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IFocusEnhancements* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IFocusEnhancements * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
-            IFocusEnhancements * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IFocusEnhancements* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Enabled)(
+            IFocusEnhancements* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
+
         END_INTERFACE
     } IFocusEnhancementsVtbl;
 
     interface IFocusEnhancements
     {
-        CONST_VTBL struct IFocusEnhancementsVtbl *lpVtbl;
+        CONST_VTBL struct IFocusEnhancementsVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -4492,100 +4492,100 @@ EXTERN_C const IID IID_IFocusEnhancements;
 #ifndef __IFocusEnhancements2_INTERFACE_DEFINED__
 #define __IFocusEnhancements2_INTERFACE_DEFINED__
 
-/* interface IFocusEnhancements2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IFocusEnhancements2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IFocusEnhancements2;
+    EXTERN_C const IID IID_IFocusEnhancements2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("58041971-3A0B-4821-A436-6B9471FDFDC4")
-    IFocusEnhancements2 : public IFocusEnhancements
+        IFocusEnhancements2 : public IFocusEnhancements
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE UpdateLocation( 
-            IRectangle *pRect) = 0;
-        
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE UpdateLocation(
+            IRectangle * pRect) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IFocusEnhancements2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IFocusEnhancements2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IFocusEnhancements2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IFocusEnhancements2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IFocusEnhancements2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IFocusEnhancements2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IFocusEnhancements2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IFocusEnhancements2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IFocusEnhancements2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IFocusEnhancements2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IFocusEnhancements2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IFocusEnhancements2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IFocusEnhancements2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IFocusEnhancements2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IFocusEnhancements2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IFocusEnhancements2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
-            IFocusEnhancements2 * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IFocusEnhancements2* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Enabled)(
+            IFocusEnhancements2* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *UpdateLocation )( 
-            IFocusEnhancements2 * This,
-            IRectangle *pRect);
-        
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* UpdateLocation)(
+            IFocusEnhancements2* This,
+            IRectangle* pRect);
+
         END_INTERFACE
     } IFocusEnhancements2Vtbl;
 
     interface IFocusEnhancements2
     {
-        CONST_VTBL struct IFocusEnhancements2Vtbl *lpVtbl;
+        CONST_VTBL struct IFocusEnhancements2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -4637,99 +4637,99 @@ EXTERN_C const IID IID_IFocusEnhancements2;
 #ifndef __IFontEnhancements_INTERFACE_DEFINED__
 #define __IFontEnhancements_INTERFACE_DEFINED__
 
-/* interface IFontEnhancements */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IFontEnhancements */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IFontEnhancements;
+    EXTERN_C const IID IID_IFontEnhancements;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("0EE21611-D296-4C6D-8D28-87D7BFC626FA")
-    IFontEnhancements : public IDispatch
+        IFontEnhancements : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Type( 
-            /* [retval][out] */ BSTR *pType) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Type( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Type(
+            /* [retval][out] */ BSTR * pType) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Type(
             /* [in] */ BSTR pType) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IFontEnhancementsVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IFontEnhancements * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IFontEnhancements * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IFontEnhancements * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IFontEnhancements * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IFontEnhancements * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IFontEnhancements* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IFontEnhancements* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IFontEnhancements* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IFontEnhancements* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IFontEnhancements* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IFontEnhancements * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IFontEnhancements* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IFontEnhancements * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IFontEnhancements* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IFontEnhancements * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Type )( 
-            IFontEnhancements * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IFontEnhancements* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Type)(
+            IFontEnhancements* This,
             /* [in] */ BSTR pType);
-        
+
         END_INTERFACE
     } IFontEnhancementsVtbl;
 
     interface IFontEnhancements
     {
-        CONST_VTBL struct IFontEnhancementsVtbl *lpVtbl;
+        CONST_VTBL struct IFontEnhancementsVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -4777,153 +4777,153 @@ EXTERN_C const IID IID_IFontEnhancements;
 #ifndef __IZoomWindow_INTERFACE_DEFINED__
 #define __IZoomWindow_INTERFACE_DEFINED__
 
-/* interface IZoomWindow */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IZoomWindow */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IZoomWindow;
+    EXTERN_C const IID IID_IZoomWindow;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("B9966BD6-5A59-4A20-B4D5-C97E70807527")
-    IZoomWindow : public IDispatch
+        IZoomWindow : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled(
+            /* [retval][out] */ VARIANT_BOOL * pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Type( 
-            /* [retval][out] */ BSTR *pbstrType) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Type( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Type(
+            /* [retval][out] */ BSTR* pbstrType) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Type(
             /* [in] */ BSTR pbstrType) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Location( 
-            /* [retval][out] */ IRectangle **ppRect) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Location( 
-            /* [in] */ IRectangle *ppRect) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_View( 
-            /* [retval][out] */ IRectangle **ppRect) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_View( 
-            /* [in] */ IRectangle *ppRect) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Power( 
-            /* [retval][out] */ IPower **ppPower) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE ViewToMouse( void) = 0;
-        
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Location(
+            /* [retval][out] */ IRectangle** ppRect) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Location(
+            /* [in] */ IRectangle* ppRect) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_View(
+            /* [retval][out] */ IRectangle** ppRect) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_View(
+            /* [in] */ IRectangle* ppRect) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Power(
+            /* [retval][out] */ IPower** ppPower) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE ViewToMouse(void) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IZoomWindowVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IZoomWindow * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IZoomWindow * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IZoomWindow * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IZoomWindow * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IZoomWindow * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IZoomWindow* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IZoomWindow* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IZoomWindow* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IZoomWindow* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IZoomWindow* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IZoomWindow * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IZoomWindow* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IZoomWindow * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IZoomWindow* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IZoomWindow * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
-            IZoomWindow * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IZoomWindow* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Enabled)(
+            IZoomWindow* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IZoomWindow * This,
-            /* [retval][out] */ BSTR *pbstrType);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Type )( 
-            IZoomWindow * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IZoomWindow* This,
+            /* [retval][out] */ BSTR* pbstrType);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Type)(
+            IZoomWindow* This,
             /* [in] */ BSTR pbstrType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IZoomWindow * This,
-            /* [retval][out] */ IRectangle **ppRect);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Location )( 
-            IZoomWindow * This,
-            /* [in] */ IRectangle *ppRect);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_View )( 
-            IZoomWindow * This,
-            /* [retval][out] */ IRectangle **ppRect);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_View )( 
-            IZoomWindow * This,
-            /* [in] */ IRectangle *ppRect);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Power )( 
-            IZoomWindow * This,
-            /* [retval][out] */ IPower **ppPower);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *ViewToMouse )( 
-            IZoomWindow * This);
-        
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IZoomWindow* This,
+            /* [retval][out] */ IRectangle** ppRect);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Location)(
+            IZoomWindow* This,
+            /* [in] */ IRectangle* ppRect);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_View)(
+            IZoomWindow* This,
+            /* [retval][out] */ IRectangle** ppRect);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_View)(
+            IZoomWindow* This,
+            /* [in] */ IRectangle* ppRect);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Power)(
+            IZoomWindow* This,
+            /* [retval][out] */ IPower** ppPower);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* ViewToMouse)(
+            IZoomWindow* This);
+
         END_INTERFACE
     } IZoomWindowVtbl;
 
     interface IZoomWindow
     {
-        CONST_VTBL struct IZoomWindowVtbl *lpVtbl;
+        CONST_VTBL struct IZoomWindowVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -4995,109 +4995,109 @@ EXTERN_C const IID IID_IZoomWindow;
 #ifndef __IPower_INTERFACE_DEFINED__
 #define __IPower_INTERFACE_DEFINED__
 
-/* interface IPower */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IPower */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IPower;
+    EXTERN_C const IID IID_IPower;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("FFBA1585-96AA-4BE7-BF8E-7996BE405683")
-    IPower : public IDispatch
+        IPower : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Level( 
-            /* [retval][out] */ float *pfLevel) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Level( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Level(
+            /* [retval][out] */ float* pfLevel) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Level(
             /* [in] */ float pfLevel) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Increase( void) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Decrease( void) = 0;
-        
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Increase(void) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Decrease(void) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IPowerVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IPower * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IPower * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IPower * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IPower * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IPower * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IPower* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IPower* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IPower* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IPower* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IPower* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IPower * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IPower* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IPower * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IPower* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Level )( 
-            IPower * This,
-            /* [retval][out] */ float *pfLevel);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Level )( 
-            IPower * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Level)(
+            IPower* This,
+            /* [retval][out] */ float* pfLevel);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Level)(
+            IPower* This,
             /* [in] */ float pfLevel);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Increase )( 
-            IPower * This);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Decrease )( 
-            IPower * This);
-        
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Increase)(
+            IPower* This);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Decrease)(
+            IPower* This);
+
         END_INTERFACE
     } IPowerVtbl;
 
     interface IPower
     {
-        CONST_VTBL struct IPowerVtbl *lpVtbl;
+        CONST_VTBL struct IPowerVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -5151,99 +5151,99 @@ EXTERN_C const IID IID_IPower;
 #ifndef __IPointerEnhancements_INTERFACE_DEFINED__
 #define __IPointerEnhancements_INTERFACE_DEFINED__
 
-/* interface IPointerEnhancements */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IPointerEnhancements */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IPointerEnhancements;
+    EXTERN_C const IID IID_IPointerEnhancements;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("41C19AC7-4D28-4D3B-A17F-704D0F1B3872")
-    IPointerEnhancements : public IDispatch
+        IPointerEnhancements : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled(
+            /* [retval][out] */ VARIANT_BOOL * pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IPointerEnhancementsVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IPointerEnhancements * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IPointerEnhancements * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IPointerEnhancements * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IPointerEnhancements * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IPointerEnhancements * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IPointerEnhancements* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IPointerEnhancements* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IPointerEnhancements* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IPointerEnhancements* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IPointerEnhancements* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IPointerEnhancements * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IPointerEnhancements* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IPointerEnhancements * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IPointerEnhancements* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IPointerEnhancements * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
-            IPointerEnhancements * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IPointerEnhancements* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Enabled)(
+            IPointerEnhancements* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
+
         END_INTERFACE
     } IPointerEnhancementsVtbl;
 
     interface IPointerEnhancements
     {
-        CONST_VTBL struct IPointerEnhancementsVtbl *lpVtbl;
+        CONST_VTBL struct IPointerEnhancementsVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -5291,113 +5291,113 @@ EXTERN_C const IID IID_IPointerEnhancements;
 #ifndef __ITracking_INTERFACE_DEFINED__
 #define __ITracking_INTERFACE_DEFINED__
 
-/* interface ITracking */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ITracking */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ITracking;
+    EXTERN_C const IID IID_ITracking;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("9A59B310-74F6-4D43-B0AB-1F44DA8268E0")
-    ITracking : public IDispatch
+        ITracking : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled(
+            /* [retval][out] */ VARIANT_BOOL * pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE JumpTo( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE JumpTo(
             BSTR strWhere) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE TrackTo( 
-            IRectangle *pRect) = 0;
-        
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE TrackTo(
+            IRectangle* pRect) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ITrackingVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ITracking * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ITracking * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ITracking * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ITracking * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ITracking * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ITracking* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ITracking* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ITracking* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ITracking* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ITracking* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ITracking * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ITracking* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ITracking * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ITracking* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            ITracking * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
-            ITracking * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            ITracking* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Enabled)(
+            ITracking* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *JumpTo )( 
-            ITracking * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* JumpTo)(
+            ITracking* This,
             BSTR strWhere);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *TrackTo )( 
-            ITracking * This,
-            IRectangle *pRect);
-        
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* TrackTo)(
+            ITracking* This,
+            IRectangle* pRect);
+
         END_INTERFACE
     } ITrackingVtbl;
 
     interface ITracking
     {
-        CONST_VTBL struct ITrackingVtbl *lpVtbl;
+        CONST_VTBL struct ITrackingVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -5451,199 +5451,199 @@ EXTERN_C const IID IID_ITracking;
 #ifndef __ITracking2_INTERFACE_DEFINED__
 #define __ITracking2_INTERFACE_DEFINED__
 
-/* interface ITracking2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ITracking2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ITracking2;
+    EXTERN_C const IID IID_ITracking2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("0E890643-4D5B-4E20-8A72-80C8AD2511F9")
-    ITracking2 : public ITracking
+        ITracking2 : public ITracking
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_AlertsEnabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_AlertsEnabled( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_AlertsEnabled(
+            /* [retval][out] */ VARIANT_BOOL * pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_AlertsEnabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ControlsEnabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ControlsEnabled( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ControlsEnabled(
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ControlsEnabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_MenusEnabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_MenusEnabled( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_MenusEnabled(
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_MenusEnabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_MousePointerEnabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_MousePointerEnabled( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_MousePointerEnabled(
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_MousePointerEnabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_TextCursorEnabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_TextCursorEnabled( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_TextCursorEnabled(
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_TextCursorEnabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ToolTipsEnabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ToolTipsEnabled( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ToolTipsEnabled(
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ToolTipsEnabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_WindowsEnabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_WindowsEnabled( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_WindowsEnabled(
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_WindowsEnabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ITracking2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ITracking2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ITracking2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ITracking2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ITracking2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ITracking2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ITracking2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ITracking2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ITracking2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ITracking2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ITracking2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ITracking2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ITracking2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ITracking2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ITracking2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            ITracking2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
-            ITracking2 * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            ITracking2* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Enabled)(
+            ITracking2* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *JumpTo )( 
-            ITracking2 * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* JumpTo)(
+            ITracking2* This,
             BSTR strWhere);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *TrackTo )( 
-            ITracking2 * This,
-            IRectangle *pRect);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AlertsEnabled )( 
-            ITracking2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_AlertsEnabled )( 
-            ITracking2 * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* TrackTo)(
+            ITracking2* This,
+            IRectangle* pRect);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_AlertsEnabled)(
+            ITracking2* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_AlertsEnabled)(
+            ITracking2* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ControlsEnabled )( 
-            ITracking2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ControlsEnabled )( 
-            ITracking2 * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ControlsEnabled)(
+            ITracking2* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_ControlsEnabled)(
+            ITracking2* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MenusEnabled )( 
-            ITracking2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_MenusEnabled )( 
-            ITracking2 * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_MenusEnabled)(
+            ITracking2* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_MenusEnabled)(
+            ITracking2* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MousePointerEnabled )( 
-            ITracking2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_MousePointerEnabled )( 
-            ITracking2 * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_MousePointerEnabled)(
+            ITracking2* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_MousePointerEnabled)(
+            ITracking2* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TextCursorEnabled )( 
-            ITracking2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_TextCursorEnabled )( 
-            ITracking2 * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TextCursorEnabled)(
+            ITracking2* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_TextCursorEnabled)(
+            ITracking2* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ToolTipsEnabled )( 
-            ITracking2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ToolTipsEnabled )( 
-            ITracking2 * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ToolTipsEnabled)(
+            ITracking2* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_ToolTipsEnabled)(
+            ITracking2* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_WindowsEnabled )( 
-            ITracking2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_WindowsEnabled )( 
-            ITracking2 * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_WindowsEnabled)(
+            ITracking2* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_WindowsEnabled)(
+            ITracking2* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
+
         END_INTERFACE
     } ITracking2Vtbl;
 
     interface ITracking2
     {
-        CONST_VTBL struct ITracking2Vtbl *lpVtbl;
+        CONST_VTBL struct ITracking2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -5740,99 +5740,99 @@ EXTERN_C const IID IID_ITracking2;
 #ifndef __IViewLocator_INTERFACE_DEFINED__
 #define __IViewLocator_INTERFACE_DEFINED__
 
-/* interface IViewLocator */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IViewLocator */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IViewLocator;
+    EXTERN_C const IID IID_IViewLocator;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("91B8C0CD-93CF-46F3-ABBA-04C61A13BA0C")
-    IViewLocator : public IDispatch
+        IViewLocator : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled(
+            /* [retval][out] */ VARIANT_BOOL * pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IViewLocatorVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IViewLocator * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IViewLocator * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IViewLocator * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IViewLocator * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IViewLocator * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IViewLocator* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IViewLocator* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IViewLocator* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IViewLocator* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IViewLocator* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IViewLocator * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IViewLocator* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IViewLocator * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IViewLocator* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IViewLocator * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
-            IViewLocator * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IViewLocator* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Enabled)(
+            IViewLocator* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
+
         END_INTERFACE
     } IViewLocatorVtbl;
 
     interface IViewLocator
     {
-        CONST_VTBL struct IViewLocatorVtbl *lpVtbl;
+        CONST_VTBL struct IViewLocatorVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -5880,225 +5880,225 @@ EXTERN_C const IID IID_IViewLocator;
 #ifndef __IScreenHighlight_INTERFACE_DEFINED__
 #define __IScreenHighlight_INTERFACE_DEFINED__
 
-/* interface IScreenHighlight */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IScreenHighlight */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IScreenHighlight;
+    EXTERN_C const IID IID_IScreenHighlight;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("1A1F44C1-83B2-4D12-B6FE-629751C134EC")
-    IScreenHighlight : public IDispatch
+        IScreenHighlight : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Color( 
-            /* [retval][out] */ long *plColor) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Color( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Color(
+            /* [retval][out] */ long* plColor) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Color(
             /* [in] */ long plColor) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnable) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled(
+            /* [retval][out] */ VARIANT_BOOL* pbEnable) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled(
             /* [in] */ VARIANT_BOOL pbEnable) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Invert( 
-            /* [retval][out] */ VARIANT_BOOL *pbInvert) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Invert( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Invert(
+            /* [retval][out] */ VARIANT_BOOL* pbInvert) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Invert(
             /* [in] */ VARIANT_BOOL pbInvert) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Location( 
-            /* [retval][out] */ IRectangle **pLocation) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Location( 
-            /* [in] */ IRectangle *pLocation) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Mode( 
-            /* [retval][out] */ long *plMode) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Mode( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Location(
+            /* [retval][out] */ IRectangle** pLocation) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Location(
+            /* [in] */ IRectangle* pLocation) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Mode(
+            /* [retval][out] */ long* plMode) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Mode(
             /* [in] */ long plMode) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Padding( 
-            /* [retval][out] */ long *plPadding) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Padding( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Padding(
+            /* [retval][out] */ long* plPadding) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Padding(
             /* [in] */ long plPadding) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Shape( 
-            /* [retval][out] */ long *plShape) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Shape( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Shape(
+            /* [retval][out] */ long* plShape) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Shape(
             /* [in] */ long plShape) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Thickness( 
-            /* [retval][out] */ long *plThickness) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Thickness( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Thickness(
+            /* [retval][out] */ long* plThickness) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Thickness(
             /* [in] */ long plThickness) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Timeout( 
-            /* [retval][out] */ long *plTimeout) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Timeout( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Timeout(
+            /* [retval][out] */ long* plTimeout) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Timeout(
             /* [in] */ long plTimeout) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Transparency( 
-            /* [retval][out] */ long *plTransparency) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Transparency( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Transparency(
+            /* [retval][out] */ long* plTransparency) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Transparency(
             /* [in] */ long plTransparency) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IScreenHighlightVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IScreenHighlight * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IScreenHighlight * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IScreenHighlight * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IScreenHighlight * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IScreenHighlight * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IScreenHighlight* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IScreenHighlight* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IScreenHighlight* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IScreenHighlight* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IScreenHighlight* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IScreenHighlight * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IScreenHighlight* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IScreenHighlight * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IScreenHighlight* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Color )( 
-            IScreenHighlight * This,
-            /* [retval][out] */ long *plColor);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Color )( 
-            IScreenHighlight * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Color)(
+            IScreenHighlight* This,
+            /* [retval][out] */ long* plColor);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Color)(
+            IScreenHighlight* This,
             /* [in] */ long plColor);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IScreenHighlight * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnable);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
-            IScreenHighlight * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IScreenHighlight* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnable);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Enabled)(
+            IScreenHighlight* This,
             /* [in] */ VARIANT_BOOL pbEnable);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Invert )( 
-            IScreenHighlight * This,
-            /* [retval][out] */ VARIANT_BOOL *pbInvert);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Invert )( 
-            IScreenHighlight * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Invert)(
+            IScreenHighlight* This,
+            /* [retval][out] */ VARIANT_BOOL* pbInvert);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Invert)(
+            IScreenHighlight* This,
             /* [in] */ VARIANT_BOOL pbInvert);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IScreenHighlight * This,
-            /* [retval][out] */ IRectangle **pLocation);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Location )( 
-            IScreenHighlight * This,
-            /* [in] */ IRectangle *pLocation);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Mode )( 
-            IScreenHighlight * This,
-            /* [retval][out] */ long *plMode);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Mode )( 
-            IScreenHighlight * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IScreenHighlight* This,
+            /* [retval][out] */ IRectangle** pLocation);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Location)(
+            IScreenHighlight* This,
+            /* [in] */ IRectangle* pLocation);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Mode)(
+            IScreenHighlight* This,
+            /* [retval][out] */ long* plMode);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Mode)(
+            IScreenHighlight* This,
             /* [in] */ long plMode);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Padding )( 
-            IScreenHighlight * This,
-            /* [retval][out] */ long *plPadding);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Padding )( 
-            IScreenHighlight * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Padding)(
+            IScreenHighlight* This,
+            /* [retval][out] */ long* plPadding);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Padding)(
+            IScreenHighlight* This,
             /* [in] */ long plPadding);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Shape )( 
-            IScreenHighlight * This,
-            /* [retval][out] */ long *plShape);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Shape )( 
-            IScreenHighlight * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Shape)(
+            IScreenHighlight* This,
+            /* [retval][out] */ long* plShape);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Shape)(
+            IScreenHighlight* This,
             /* [in] */ long plShape);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Thickness )( 
-            IScreenHighlight * This,
-            /* [retval][out] */ long *plThickness);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Thickness )( 
-            IScreenHighlight * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Thickness)(
+            IScreenHighlight* This,
+            /* [retval][out] */ long* plThickness);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Thickness)(
+            IScreenHighlight* This,
             /* [in] */ long plThickness);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Timeout )( 
-            IScreenHighlight * This,
-            /* [retval][out] */ long *plTimeout);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Timeout )( 
-            IScreenHighlight * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Timeout)(
+            IScreenHighlight* This,
+            /* [retval][out] */ long* plTimeout);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Timeout)(
+            IScreenHighlight* This,
             /* [in] */ long plTimeout);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Transparency )( 
-            IScreenHighlight * This,
-            /* [retval][out] */ long *plTransparency);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Transparency )( 
-            IScreenHighlight * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Transparency)(
+            IScreenHighlight* This,
+            /* [retval][out] */ long* plTransparency);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Transparency)(
+            IScreenHighlight* This,
             /* [in] */ long plTransparency);
-        
+
         END_INTERFACE
     } IScreenHighlightVtbl;
 
     interface IScreenHighlight
     {
-        CONST_VTBL struct IScreenHighlightVtbl *lpVtbl;
+        CONST_VTBL struct IScreenHighlightVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -6200,170 +6200,170 @@ EXTERN_C const IID IID_IScreenHighlight;
 #ifndef __IScreenHighlight2_INTERFACE_DEFINED__
 #define __IScreenHighlight2_INTERFACE_DEFINED__
 
-/* interface IScreenHighlight2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IScreenHighlight2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IScreenHighlight2;
+    EXTERN_C const IID IID_IScreenHighlight2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("EB53CA25-96D6-4978-BC65-4C3B2118CEE5")
-    IScreenHighlight2 : public IScreenHighlight
+        IScreenHighlight2 : public IScreenHighlight
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE UseFocusEnhancementSettings( void) = 0;
-        
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE UseFocusEnhancementSettings(void) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IScreenHighlight2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IScreenHighlight2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IScreenHighlight2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IScreenHighlight2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IScreenHighlight2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IScreenHighlight2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IScreenHighlight2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IScreenHighlight2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IScreenHighlight2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IScreenHighlight2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IScreenHighlight2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IScreenHighlight2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IScreenHighlight2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IScreenHighlight2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IScreenHighlight2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Color )( 
-            IScreenHighlight2 * This,
-            /* [retval][out] */ long *plColor);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Color )( 
-            IScreenHighlight2 * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Color)(
+            IScreenHighlight2* This,
+            /* [retval][out] */ long* plColor);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Color)(
+            IScreenHighlight2* This,
             /* [in] */ long plColor);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IScreenHighlight2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnable);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
-            IScreenHighlight2 * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IScreenHighlight2* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnable);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Enabled)(
+            IScreenHighlight2* This,
             /* [in] */ VARIANT_BOOL pbEnable);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Invert )( 
-            IScreenHighlight2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pbInvert);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Invert )( 
-            IScreenHighlight2 * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Invert)(
+            IScreenHighlight2* This,
+            /* [retval][out] */ VARIANT_BOOL* pbInvert);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Invert)(
+            IScreenHighlight2* This,
             /* [in] */ VARIANT_BOOL pbInvert);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IScreenHighlight2 * This,
-            /* [retval][out] */ IRectangle **pLocation);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Location )( 
-            IScreenHighlight2 * This,
-            /* [in] */ IRectangle *pLocation);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Mode )( 
-            IScreenHighlight2 * This,
-            /* [retval][out] */ long *plMode);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Mode )( 
-            IScreenHighlight2 * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IScreenHighlight2* This,
+            /* [retval][out] */ IRectangle** pLocation);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Location)(
+            IScreenHighlight2* This,
+            /* [in] */ IRectangle* pLocation);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Mode)(
+            IScreenHighlight2* This,
+            /* [retval][out] */ long* plMode);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Mode)(
+            IScreenHighlight2* This,
             /* [in] */ long plMode);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Padding )( 
-            IScreenHighlight2 * This,
-            /* [retval][out] */ long *plPadding);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Padding )( 
-            IScreenHighlight2 * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Padding)(
+            IScreenHighlight2* This,
+            /* [retval][out] */ long* plPadding);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Padding)(
+            IScreenHighlight2* This,
             /* [in] */ long plPadding);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Shape )( 
-            IScreenHighlight2 * This,
-            /* [retval][out] */ long *plShape);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Shape )( 
-            IScreenHighlight2 * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Shape)(
+            IScreenHighlight2* This,
+            /* [retval][out] */ long* plShape);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Shape)(
+            IScreenHighlight2* This,
             /* [in] */ long plShape);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Thickness )( 
-            IScreenHighlight2 * This,
-            /* [retval][out] */ long *plThickness);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Thickness )( 
-            IScreenHighlight2 * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Thickness)(
+            IScreenHighlight2* This,
+            /* [retval][out] */ long* plThickness);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Thickness)(
+            IScreenHighlight2* This,
             /* [in] */ long plThickness);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Timeout )( 
-            IScreenHighlight2 * This,
-            /* [retval][out] */ long *plTimeout);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Timeout )( 
-            IScreenHighlight2 * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Timeout)(
+            IScreenHighlight2* This,
+            /* [retval][out] */ long* plTimeout);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Timeout)(
+            IScreenHighlight2* This,
             /* [in] */ long plTimeout);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Transparency )( 
-            IScreenHighlight2 * This,
-            /* [retval][out] */ long *plTransparency);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Transparency )( 
-            IScreenHighlight2 * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Transparency)(
+            IScreenHighlight2* This,
+            /* [retval][out] */ long* plTransparency);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Transparency)(
+            IScreenHighlight2* This,
             /* [in] */ long plTransparency);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *UseFocusEnhancementSettings )( 
-            IScreenHighlight2 * This);
-        
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* UseFocusEnhancementSettings)(
+            IScreenHighlight2* This);
+
         END_INTERFACE
     } IScreenHighlight2Vtbl;
 
     interface IScreenHighlight2
     {
-        CONST_VTBL struct IScreenHighlight2Vtbl *lpVtbl;
+        CONST_VTBL struct IScreenHighlight2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -6469,135 +6469,135 @@ EXTERN_C const IID IID_IScreenHighlight2;
 #ifndef __ICCTV_INTERFACE_DEFINED__
 #define __ICCTV_INTERFACE_DEFINED__
 
-/* interface ICCTV */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ICCTV */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ICCTV;
+    EXTERN_C const IID IID_ICCTV;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("050E0E11-3D0A-4F6E-A634-C2270E30DC1B")
-    ICCTV : public IDispatch
+        ICCTV : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnable) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled(
+            /* [retval][out] */ VARIANT_BOOL * pbEnable) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Enabled(
             /* [in] */ VARIANT_BOOL pbEnable) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE SetResolution( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE SetResolution(
             /* [in] */ long width,
             /* [in] */ long height) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE SetLocation( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE SetLocation(
             /* [in] */ long left,
             /* [in] */ long top,
             /* [in] */ long right,
             /* [in] */ long bottom) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE SetStreamsOffset( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE SetStreamsOffset(
             /* [in] */ long x,
             /* [in] */ long y) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CenterStream( void) = 0;
-        
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CenterStream(void) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ICCTVVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ICCTV * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ICCTV * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ICCTV * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ICCTV * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ICCTV * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ICCTV* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ICCTV* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ICCTV* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ICCTV* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ICCTV* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ICCTV * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ICCTV* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ICCTV * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ICCTV* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            ICCTV * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnable);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
-            ICCTV * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            ICCTV* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnable);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Enabled)(
+            ICCTV* This,
             /* [in] */ VARIANT_BOOL pbEnable);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetResolution )( 
-            ICCTV * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetResolution)(
+            ICCTV* This,
             /* [in] */ long width,
             /* [in] */ long height);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetLocation )( 
-            ICCTV * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetLocation)(
+            ICCTV* This,
             /* [in] */ long left,
             /* [in] */ long top,
             /* [in] */ long right,
             /* [in] */ long bottom);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetStreamsOffset )( 
-            ICCTV * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetStreamsOffset)(
+            ICCTV* This,
             /* [in] */ long x,
             /* [in] */ long y);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *CenterStream )( 
-            ICCTV * This);
-        
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* CenterStream)(
+            ICCTV* This);
+
         END_INTERFACE
     } ICCTVVtbl;
 
     interface ICCTV
     {
-        CONST_VTBL struct ICCTVVtbl *lpVtbl;
+        CONST_VTBL struct ICCTVVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -6657,118 +6657,118 @@ EXTERN_C const IID IID_ICCTV;
 #ifndef __IMouse_INTERFACE_DEFINED__
 #define __IMouse_INTERFACE_DEFINED__
 
-/* interface IMouse */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IMouse */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IMouse;
+    EXTERN_C const IID IID_IMouse;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("4C2662B3-4CF7-4B05-B0B0-53AE74EE8D5D")
-    IMouse : public IDispatch
+        IMouse : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Location( 
-            /* [retval][out] */ IPoint **pPoint) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Location( 
-            /* [in] */ IPoint *pPoint) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Click( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Location(
+            /* [retval][out] */ IPoint * *pPoint) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Location(
+            /* [in] */ IPoint* pPoint) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Click(
             /* [in] */ BSTR pButton) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DoubleClick( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DoubleClick(
             /* [in] */ BSTR pButton) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE MoveToView( void) = 0;
-        
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE MoveToView(void) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IMouseVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IMouse * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IMouse * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IMouse * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IMouse * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IMouse * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IMouse* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IMouse* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IMouse* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IMouse* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IMouse* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IMouse * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IMouse* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IMouse * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IMouse* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IMouse * This,
-            /* [retval][out] */ IPoint **pPoint);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Location )( 
-            IMouse * This,
-            /* [in] */ IPoint *pPoint);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Click )( 
-            IMouse * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IMouse* This,
+            /* [retval][out] */ IPoint** pPoint);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Location)(
+            IMouse* This,
+            /* [in] */ IPoint* pPoint);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Click)(
+            IMouse* This,
             /* [in] */ BSTR pButton);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *DoubleClick )( 
-            IMouse * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* DoubleClick)(
+            IMouse* This,
             /* [in] */ BSTR pButton);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *MoveToView )( 
-            IMouse * This);
-        
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* MoveToView)(
+            IMouse* This);
+
         END_INTERFACE
     } IMouseVtbl;
 
     interface IMouse
     {
-        CONST_VTBL struct IMouseVtbl *lpVtbl;
+        CONST_VTBL struct IMouseVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -6825,143 +6825,143 @@ EXTERN_C const IID IID_IMouse;
 #ifndef __IPoint_INTERFACE_DEFINED__
 #define __IPoint_INTERFACE_DEFINED__
 
-/* interface IPoint */
-/* [object][oleautomation][dual][uuid] */ 
+    /* interface IPoint */
+    /* [object][oleautomation][dual][uuid] */
 
 
-EXTERN_C const IID IID_IPoint;
+    EXTERN_C const IID IID_IPoint;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("E9BED2BF-8834-49F9-AD4C-12C3CF7373AD")
-    IPoint : public IDispatch
+        IPoint : public IDispatch
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Clear( void) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Set( 
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Clear(void) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Set(
             /* [in] */ long x,
             /* [in] */ long y) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Copy( 
-            /* [in] */ IPoint *copyPoint) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Equals( 
-            /* [in] */ IPoint *rhsPoint,
-            /* [retval][out] */ VARIANT_BOOL *pRetVal) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_x( 
-            /* [retval][out] */ long *pRetVal) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_x( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Copy(
+            /* [in] */ IPoint* copyPoint) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Equals(
+            /* [in] */ IPoint* rhsPoint,
+            /* [retval][out] */ VARIANT_BOOL* pRetVal) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_x(
+            /* [retval][out] */ long* pRetVal) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_x(
             /* [in] */ long pRetVal) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_y( 
-            /* [retval][out] */ long *pRetVal) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_y( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_y(
+            /* [retval][out] */ long* pRetVal) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_y(
             /* [in] */ long pRetVal) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IPointVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IPoint * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IPoint * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IPoint * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IPoint * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IPoint * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IPoint* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IPoint* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IPoint* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IPoint* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IPoint* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IPoint * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IPoint* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IPoint * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IPoint* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Clear )( 
-            IPoint * This);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Set )( 
-            IPoint * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Clear)(
+            IPoint* This);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Set)(
+            IPoint* This,
             /* [in] */ long x,
             /* [in] */ long y);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Copy )( 
-            IPoint * This,
-            /* [in] */ IPoint *copyPoint);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Equals )( 
-            IPoint * This,
-            /* [in] */ IPoint *rhsPoint,
-            /* [retval][out] */ VARIANT_BOOL *pRetVal);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_x )( 
-            IPoint * This,
-            /* [retval][out] */ long *pRetVal);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_x )( 
-            IPoint * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Copy)(
+            IPoint* This,
+            /* [in] */ IPoint* copyPoint);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Equals)(
+            IPoint* This,
+            /* [in] */ IPoint* rhsPoint,
+            /* [retval][out] */ VARIANT_BOOL* pRetVal);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_x)(
+            IPoint* This,
+            /* [retval][out] */ long* pRetVal);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_x)(
+            IPoint* This,
             /* [in] */ long pRetVal);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_y )( 
-            IPoint * This,
-            /* [retval][out] */ long *pRetVal);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_y )( 
-            IPoint * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_y)(
+            IPoint* This,
+            /* [retval][out] */ long* pRetVal);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_y)(
+            IPoint* This,
             /* [in] */ long pRetVal);
-        
+
         END_INTERFACE
     } IPointVtbl;
 
     interface IPoint
     {
-        CONST_VTBL struct IPointVtbl *lpVtbl;
+        CONST_VTBL struct IPointVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -7027,120 +7027,120 @@ EXTERN_C const IID IID_IPoint;
 #ifndef __IReader_INTERFACE_DEFINED__
 #define __IReader_INTERFACE_DEFINED__
 
-/* interface IReader */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IReader */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IReader;
+    EXTERN_C const IID IID_IReader;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("CDE9E8A8-03A7-4413-86A3-ACA30F305AC1")
-    IReader : public IDispatch
+        IReader : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_AppReader( 
-            /* [retval][out] */ IAppReader **ppAppReader) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_MouseEcho( 
-            /* [retval][out] */ IMouseEcho **ppMouseEcho) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ReadingZones( 
-            /* [retval][out] */ IReadingZones **ppReadingZones) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_TypingEcho( 
-            /* [retval][out] */ ITypingEcho **ppTypingEcho) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Verbosity( 
-            /* [retval][out] */ IVerbosity **ppVerbosity) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_AppReader(
+            /* [retval][out] */ IAppReader * *ppAppReader) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_MouseEcho(
+            /* [retval][out] */ IMouseEcho** ppMouseEcho) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ReadingZones(
+            /* [retval][out] */ IReadingZones** ppReadingZones) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_TypingEcho(
+            /* [retval][out] */ ITypingEcho** ppTypingEcho) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Verbosity(
+            /* [retval][out] */ IVerbosity** ppVerbosity) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IReaderVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IReader * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IReader * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IReader * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IReader * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IReader * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IReader* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IReader* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IReader* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IReader* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IReader* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IReader * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IReader* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IReader * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IReader* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AppReader )( 
-            IReader * This,
-            /* [retval][out] */ IAppReader **ppAppReader);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MouseEcho )( 
-            IReader * This,
-            /* [retval][out] */ IMouseEcho **ppMouseEcho);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReadingZones )( 
-            IReader * This,
-            /* [retval][out] */ IReadingZones **ppReadingZones);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TypingEcho )( 
-            IReader * This,
-            /* [retval][out] */ ITypingEcho **ppTypingEcho);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Verbosity )( 
-            IReader * This,
-            /* [retval][out] */ IVerbosity **ppVerbosity);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_AppReader)(
+            IReader* This,
+            /* [retval][out] */ IAppReader** ppAppReader);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_MouseEcho)(
+            IReader* This,
+            /* [retval][out] */ IMouseEcho** ppMouseEcho);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ReadingZones)(
+            IReader* This,
+            /* [retval][out] */ IReadingZones** ppReadingZones);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TypingEcho)(
+            IReader* This,
+            /* [retval][out] */ ITypingEcho** ppTypingEcho);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Verbosity)(
+            IReader* This,
+            /* [retval][out] */ IVerbosity** ppVerbosity);
+
         END_INTERFACE
     } IReaderVtbl;
 
     interface IReader
     {
-        CONST_VTBL struct IReaderVtbl *lpVtbl;
+        CONST_VTBL struct IReaderVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -7197,112 +7197,112 @@ EXTERN_C const IID IID_IReader;
 #ifndef __IReader2_INTERFACE_DEFINED__
 #define __IReader2_INTERFACE_DEFINED__
 
-/* interface IReader2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IReader2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IReader2;
+    EXTERN_C const IID IID_IReader2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("5F41AADC-84DC-445D-BB22-0FDE09B95E91")
-    IReader2 : public IReader
+        IReader2 : public IReader
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ProgramEcho( 
-            /* [retval][out] */ IProgramEcho **ppProgramEcho) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ProgramEcho(
+            /* [retval][out] */ IProgramEcho * *ppProgramEcho) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IReader2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IReader2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IReader2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IReader2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IReader2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IReader2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IReader2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IReader2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IReader2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IReader2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IReader2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IReader2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IReader2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IReader2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IReader2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AppReader )( 
-            IReader2 * This,
-            /* [retval][out] */ IAppReader **ppAppReader);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MouseEcho )( 
-            IReader2 * This,
-            /* [retval][out] */ IMouseEcho **ppMouseEcho);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReadingZones )( 
-            IReader2 * This,
-            /* [retval][out] */ IReadingZones **ppReadingZones);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TypingEcho )( 
-            IReader2 * This,
-            /* [retval][out] */ ITypingEcho **ppTypingEcho);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Verbosity )( 
-            IReader2 * This,
-            /* [retval][out] */ IVerbosity **ppVerbosity);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ProgramEcho )( 
-            IReader2 * This,
-            /* [retval][out] */ IProgramEcho **ppProgramEcho);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_AppReader)(
+            IReader2* This,
+            /* [retval][out] */ IAppReader** ppAppReader);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_MouseEcho)(
+            IReader2* This,
+            /* [retval][out] */ IMouseEcho** ppMouseEcho);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ReadingZones)(
+            IReader2* This,
+            /* [retval][out] */ IReadingZones** ppReadingZones);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TypingEcho)(
+            IReader2* This,
+            /* [retval][out] */ ITypingEcho** ppTypingEcho);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Verbosity)(
+            IReader2* This,
+            /* [retval][out] */ IVerbosity** ppVerbosity);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ProgramEcho)(
+            IReader2* This,
+            /* [retval][out] */ IProgramEcho** ppProgramEcho);
+
         END_INTERFACE
     } IReader2Vtbl;
 
     interface IReader2
     {
-        CONST_VTBL struct IReader2Vtbl *lpVtbl;
+        CONST_VTBL struct IReader2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -7363,123 +7363,123 @@ EXTERN_C const IID IID_IReader2;
 #ifndef __IReader3_INTERFACE_DEFINED__
 #define __IReader3_INTERFACE_DEFINED__
 
-/* interface IReader3 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IReader3 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IReader3;
+    EXTERN_C const IID IID_IReader3;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("129E7A0E-9E23-469D-A2CA-DE3BAECAF45D")
-    IReader3 : public IReader2
+        IReader3 : public IReader2
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_DocReader( 
-            /* [retval][out] */ IDocReader **ppDocReader) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Recorder( 
-            /* [retval][out] */ IRecorder **ppRecorder) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_DocReader(
+            /* [retval][out] */ IDocReader * *ppDocReader) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Recorder(
+            /* [retval][out] */ IRecorder** ppRecorder) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IReader3Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IReader3 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IReader3 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IReader3 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IReader3 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IReader3 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IReader3* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IReader3* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IReader3* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IReader3* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IReader3* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IReader3 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IReader3* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IReader3 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IReader3* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AppReader )( 
-            IReader3 * This,
-            /* [retval][out] */ IAppReader **ppAppReader);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MouseEcho )( 
-            IReader3 * This,
-            /* [retval][out] */ IMouseEcho **ppMouseEcho);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReadingZones )( 
-            IReader3 * This,
-            /* [retval][out] */ IReadingZones **ppReadingZones);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TypingEcho )( 
-            IReader3 * This,
-            /* [retval][out] */ ITypingEcho **ppTypingEcho);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Verbosity )( 
-            IReader3 * This,
-            /* [retval][out] */ IVerbosity **ppVerbosity);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ProgramEcho )( 
-            IReader3 * This,
-            /* [retval][out] */ IProgramEcho **ppProgramEcho);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DocReader )( 
-            IReader3 * This,
-            /* [retval][out] */ IDocReader **ppDocReader);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Recorder )( 
-            IReader3 * This,
-            /* [retval][out] */ IRecorder **ppRecorder);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_AppReader)(
+            IReader3* This,
+            /* [retval][out] */ IAppReader** ppAppReader);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_MouseEcho)(
+            IReader3* This,
+            /* [retval][out] */ IMouseEcho** ppMouseEcho);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ReadingZones)(
+            IReader3* This,
+            /* [retval][out] */ IReadingZones** ppReadingZones);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TypingEcho)(
+            IReader3* This,
+            /* [retval][out] */ ITypingEcho** ppTypingEcho);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Verbosity)(
+            IReader3* This,
+            /* [retval][out] */ IVerbosity** ppVerbosity);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ProgramEcho)(
+            IReader3* This,
+            /* [retval][out] */ IProgramEcho** ppProgramEcho);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_DocReader)(
+            IReader3* This,
+            /* [retval][out] */ IDocReader** ppDocReader);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Recorder)(
+            IReader3* This,
+            /* [retval][out] */ IRecorder** ppRecorder);
+
         END_INTERFACE
     } IReader3Vtbl;
 
     interface IReader3
     {
-        CONST_VTBL struct IReader3Vtbl *lpVtbl;
+        CONST_VTBL struct IReader3Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -7547,102 +7547,102 @@ EXTERN_C const IID IID_IReader3;
 #ifndef __IAppReader_INTERFACE_DEFINED__
 #define __IAppReader_INTERFACE_DEFINED__
 
-/* interface IAppReader */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IAppReader */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IAppReader;
+    EXTERN_C const IID IID_IAppReader;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("C4C5A470-4F53-4BBF-A534-BA88E9FBBE5F")
-    IAppReader : public IDispatch
+        IAppReader : public IDispatch
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Start( void) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE StartAtPoint( 
-            IPoint *pPoint) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Stop( void) = 0;
-        
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Start(void) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE StartAtPoint(
+            IPoint* pPoint) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Stop(void) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IAppReaderVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IAppReader * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IAppReader * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IAppReader * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IAppReader * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IAppReader * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IAppReader* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IAppReader* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IAppReader* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IAppReader* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IAppReader* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IAppReader * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IAppReader* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IAppReader * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IAppReader* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Start )( 
-            IAppReader * This);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *StartAtPoint )( 
-            IAppReader * This,
-            IPoint *pPoint);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Stop )( 
-            IAppReader * This);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Start)(
+            IAppReader* This);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* StartAtPoint)(
+            IAppReader* This,
+            IPoint* pPoint);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Stop)(
+            IAppReader* This);
+
         END_INTERFACE
     } IAppReaderVtbl;
 
     interface IAppReader
     {
-        CONST_VTBL struct IAppReaderVtbl *lpVtbl;
+        CONST_VTBL struct IAppReaderVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -7693,99 +7693,99 @@ EXTERN_C const IID IID_IAppReader;
 #ifndef __IMouseEcho_INTERFACE_DEFINED__
 #define __IMouseEcho_INTERFACE_DEFINED__
 
-/* interface IMouseEcho */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IMouseEcho */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IMouseEcho;
+    EXTERN_C const IID IID_IMouseEcho;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("1203B332-4EF0-41FD-BC24-763503B8DC90")
-    IMouseEcho : public IDispatch
+        IMouseEcho : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Mode( 
-            /* [retval][out] */ BSTR *pstrMode) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Mode( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Mode(
+            /* [retval][out] */ BSTR * pstrMode) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Mode(
             /* [in] */ BSTR pstrMode) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IMouseEchoVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IMouseEcho * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IMouseEcho * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IMouseEcho * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IMouseEcho * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IMouseEcho * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IMouseEcho* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IMouseEcho* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IMouseEcho* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IMouseEcho* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IMouseEcho* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IMouseEcho * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IMouseEcho* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IMouseEcho * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IMouseEcho* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Mode )( 
-            IMouseEcho * This,
-            /* [retval][out] */ BSTR *pstrMode);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Mode )( 
-            IMouseEcho * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Mode)(
+            IMouseEcho* This,
+            /* [retval][out] */ BSTR* pstrMode);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Mode)(
+            IMouseEcho* This,
             /* [in] */ BSTR pstrMode);
-        
+
         END_INTERFACE
     } IMouseEchoVtbl;
 
     interface IMouseEcho
     {
-        CONST_VTBL struct IMouseEchoVtbl *lpVtbl;
+        CONST_VTBL struct IMouseEchoVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -7833,118 +7833,118 @@ EXTERN_C const IID IID_IMouseEcho;
 #ifndef __IReadingZones_INTERFACE_DEFINED__
 #define __IReadingZones_INTERFACE_DEFINED__
 
-/* interface IReadingZones */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IReadingZones */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IReadingZones;
+    EXTERN_C const IID IID_IReadingZones;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("A0A71491-2B73-43F3-9E6B-5A9FDDDDC3D1")
-    IReadingZones : public IDispatch
+        IReadingZones : public IDispatch
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateZone( 
-            /* [in] */ IReadingZoneObject *pZone) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DeleteZone( 
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateZone(
+            /* [in] */ IReadingZoneObject * pZone) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DeleteZone(
             /* [in] */ BSTR ApplicationName,
             /* [in] */ long ZoneID) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE ToggleZone( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE ToggleZone(
             /* [in] */ long lZoneNum) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE NextZone( void) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE PreviousZone( void) = 0;
-        
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE NextZone(void) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE PreviousZone(void) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IReadingZonesVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IReadingZones * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IReadingZones * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IReadingZones * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IReadingZones * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IReadingZones * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IReadingZones* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IReadingZones* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IReadingZones* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IReadingZones* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IReadingZones* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IReadingZones * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IReadingZones* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IReadingZones * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IReadingZones* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *CreateZone )( 
-            IReadingZones * This,
-            /* [in] */ IReadingZoneObject *pZone);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *DeleteZone )( 
-            IReadingZones * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* CreateZone)(
+            IReadingZones* This,
+            /* [in] */ IReadingZoneObject* pZone);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* DeleteZone)(
+            IReadingZones* This,
             /* [in] */ BSTR ApplicationName,
             /* [in] */ long ZoneID);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *ToggleZone )( 
-            IReadingZones * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* ToggleZone)(
+            IReadingZones* This,
             /* [in] */ long lZoneNum);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *NextZone )( 
-            IReadingZones * This);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *PreviousZone )( 
-            IReadingZones * This);
-        
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* NextZone)(
+            IReadingZones* This);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* PreviousZone)(
+            IReadingZones* This);
+
         END_INTERFACE
     } IReadingZonesVtbl;
 
     interface IReadingZones
     {
-        CONST_VTBL struct IReadingZonesVtbl *lpVtbl;
+        CONST_VTBL struct IReadingZonesVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -8001,204 +8001,204 @@ EXTERN_C const IID IID_IReadingZones;
 #ifndef __IReadingZoneObject_INTERFACE_DEFINED__
 #define __IReadingZoneObject_INTERFACE_DEFINED__
 
-/* interface IReadingZoneObject */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IReadingZoneObject */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IReadingZoneObject;
+    EXTERN_C const IID IID_IReadingZoneObject;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("CB508DD4-5076-4B3C-B792-629D6C37AF41")
-    IReadingZoneObject : public IDispatch
+        IReadingZoneObject : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Name( 
-            /* [retval][out] */ BSTR *pstrName) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Name( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Name(
+            /* [retval][out] */ BSTR * pstrName) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Name(
             /* [in] */ BSTR pstrName) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Location( 
-            /* [retval][out] */ IRectangle **ppLocation) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Location( 
-            /* [in] */ IRectangle *ppLocation) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ApplicationName( 
-            /* [retval][out] */ BSTR *pstrAppName) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ApplicationName( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Location(
+            /* [retval][out] */ IRectangle** ppLocation) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Location(
+            /* [in] */ IRectangle* ppLocation) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ApplicationName(
+            /* [retval][out] */ BSTR* pstrAppName) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ApplicationName(
             /* [in] */ BSTR pstrAppName) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Anchor( 
-            /* [retval][out] */ BSTR *pstrAnchor) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Anchor( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Anchor(
+            /* [retval][out] */ BSTR* pstrAnchor) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Anchor(
             /* [in] */ BSTR pstrAnchor) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Action( 
-            /* [retval][out] */ BSTR *pstrAction) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Action( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Action(
+            /* [retval][out] */ BSTR* pstrAction) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Action(
             /* [in] */ BSTR pstrAction) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_HighlightTime( 
-            /* [retval][out] */ float *pfSeconds) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_HighlightTime( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_HighlightTime(
+            /* [retval][out] */ float* pfSeconds) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_HighlightTime(
             /* [in] */ float pfSeconds) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ReturnToPreviousLocation( 
-            /* [retval][out] */ VARIANT_BOOL *pbReturns) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ReturnToPreviousLocation( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ReturnToPreviousLocation(
+            /* [retval][out] */ VARIANT_BOOL* pbReturns) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ReturnToPreviousLocation(
             /* [in] */ VARIANT_BOOL pbReturns) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_DimAreaOutside( 
-            /* [retval][out] */ VARIANT_BOOL *pbDims) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_DimAreaOutside( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_DimAreaOutside(
+            /* [retval][out] */ VARIANT_BOOL* pbDims) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_DimAreaOutside(
             /* [in] */ VARIANT_BOOL pbDims) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ZoneID( 
-            /* [retval][out] */ long *pId) = 0;
-        
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ZoneID(
+            /* [retval][out] */ long* pId) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IReadingZoneObjectVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IReadingZoneObject * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IReadingZoneObject * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IReadingZoneObject * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IReadingZoneObject * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IReadingZoneObject * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IReadingZoneObject* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IReadingZoneObject* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IReadingZoneObject* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IReadingZoneObject* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IReadingZoneObject* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IReadingZoneObject * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IReadingZoneObject* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IReadingZoneObject * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IReadingZoneObject* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Name )( 
-            IReadingZoneObject * This,
-            /* [retval][out] */ BSTR *pstrName);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Name )( 
-            IReadingZoneObject * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Name)(
+            IReadingZoneObject* This,
+            /* [retval][out] */ BSTR* pstrName);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Name)(
+            IReadingZoneObject* This,
             /* [in] */ BSTR pstrName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IReadingZoneObject * This,
-            /* [retval][out] */ IRectangle **ppLocation);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Location )( 
-            IReadingZoneObject * This,
-            /* [in] */ IRectangle *ppLocation);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ApplicationName )( 
-            IReadingZoneObject * This,
-            /* [retval][out] */ BSTR *pstrAppName);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ApplicationName )( 
-            IReadingZoneObject * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IReadingZoneObject* This,
+            /* [retval][out] */ IRectangle** ppLocation);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Location)(
+            IReadingZoneObject* This,
+            /* [in] */ IRectangle* ppLocation);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ApplicationName)(
+            IReadingZoneObject* This,
+            /* [retval][out] */ BSTR* pstrAppName);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_ApplicationName)(
+            IReadingZoneObject* This,
             /* [in] */ BSTR pstrAppName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Anchor )( 
-            IReadingZoneObject * This,
-            /* [retval][out] */ BSTR *pstrAnchor);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Anchor )( 
-            IReadingZoneObject * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Anchor)(
+            IReadingZoneObject* This,
+            /* [retval][out] */ BSTR* pstrAnchor);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Anchor)(
+            IReadingZoneObject* This,
             /* [in] */ BSTR pstrAnchor);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Action )( 
-            IReadingZoneObject * This,
-            /* [retval][out] */ BSTR *pstrAction);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Action )( 
-            IReadingZoneObject * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Action)(
+            IReadingZoneObject* This,
+            /* [retval][out] */ BSTR* pstrAction);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Action)(
+            IReadingZoneObject* This,
             /* [in] */ BSTR pstrAction);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HighlightTime )( 
-            IReadingZoneObject * This,
-            /* [retval][out] */ float *pfSeconds);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_HighlightTime )( 
-            IReadingZoneObject * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HighlightTime)(
+            IReadingZoneObject* This,
+            /* [retval][out] */ float* pfSeconds);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_HighlightTime)(
+            IReadingZoneObject* This,
             /* [in] */ float pfSeconds);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReturnToPreviousLocation )( 
-            IReadingZoneObject * This,
-            /* [retval][out] */ VARIANT_BOOL *pbReturns);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ReturnToPreviousLocation )( 
-            IReadingZoneObject * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ReturnToPreviousLocation)(
+            IReadingZoneObject* This,
+            /* [retval][out] */ VARIANT_BOOL* pbReturns);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_ReturnToPreviousLocation)(
+            IReadingZoneObject* This,
             /* [in] */ VARIANT_BOOL pbReturns);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DimAreaOutside )( 
-            IReadingZoneObject * This,
-            /* [retval][out] */ VARIANT_BOOL *pbDims);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_DimAreaOutside )( 
-            IReadingZoneObject * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_DimAreaOutside)(
+            IReadingZoneObject* This,
+            /* [retval][out] */ VARIANT_BOOL* pbDims);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_DimAreaOutside)(
+            IReadingZoneObject* This,
             /* [in] */ VARIANT_BOOL pbDims);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ZoneID )( 
-            IReadingZoneObject * This,
-            /* [retval][out] */ long *pId);
-        
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ZoneID)(
+            IReadingZoneObject* This,
+            /* [retval][out] */ long* pId);
+
         END_INTERFACE
     } IReadingZoneObjectVtbl;
 
     interface IReadingZoneObject
     {
-        CONST_VTBL struct IReadingZoneObjectVtbl *lpVtbl;
+        CONST_VTBL struct IReadingZoneObjectVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -8291,99 +8291,99 @@ EXTERN_C const IID IID_IReadingZoneObject;
 #ifndef __ITypingEcho_INTERFACE_DEFINED__
 #define __ITypingEcho_INTERFACE_DEFINED__
 
-/* interface ITypingEcho */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ITypingEcho */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ITypingEcho;
+    EXTERN_C const IID IID_ITypingEcho;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("865C25B5-9A75-4E41-B182-DCA1768255E3")
-    ITypingEcho : public IDispatch
+        ITypingEcho : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Mode( 
-            /* [retval][out] */ BSTR *pstrMode) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Mode( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Mode(
+            /* [retval][out] */ BSTR * pstrMode) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Mode(
             /* [in] */ BSTR pstrMode) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ITypingEchoVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ITypingEcho * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ITypingEcho * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ITypingEcho * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ITypingEcho * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ITypingEcho * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ITypingEcho* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ITypingEcho* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ITypingEcho* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ITypingEcho* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ITypingEcho* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ITypingEcho * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ITypingEcho* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ITypingEcho * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ITypingEcho* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Mode )( 
-            ITypingEcho * This,
-            /* [retval][out] */ BSTR *pstrMode);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Mode )( 
-            ITypingEcho * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Mode)(
+            ITypingEcho* This,
+            /* [retval][out] */ BSTR* pstrMode);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Mode)(
+            ITypingEcho* This,
             /* [in] */ BSTR pstrMode);
-        
+
         END_INTERFACE
     } ITypingEchoVtbl;
 
     interface ITypingEcho
     {
-        CONST_VTBL struct ITypingEchoVtbl *lpVtbl;
+        CONST_VTBL struct ITypingEchoVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -8431,121 +8431,121 @@ EXTERN_C const IID IID_ITypingEcho;
 #ifndef __IVerbosity_INTERFACE_DEFINED__
 #define __IVerbosity_INTERFACE_DEFINED__
 
-/* interface IVerbosity */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IVerbosity */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IVerbosity;
+    EXTERN_C const IID IID_IVerbosity;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("7F5432AA-9729-4FD3-A783-2C02FABE5B86")
-    IVerbosity : public IDispatch
+        IVerbosity : public IDispatch
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetSetting( 
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetSetting(
             /* [in] */ BSTR bstrLevel,
             /* [in] */ BSTR bstrValueName,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE SetSetting( 
+            /* [retval][out] */ VARIANT_BOOL * pbEnabled) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE SetSetting(
             /* [in] */ BSTR bstrLevel,
             /* [in] */ BSTR bstrValueName,
             /* [in] */ VARIANT_BOOL bEnabled) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Level( 
-            /* [retval][out] */ BSTR *pstrLevel) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Level( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Level(
+            /* [retval][out] */ BSTR* pstrLevel) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Level(
             /* [in] */ BSTR pstrLevel) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IVerbosityVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IVerbosity * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IVerbosity * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IVerbosity * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IVerbosity * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IVerbosity * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IVerbosity* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IVerbosity* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IVerbosity* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IVerbosity* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IVerbosity* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IVerbosity * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IVerbosity* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IVerbosity * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IVerbosity* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *GetSetting )( 
-            IVerbosity * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* GetSetting)(
+            IVerbosity* This,
             /* [in] */ BSTR bstrLevel,
             /* [in] */ BSTR bstrValueName,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetSetting )( 
-            IVerbosity * This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetSetting)(
+            IVerbosity* This,
             /* [in] */ BSTR bstrLevel,
             /* [in] */ BSTR bstrValueName,
             /* [in] */ VARIANT_BOOL bEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Level )( 
-            IVerbosity * This,
-            /* [retval][out] */ BSTR *pstrLevel);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Level )( 
-            IVerbosity * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Level)(
+            IVerbosity* This,
+            /* [retval][out] */ BSTR* pstrLevel);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Level)(
+            IVerbosity* This,
             /* [in] */ BSTR pstrLevel);
-        
+
         END_INTERFACE
     } IVerbosityVtbl;
 
     interface IVerbosity
     {
-        CONST_VTBL struct IVerbosityVtbl *lpVtbl;
+        CONST_VTBL struct IVerbosityVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -8599,183 +8599,183 @@ EXTERN_C const IID IID_IVerbosity;
 #ifndef __IProgramEcho_INTERFACE_DEFINED__
 #define __IProgramEcho_INTERFACE_DEFINED__
 
-/* interface IProgramEcho */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IProgramEcho */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IProgramEcho;
+    EXTERN_C const IID IID_IProgramEcho;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("BFFF5140-BA03-40B0-8131-EC64673BC735")
-    IProgramEcho : public IDispatch
+        IProgramEcho : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_AlertsEnabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_AlertsEnabled( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_AlertsEnabled(
+            /* [retval][out] */ VARIANT_BOOL * pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_AlertsEnabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ControlsEnabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ControlsEnabled( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ControlsEnabled(
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ControlsEnabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_MenusEnabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_MenusEnabled( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_MenusEnabled(
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_MenusEnabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_TextCursorEchosLine( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_TextCursorEchosLine( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_TextCursorEchosLine(
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_TextCursorEchosLine(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_TextCursorEnabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_TextCursorEnabled( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_TextCursorEnabled(
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_TextCursorEnabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ToolTipsEnabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ToolTipsEnabled( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ToolTipsEnabled(
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ToolTipsEnabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_WindowTitlesEnabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_WindowTitlesEnabled( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_WindowTitlesEnabled(
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_WindowTitlesEnabled(
             /* [in] */ VARIANT_BOOL pbEnabled) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IProgramEchoVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IProgramEcho * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IProgramEcho * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IProgramEcho * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IProgramEcho * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IProgramEcho * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IProgramEcho* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IProgramEcho* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IProgramEcho* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IProgramEcho* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IProgramEcho* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IProgramEcho * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IProgramEcho* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IProgramEcho * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IProgramEcho* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AlertsEnabled )( 
-            IProgramEcho * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_AlertsEnabled )( 
-            IProgramEcho * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_AlertsEnabled)(
+            IProgramEcho* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_AlertsEnabled)(
+            IProgramEcho* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ControlsEnabled )( 
-            IProgramEcho * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ControlsEnabled )( 
-            IProgramEcho * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ControlsEnabled)(
+            IProgramEcho* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_ControlsEnabled)(
+            IProgramEcho* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MenusEnabled )( 
-            IProgramEcho * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_MenusEnabled )( 
-            IProgramEcho * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_MenusEnabled)(
+            IProgramEcho* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_MenusEnabled)(
+            IProgramEcho* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TextCursorEchosLine )( 
-            IProgramEcho * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_TextCursorEchosLine )( 
-            IProgramEcho * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TextCursorEchosLine)(
+            IProgramEcho* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_TextCursorEchosLine)(
+            IProgramEcho* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TextCursorEnabled )( 
-            IProgramEcho * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_TextCursorEnabled )( 
-            IProgramEcho * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TextCursorEnabled)(
+            IProgramEcho* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_TextCursorEnabled)(
+            IProgramEcho* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ToolTipsEnabled )( 
-            IProgramEcho * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ToolTipsEnabled )( 
-            IProgramEcho * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ToolTipsEnabled)(
+            IProgramEcho* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_ToolTipsEnabled)(
+            IProgramEcho* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_WindowTitlesEnabled )( 
-            IProgramEcho * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_WindowTitlesEnabled )( 
-            IProgramEcho * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_WindowTitlesEnabled)(
+            IProgramEcho* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_WindowTitlesEnabled)(
+            IProgramEcho* This,
             /* [in] */ VARIANT_BOOL pbEnabled);
-        
+
         END_INTERFACE
     } IProgramEchoVtbl;
 
     interface IProgramEcho
     {
-        CONST_VTBL struct IProgramEchoVtbl *lpVtbl;
+        CONST_VTBL struct IProgramEchoVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -8859,95 +8859,95 @@ EXTERN_C const IID IID_IProgramEcho;
 #ifndef __IDocReader_INTERFACE_DEFINED__
 #define __IDocReader_INTERFACE_DEFINED__
 
-/* interface IDocReader */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IDocReader */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IDocReader;
+    EXTERN_C const IID IID_IDocReader;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("8423FBEB-FEAF-4248-9638-156A7543EA91")
-    IDocReader : public IDispatch
+        IDocReader : public IDispatch
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Start( void) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Stop( void) = 0;
-        
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Start(void) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Stop(void) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IDocReaderVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IDocReader * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IDocReader * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IDocReader * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IDocReader * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IDocReader * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IDocReader* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IDocReader* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IDocReader* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IDocReader* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IDocReader* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IDocReader * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IDocReader* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IDocReader * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IDocReader* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Start )( 
-            IDocReader * This);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Stop )( 
-            IDocReader * This);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Start)(
+            IDocReader* This);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Stop)(
+            IDocReader* This);
+
         END_INTERFACE
     } IDocReaderVtbl;
 
     interface IDocReader
     {
-        CONST_VTBL struct IDocReaderVtbl *lpVtbl;
+        CONST_VTBL struct IDocReaderVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -8995,90 +8995,90 @@ EXTERN_C const IID IID_IDocReader;
 #ifndef __IRecorder_INTERFACE_DEFINED__
 #define __IRecorder_INTERFACE_DEFINED__
 
-/* interface IRecorder */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IRecorder */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IRecorder;
+    EXTERN_C const IID IID_IRecorder;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("2AEB500E-85AD-4808-836B-2F1512697966")
-    IRecorder : public IDispatch
+        IRecorder : public IDispatch
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Start( void) = 0;
-        
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Start(void) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IRecorderVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IRecorder * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IRecorder * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IRecorder * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IRecorder * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IRecorder * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IRecorder* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IRecorder* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IRecorder* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IRecorder* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IRecorder* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IRecorder * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IRecorder* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IRecorder * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IRecorder* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Start )( 
-            IRecorder * This);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Start)(
+            IRecorder* This);
+
         END_INTERFACE
     } IRecorderVtbl;
 
     interface IRecorder
     {
-        CONST_VTBL struct IRecorderVtbl *lpVtbl;
+        CONST_VTBL struct IRecorderVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -9123,222 +9123,222 @@ EXTERN_C const IID IID_IRecorder;
 #ifndef __IScriptConfiguration_INTERFACE_DEFINED__
 #define __IScriptConfiguration_INTERFACE_DEFINED__
 
-/* interface IScriptConfiguration */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IScriptConfiguration */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IScriptConfiguration;
+    EXTERN_C const IID IID_IScriptConfiguration;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("FF065601-DC5C-49AD-AB8D-58325885BE0B")
-    IScriptConfiguration : public IDispatch
+        IScriptConfiguration : public IDispatch
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE RegisterScriptFile( 
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE RegisterScriptFile(
             /* [in] */ BSTR bsFilePath) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE RegisterScriptComponent( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE RegisterScriptComponent(
             /* [in] */ BSTR bsProgID) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE UnregisterScript( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE UnregisterScript(
             /* [in] */ BSTR bstrName) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE ScriptRegistered( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE ScriptRegistered(
             /* [in] */ BSTR bstrName,
-            /* [retval][out] */ VARIANT_BOOL *pbRegistered) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetFirstScript( 
-            /* [retval][out] */ BSTR *pbstrName) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetNextScript( 
+            /* [retval][out] */ VARIANT_BOOL* pbRegistered) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetFirstScript(
+            /* [retval][out] */ BSTR* pbstrName) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetNextScript(
             /* [in] */ BSTR bstrName,
-            /* [retval][out] */ BSTR *pbstrNext) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetScriptType( 
+            /* [retval][out] */ BSTR* pbstrNext) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetScriptType(
             /* [in] */ BSTR bstrName,
-            /* [retval][out] */ unsigned long *dwType) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE ScriptInitialized( 
+            /* [retval][out] */ unsigned long* dwType) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE ScriptInitialized(
             /* [in] */ BSTR bstrName,
-            /* [retval][out] */ VARIANT_BOOL *pbInitialized) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE ChangeScriptLoadOrder( 
+            /* [retval][out] */ VARIANT_BOOL* pbInitialized) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE ChangeScriptLoadOrder(
             /* [in] */ BSTR bstrScript,
             /* [in] */ int iPosChange) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE EnableScript( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE EnableScript(
             /* [in] */ BSTR bstrScript) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DisableScript( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DisableScript(
             /* [in] */ BSTR bstrScript) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE ScriptEnabled( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE ScriptEnabled(
             /* [in] */ BSTR bstrScript,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetScriptFileInformation( 
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetScriptFileInformation(
             /* [in] */ BSTR bstrScript,
-            /* [retval][out] */ IScriptInformation **pScriptInformation) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetScriptComponentInformation( 
+            /* [retval][out] */ IScriptInformation** pScriptInformation) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetScriptComponentInformation(
             /* [in] */ BSTR bstrScript,
-            /* [retval][out] */ IScriptInformation **pScriptInformation) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_RequireAdmin( 
-            /* [retval][out] */ VARIANT_BOOL *pbRequireAdmin) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_RequireAdmin( 
+            /* [retval][out] */ IScriptInformation** pScriptInformation) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_RequireAdmin(
+            /* [retval][out] */ VARIANT_BOOL* pbRequireAdmin) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_RequireAdmin(
             /* [in] */ VARIANT_BOOL pbRequireAdmin) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE SetScriptInformation( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE SetScriptInformation(
             /* [in] */ BSTR bstrScript,
-            /* [in] */ IScriptInformation *pScriptInformation) = 0;
-        
+            /* [in] */ IScriptInformation* pScriptInformation) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IScriptConfigurationVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IScriptConfiguration * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IScriptConfiguration * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IScriptConfiguration * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IScriptConfiguration * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IScriptConfiguration * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IScriptConfiguration* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IScriptConfiguration* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IScriptConfiguration* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IScriptConfiguration* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IScriptConfiguration* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IScriptConfiguration * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IScriptConfiguration* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IScriptConfiguration * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IScriptConfiguration* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *RegisterScriptFile )( 
-            IScriptConfiguration * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* RegisterScriptFile)(
+            IScriptConfiguration* This,
             /* [in] */ BSTR bsFilePath);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *RegisterScriptComponent )( 
-            IScriptConfiguration * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* RegisterScriptComponent)(
+            IScriptConfiguration* This,
             /* [in] */ BSTR bsProgID);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *UnregisterScript )( 
-            IScriptConfiguration * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* UnregisterScript)(
+            IScriptConfiguration* This,
             /* [in] */ BSTR bstrName);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *ScriptRegistered )( 
-            IScriptConfiguration * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* ScriptRegistered)(
+            IScriptConfiguration* This,
             /* [in] */ BSTR bstrName,
-            /* [retval][out] */ VARIANT_BOOL *pbRegistered);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *GetFirstScript )( 
-            IScriptConfiguration * This,
-            /* [retval][out] */ BSTR *pbstrName);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *GetNextScript )( 
-            IScriptConfiguration * This,
+            /* [retval][out] */ VARIANT_BOOL* pbRegistered);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* GetFirstScript)(
+            IScriptConfiguration* This,
+            /* [retval][out] */ BSTR* pbstrName);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* GetNextScript)(
+            IScriptConfiguration* This,
             /* [in] */ BSTR bstrName,
-            /* [retval][out] */ BSTR *pbstrNext);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *GetScriptType )( 
-            IScriptConfiguration * This,
+            /* [retval][out] */ BSTR* pbstrNext);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* GetScriptType)(
+            IScriptConfiguration* This,
             /* [in] */ BSTR bstrName,
-            /* [retval][out] */ unsigned long *dwType);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *ScriptInitialized )( 
-            IScriptConfiguration * This,
+            /* [retval][out] */ unsigned long* dwType);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* ScriptInitialized)(
+            IScriptConfiguration* This,
             /* [in] */ BSTR bstrName,
-            /* [retval][out] */ VARIANT_BOOL *pbInitialized);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *ChangeScriptLoadOrder )( 
-            IScriptConfiguration * This,
+            /* [retval][out] */ VARIANT_BOOL* pbInitialized);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* ChangeScriptLoadOrder)(
+            IScriptConfiguration* This,
             /* [in] */ BSTR bstrScript,
             /* [in] */ int iPosChange);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *EnableScript )( 
-            IScriptConfiguration * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* EnableScript)(
+            IScriptConfiguration* This,
             /* [in] */ BSTR bstrScript);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *DisableScript )( 
-            IScriptConfiguration * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* DisableScript)(
+            IScriptConfiguration* This,
             /* [in] */ BSTR bstrScript);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *ScriptEnabled )( 
-            IScriptConfiguration * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* ScriptEnabled)(
+            IScriptConfiguration* This,
             /* [in] */ BSTR bstrScript,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *GetScriptFileInformation )( 
-            IScriptConfiguration * This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* GetScriptFileInformation)(
+            IScriptConfiguration* This,
             /* [in] */ BSTR bstrScript,
-            /* [retval][out] */ IScriptInformation **pScriptInformation);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *GetScriptComponentInformation )( 
-            IScriptConfiguration * This,
+            /* [retval][out] */ IScriptInformation** pScriptInformation);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* GetScriptComponentInformation)(
+            IScriptConfiguration* This,
             /* [in] */ BSTR bstrScript,
-            /* [retval][out] */ IScriptInformation **pScriptInformation);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RequireAdmin )( 
-            IScriptConfiguration * This,
-            /* [retval][out] */ VARIANT_BOOL *pbRequireAdmin);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_RequireAdmin )( 
-            IScriptConfiguration * This,
+            /* [retval][out] */ IScriptInformation** pScriptInformation);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_RequireAdmin)(
+            IScriptConfiguration* This,
+            /* [retval][out] */ VARIANT_BOOL* pbRequireAdmin);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_RequireAdmin)(
+            IScriptConfiguration* This,
             /* [in] */ VARIANT_BOOL pbRequireAdmin);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetScriptInformation )( 
-            IScriptConfiguration * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetScriptInformation)(
+            IScriptConfiguration* This,
             /* [in] */ BSTR bstrScript,
-            /* [in] */ IScriptInformation *pScriptInformation);
-        
+            /* [in] */ IScriptInformation* pScriptInformation);
+
         END_INTERFACE
     } IScriptConfigurationVtbl;
 
     interface IScriptConfiguration
     {
-        CONST_VTBL struct IScriptConfigurationVtbl *lpVtbl;
+        CONST_VTBL struct IScriptConfigurationVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -9431,253 +9431,253 @@ EXTERN_C const IID IID_IScriptConfiguration;
 #ifndef __IScriptInformation_INTERFACE_DEFINED__
 #define __IScriptInformation_INTERFACE_DEFINED__
 
-/* interface IScriptInformation */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IScriptInformation */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IScriptInformation;
+    EXTERN_C const IID IID_IScriptInformation;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("FA636707-C09A-4FD9-8A1B-838A5A505A4C")
-    IScriptInformation : public IDispatch
+        IScriptInformation : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ScriptName( 
-            /* [retval][out] */ BSTR *pbstrData) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ScriptName( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ScriptName(
+            /* [retval][out] */ BSTR * pbstrData) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_ScriptName(
             /* [in] */ BSTR pbstrData) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Version( 
-            /* [retval][out] */ BSTR *pbstrData) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Version( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Version(
+            /* [retval][out] */ BSTR* pbstrData) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Version(
             /* [in] */ BSTR pbstrData) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Date( 
-            /* [retval][out] */ BSTR *pbstrData) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Date( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Date(
+            /* [retval][out] */ BSTR* pbstrData) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Date(
             /* [in] */ BSTR pbstrData) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Author( 
-            /* [retval][out] */ BSTR *pbstrData) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Author( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Author(
+            /* [retval][out] */ BSTR* pbstrData) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Author(
             /* [in] */ BSTR pbstrData) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Address1( 
-            /* [retval][out] */ BSTR *pbstrData) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Address1( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Address1(
+            /* [retval][out] */ BSTR* pbstrData) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Address1(
             /* [in] */ BSTR pbstrData) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Address2( 
-            /* [retval][out] */ BSTR *pbstrData) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Address2( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Address2(
+            /* [retval][out] */ BSTR* pbstrData) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Address2(
             /* [in] */ BSTR pbstrData) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Address3( 
-            /* [retval][out] */ BSTR *pbstrData) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Address3( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Address3(
+            /* [retval][out] */ BSTR* pbstrData) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Address3(
             /* [in] */ BSTR pbstrData) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Email( 
-            /* [retval][out] */ BSTR *pbstrData) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Email( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Email(
+            /* [retval][out] */ BSTR* pbstrData) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Email(
             /* [in] */ BSTR pbstrData) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Website( 
-            /* [retval][out] */ BSTR *pbstrData) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Website( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Website(
+            /* [retval][out] */ BSTR* pbstrData) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Website(
             /* [in] */ BSTR pbstrData) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Phone( 
-            /* [retval][out] */ BSTR *pbstrData) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Phone( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Phone(
+            /* [retval][out] */ BSTR* pbstrData) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Phone(
             /* [in] */ BSTR pbstrData) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Description( 
-            /* [retval][out] */ BSTR *pbstrData) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Description( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Description(
+            /* [retval][out] */ BSTR* pbstrData) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Description(
             /* [in] */ BSTR pbstrData) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Copyright( 
-            /* [retval][out] */ BSTR *pbstrData) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Copyright( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Copyright(
+            /* [retval][out] */ BSTR* pbstrData) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Copyright(
             /* [in] */ BSTR pbstrData) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IScriptInformationVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IScriptInformation * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IScriptInformation * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IScriptInformation * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IScriptInformation * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IScriptInformation * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IScriptInformation* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IScriptInformation* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IScriptInformation* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IScriptInformation* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IScriptInformation* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IScriptInformation * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IScriptInformation* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IScriptInformation * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IScriptInformation* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScriptName )( 
-            IScriptInformation * This,
-            /* [retval][out] */ BSTR *pbstrData);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ScriptName )( 
-            IScriptInformation * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ScriptName)(
+            IScriptInformation* This,
+            /* [retval][out] */ BSTR* pbstrData);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_ScriptName)(
+            IScriptInformation* This,
             /* [in] */ BSTR pbstrData);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Version )( 
-            IScriptInformation * This,
-            /* [retval][out] */ BSTR *pbstrData);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Version )( 
-            IScriptInformation * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Version)(
+            IScriptInformation* This,
+            /* [retval][out] */ BSTR* pbstrData);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Version)(
+            IScriptInformation* This,
             /* [in] */ BSTR pbstrData);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Date )( 
-            IScriptInformation * This,
-            /* [retval][out] */ BSTR *pbstrData);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Date )( 
-            IScriptInformation * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Date)(
+            IScriptInformation* This,
+            /* [retval][out] */ BSTR* pbstrData);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Date)(
+            IScriptInformation* This,
             /* [in] */ BSTR pbstrData);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Author )( 
-            IScriptInformation * This,
-            /* [retval][out] */ BSTR *pbstrData);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Author )( 
-            IScriptInformation * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Author)(
+            IScriptInformation* This,
+            /* [retval][out] */ BSTR* pbstrData);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Author)(
+            IScriptInformation* This,
             /* [in] */ BSTR pbstrData);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Address1 )( 
-            IScriptInformation * This,
-            /* [retval][out] */ BSTR *pbstrData);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Address1 )( 
-            IScriptInformation * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Address1)(
+            IScriptInformation* This,
+            /* [retval][out] */ BSTR* pbstrData);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Address1)(
+            IScriptInformation* This,
             /* [in] */ BSTR pbstrData);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Address2 )( 
-            IScriptInformation * This,
-            /* [retval][out] */ BSTR *pbstrData);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Address2 )( 
-            IScriptInformation * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Address2)(
+            IScriptInformation* This,
+            /* [retval][out] */ BSTR* pbstrData);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Address2)(
+            IScriptInformation* This,
             /* [in] */ BSTR pbstrData);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Address3 )( 
-            IScriptInformation * This,
-            /* [retval][out] */ BSTR *pbstrData);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Address3 )( 
-            IScriptInformation * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Address3)(
+            IScriptInformation* This,
+            /* [retval][out] */ BSTR* pbstrData);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Address3)(
+            IScriptInformation* This,
             /* [in] */ BSTR pbstrData);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Email )( 
-            IScriptInformation * This,
-            /* [retval][out] */ BSTR *pbstrData);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Email )( 
-            IScriptInformation * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Email)(
+            IScriptInformation* This,
+            /* [retval][out] */ BSTR* pbstrData);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Email)(
+            IScriptInformation* This,
             /* [in] */ BSTR pbstrData);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Website )( 
-            IScriptInformation * This,
-            /* [retval][out] */ BSTR *pbstrData);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Website )( 
-            IScriptInformation * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Website)(
+            IScriptInformation* This,
+            /* [retval][out] */ BSTR* pbstrData);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Website)(
+            IScriptInformation* This,
             /* [in] */ BSTR pbstrData);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Phone )( 
-            IScriptInformation * This,
-            /* [retval][out] */ BSTR *pbstrData);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Phone )( 
-            IScriptInformation * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Phone)(
+            IScriptInformation* This,
+            /* [retval][out] */ BSTR* pbstrData);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Phone)(
+            IScriptInformation* This,
             /* [in] */ BSTR pbstrData);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Description )( 
-            IScriptInformation * This,
-            /* [retval][out] */ BSTR *pbstrData);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Description )( 
-            IScriptInformation * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Description)(
+            IScriptInformation* This,
+            /* [retval][out] */ BSTR* pbstrData);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Description)(
+            IScriptInformation* This,
             /* [in] */ BSTR pbstrData);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Copyright )( 
-            IScriptInformation * This,
-            /* [retval][out] */ BSTR *pbstrData);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Copyright )( 
-            IScriptInformation * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Copyright)(
+            IScriptInformation* This,
+            /* [retval][out] */ BSTR* pbstrData);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Copyright)(
+            IScriptInformation* This,
             /* [in] */ BSTR pbstrData);
-        
+
         END_INTERFACE
     } IScriptInformationVtbl;
 
     interface IScriptInformation
     {
-        CONST_VTBL struct IScriptInformationVtbl *lpVtbl;
+        CONST_VTBL struct IScriptInformationVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -9791,92 +9791,92 @@ EXTERN_C const IID IID_IScriptInformation;
 #ifndef __IZoomTextSettings_INTERFACE_DEFINED__
 #define __IZoomTextSettings_INTERFACE_DEFINED__
 
-/* interface IZoomTextSettings */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IZoomTextSettings */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IZoomTextSettings;
+    EXTERN_C const IID IID_IZoomTextSettings;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("EE7B5CC9-BF3E-493D-AED4-A0A0A10A9A8C")
-    IZoomTextSettings : public IDispatch
+        IZoomTextSettings : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_UiCulture( 
-            /* [retval][out] */ BSTR *pUiCulture) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_UiCulture(
+            /* [retval][out] */ BSTR * pUiCulture) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IZoomTextSettingsVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IZoomTextSettings * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IZoomTextSettings * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IZoomTextSettings * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IZoomTextSettings * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IZoomTextSettings * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IZoomTextSettings* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IZoomTextSettings* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IZoomTextSettings* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IZoomTextSettings* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IZoomTextSettings* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IZoomTextSettings * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IZoomTextSettings* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IZoomTextSettings * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IZoomTextSettings* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UiCulture )( 
-            IZoomTextSettings * This,
-            /* [retval][out] */ BSTR *pUiCulture);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_UiCulture)(
+            IZoomTextSettings* This,
+            /* [retval][out] */ BSTR* pUiCulture);
+
         END_INTERFACE
     } IZoomTextSettingsVtbl;
 
     interface IZoomTextSettings
     {
-        CONST_VTBL struct IZoomTextSettingsVtbl *lpVtbl;
+        CONST_VTBL struct IZoomTextSettingsVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -9921,110 +9921,110 @@ EXTERN_C const IID IID_IZoomTextSettings;
 #ifndef __IZoomTextSettings2_INTERFACE_DEFINED__
 #define __IZoomTextSettings2_INTERFACE_DEFINED__
 
-/* interface IZoomTextSettings2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IZoomTextSettings2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IZoomTextSettings2;
+    EXTERN_C const IID IID_IZoomTextSettings2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("E874A180-D7C9-4B21-A638-982D36F5EA7E")
-    IZoomTextSettings2 : public IZoomTextSettings
+        IZoomTextSettings2 : public IZoomTextSettings
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ProgramFolder( 
-            /* [retval][out] */ BSTR *pbstrValue) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ScriptDataFolder( 
-            /* [retval][out] */ BSTR *pbstrValue) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ScriptsFolder( 
-            /* [retval][out] */ BSTR *pbstrValue) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ProgramFolder(
+            /* [retval][out] */ BSTR * pbstrValue) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ScriptDataFolder(
+            /* [retval][out] */ BSTR* pbstrValue) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ScriptsFolder(
+            /* [retval][out] */ BSTR* pbstrValue) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IZoomTextSettings2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IZoomTextSettings2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IZoomTextSettings2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IZoomTextSettings2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IZoomTextSettings2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IZoomTextSettings2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IZoomTextSettings2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IZoomTextSettings2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IZoomTextSettings2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IZoomTextSettings2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IZoomTextSettings2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IZoomTextSettings2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IZoomTextSettings2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IZoomTextSettings2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IZoomTextSettings2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UiCulture )( 
-            IZoomTextSettings2 * This,
-            /* [retval][out] */ BSTR *pUiCulture);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ProgramFolder )( 
-            IZoomTextSettings2 * This,
-            /* [retval][out] */ BSTR *pbstrValue);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScriptDataFolder )( 
-            IZoomTextSettings2 * This,
-            /* [retval][out] */ BSTR *pbstrValue);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScriptsFolder )( 
-            IZoomTextSettings2 * This,
-            /* [retval][out] */ BSTR *pbstrValue);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_UiCulture)(
+            IZoomTextSettings2* This,
+            /* [retval][out] */ BSTR* pUiCulture);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ProgramFolder)(
+            IZoomTextSettings2* This,
+            /* [retval][out] */ BSTR* pbstrValue);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ScriptDataFolder)(
+            IZoomTextSettings2* This,
+            /* [retval][out] */ BSTR* pbstrValue);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ScriptsFolder)(
+            IZoomTextSettings2* This,
+            /* [retval][out] */ BSTR* pbstrValue);
+
         END_INTERFACE
     } IZoomTextSettings2Vtbl;
 
     interface IZoomTextSettings2
     {
-        CONST_VTBL struct IZoomTextSettings2Vtbl *lpVtbl;
+        CONST_VTBL struct IZoomTextSettings2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -10079,149 +10079,149 @@ EXTERN_C const IID IID_IZoomTextSettings2;
 #ifndef __IZoomTextSettings3_INTERFACE_DEFINED__
 #define __IZoomTextSettings3_INTERFACE_DEFINED__
 
-/* interface IZoomTextSettings3 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IZoomTextSettings3 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IZoomTextSettings3;
+    EXTERN_C const IID IID_IZoomTextSettings3;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("51B35190-807C-4AC8-B74F-3A3FD83E6F86")
-    IZoomTextSettings3 : public IZoomTextSettings2
+        IZoomTextSettings3 : public IZoomTextSettings2
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ProductType( 
-            /* [retval][out] */ unsigned long *pdwType) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_MyScriptsFolder( 
-            /* [retval][out] */ BSTR *pbstrValue) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SharedScriptsFolder( 
-            /* [retval][out] */ BSTR *pbstrValue) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SampleScriptsFolder( 
-            /* [retval][out] */ BSTR *pbstrValue) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetScriptSetting( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ProductType(
+            /* [retval][out] */ unsigned long* pdwType) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_MyScriptsFolder(
+            /* [retval][out] */ BSTR* pbstrValue) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SharedScriptsFolder(
+            /* [retval][out] */ BSTR* pbstrValue) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SampleScriptsFolder(
+            /* [retval][out] */ BSTR* pbstrValue) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetScriptSetting(
             /* [in] */ BSTR bstrName,
             /* [in] */ BSTR bstrDefaultValue,
-            /* [retval][out] */ BSTR *pbstrValue) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE SetScriptSetting( 
+            /* [retval][out] */ BSTR* pbstrValue) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE SetScriptSetting(
             /* [in] */ BSTR bstrName,
             /* [in] */ BSTR bstrValue) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IZoomTextSettings3Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IZoomTextSettings3 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IZoomTextSettings3 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IZoomTextSettings3 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IZoomTextSettings3 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IZoomTextSettings3 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IZoomTextSettings3* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IZoomTextSettings3* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IZoomTextSettings3* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IZoomTextSettings3* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IZoomTextSettings3* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IZoomTextSettings3 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IZoomTextSettings3* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IZoomTextSettings3 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IZoomTextSettings3* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UiCulture )( 
-            IZoomTextSettings3 * This,
-            /* [retval][out] */ BSTR *pUiCulture);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ProgramFolder )( 
-            IZoomTextSettings3 * This,
-            /* [retval][out] */ BSTR *pbstrValue);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScriptDataFolder )( 
-            IZoomTextSettings3 * This,
-            /* [retval][out] */ BSTR *pbstrValue);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScriptsFolder )( 
-            IZoomTextSettings3 * This,
-            /* [retval][out] */ BSTR *pbstrValue);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ProductType )( 
-            IZoomTextSettings3 * This,
-            /* [retval][out] */ unsigned long *pdwType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MyScriptsFolder )( 
-            IZoomTextSettings3 * This,
-            /* [retval][out] */ BSTR *pbstrValue);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SharedScriptsFolder )( 
-            IZoomTextSettings3 * This,
-            /* [retval][out] */ BSTR *pbstrValue);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SampleScriptsFolder )( 
-            IZoomTextSettings3 * This,
-            /* [retval][out] */ BSTR *pbstrValue);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *GetScriptSetting )( 
-            IZoomTextSettings3 * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_UiCulture)(
+            IZoomTextSettings3* This,
+            /* [retval][out] */ BSTR* pUiCulture);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ProgramFolder)(
+            IZoomTextSettings3* This,
+            /* [retval][out] */ BSTR* pbstrValue);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ScriptDataFolder)(
+            IZoomTextSettings3* This,
+            /* [retval][out] */ BSTR* pbstrValue);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ScriptsFolder)(
+            IZoomTextSettings3* This,
+            /* [retval][out] */ BSTR* pbstrValue);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ProductType)(
+            IZoomTextSettings3* This,
+            /* [retval][out] */ unsigned long* pdwType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_MyScriptsFolder)(
+            IZoomTextSettings3* This,
+            /* [retval][out] */ BSTR* pbstrValue);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_SharedScriptsFolder)(
+            IZoomTextSettings3* This,
+            /* [retval][out] */ BSTR* pbstrValue);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_SampleScriptsFolder)(
+            IZoomTextSettings3* This,
+            /* [retval][out] */ BSTR* pbstrValue);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* GetScriptSetting)(
+            IZoomTextSettings3* This,
             /* [in] */ BSTR bstrName,
             /* [in] */ BSTR bstrDefaultValue,
-            /* [retval][out] */ BSTR *pbstrValue);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetScriptSetting )( 
-            IZoomTextSettings3 * This,
+            /* [retval][out] */ BSTR* pbstrValue);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetScriptSetting)(
+            IZoomTextSettings3* This,
             /* [in] */ BSTR bstrName,
             /* [in] */ BSTR bstrValue);
-        
+
         END_INTERFACE
     } IZoomTextSettings3Vtbl;
 
     interface IZoomTextSettings3
     {
-        CONST_VTBL struct IZoomTextSettings3Vtbl *lpVtbl;
+        CONST_VTBL struct IZoomTextSettings3Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -10295,135 +10295,135 @@ EXTERN_C const IID IID_IZoomTextSettings3;
 #ifndef __IZoomTextSettings4_INTERFACE_DEFINED__
 #define __IZoomTextSettings4_INTERFACE_DEFINED__
 
-/* interface IZoomTextSettings4 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IZoomTextSettings4 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IZoomTextSettings4;
+    EXTERN_C const IID IID_IZoomTextSettings4;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("84C39C47-0CFB-43A8-B88E-0C6662000877")
-    IZoomTextSettings4 : public IZoomTextSettings3
+        IZoomTextSettings4 : public IZoomTextSettings3
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_CurrentConfigurationFile( 
-            /* [retval][out] */ BSTR *pbstrValue) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_CurrentConfigurationFile(
+            /* [retval][out] */ BSTR * pbstrValue) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IZoomTextSettings4Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IZoomTextSettings4 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IZoomTextSettings4 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IZoomTextSettings4 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IZoomTextSettings4 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IZoomTextSettings4 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IZoomTextSettings4* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IZoomTextSettings4* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IZoomTextSettings4* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IZoomTextSettings4* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IZoomTextSettings4* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IZoomTextSettings4 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IZoomTextSettings4* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IZoomTextSettings4 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IZoomTextSettings4* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UiCulture )( 
-            IZoomTextSettings4 * This,
-            /* [retval][out] */ BSTR *pUiCulture);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ProgramFolder )( 
-            IZoomTextSettings4 * This,
-            /* [retval][out] */ BSTR *pbstrValue);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScriptDataFolder )( 
-            IZoomTextSettings4 * This,
-            /* [retval][out] */ BSTR *pbstrValue);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScriptsFolder )( 
-            IZoomTextSettings4 * This,
-            /* [retval][out] */ BSTR *pbstrValue);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ProductType )( 
-            IZoomTextSettings4 * This,
-            /* [retval][out] */ unsigned long *pdwType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MyScriptsFolder )( 
-            IZoomTextSettings4 * This,
-            /* [retval][out] */ BSTR *pbstrValue);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SharedScriptsFolder )( 
-            IZoomTextSettings4 * This,
-            /* [retval][out] */ BSTR *pbstrValue);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SampleScriptsFolder )( 
-            IZoomTextSettings4 * This,
-            /* [retval][out] */ BSTR *pbstrValue);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *GetScriptSetting )( 
-            IZoomTextSettings4 * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_UiCulture)(
+            IZoomTextSettings4* This,
+            /* [retval][out] */ BSTR* pUiCulture);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ProgramFolder)(
+            IZoomTextSettings4* This,
+            /* [retval][out] */ BSTR* pbstrValue);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ScriptDataFolder)(
+            IZoomTextSettings4* This,
+            /* [retval][out] */ BSTR* pbstrValue);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ScriptsFolder)(
+            IZoomTextSettings4* This,
+            /* [retval][out] */ BSTR* pbstrValue);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ProductType)(
+            IZoomTextSettings4* This,
+            /* [retval][out] */ unsigned long* pdwType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_MyScriptsFolder)(
+            IZoomTextSettings4* This,
+            /* [retval][out] */ BSTR* pbstrValue);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_SharedScriptsFolder)(
+            IZoomTextSettings4* This,
+            /* [retval][out] */ BSTR* pbstrValue);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_SampleScriptsFolder)(
+            IZoomTextSettings4* This,
+            /* [retval][out] */ BSTR* pbstrValue);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* GetScriptSetting)(
+            IZoomTextSettings4* This,
             /* [in] */ BSTR bstrName,
             /* [in] */ BSTR bstrDefaultValue,
-            /* [retval][out] */ BSTR *pbstrValue);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetScriptSetting )( 
-            IZoomTextSettings4 * This,
+            /* [retval][out] */ BSTR* pbstrValue);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetScriptSetting)(
+            IZoomTextSettings4* This,
             /* [in] */ BSTR bstrName,
             /* [in] */ BSTR bstrValue);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CurrentConfigurationFile )( 
-            IZoomTextSettings4 * This,
-            /* [retval][out] */ BSTR *pbstrValue);
-        
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_CurrentConfigurationFile)(
+            IZoomTextSettings4* This,
+            /* [retval][out] */ BSTR* pbstrValue);
+
         END_INTERFACE
     } IZoomTextSettings4Vtbl;
 
     interface IZoomTextSettings4
     {
-        CONST_VTBL struct IZoomTextSettings4Vtbl *lpVtbl;
+        CONST_VTBL struct IZoomTextSettings4Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -10501,113 +10501,113 @@ EXTERN_C const IID IID_IZoomTextSettings4;
 #ifndef __ISpeech_INTERFACE_DEFINED__
 #define __ISpeech_INTERFACE_DEFINED__
 
-/* interface ISpeech */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ISpeech */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ISpeech;
+    EXTERN_C const IID IID_ISpeech;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("B7271C8C-3A94-4831-883B-81BA18B87664")
-    ISpeech : public IDispatch
+        ISpeech : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_CurrentVoice( 
-            /* [retval][out] */ IVoice **ppVoice) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_CurrentVoice( 
-            /* [in] */ IVoice *ppVoice) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled( 
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Voices( 
-            /* [retval][out] */ IObjectCollection **ppVoiceCollection) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_CurrentVoice(
+            /* [retval][out] */ IVoice * *ppVoice) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_CurrentVoice(
+            /* [in] */ IVoice* ppVoice) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled(
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Voices(
+            /* [retval][out] */ IObjectCollection** ppVoiceCollection) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ISpeechVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ISpeech * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ISpeech * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ISpeech * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ISpeech * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ISpeech * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ISpeech* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ISpeech* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ISpeech* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ISpeech* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ISpeech* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ISpeech * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ISpeech* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ISpeech * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ISpeech* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CurrentVoice )( 
-            ISpeech * This,
-            /* [retval][out] */ IVoice **ppVoice);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_CurrentVoice )( 
-            ISpeech * This,
-            /* [in] */ IVoice *ppVoice);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            ISpeech * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Voices )( 
-            ISpeech * This,
-            /* [retval][out] */ IObjectCollection **ppVoiceCollection);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_CurrentVoice)(
+            ISpeech* This,
+            /* [retval][out] */ IVoice** ppVoice);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_CurrentVoice)(
+            ISpeech* This,
+            /* [in] */ IVoice* ppVoice);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            ISpeech* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Voices)(
+            ISpeech* This,
+            /* [retval][out] */ IObjectCollection** ppVoiceCollection);
+
         END_INTERFACE
     } ISpeechVtbl;
 
     interface ISpeech
     {
-        CONST_VTBL struct ISpeechVtbl *lpVtbl;
+        CONST_VTBL struct ISpeechVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -10661,128 +10661,128 @@ EXTERN_C const IID IID_ISpeech;
 #ifndef __ISpeech2_INTERFACE_DEFINED__
 #define __ISpeech2_INTERFACE_DEFINED__
 
-/* interface ISpeech2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ISpeech2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ISpeech2;
+    EXTERN_C const IID IID_ISpeech2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("CD16491D-29DE-4CB2-A4D9-2AD423FE3C6E")
-    ISpeech2 : public ISpeech
+        ISpeech2 : public ISpeech
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE FindVoice( 
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE FindVoice(
             /* [in] */ BSTR bstrProductName,
             /* [in] */ BSTR bstrVoiceName,
-            /* [retval][out] */ IVoice **ppVoice) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateSpeaker( 
-            /* [in] */ IVoice *pVoice,
-            /* [retval][out] */ ISpeaker **ppSpeaker) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DeleteSpeaker( 
-            /* [in] */ ISpeaker *pSpeaker) = 0;
-        
+            /* [retval][out] */ IVoice * *ppVoice) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateSpeaker(
+            /* [in] */ IVoice* pVoice,
+            /* [retval][out] */ ISpeaker** ppSpeaker) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DeleteSpeaker(
+            /* [in] */ ISpeaker* pSpeaker) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ISpeech2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ISpeech2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ISpeech2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ISpeech2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ISpeech2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ISpeech2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ISpeech2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ISpeech2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ISpeech2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ISpeech2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ISpeech2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ISpeech2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ISpeech2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ISpeech2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ISpeech2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CurrentVoice )( 
-            ISpeech2 * This,
-            /* [retval][out] */ IVoice **ppVoice);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_CurrentVoice )( 
-            ISpeech2 * This,
-            /* [in] */ IVoice *ppVoice);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            ISpeech2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pbEnabled);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Voices )( 
-            ISpeech2 * This,
-            /* [retval][out] */ IObjectCollection **ppVoiceCollection);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *FindVoice )( 
-            ISpeech2 * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_CurrentVoice)(
+            ISpeech2* This,
+            /* [retval][out] */ IVoice** ppVoice);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_CurrentVoice)(
+            ISpeech2* This,
+            /* [in] */ IVoice* ppVoice);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            ISpeech2* This,
+            /* [retval][out] */ VARIANT_BOOL* pbEnabled);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Voices)(
+            ISpeech2* This,
+            /* [retval][out] */ IObjectCollection** ppVoiceCollection);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* FindVoice)(
+            ISpeech2* This,
             /* [in] */ BSTR bstrProductName,
             /* [in] */ BSTR bstrVoiceName,
-            /* [retval][out] */ IVoice **ppVoice);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *CreateSpeaker )( 
-            ISpeech2 * This,
-            /* [in] */ IVoice *pVoice,
-            /* [retval][out] */ ISpeaker **ppSpeaker);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *DeleteSpeaker )( 
-            ISpeech2 * This,
-            /* [in] */ ISpeaker *pSpeaker);
-        
+            /* [retval][out] */ IVoice** ppVoice);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* CreateSpeaker)(
+            ISpeech2* This,
+            /* [in] */ IVoice* pVoice,
+            /* [retval][out] */ ISpeaker** ppSpeaker);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* DeleteSpeaker)(
+            ISpeech2* This,
+            /* [in] */ ISpeaker* pSpeaker);
+
         END_INTERFACE
     } ISpeech2Vtbl;
 
     interface ISpeech2
     {
-        CONST_VTBL struct ISpeech2Vtbl *lpVtbl;
+        CONST_VTBL struct ISpeech2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -10846,265 +10846,265 @@ EXTERN_C const IID IID_ISpeech2;
 #ifndef __IVoice_INTERFACE_DEFINED__
 #define __IVoice_INTERFACE_DEFINED__
 
-/* interface IVoice */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IVoice */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IVoice;
+    EXTERN_C const IID IID_IVoice;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("A2FBF963-0748-4266-A04B-8C54466126D5")
-    IVoice : public IDispatch
+        IVoice : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Active( 
-            /* [retval][out] */ VARIANT_BOOL *pbActive) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Active( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Active(
+            /* [retval][out] */ VARIANT_BOOL * pbActive) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Active(
             /* [in] */ VARIANT_BOOL pbActive) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_LanguageID( 
-            /* [retval][out] */ long *pnLanguageID) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Mute( 
-            /* [retval][out] */ VARIANT_BOOL *pbMute) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Mute( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_LanguageID(
+            /* [retval][out] */ long* pnLanguageID) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Mute(
+            /* [retval][out] */ VARIANT_BOOL* pbMute) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Mute(
             /* [in] */ VARIANT_BOOL pbMute) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Pitch( 
-            /* [retval][out] */ long *pnPitch) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Pitch( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Pitch(
+            /* [retval][out] */ long* pnPitch) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Pitch(
             /* [in] */ long pnPitch) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_PitchSupported( 
-            /* [retval][out] */ VARIANT_BOOL *pbSupported) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ProductName( 
-            /* [retval][out] */ BSTR *pbstrProductName) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Rate( 
-            /* [retval][out] */ long *pnRate) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Rate( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_PitchSupported(
+            /* [retval][out] */ VARIANT_BOOL* pbSupported) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ProductName(
+            /* [retval][out] */ BSTR* pbstrProductName) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Rate(
+            /* [retval][out] */ long* pnRate) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Rate(
             /* [in] */ long pnRate) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_RateSupported( 
-            /* [retval][out] */ VARIANT_BOOL *pbSupported) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Speaking( 
-            /* [retval][out] */ VARIANT_BOOL *pbSpeaking) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_VoiceName( 
-            /* [retval][out] */ BSTR *pbstrVoiceName) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Volume( 
-            /* [retval][out] */ long *pnVolume) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Volume( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_RateSupported(
+            /* [retval][out] */ VARIANT_BOOL* pbSupported) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Speaking(
+            /* [retval][out] */ VARIANT_BOOL* pbSpeaking) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_VoiceName(
+            /* [retval][out] */ BSTR* pbstrVoiceName) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Volume(
+            /* [retval][out] */ long* pnVolume) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Volume(
             /* [in] */ long pnVolume) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_VolumeSupported( 
-            /* [retval][out] */ VARIANT_BOOL *pbSupported) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SpellMode( 
-            /* [retval][out] */ VARIANT_BOOL *pbSpell) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_SpellMode( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_VolumeSupported(
+            /* [retval][out] */ VARIANT_BOOL* pbSupported) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SpellMode(
+            /* [retval][out] */ VARIANT_BOOL* pbSpell) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_SpellMode(
             /* [in] */ VARIANT_BOOL pbSpell) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SpeakImmediate( 
-            /* [retval][out] */ VARIANT_BOOL *pbImmediate) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_SpeakImmediate( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SpeakImmediate(
+            /* [retval][out] */ VARIANT_BOOL* pbImmediate) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_SpeakImmediate(
             /* [in] */ VARIANT_BOOL pbImmediate) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_AllowInterrupt( 
-            /* [retval][out] */ VARIANT_BOOL *pbInterrupt) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_AllowInterrupt( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_AllowInterrupt(
+            /* [retval][out] */ VARIANT_BOOL* pbInterrupt) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_AllowInterrupt(
             /* [in] */ VARIANT_BOOL pbInterrupt) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Speak( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Speak(
             /* [in] */ BSTR bstrText) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Stop( void) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE SpeakEvent( 
-            /* [in] */ IDispatch *pSpeechEventObject) = 0;
-        
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Stop(void) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE SpeakEvent(
+            /* [in] */ IDispatch* pSpeechEventObject) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IVoiceVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IVoice * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IVoice * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IVoice * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IVoice * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IVoice * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IVoice* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IVoice* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IVoice* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IVoice* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IVoice* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IVoice * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IVoice* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IVoice * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IVoice* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IVoice * This,
-            /* [retval][out] */ VARIANT_BOOL *pbActive);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Active )( 
-            IVoice * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IVoice* This,
+            /* [retval][out] */ VARIANT_BOOL* pbActive);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Active)(
+            IVoice* This,
             /* [in] */ VARIANT_BOOL pbActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LanguageID )( 
-            IVoice * This,
-            /* [retval][out] */ long *pnLanguageID);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Mute )( 
-            IVoice * This,
-            /* [retval][out] */ VARIANT_BOOL *pbMute);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Mute )( 
-            IVoice * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LanguageID)(
+            IVoice* This,
+            /* [retval][out] */ long* pnLanguageID);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Mute)(
+            IVoice* This,
+            /* [retval][out] */ VARIANT_BOOL* pbMute);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Mute)(
+            IVoice* This,
             /* [in] */ VARIANT_BOOL pbMute);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Pitch )( 
-            IVoice * This,
-            /* [retval][out] */ long *pnPitch);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Pitch )( 
-            IVoice * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Pitch)(
+            IVoice* This,
+            /* [retval][out] */ long* pnPitch);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Pitch)(
+            IVoice* This,
             /* [in] */ long pnPitch);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PitchSupported )( 
-            IVoice * This,
-            /* [retval][out] */ VARIANT_BOOL *pbSupported);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ProductName )( 
-            IVoice * This,
-            /* [retval][out] */ BSTR *pbstrProductName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Rate )( 
-            IVoice * This,
-            /* [retval][out] */ long *pnRate);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Rate )( 
-            IVoice * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PitchSupported)(
+            IVoice* This,
+            /* [retval][out] */ VARIANT_BOOL* pbSupported);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ProductName)(
+            IVoice* This,
+            /* [retval][out] */ BSTR* pbstrProductName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Rate)(
+            IVoice* This,
+            /* [retval][out] */ long* pnRate);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Rate)(
+            IVoice* This,
             /* [in] */ long pnRate);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RateSupported )( 
-            IVoice * This,
-            /* [retval][out] */ VARIANT_BOOL *pbSupported);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Speaking )( 
-            IVoice * This,
-            /* [retval][out] */ VARIANT_BOOL *pbSpeaking);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_VoiceName )( 
-            IVoice * This,
-            /* [retval][out] */ BSTR *pbstrVoiceName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Volume )( 
-            IVoice * This,
-            /* [retval][out] */ long *pnVolume);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Volume )( 
-            IVoice * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_RateSupported)(
+            IVoice* This,
+            /* [retval][out] */ VARIANT_BOOL* pbSupported);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Speaking)(
+            IVoice* This,
+            /* [retval][out] */ VARIANT_BOOL* pbSpeaking);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_VoiceName)(
+            IVoice* This,
+            /* [retval][out] */ BSTR* pbstrVoiceName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Volume)(
+            IVoice* This,
+            /* [retval][out] */ long* pnVolume);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Volume)(
+            IVoice* This,
             /* [in] */ long pnVolume);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_VolumeSupported )( 
-            IVoice * This,
-            /* [retval][out] */ VARIANT_BOOL *pbSupported);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SpellMode )( 
-            IVoice * This,
-            /* [retval][out] */ VARIANT_BOOL *pbSpell);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_SpellMode )( 
-            IVoice * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_VolumeSupported)(
+            IVoice* This,
+            /* [retval][out] */ VARIANT_BOOL* pbSupported);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_SpellMode)(
+            IVoice* This,
+            /* [retval][out] */ VARIANT_BOOL* pbSpell);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_SpellMode)(
+            IVoice* This,
             /* [in] */ VARIANT_BOOL pbSpell);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SpeakImmediate )( 
-            IVoice * This,
-            /* [retval][out] */ VARIANT_BOOL *pbImmediate);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_SpeakImmediate )( 
-            IVoice * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_SpeakImmediate)(
+            IVoice* This,
+            /* [retval][out] */ VARIANT_BOOL* pbImmediate);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_SpeakImmediate)(
+            IVoice* This,
             /* [in] */ VARIANT_BOOL pbImmediate);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AllowInterrupt )( 
-            IVoice * This,
-            /* [retval][out] */ VARIANT_BOOL *pbInterrupt);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_AllowInterrupt )( 
-            IVoice * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_AllowInterrupt)(
+            IVoice* This,
+            /* [retval][out] */ VARIANT_BOOL* pbInterrupt);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_AllowInterrupt)(
+            IVoice* This,
             /* [in] */ VARIANT_BOOL pbInterrupt);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Speak )( 
-            IVoice * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Speak)(
+            IVoice* This,
             /* [in] */ BSTR bstrText);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Stop )( 
-            IVoice * This);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SpeakEvent )( 
-            IVoice * This,
-            /* [in] */ IDispatch *pSpeechEventObject);
-        
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Stop)(
+            IVoice* This);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SpeakEvent)(
+            IVoice* This,
+            /* [in] */ IDispatch* pSpeechEventObject);
+
         END_INTERFACE
     } IVoiceVtbl;
 
     interface IVoice
     {
-        CONST_VTBL struct IVoiceVtbl *lpVtbl;
+        CONST_VTBL struct IVoiceVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -11224,124 +11224,124 @@ EXTERN_C const IID IID_IVoice;
 #ifndef __IObjectCollection_INTERFACE_DEFINED__
 #define __IObjectCollection_INTERFACE_DEFINED__
 
-/* interface IObjectCollection */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IObjectCollection */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IObjectCollection;
+    EXTERN_C const IID IID_IObjectCollection;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("E9EF732F-25EF-4D19-A0D2-FE8F6D3A1BBB")
-    IObjectCollection : public IDispatch
+        IObjectCollection : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Size( 
-            /* [retval][out] */ long *pSize) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_First( 
-            /* [retval][out] */ IDispatch **ppObject) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Last( 
-            /* [retval][out] */ IDispatch **ppObject) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Next( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Size(
+            /* [retval][out] */ long* pSize) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_First(
+            /* [retval][out] */ IDispatch** ppObject) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Last(
+            /* [retval][out] */ IDispatch** ppObject) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Next(
             /* [in] */ VARIANT vCurrent,
-            /* [retval][out] */ IDispatch **ppObject) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Previous( 
+            /* [retval][out] */ IDispatch** ppObject) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Previous(
             /* [in] */ VARIANT vCurrent,
-            /* [retval][out] */ IDispatch **ppObject) = 0;
-        
+            /* [retval][out] */ IDispatch** ppObject) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IObjectCollectionVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IObjectCollection * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IObjectCollection * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IObjectCollection * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IObjectCollection * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IObjectCollection * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IObjectCollection* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IObjectCollection* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IObjectCollection* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IObjectCollection* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IObjectCollection* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IObjectCollection * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IObjectCollection* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IObjectCollection * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IObjectCollection* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-            IObjectCollection * This,
-            /* [retval][out] */ long *pSize);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_First )( 
-            IObjectCollection * This,
-            /* [retval][out] */ IDispatch **ppObject);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Last )( 
-            IObjectCollection * This,
-            /* [retval][out] */ IDispatch **ppObject);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Next )( 
-            IObjectCollection * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Size)(
+            IObjectCollection* This,
+            /* [retval][out] */ long* pSize);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_First)(
+            IObjectCollection* This,
+            /* [retval][out] */ IDispatch** ppObject);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Last)(
+            IObjectCollection* This,
+            /* [retval][out] */ IDispatch** ppObject);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Next)(
+            IObjectCollection* This,
             /* [in] */ VARIANT vCurrent,
-            /* [retval][out] */ IDispatch **ppObject);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Previous )( 
-            IObjectCollection * This,
+            /* [retval][out] */ IDispatch** ppObject);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Previous)(
+            IObjectCollection* This,
             /* [in] */ VARIANT vCurrent,
-            /* [retval][out] */ IDispatch **ppObject);
-        
+            /* [retval][out] */ IDispatch** ppObject);
+
         END_INTERFACE
     } IObjectCollectionVtbl;
 
     interface IObjectCollection
     {
-        CONST_VTBL struct IObjectCollectionVtbl *lpVtbl;
+        CONST_VTBL struct IObjectCollectionVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -11398,304 +11398,304 @@ EXTERN_C const IID IID_IObjectCollection;
 #ifndef __ISpeaker_INTERFACE_DEFINED__
 #define __ISpeaker_INTERFACE_DEFINED__
 
-/* interface ISpeaker */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ISpeaker */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ISpeaker;
+    EXTERN_C const IID IID_ISpeaker;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("C7149863-61D3-422F-AA2C-0DCA654914D5")
-    ISpeaker : public IDispatch
+        ISpeaker : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_LanguageID( 
-            /* [retval][out] */ long *pnLanguageID) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Mute( 
-            /* [retval][out] */ VARIANT_BOOL *pbMute) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Mute( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_LanguageID(
+            /* [retval][out] */ long* pnLanguageID) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Mute(
+            /* [retval][out] */ VARIANT_BOOL* pbMute) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Mute(
             /* [in] */ VARIANT_BOOL pbMute) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Pitch( 
-            /* [retval][out] */ long *pnPitch) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Pitch( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Pitch(
+            /* [retval][out] */ long* pnPitch) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Pitch(
             /* [in] */ long pnPitch) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_PitchSupported( 
-            /* [retval][out] */ VARIANT_BOOL *pbSupported) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ProductName( 
-            /* [retval][out] */ BSTR *pbstrProductName) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Rate( 
-            /* [retval][out] */ long *pnRate) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Rate( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_PitchSupported(
+            /* [retval][out] */ VARIANT_BOOL* pbSupported) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ProductName(
+            /* [retval][out] */ BSTR* pbstrProductName) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Rate(
+            /* [retval][out] */ long* pnRate) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Rate(
             /* [in] */ long pnRate) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_RateSupported( 
-            /* [retval][out] */ VARIANT_BOOL *pbSupported) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_RateMaximum( 
-            /* [retval][out] */ long *pnRateMaximum) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_RateMinimum( 
-            /* [retval][out] */ long *pnRateMinimum) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_RateIsWPM( 
-            /* [retval][out] */ VARIANT_BOOL *pbRateIsWPM) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Speaking( 
-            /* [retval][out] */ VARIANT_BOOL *pbSpeaking) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_VoiceName( 
-            /* [retval][out] */ BSTR *pbstrVoiceName) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Volume( 
-            /* [retval][out] */ long *pnVolume) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Volume( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_RateSupported(
+            /* [retval][out] */ VARIANT_BOOL* pbSupported) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_RateMaximum(
+            /* [retval][out] */ long* pnRateMaximum) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_RateMinimum(
+            /* [retval][out] */ long* pnRateMinimum) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_RateIsWPM(
+            /* [retval][out] */ VARIANT_BOOL* pbRateIsWPM) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Speaking(
+            /* [retval][out] */ VARIANT_BOOL* pbSpeaking) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_VoiceName(
+            /* [retval][out] */ BSTR* pbstrVoiceName) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Volume(
+            /* [retval][out] */ long* pnVolume) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Volume(
             /* [in] */ long pnVolume) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_VolumeSupported( 
-            /* [retval][out] */ VARIANT_BOOL *pbSupported) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SpellMode( 
-            /* [retval][out] */ VARIANT_BOOL *pbSpell) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_SpellMode( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_VolumeSupported(
+            /* [retval][out] */ VARIANT_BOOL* pbSupported) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SpellMode(
+            /* [retval][out] */ VARIANT_BOOL* pbSpell) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_SpellMode(
             /* [in] */ VARIANT_BOOL pbSpell) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SpeakImmediate( 
-            /* [retval][out] */ VARIANT_BOOL *pbImmediate) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_SpeakImmediate( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SpeakImmediate(
+            /* [retval][out] */ VARIANT_BOOL* pbImmediate) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_SpeakImmediate(
             /* [in] */ VARIANT_BOOL pbImmediate) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_AllowInterrupt( 
-            /* [retval][out] */ VARIANT_BOOL *pbInterrupt) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_AllowInterrupt( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_AllowInterrupt(
+            /* [retval][out] */ VARIANT_BOOL* pbInterrupt) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_AllowInterrupt(
             /* [in] */ VARIANT_BOOL pbInterrupt) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Handle( 
-            /* [retval][out] */ unsigned long *pdwSpeakerHandle) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FileOutputStatus( 
-            /* [retval][out] */ long *plStatus) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SpeakStatus( 
-            /* [retval][out] */ long *plStatus) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Speak( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Handle(
+            /* [retval][out] */ unsigned long* pdwSpeakerHandle) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FileOutputStatus(
+            /* [retval][out] */ long* plStatus) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SpeakStatus(
+            /* [retval][out] */ long* plStatus) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Speak(
             /* [in] */ BSTR bstrText,
             /* [optional][in] */ VARIANT varDoneEvent) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Stop( void) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE OutputToWaveFile( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Stop(void) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE OutputToWaveFile(
             /* [in] */ BSTR bstrText,
             /* [in] */ BSTR bstrFile,
             /* [optional][in] */ VARIANT varDoneEvent) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CancelOutputToWaveFile( void) = 0;
-        
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CancelOutputToWaveFile(void) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ISpeakerVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ISpeaker * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ISpeaker * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ISpeaker * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ISpeaker * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ISpeaker * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ISpeaker* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ISpeaker* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ISpeaker* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ISpeaker* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ISpeaker* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ISpeaker * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ISpeaker* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ISpeaker * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ISpeaker* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LanguageID )( 
-            ISpeaker * This,
-            /* [retval][out] */ long *pnLanguageID);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Mute )( 
-            ISpeaker * This,
-            /* [retval][out] */ VARIANT_BOOL *pbMute);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Mute )( 
-            ISpeaker * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LanguageID)(
+            ISpeaker* This,
+            /* [retval][out] */ long* pnLanguageID);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Mute)(
+            ISpeaker* This,
+            /* [retval][out] */ VARIANT_BOOL* pbMute);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Mute)(
+            ISpeaker* This,
             /* [in] */ VARIANT_BOOL pbMute);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Pitch )( 
-            ISpeaker * This,
-            /* [retval][out] */ long *pnPitch);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Pitch )( 
-            ISpeaker * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Pitch)(
+            ISpeaker* This,
+            /* [retval][out] */ long* pnPitch);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Pitch)(
+            ISpeaker* This,
             /* [in] */ long pnPitch);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PitchSupported )( 
-            ISpeaker * This,
-            /* [retval][out] */ VARIANT_BOOL *pbSupported);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ProductName )( 
-            ISpeaker * This,
-            /* [retval][out] */ BSTR *pbstrProductName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Rate )( 
-            ISpeaker * This,
-            /* [retval][out] */ long *pnRate);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Rate )( 
-            ISpeaker * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PitchSupported)(
+            ISpeaker* This,
+            /* [retval][out] */ VARIANT_BOOL* pbSupported);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ProductName)(
+            ISpeaker* This,
+            /* [retval][out] */ BSTR* pbstrProductName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Rate)(
+            ISpeaker* This,
+            /* [retval][out] */ long* pnRate);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Rate)(
+            ISpeaker* This,
             /* [in] */ long pnRate);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RateSupported )( 
-            ISpeaker * This,
-            /* [retval][out] */ VARIANT_BOOL *pbSupported);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RateMaximum )( 
-            ISpeaker * This,
-            /* [retval][out] */ long *pnRateMaximum);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RateMinimum )( 
-            ISpeaker * This,
-            /* [retval][out] */ long *pnRateMinimum);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RateIsWPM )( 
-            ISpeaker * This,
-            /* [retval][out] */ VARIANT_BOOL *pbRateIsWPM);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Speaking )( 
-            ISpeaker * This,
-            /* [retval][out] */ VARIANT_BOOL *pbSpeaking);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_VoiceName )( 
-            ISpeaker * This,
-            /* [retval][out] */ BSTR *pbstrVoiceName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Volume )( 
-            ISpeaker * This,
-            /* [retval][out] */ long *pnVolume);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Volume )( 
-            ISpeaker * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_RateSupported)(
+            ISpeaker* This,
+            /* [retval][out] */ VARIANT_BOOL* pbSupported);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_RateMaximum)(
+            ISpeaker* This,
+            /* [retval][out] */ long* pnRateMaximum);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_RateMinimum)(
+            ISpeaker* This,
+            /* [retval][out] */ long* pnRateMinimum);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_RateIsWPM)(
+            ISpeaker* This,
+            /* [retval][out] */ VARIANT_BOOL* pbRateIsWPM);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Speaking)(
+            ISpeaker* This,
+            /* [retval][out] */ VARIANT_BOOL* pbSpeaking);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_VoiceName)(
+            ISpeaker* This,
+            /* [retval][out] */ BSTR* pbstrVoiceName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Volume)(
+            ISpeaker* This,
+            /* [retval][out] */ long* pnVolume);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Volume)(
+            ISpeaker* This,
             /* [in] */ long pnVolume);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_VolumeSupported )( 
-            ISpeaker * This,
-            /* [retval][out] */ VARIANT_BOOL *pbSupported);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SpellMode )( 
-            ISpeaker * This,
-            /* [retval][out] */ VARIANT_BOOL *pbSpell);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_SpellMode )( 
-            ISpeaker * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_VolumeSupported)(
+            ISpeaker* This,
+            /* [retval][out] */ VARIANT_BOOL* pbSupported);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_SpellMode)(
+            ISpeaker* This,
+            /* [retval][out] */ VARIANT_BOOL* pbSpell);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_SpellMode)(
+            ISpeaker* This,
             /* [in] */ VARIANT_BOOL pbSpell);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SpeakImmediate )( 
-            ISpeaker * This,
-            /* [retval][out] */ VARIANT_BOOL *pbImmediate);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_SpeakImmediate )( 
-            ISpeaker * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_SpeakImmediate)(
+            ISpeaker* This,
+            /* [retval][out] */ VARIANT_BOOL* pbImmediate);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_SpeakImmediate)(
+            ISpeaker* This,
             /* [in] */ VARIANT_BOOL pbImmediate);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AllowInterrupt )( 
-            ISpeaker * This,
-            /* [retval][out] */ VARIANT_BOOL *pbInterrupt);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_AllowInterrupt )( 
-            ISpeaker * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_AllowInterrupt)(
+            ISpeaker* This,
+            /* [retval][out] */ VARIANT_BOOL* pbInterrupt);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_AllowInterrupt)(
+            ISpeaker* This,
             /* [in] */ VARIANT_BOOL pbInterrupt);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Handle )( 
-            ISpeaker * This,
-            /* [retval][out] */ unsigned long *pdwSpeakerHandle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FileOutputStatus )( 
-            ISpeaker * This,
-            /* [retval][out] */ long *plStatus);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SpeakStatus )( 
-            ISpeaker * This,
-            /* [retval][out] */ long *plStatus);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Speak )( 
-            ISpeaker * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Handle)(
+            ISpeaker* This,
+            /* [retval][out] */ unsigned long* pdwSpeakerHandle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FileOutputStatus)(
+            ISpeaker* This,
+            /* [retval][out] */ long* plStatus);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_SpeakStatus)(
+            ISpeaker* This,
+            /* [retval][out] */ long* plStatus);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Speak)(
+            ISpeaker* This,
             /* [in] */ BSTR bstrText,
             /* [optional][in] */ VARIANT varDoneEvent);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Stop )( 
-            ISpeaker * This);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *OutputToWaveFile )( 
-            ISpeaker * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Stop)(
+            ISpeaker* This);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* OutputToWaveFile)(
+            ISpeaker* This,
             /* [in] */ BSTR bstrText,
             /* [in] */ BSTR bstrFile,
             /* [optional][in] */ VARIANT varDoneEvent);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *CancelOutputToWaveFile )( 
-            ISpeaker * This);
-        
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* CancelOutputToWaveFile)(
+            ISpeaker* This);
+
         END_INTERFACE
     } ISpeakerVtbl;
 
     interface ISpeaker
     {
-        CONST_VTBL struct ISpeakerVtbl *lpVtbl;
+        CONST_VTBL struct ISpeakerVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -11830,182 +11830,182 @@ EXTERN_C const IID IID_ISpeaker;
 #ifndef __IScriptManager_INTERFACE_DEFINED__
 #define __IScriptManager_INTERFACE_DEFINED__
 
-/* interface IScriptManager */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IScriptManager */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IScriptManager;
+    EXTERN_C const IID IID_IScriptManager;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("729772A3-83E7-4D86-A30C-780C24D0BB6C")
-    IScriptManager : public IDispatch
+        IScriptManager : public IDispatch
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DetachScriptTrigger( 
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DetachScriptTrigger(
             /* [in] */ BSTR bstrTriggerPoint,
             /* [in] */ BSTR bstrScriptName) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DetachScriptTriggersFromTriggerPoint( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DetachScriptTriggersFromTriggerPoint(
             /* [in] */ BSTR bstrTriggerPoint) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DetachScriptTriggersFromAllTriggerPoints( void) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DisableScriptTrigger( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DetachScriptTriggersFromAllTriggerPoints(void) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DisableScriptTrigger(
             /* [in] */ BSTR bstrTriggerPoint,
             /* [in] */ BSTR bstrScriptName) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DisableScriptTriggerPoint( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DisableScriptTriggerPoint(
             /* [in] */ BSTR bstrTriggerPoint) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DisableScriptTriggerPoints( void) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE EnableScriptTrigger( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DisableScriptTriggerPoints(void) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE EnableScriptTrigger(
             /* [in] */ BSTR bstrTriggerPoint,
             /* [in] */ BSTR bstrScriptName) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE EnableScriptTriggerPoint( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE EnableScriptTriggerPoint(
             /* [in] */ BSTR bstrTriggerName) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE EnableScriptTriggerPoints( void) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetTriggerPointFilterData( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE EnableScriptTriggerPoints(void) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetTriggerPointFilterData(
             /* [in] */ BSTR bstrTriggerPoint,
-            /* [retval][out] */ IEventDefinition **pTriggerPointData) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetTriggerFilterData( 
+            /* [retval][out] */ IEventDefinition** pTriggerPointData) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetTriggerFilterData(
             /* [in] */ BSTR bstrTriggerPoint,
             /* [in] */ BSTR bstrScriptName,
-            /* [retval][out] */ IEventDefinition **pTriggerPointData) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE EnableTriggersForScript( 
+            /* [retval][out] */ IEventDefinition** pTriggerPointData) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE EnableTriggersForScript(
             /* [in] */ BSTR bstrScript) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DisableTriggersForScript( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DisableTriggersForScript(
             /* [in] */ BSTR bstrScript) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IScriptManagerVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IScriptManager * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IScriptManager * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IScriptManager * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IScriptManager * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IScriptManager * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IScriptManager* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IScriptManager* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IScriptManager* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IScriptManager* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IScriptManager* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IScriptManager * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IScriptManager* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IScriptManager * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IScriptManager* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *DetachScriptTrigger )( 
-            IScriptManager * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* DetachScriptTrigger)(
+            IScriptManager* This,
             /* [in] */ BSTR bstrTriggerPoint,
             /* [in] */ BSTR bstrScriptName);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *DetachScriptTriggersFromTriggerPoint )( 
-            IScriptManager * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* DetachScriptTriggersFromTriggerPoint)(
+            IScriptManager* This,
             /* [in] */ BSTR bstrTriggerPoint);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *DetachScriptTriggersFromAllTriggerPoints )( 
-            IScriptManager * This);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *DisableScriptTrigger )( 
-            IScriptManager * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* DetachScriptTriggersFromAllTriggerPoints)(
+            IScriptManager* This);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* DisableScriptTrigger)(
+            IScriptManager* This,
             /* [in] */ BSTR bstrTriggerPoint,
             /* [in] */ BSTR bstrScriptName);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *DisableScriptTriggerPoint )( 
-            IScriptManager * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* DisableScriptTriggerPoint)(
+            IScriptManager* This,
             /* [in] */ BSTR bstrTriggerPoint);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *DisableScriptTriggerPoints )( 
-            IScriptManager * This);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *EnableScriptTrigger )( 
-            IScriptManager * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* DisableScriptTriggerPoints)(
+            IScriptManager* This);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* EnableScriptTrigger)(
+            IScriptManager* This,
             /* [in] */ BSTR bstrTriggerPoint,
             /* [in] */ BSTR bstrScriptName);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *EnableScriptTriggerPoint )( 
-            IScriptManager * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* EnableScriptTriggerPoint)(
+            IScriptManager* This,
             /* [in] */ BSTR bstrTriggerName);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *EnableScriptTriggerPoints )( 
-            IScriptManager * This);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *GetTriggerPointFilterData )( 
-            IScriptManager * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* EnableScriptTriggerPoints)(
+            IScriptManager* This);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* GetTriggerPointFilterData)(
+            IScriptManager* This,
             /* [in] */ BSTR bstrTriggerPoint,
-            /* [retval][out] */ IEventDefinition **pTriggerPointData);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *GetTriggerFilterData )( 
-            IScriptManager * This,
+            /* [retval][out] */ IEventDefinition** pTriggerPointData);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* GetTriggerFilterData)(
+            IScriptManager* This,
             /* [in] */ BSTR bstrTriggerPoint,
             /* [in] */ BSTR bstrScriptName,
-            /* [retval][out] */ IEventDefinition **pTriggerPointData);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *EnableTriggersForScript )( 
-            IScriptManager * This,
+            /* [retval][out] */ IEventDefinition** pTriggerPointData);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* EnableTriggersForScript)(
+            IScriptManager* This,
             /* [in] */ BSTR bstrScript);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *DisableTriggersForScript )( 
-            IScriptManager * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* DisableTriggersForScript)(
+            IScriptManager* This,
             /* [in] */ BSTR bstrScript);
-        
+
         END_INTERFACE
     } IScriptManagerVtbl;
 
     interface IScriptManager
     {
-        CONST_VTBL struct IScriptManagerVtbl *lpVtbl;
+        CONST_VTBL struct IScriptManagerVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -12086,142 +12086,142 @@ EXTERN_C const IID IID_IScriptManager;
 #ifndef __ITextSearch_INTERFACE_DEFINED__
 #define __ITextSearch_INTERFACE_DEFINED__
 
-/* interface ITextSearch */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ITextSearch */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ITextSearch;
+    EXTERN_C const IID IID_ITextSearch;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("0D7614B7-C695-4527-9B99-ACA804AACB5E")
-    ITextSearch : public IDispatch
+        ITextSearch : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Options( 
-            /* [retval][out] */ ITextSearchOption **ppOption) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE AtPoint( 
-            /* [in] */ IPoint *pPoint,
-            /* [retval][out] */ ITextObject **ppTextObj) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CollectionInRect( 
-            /* [in] */ IRectangle *pRect,
-            /* [retval][out] */ IObjectCollection **ppObjectCollection) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE InRect( 
-            /* [in] */ IRectangle *pRect,
-            /* [retval][out] */ ITextObject **ppTextObject) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE TextCursor( 
-            /* [retval][out] */ ITextCursor **ppTextCursor) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE FirstVisible( 
-            /* [retval][out] */ ITextObject **ppTextObject) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE FindTextObject( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Options(
+            /* [retval][out] */ ITextSearchOption * *ppOption) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE AtPoint(
+            /* [in] */ IPoint* pPoint,
+            /* [retval][out] */ ITextObject** ppTextObj) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE CollectionInRect(
+            /* [in] */ IRectangle* pRect,
+            /* [retval][out] */ IObjectCollection** ppObjectCollection) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE InRect(
+            /* [in] */ IRectangle* pRect,
+            /* [retval][out] */ ITextObject** ppTextObject) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE TextCursor(
+            /* [retval][out] */ ITextCursor** ppTextCursor) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE FirstVisible(
+            /* [retval][out] */ ITextObject** ppTextObject) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE FindTextObject(
             /* [in] */ BSTR bstr,
-            /* [retval][out] */ IObjectCollection **ppObjectCollection) = 0;
-        
+            /* [retval][out] */ IObjectCollection** ppObjectCollection) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ITextSearchVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ITextSearch * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ITextSearch * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ITextSearch * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ITextSearch * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ITextSearch * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ITextSearch* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ITextSearch* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ITextSearch* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ITextSearch* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ITextSearch* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ITextSearch * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ITextSearch* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ITextSearch * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ITextSearch* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Options )( 
-            ITextSearch * This,
-            /* [retval][out] */ ITextSearchOption **ppOption);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *AtPoint )( 
-            ITextSearch * This,
-            /* [in] */ IPoint *pPoint,
-            /* [retval][out] */ ITextObject **ppTextObj);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *CollectionInRect )( 
-            ITextSearch * This,
-            /* [in] */ IRectangle *pRect,
-            /* [retval][out] */ IObjectCollection **ppObjectCollection);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *InRect )( 
-            ITextSearch * This,
-            /* [in] */ IRectangle *pRect,
-            /* [retval][out] */ ITextObject **ppTextObject);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *TextCursor )( 
-            ITextSearch * This,
-            /* [retval][out] */ ITextCursor **ppTextCursor);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *FirstVisible )( 
-            ITextSearch * This,
-            /* [retval][out] */ ITextObject **ppTextObject);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *FindTextObject )( 
-            ITextSearch * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Options)(
+            ITextSearch* This,
+            /* [retval][out] */ ITextSearchOption** ppOption);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* AtPoint)(
+            ITextSearch* This,
+            /* [in] */ IPoint* pPoint,
+            /* [retval][out] */ ITextObject** ppTextObj);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* CollectionInRect)(
+            ITextSearch* This,
+            /* [in] */ IRectangle* pRect,
+            /* [retval][out] */ IObjectCollection** ppObjectCollection);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* InRect)(
+            ITextSearch* This,
+            /* [in] */ IRectangle* pRect,
+            /* [retval][out] */ ITextObject** ppTextObject);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* TextCursor)(
+            ITextSearch* This,
+            /* [retval][out] */ ITextCursor** ppTextCursor);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* FirstVisible)(
+            ITextSearch* This,
+            /* [retval][out] */ ITextObject** ppTextObject);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* FindTextObject)(
+            ITextSearch* This,
             /* [in] */ BSTR bstr,
-            /* [retval][out] */ IObjectCollection **ppObjectCollection);
-        
+            /* [retval][out] */ IObjectCollection** ppObjectCollection);
+
         END_INTERFACE
     } ITextSearchVtbl;
 
     interface ITextSearch
     {
-        CONST_VTBL struct ITextSearchVtbl *lpVtbl;
+        CONST_VTBL struct ITextSearchVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -12284,160 +12284,160 @@ EXTERN_C const IID IID_ITextSearch;
 #ifndef __ITextSearchOption_INTERFACE_DEFINED__
 #define __ITextSearchOption_INTERFACE_DEFINED__
 
-/* interface ITextSearchOption */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ITextSearchOption */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ITextSearchOption;
+    EXTERN_C const IID IID_ITextSearchOption;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("6820972A-1ABD-4BCF-924A-60053FAC4A8D")
-    ITextSearchOption : public IDispatch
+        ITextSearchOption : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Type( 
-            /* [retval][out] */ BSTR *pType) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Type( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Type(
+            /* [retval][out] */ BSTR * pType) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Type(
             /* [in] */ BSTR pType) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Area( 
-            /* [retval][out] */ BSTR *pArea) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Area( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Area(
+            /* [retval][out] */ BSTR* pArea) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Area(
             /* [in] */ BSTR pArea) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_StartFrom( 
-            /* [retval][out] */ BSTR *pStartFrom) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_StartFrom( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_StartFrom(
+            /* [retval][out] */ BSTR* pStartFrom) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_StartFrom(
             /* [in] */ BSTR pStartFrom) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_WholeWords( 
-            /* [retval][out] */ VARIANT_BOOL *pWholeWords) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_WholeWords( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_WholeWords(
+            /* [retval][out] */ VARIANT_BOOL* pWholeWords) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_WholeWords(
             /* [in] */ VARIANT_BOOL pWholeWords) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_CaseSensitive( 
-            /* [retval][out] */ VARIANT_BOOL *pCase) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_CaseSensitive( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_CaseSensitive(
+            /* [retval][out] */ VARIANT_BOOL* pCase) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_CaseSensitive(
             /* [in] */ VARIANT_BOOL pCase) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Reset( void) = 0;
-        
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Reset(void) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ITextSearchOptionVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ITextSearchOption * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ITextSearchOption * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ITextSearchOption * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ITextSearchOption * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ITextSearchOption * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ITextSearchOption* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ITextSearchOption* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ITextSearchOption* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ITextSearchOption* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ITextSearchOption* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ITextSearchOption * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ITextSearchOption* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ITextSearchOption * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ITextSearchOption* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            ITextSearchOption * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Type )( 
-            ITextSearchOption * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            ITextSearchOption* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Type)(
+            ITextSearchOption* This,
             /* [in] */ BSTR pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Area )( 
-            ITextSearchOption * This,
-            /* [retval][out] */ BSTR *pArea);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Area )( 
-            ITextSearchOption * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Area)(
+            ITextSearchOption* This,
+            /* [retval][out] */ BSTR* pArea);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Area)(
+            ITextSearchOption* This,
             /* [in] */ BSTR pArea);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_StartFrom )( 
-            ITextSearchOption * This,
-            /* [retval][out] */ BSTR *pStartFrom);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_StartFrom )( 
-            ITextSearchOption * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_StartFrom)(
+            ITextSearchOption* This,
+            /* [retval][out] */ BSTR* pStartFrom);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_StartFrom)(
+            ITextSearchOption* This,
             /* [in] */ BSTR pStartFrom);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_WholeWords )( 
-            ITextSearchOption * This,
-            /* [retval][out] */ VARIANT_BOOL *pWholeWords);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_WholeWords )( 
-            ITextSearchOption * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_WholeWords)(
+            ITextSearchOption* This,
+            /* [retval][out] */ VARIANT_BOOL* pWholeWords);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_WholeWords)(
+            ITextSearchOption* This,
             /* [in] */ VARIANT_BOOL pWholeWords);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CaseSensitive )( 
-            ITextSearchOption * This,
-            /* [retval][out] */ VARIANT_BOOL *pCase);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_CaseSensitive )( 
-            ITextSearchOption * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_CaseSensitive)(
+            ITextSearchOption* This,
+            /* [retval][out] */ VARIANT_BOOL* pCase);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_CaseSensitive)(
+            ITextSearchOption* This,
             /* [in] */ VARIANT_BOOL pCase);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Reset )( 
-            ITextSearchOption * This);
-        
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Reset)(
+            ITextSearchOption* This);
+
         END_INTERFACE
     } ITextSearchOptionVtbl;
 
     interface ITextSearchOption
     {
-        CONST_VTBL struct ITextSearchOptionVtbl *lpVtbl;
+        CONST_VTBL struct ITextSearchOptionVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -12512,148 +12512,148 @@ EXTERN_C const IID IID_ITextSearchOption;
 #ifndef __ITextObject_INTERFACE_DEFINED__
 #define __ITextObject_INTERFACE_DEFINED__
 
-/* interface ITextObject */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ITextObject */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ITextObject;
+    EXTERN_C const IID IID_ITextObject;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("7DC44C70-D1E4-4477-9E4A-CCDB38C862F7")
-    ITextObject : public IDispatch
+        ITextObject : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Type( 
-            /* [retval][out] */ BSTR *pType) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Type( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Type(
+            /* [retval][out] */ BSTR * pType) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Type(
             /* [in] */ BSTR pType) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Next( 
-            /* [retval][out] */ ITextObject **ppTextObject) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Previous( 
-            /* [retval][out] */ ITextObject **ppTextObject) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Text( 
-            /* [retval][out] */ BSTR *pText) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Location( 
-            /* [retval][out] */ IRectangle **pRectangle) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Application( 
-            /* [retval][out] */ IApplicationObject **pApplication) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Window( 
-            /* [retval][out] */ IDispatch **pWindow) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Font( 
-            /* [retval][out] */ IFontObject **pFont) = 0;
-        
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Next(
+            /* [retval][out] */ ITextObject** ppTextObject) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Previous(
+            /* [retval][out] */ ITextObject** ppTextObject) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Text(
+            /* [retval][out] */ BSTR* pText) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Location(
+            /* [retval][out] */ IRectangle** pRectangle) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Application(
+            /* [retval][out] */ IApplicationObject** pApplication) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Window(
+            /* [retval][out] */ IDispatch** pWindow) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Font(
+            /* [retval][out] */ IFontObject** pFont) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ITextObjectVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ITextObject * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ITextObject * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ITextObject * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ITextObject * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ITextObject * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ITextObject* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ITextObject* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ITextObject* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ITextObject* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ITextObject* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ITextObject * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ITextObject* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ITextObject * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ITextObject* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            ITextObject * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Type )( 
-            ITextObject * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            ITextObject* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Type)(
+            ITextObject* This,
             /* [in] */ BSTR pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Next )( 
-            ITextObject * This,
-            /* [retval][out] */ ITextObject **ppTextObject);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Previous )( 
-            ITextObject * This,
-            /* [retval][out] */ ITextObject **ppTextObject);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            ITextObject * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            ITextObject * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            ITextObject * This,
-            /* [retval][out] */ IApplicationObject **pApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Window )( 
-            ITextObject * This,
-            /* [retval][out] */ IDispatch **pWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Font )( 
-            ITextObject * This,
-            /* [retval][out] */ IFontObject **pFont);
-        
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Next)(
+            ITextObject* This,
+            /* [retval][out] */ ITextObject** ppTextObject);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Previous)(
+            ITextObject* This,
+            /* [retval][out] */ ITextObject** ppTextObject);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            ITextObject* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            ITextObject* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            ITextObject* This,
+            /* [retval][out] */ IApplicationObject** pApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Window)(
+            ITextObject* This,
+            /* [retval][out] */ IDispatch** pWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Font)(
+            ITextObject* This,
+            /* [retval][out] */ IFontObject** pFont);
+
         END_INTERFACE
     } ITextObjectVtbl;
 
     interface ITextObject
     {
-        CONST_VTBL struct ITextObjectVtbl *lpVtbl;
+        CONST_VTBL struct ITextObjectVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -12722,125 +12722,125 @@ EXTERN_C const IID IID_ITextObject;
 #ifndef __IApplicationObject_INTERFACE_DEFINED__
 #define __IApplicationObject_INTERFACE_DEFINED__
 
-/* interface IApplicationObject */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IApplicationObject */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IApplicationObject;
+    EXTERN_C const IID IID_IApplicationObject;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("30EF42DE-166E-4BD4-B864-0BEC8DC143F3")
-    IApplicationObject : public IDispatch
+        IApplicationObject : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Active( 
-            /* [retval][out] */ VARIANT_BOOL *pActive) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Module( 
-            /* [retval][out] */ BSTR *Name) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FriendlyName( 
-            /* [retval][out] */ BSTR *Name) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ProcessID( 
-            /* [retval][out] */ long *pProcID) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_WindowRoot( 
-            /* [retval][out] */ IDispatch **ppWindow) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Activate( void) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Active(
+            /* [retval][out] */ VARIANT_BOOL * pActive) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Module(
+            /* [retval][out] */ BSTR* Name) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FriendlyName(
+            /* [retval][out] */ BSTR* Name) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ProcessID(
+            /* [retval][out] */ long* pProcID) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_WindowRoot(
+            /* [retval][out] */ IDispatch** ppWindow) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Activate(void) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IApplicationObjectVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IApplicationObject * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IApplicationObject * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IApplicationObject * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IApplicationObject * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IApplicationObject * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IApplicationObject* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IApplicationObject* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IApplicationObject* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IApplicationObject* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IApplicationObject* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IApplicationObject * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IApplicationObject* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IApplicationObject * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IApplicationObject* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IApplicationObject * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Module )( 
-            IApplicationObject * This,
-            /* [retval][out] */ BSTR *Name);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FriendlyName )( 
-            IApplicationObject * This,
-            /* [retval][out] */ BSTR *Name);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ProcessID )( 
-            IApplicationObject * This,
-            /* [retval][out] */ long *pProcID);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_WindowRoot )( 
-            IApplicationObject * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IApplicationObject * This);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IApplicationObject* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Module)(
+            IApplicationObject* This,
+            /* [retval][out] */ BSTR* Name);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FriendlyName)(
+            IApplicationObject* This,
+            /* [retval][out] */ BSTR* Name);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ProcessID)(
+            IApplicationObject* This,
+            /* [retval][out] */ long* pProcID);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_WindowRoot)(
+            IApplicationObject* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IApplicationObject* This);
+
         END_INTERFACE
     } IApplicationObjectVtbl;
 
     interface IApplicationObject
     {
-        CONST_VTBL struct IApplicationObjectVtbl *lpVtbl;
+        CONST_VTBL struct IApplicationObjectVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -12900,141 +12900,141 @@ EXTERN_C const IID IID_IApplicationObject;
 #ifndef __IFontObject_INTERFACE_DEFINED__
 #define __IFontObject_INTERFACE_DEFINED__
 
-/* interface IFontObject */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IFontObject */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IFontObject;
+    EXTERN_C const IID IID_IFontObject;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("A3B6C1B2-5B5A-48D3-889B-F77B4087E860")
-    IFontObject : public IDispatch
+        IFontObject : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FontName( 
-            /* [retval][out] */ BSTR *pName) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FontSize( 
-            /* [retval][out] */ long *pSize) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_TextColor( 
-            /* [retval][out] */ long *pColor) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_BackgroundColor( 
-            /* [retval][out] */ long *pColor) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Bold( 
-            /* [retval][out] */ VARIANT_BOOL *pBold) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Italic( 
-            /* [retval][out] */ VARIANT_BOOL *pItalic) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Underline( 
-            /* [retval][out] */ VARIANT_BOOL *pUnderline) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Strikeout( 
-            /* [retval][out] */ VARIANT_BOOL *pStrikeout) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FontName(
+            /* [retval][out] */ BSTR * pName) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FontSize(
+            /* [retval][out] */ long* pSize) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_TextColor(
+            /* [retval][out] */ long* pColor) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_BackgroundColor(
+            /* [retval][out] */ long* pColor) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Bold(
+            /* [retval][out] */ VARIANT_BOOL* pBold) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Italic(
+            /* [retval][out] */ VARIANT_BOOL* pItalic) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Underline(
+            /* [retval][out] */ VARIANT_BOOL* pUnderline) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Strikeout(
+            /* [retval][out] */ VARIANT_BOOL* pStrikeout) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IFontObjectVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IFontObject * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IFontObject * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IFontObject * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IFontObject * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IFontObject * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IFontObject* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IFontObject* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IFontObject* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IFontObject* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IFontObject* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IFontObject * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IFontObject* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IFontObject * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IFontObject* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FontName )( 
-            IFontObject * This,
-            /* [retval][out] */ BSTR *pName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FontSize )( 
-            IFontObject * This,
-            /* [retval][out] */ long *pSize);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TextColor )( 
-            IFontObject * This,
-            /* [retval][out] */ long *pColor);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BackgroundColor )( 
-            IFontObject * This,
-            /* [retval][out] */ long *pColor);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Bold )( 
-            IFontObject * This,
-            /* [retval][out] */ VARIANT_BOOL *pBold);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Italic )( 
-            IFontObject * This,
-            /* [retval][out] */ VARIANT_BOOL *pItalic);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Underline )( 
-            IFontObject * This,
-            /* [retval][out] */ VARIANT_BOOL *pUnderline);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Strikeout )( 
-            IFontObject * This,
-            /* [retval][out] */ VARIANT_BOOL *pStrikeout);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FontName)(
+            IFontObject* This,
+            /* [retval][out] */ BSTR* pName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FontSize)(
+            IFontObject* This,
+            /* [retval][out] */ long* pSize);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TextColor)(
+            IFontObject* This,
+            /* [retval][out] */ long* pColor);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_BackgroundColor)(
+            IFontObject* This,
+            /* [retval][out] */ long* pColor);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Bold)(
+            IFontObject* This,
+            /* [retval][out] */ VARIANT_BOOL* pBold);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Italic)(
+            IFontObject* This,
+            /* [retval][out] */ VARIANT_BOOL* pItalic);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Underline)(
+            IFontObject* This,
+            /* [retval][out] */ VARIANT_BOOL* pUnderline);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Strikeout)(
+            IFontObject* This,
+            /* [retval][out] */ VARIANT_BOOL* pStrikeout);
+
         END_INTERFACE
     } IFontObjectVtbl;
 
     interface IFontObject
     {
-        CONST_VTBL struct IFontObjectVtbl *lpVtbl;
+        CONST_VTBL struct IFontObjectVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -13100,113 +13100,113 @@ EXTERN_C const IID IID_IFontObject;
 #ifndef __ITextCursor_INTERFACE_DEFINED__
 #define __ITextCursor_INTERFACE_DEFINED__
 
-/* interface ITextCursor */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ITextCursor */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ITextCursor;
+    EXTERN_C const IID IID_ITextCursor;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("A04731F3-3F79-4AFD-8658-1673D5E56ECE")
-    ITextCursor : public IDispatch
+        ITextCursor : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Location( 
-            /* [retval][out] */ IRectangle **pRectangle) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Text( 
-            /* [retval][out] */ ITextObject **ppTextObject) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Application( 
-            /* [retval][out] */ IApplicationObject **pApplication) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Window( 
-            /* [retval][out] */ IDispatch **pWindow) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Location(
+            /* [retval][out] */ IRectangle * *pRectangle) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Text(
+            /* [retval][out] */ ITextObject** ppTextObject) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Application(
+            /* [retval][out] */ IApplicationObject** pApplication) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Window(
+            /* [retval][out] */ IDispatch** pWindow) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ITextCursorVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ITextCursor * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ITextCursor * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ITextCursor * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ITextCursor * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ITextCursor * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ITextCursor* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ITextCursor* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ITextCursor* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ITextCursor* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ITextCursor* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ITextCursor * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ITextCursor* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ITextCursor * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ITextCursor* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            ITextCursor * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            ITextCursor * This,
-            /* [retval][out] */ ITextObject **ppTextObject);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            ITextCursor * This,
-            /* [retval][out] */ IApplicationObject **pApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Window )( 
-            ITextCursor * This,
-            /* [retval][out] */ IDispatch **pWindow);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            ITextCursor* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            ITextCursor* This,
+            /* [retval][out] */ ITextObject** ppTextObject);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            ITextCursor* This,
+            /* [retval][out] */ IApplicationObject** pApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Window)(
+            ITextCursor* This,
+            /* [retval][out] */ IDispatch** pWindow);
+
         END_INTERFACE
     } ITextCursorVtbl;
 
     interface ITextCursor
     {
-        CONST_VTBL struct ITextCursorVtbl *lpVtbl;
+        CONST_VTBL struct ITextCursorVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -13260,117 +13260,117 @@ EXTERN_C const IID IID_ITextCursor;
 #ifndef __IApplicationSearch_INTERFACE_DEFINED__
 #define __IApplicationSearch_INTERFACE_DEFINED__
 
-/* interface IApplicationSearch */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IApplicationSearch */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IApplicationSearch;
+    EXTERN_C const IID IID_IApplicationSearch;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("A4E4B0F5-5321-4E2C-9526-A5B33E890D17")
-    IApplicationSearch : public IDispatch
+        IApplicationSearch : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Active( 
-            /* [retval][out] */ IApplicationObject **ppApp) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Applications( 
-            /* [retval][out] */ IObjectCollection **ppAppColl) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE ByModuleName( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Active(
+            /* [retval][out] */ IApplicationObject * *ppApp) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Applications(
+            /* [retval][out] */ IObjectCollection** ppAppColl) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE ByModuleName(
             /* [in] */ BSTR bstr,
-            /* [retval][out] */ IObjectCollection **ppAppColl) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE AtPoint( 
-            /* [in] */ IPoint *pPoint,
-            /* [retval][out] */ IApplicationObject **ppApp) = 0;
-        
+            /* [retval][out] */ IObjectCollection** ppAppColl) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE AtPoint(
+            /* [in] */ IPoint* pPoint,
+            /* [retval][out] */ IApplicationObject** ppApp) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IApplicationSearchVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IApplicationSearch * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IApplicationSearch * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IApplicationSearch * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IApplicationSearch * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IApplicationSearch * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IApplicationSearch* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IApplicationSearch* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IApplicationSearch* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IApplicationSearch* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IApplicationSearch* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IApplicationSearch * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IApplicationSearch* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IApplicationSearch * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IApplicationSearch* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IApplicationSearch * This,
-            /* [retval][out] */ IApplicationObject **ppApp);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Applications )( 
-            IApplicationSearch * This,
-            /* [retval][out] */ IObjectCollection **ppAppColl);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *ByModuleName )( 
-            IApplicationSearch * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IApplicationSearch* This,
+            /* [retval][out] */ IApplicationObject** ppApp);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Applications)(
+            IApplicationSearch* This,
+            /* [retval][out] */ IObjectCollection** ppAppColl);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* ByModuleName)(
+            IApplicationSearch* This,
             /* [in] */ BSTR bstr,
-            /* [retval][out] */ IObjectCollection **ppAppColl);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *AtPoint )( 
-            IApplicationSearch * This,
-            /* [in] */ IPoint *pPoint,
-            /* [retval][out] */ IApplicationObject **ppApp);
-        
+            /* [retval][out] */ IObjectCollection** ppAppColl);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* AtPoint)(
+            IApplicationSearch* This,
+            /* [in] */ IPoint* pPoint,
+            /* [retval][out] */ IApplicationObject** ppApp);
+
         END_INTERFACE
     } IApplicationSearchVtbl;
 
     interface IApplicationSearch
     {
-        CONST_VTBL struct IApplicationSearchVtbl *lpVtbl;
+        CONST_VTBL struct IApplicationSearchVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -13424,112 +13424,112 @@ EXTERN_C const IID IID_IApplicationSearch;
 #ifndef __IWindowSearch_INTERFACE_DEFINED__
 #define __IWindowSearch_INTERFACE_DEFINED__
 
-/* interface IWindowSearch */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IWindowSearch */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IWindowSearch;
+    EXTERN_C const IID IID_IWindowSearch;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("67C6CF6A-AFDA-44BE-BCF9-C70E28C9EE91")
-    IWindowSearch : public IDispatch
+        IWindowSearch : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Active( 
-            /* [retval][out] */ IDispatch **ppWindow) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE AtPoint( 
-            /* [in] */ IPoint *pPoint,
-            /* [retval][out] */ IDispatch **ppWindow) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE FindWindowObject( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Active(
+            /* [retval][out] */ IDispatch * *ppWindow) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE AtPoint(
+            /* [in] */ IPoint* pPoint,
+            /* [retval][out] */ IDispatch** ppWindow) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE FindWindowObject(
             /* [in] */ BSTR bstrClassName,
             /* [in] */ BSTR bstrWindowTitle,
-            /* [retval][out] */ IObjectCollection **ppWindow) = 0;
-        
+            /* [retval][out] */ IObjectCollection** ppWindow) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IWindowSearchVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IWindowSearch * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IWindowSearch * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IWindowSearch * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IWindowSearch * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IWindowSearch * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IWindowSearch* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IWindowSearch* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IWindowSearch* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IWindowSearch* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IWindowSearch* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IWindowSearch * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IWindowSearch* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IWindowSearch * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IWindowSearch* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IWindowSearch * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *AtPoint )( 
-            IWindowSearch * This,
-            /* [in] */ IPoint *pPoint,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *FindWindowObject )( 
-            IWindowSearch * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IWindowSearch* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* AtPoint)(
+            IWindowSearch* This,
+            /* [in] */ IPoint* pPoint,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* FindWindowObject)(
+            IWindowSearch* This,
             /* [in] */ BSTR bstrClassName,
             /* [in] */ BSTR bstrWindowTitle,
-            /* [retval][out] */ IObjectCollection **ppWindow);
-        
+            /* [retval][out] */ IObjectCollection** ppWindow);
+
         END_INTERFACE
     } IWindowSearchVtbl;
 
     interface IWindowSearch
     {
-        CONST_VTBL struct IWindowSearchVtbl *lpVtbl;
+        CONST_VTBL struct IWindowSearchVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -13580,209 +13580,209 @@ EXTERN_C const IID IID_IWindowSearch;
 #ifndef __IWindowObject_INTERFACE_DEFINED__
 #define __IWindowObject_INTERFACE_DEFINED__
 
-/* interface IWindowObject */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IWindowObject */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IWindowObject;
+    EXTERN_C const IID IID_IWindowObject;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("5A1F732F-6C70-4B4E-BDF8-B0ECF9500134")
-    IWindowObject : public IDispatch
+        IWindowObject : public IDispatch
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Activate( void) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Active( 
-            /* [retval][out] */ VARIANT_BOOL *pActive) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Application( 
-            /* [retval][out] */ IApplicationObject **ppApplication) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ClassName( 
-            /* [retval][out] */ BSTR *pClassName) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled( 
-            /* [retval][out] */ VARIANT_BOOL *pVisible) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FirstChild( 
-            /* [retval][out] */ IDispatch **ppWindow) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Focus( 
-            /* [retval][out] */ VARIANT_BOOL *pActive) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Hotkey( 
-            /* [retval][out] */ BSTR *pHotkey) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_HWnd( 
-            /* [retval][out] */ long *pHWnd) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_LastChild( 
-            /* [retval][out] */ IDispatch **ppWindow) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Location( 
-            /* [retval][out] */ IRectangle **pRectangle) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_NextSibling( 
-            /* [retval][out] */ IDispatch **ppWindow) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Parent( 
-            /* [retval][out] */ IDispatch **ppWindow) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_PreviousSibling( 
-            /* [retval][out] */ IDispatch **ppWindow) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Text( 
-            /* [retval][out] */ BSTR *pText) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Title( 
-            /* [retval][out] */ BSTR *pTitle) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Type( 
-            /* [retval][out] */ BSTR *pType) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Visible( 
-            /* [retval][out] */ VARIANT_BOOL *pVisible) = 0;
-        
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Activate(void) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Active(
+            /* [retval][out] */ VARIANT_BOOL* pActive) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Application(
+            /* [retval][out] */ IApplicationObject** ppApplication) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ClassName(
+            /* [retval][out] */ BSTR* pClassName) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Enabled(
+            /* [retval][out] */ VARIANT_BOOL* pVisible) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FirstChild(
+            /* [retval][out] */ IDispatch** ppWindow) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Focus(
+            /* [retval][out] */ VARIANT_BOOL* pActive) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Hotkey(
+            /* [retval][out] */ BSTR* pHotkey) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_HWnd(
+            /* [retval][out] */ long* pHWnd) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_LastChild(
+            /* [retval][out] */ IDispatch** ppWindow) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Location(
+            /* [retval][out] */ IRectangle** pRectangle) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_NextSibling(
+            /* [retval][out] */ IDispatch** ppWindow) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Parent(
+            /* [retval][out] */ IDispatch** ppWindow) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_PreviousSibling(
+            /* [retval][out] */ IDispatch** ppWindow) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Text(
+            /* [retval][out] */ BSTR* pText) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Title(
+            /* [retval][out] */ BSTR* pTitle) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Type(
+            /* [retval][out] */ BSTR* pType) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Visible(
+            /* [retval][out] */ VARIANT_BOOL* pVisible) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IWindowObjectVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IWindowObject * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IWindowObject * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IWindowObject * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IWindowObject * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IWindowObject * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IWindowObject* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IWindowObject* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IWindowObject* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IWindowObject* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IWindowObject* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IWindowObject * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IWindowObject* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IWindowObject * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IWindowObject* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IWindowObject * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IWindowObject * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            IWindowObject * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            IWindowObject * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IWindowObject * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            IWindowObject * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            IWindowObject * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            IWindowObject * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            IWindowObject * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            IWindowObject * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IWindowObject * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            IWindowObject * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            IWindowObject * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            IWindowObject * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            IWindowObject * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            IWindowObject * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IWindowObject * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            IWindowObject * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IWindowObject* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IWindowObject* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            IWindowObject* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            IWindowObject* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IWindowObject* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            IWindowObject* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            IWindowObject* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            IWindowObject* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            IWindowObject* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            IWindowObject* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IWindowObject* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            IWindowObject* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            IWindowObject* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            IWindowObject* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            IWindowObject* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            IWindowObject* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IWindowObject* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            IWindowObject* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
         END_INTERFACE
     } IWindowObjectVtbl;
 
     interface IWindowObject
     {
-        CONST_VTBL struct IWindowObjectVtbl *lpVtbl;
+        CONST_VTBL struct IWindowObjectVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -13878,163 +13878,163 @@ EXTERN_C const IID IID_IWindowObject;
 #ifndef __ICheckBox_INTERFACE_DEFINED__
 #define __ICheckBox_INTERFACE_DEFINED__
 
-/* interface ICheckBox */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ICheckBox */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ICheckBox;
+    EXTERN_C const IID IID_ICheckBox;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("477F6A4D-AD3D-49BE-A990-C56DD52614FB")
-    ICheckBox : public IWindowObject
+        ICheckBox : public IWindowObject
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_CheckState( 
-            /* [retval][out] */ BSTR *pState) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_CheckState(
+            /* [retval][out] */ BSTR * pState) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ICheckBoxVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ICheckBox * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ICheckBox * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ICheckBox * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ICheckBox * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ICheckBox * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ICheckBox* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ICheckBox* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ICheckBox* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ICheckBox* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ICheckBox* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ICheckBox * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ICheckBox* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ICheckBox * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ICheckBox* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            ICheckBox * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            ICheckBox * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            ICheckBox * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            ICheckBox * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            ICheckBox * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            ICheckBox * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            ICheckBox * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            ICheckBox * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            ICheckBox * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            ICheckBox * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            ICheckBox * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            ICheckBox * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            ICheckBox * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            ICheckBox * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            ICheckBox * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            ICheckBox * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            ICheckBox * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            ICheckBox * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CheckState )( 
-            ICheckBox * This,
-            /* [retval][out] */ BSTR *pState);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            ICheckBox* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            ICheckBox* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            ICheckBox* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            ICheckBox* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            ICheckBox* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            ICheckBox* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            ICheckBox* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            ICheckBox* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            ICheckBox* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            ICheckBox* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            ICheckBox* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            ICheckBox* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            ICheckBox* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            ICheckBox* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            ICheckBox* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            ICheckBox* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            ICheckBox* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            ICheckBox* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_CheckState)(
+            ICheckBox* This,
+            /* [retval][out] */ BSTR* pState);
+
         END_INTERFACE
     } ICheckBoxVtbl;
 
     interface ICheckBox
     {
-        CONST_VTBL struct ICheckBoxVtbl *lpVtbl;
+        CONST_VTBL struct ICheckBoxVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -14134,184 +14134,184 @@ EXTERN_C const IID IID_ICheckBox;
 #ifndef __IComboBox_INTERFACE_DEFINED__
 #define __IComboBox_INTERFACE_DEFINED__
 
-/* interface IComboBox */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IComboBox */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IComboBox;
+    EXTERN_C const IID IID_IComboBox;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("C644815F-2157-4854-861D-E433DA8DA5B0")
-    IComboBox : public IWindowObject
+        IComboBox : public IWindowObject
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SelectedItem( 
-            /* [retval][out] */ IItemObject **pListItem) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_NumberOfItems( 
-            /* [retval][out] */ long *pNumber) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ReadOnly( 
-            /* [retval][out] */ VARIANT_BOOL *pReadOnly) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Open( 
-            /* [retval][out] */ VARIANT_BOOL *pOpen) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SelectedItem(
+            /* [retval][out] */ IItemObject * *pListItem) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_NumberOfItems(
+            /* [retval][out] */ long* pNumber) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ReadOnly(
+            /* [retval][out] */ VARIANT_BOOL* pReadOnly) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Open(
+            /* [retval][out] */ VARIANT_BOOL* pOpen) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IComboBoxVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IComboBox * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IComboBox * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IComboBox * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IComboBox * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IComboBox * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IComboBox* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IComboBox* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IComboBox* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IComboBox* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IComboBox* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IComboBox * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IComboBox* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IComboBox * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IComboBox* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IComboBox * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IComboBox * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            IComboBox * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            IComboBox * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IComboBox * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            IComboBox * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            IComboBox * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            IComboBox * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            IComboBox * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            IComboBox * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IComboBox * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            IComboBox * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            IComboBox * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            IComboBox * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            IComboBox * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            IComboBox * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IComboBox * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            IComboBox * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SelectedItem )( 
-            IComboBox * This,
-            /* [retval][out] */ IItemObject **pListItem);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NumberOfItems )( 
-            IComboBox * This,
-            /* [retval][out] */ long *pNumber);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReadOnly )( 
-            IComboBox * This,
-            /* [retval][out] */ VARIANT_BOOL *pReadOnly);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Open )( 
-            IComboBox * This,
-            /* [retval][out] */ VARIANT_BOOL *pOpen);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IComboBox* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IComboBox* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            IComboBox* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            IComboBox* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IComboBox* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            IComboBox* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            IComboBox* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            IComboBox* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            IComboBox* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            IComboBox* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IComboBox* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            IComboBox* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            IComboBox* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            IComboBox* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            IComboBox* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            IComboBox* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IComboBox* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            IComboBox* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_SelectedItem)(
+            IComboBox* This,
+            /* [retval][out] */ IItemObject** pListItem);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NumberOfItems)(
+            IComboBox* This,
+            /* [retval][out] */ long* pNumber);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ReadOnly)(
+            IComboBox* This,
+            /* [retval][out] */ VARIANT_BOOL* pReadOnly);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Open)(
+            IComboBox* This,
+            /* [retval][out] */ VARIANT_BOOL* pOpen);
+
         END_INTERFACE
     } IComboBoxVtbl;
 
     interface IComboBox
     {
-        CONST_VTBL struct IComboBoxVtbl *lpVtbl;
+        CONST_VTBL struct IComboBoxVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -14420,163 +14420,163 @@ EXTERN_C const IID IID_IComboBox;
 #ifndef __IItemObject_INTERFACE_DEFINED__
 #define __IItemObject_INTERFACE_DEFINED__
 
-/* interface IItemObject */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IItemObject */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IItemObject;
+    EXTERN_C const IID IID_IItemObject;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("AE0E849F-ED2B-494D-9A02-9DB2F021DDA5")
-    IItemObject : public IWindowObject
+        IItemObject : public IWindowObject
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Selected( 
-            /* [retval][out] */ VARIANT_BOOL *pSelected) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Selected(
+            /* [retval][out] */ VARIANT_BOOL * pSelected) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IItemObjectVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IItemObject * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IItemObject * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IItemObject * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IItemObject * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IItemObject * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IItemObject* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IItemObject* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IItemObject* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IItemObject* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IItemObject* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IItemObject * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IItemObject* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IItemObject * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IItemObject* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IItemObject * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IItemObject * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            IItemObject * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            IItemObject * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IItemObject * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            IItemObject * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            IItemObject * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            IItemObject * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            IItemObject * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            IItemObject * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IItemObject * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            IItemObject * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            IItemObject * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            IItemObject * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            IItemObject * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            IItemObject * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IItemObject * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            IItemObject * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Selected )( 
-            IItemObject * This,
-            /* [retval][out] */ VARIANT_BOOL *pSelected);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IItemObject* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IItemObject* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            IItemObject* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            IItemObject* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IItemObject* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            IItemObject* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            IItemObject* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            IItemObject* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            IItemObject* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            IItemObject* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IItemObject* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            IItemObject* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            IItemObject* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            IItemObject* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            IItemObject* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            IItemObject* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IItemObject* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            IItemObject* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Selected)(
+            IItemObject* This,
+            /* [retval][out] */ VARIANT_BOOL* pSelected);
+
         END_INTERFACE
     } IItemObjectVtbl;
 
     interface IItemObject
     {
-        CONST_VTBL struct IItemObjectVtbl *lpVtbl;
+        CONST_VTBL struct IItemObjectVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -14676,184 +14676,184 @@ EXTERN_C const IID IID_IItemObject;
 #ifndef __IEditBox_INTERFACE_DEFINED__
 #define __IEditBox_INTERFACE_DEFINED__
 
-/* interface IEditBox */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IEditBox */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IEditBox;
+    EXTERN_C const IID IID_IEditBox;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("37E5004F-2BBD-4800-BD87-B8883B6A2A83")
-    IEditBox : public IWindowObject
+        IEditBox : public IWindowObject
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ReadOnly( 
-            /* [retval][out] */ VARIANT_BOOL *pReadOnly) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_MultiLine( 
-            /* [retval][out] */ VARIANT_BOOL *pMultiLine) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_RichText( 
-            /* [retval][out] */ VARIANT_BOOL *pRichText) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Password( 
-            /* [retval][out] */ VARIANT_BOOL *pPassword) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ReadOnly(
+            /* [retval][out] */ VARIANT_BOOL * pReadOnly) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_MultiLine(
+            /* [retval][out] */ VARIANT_BOOL* pMultiLine) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_RichText(
+            /* [retval][out] */ VARIANT_BOOL* pRichText) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Password(
+            /* [retval][out] */ VARIANT_BOOL* pPassword) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IEditBoxVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IEditBox * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IEditBox * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IEditBox * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IEditBox * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IEditBox * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IEditBox* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IEditBox* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IEditBox* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IEditBox* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IEditBox* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IEditBox * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IEditBox* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IEditBox * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IEditBox* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IEditBox * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IEditBox * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            IEditBox * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            IEditBox * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IEditBox * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            IEditBox * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            IEditBox * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            IEditBox * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            IEditBox * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            IEditBox * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IEditBox * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            IEditBox * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            IEditBox * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            IEditBox * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            IEditBox * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            IEditBox * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IEditBox * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            IEditBox * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReadOnly )( 
-            IEditBox * This,
-            /* [retval][out] */ VARIANT_BOOL *pReadOnly);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MultiLine )( 
-            IEditBox * This,
-            /* [retval][out] */ VARIANT_BOOL *pMultiLine);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RichText )( 
-            IEditBox * This,
-            /* [retval][out] */ VARIANT_BOOL *pRichText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Password )( 
-            IEditBox * This,
-            /* [retval][out] */ VARIANT_BOOL *pPassword);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IEditBox* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IEditBox* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            IEditBox* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            IEditBox* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IEditBox* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            IEditBox* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            IEditBox* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            IEditBox* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            IEditBox* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            IEditBox* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IEditBox* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            IEditBox* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            IEditBox* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            IEditBox* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            IEditBox* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            IEditBox* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IEditBox* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            IEditBox* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ReadOnly)(
+            IEditBox* This,
+            /* [retval][out] */ VARIANT_BOOL* pReadOnly);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_MultiLine)(
+            IEditBox* This,
+            /* [retval][out] */ VARIANT_BOOL* pMultiLine);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_RichText)(
+            IEditBox* This,
+            /* [retval][out] */ VARIANT_BOOL* pRichText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Password)(
+            IEditBox* This,
+            /* [retval][out] */ VARIANT_BOOL* pPassword);
+
         END_INTERFACE
     } IEditBoxVtbl;
 
     interface IEditBox
     {
-        CONST_VTBL struct IEditBoxVtbl *lpVtbl;
+        CONST_VTBL struct IEditBoxVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -14962,170 +14962,170 @@ EXTERN_C const IID IID_IEditBox;
 #ifndef __ILink_INTERFACE_DEFINED__
 #define __ILink_INTERFACE_DEFINED__
 
-/* interface ILink */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ILink */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ILink;
+    EXTERN_C const IID IID_ILink;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("FB9E3E9B-374D-4E3F-9203-7C3D8F848F41")
-    ILink : public IWindowObject
+        ILink : public IWindowObject
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Visited( 
-            /* [retval][out] */ VARIANT_BOOL *pVisited) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_URL( 
-            /* [retval][out] */ BSTR *pURL) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Visited(
+            /* [retval][out] */ VARIANT_BOOL * pVisited) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_URL(
+            /* [retval][out] */ BSTR* pURL) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ILinkVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ILink * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ILink * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ILink * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ILink * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ILink * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ILink* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ILink* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ILink* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ILink* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ILink* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ILink * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ILink* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ILink * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ILink* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            ILink * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            ILink * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            ILink * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            ILink * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            ILink * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            ILink * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            ILink * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            ILink * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            ILink * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            ILink * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            ILink * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            ILink * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            ILink * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            ILink * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            ILink * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            ILink * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            ILink * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            ILink * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visited )( 
-            ILink * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisited);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_URL )( 
-            ILink * This,
-            /* [retval][out] */ BSTR *pURL);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            ILink* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            ILink* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            ILink* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            ILink* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            ILink* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            ILink* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            ILink* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            ILink* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            ILink* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            ILink* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            ILink* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            ILink* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            ILink* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            ILink* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            ILink* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            ILink* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            ILink* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            ILink* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visited)(
+            ILink* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisited);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_URL)(
+            ILink* This,
+            /* [retval][out] */ BSTR* pURL);
+
         END_INTERFACE
     } ILinkVtbl;
 
     interface ILink
     {
-        CONST_VTBL struct ILinkVtbl *lpVtbl;
+        CONST_VTBL struct ILinkVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -15228,184 +15228,184 @@ EXTERN_C const IID IID_ILink;
 #ifndef __IListView_INTERFACE_DEFINED__
 #define __IListView_INTERFACE_DEFINED__
 
-/* interface IListView */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IListView */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IListView;
+    EXTERN_C const IID IID_IListView;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("32A532D8-5F54-4E5A-876A-737A87C8CEE1")
-    IListView : public IWindowObject
+        IListView : public IWindowObject
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SelectedItem( 
-            /* [retval][out] */ IItemObject **pListItem) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_NumberOfItems( 
-            /* [retval][out] */ long *pNumber) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_NumberOfColumns( 
-            /* [retval][out] */ long *pNumber) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ViewType( 
-            /* [retval][out] */ BSTR *pViewType) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SelectedItem(
+            /* [retval][out] */ IItemObject * *pListItem) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_NumberOfItems(
+            /* [retval][out] */ long* pNumber) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_NumberOfColumns(
+            /* [retval][out] */ long* pNumber) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ViewType(
+            /* [retval][out] */ BSTR* pViewType) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IListViewVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IListView * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IListView * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IListView * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IListView * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IListView * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IListView* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IListView* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IListView* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IListView* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IListView* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IListView * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IListView* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IListView * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IListView* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IListView * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IListView * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            IListView * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            IListView * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IListView * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            IListView * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            IListView * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            IListView * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            IListView * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            IListView * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IListView * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            IListView * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            IListView * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            IListView * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            IListView * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            IListView * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IListView * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            IListView * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SelectedItem )( 
-            IListView * This,
-            /* [retval][out] */ IItemObject **pListItem);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NumberOfItems )( 
-            IListView * This,
-            /* [retval][out] */ long *pNumber);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NumberOfColumns )( 
-            IListView * This,
-            /* [retval][out] */ long *pNumber);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ViewType )( 
-            IListView * This,
-            /* [retval][out] */ BSTR *pViewType);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IListView* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IListView* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            IListView* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            IListView* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IListView* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            IListView* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            IListView* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            IListView* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            IListView* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            IListView* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IListView* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            IListView* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            IListView* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            IListView* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            IListView* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            IListView* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IListView* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            IListView* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_SelectedItem)(
+            IListView* This,
+            /* [retval][out] */ IItemObject** pListItem);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NumberOfItems)(
+            IListView* This,
+            /* [retval][out] */ long* pNumber);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NumberOfColumns)(
+            IListView* This,
+            /* [retval][out] */ long* pNumber);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ViewType)(
+            IListView* This,
+            /* [retval][out] */ BSTR* pViewType);
+
         END_INTERFACE
     } IListViewVtbl;
 
     interface IListView
     {
-        CONST_VTBL struct IListViewVtbl *lpVtbl;
+        CONST_VTBL struct IListViewVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -15514,184 +15514,184 @@ EXTERN_C const IID IID_IListView;
 #ifndef __IMenuItem_INTERFACE_DEFINED__
 #define __IMenuItem_INTERFACE_DEFINED__
 
-/* interface IMenuItem */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IMenuItem */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IMenuItem;
+    EXTERN_C const IID IID_IMenuItem;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("836A99AD-BCBE-4534-A8A2-73ADDFCC7571")
-    IMenuItem : public IWindowObject
+        IMenuItem : public IWindowObject
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ShortCut( 
-            /* [retval][out] */ BSTR *pShortCut) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Selected( 
-            /* [retval][out] */ VARIANT_BOOL *pSelected) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Checked( 
-            /* [retval][out] */ VARIANT_BOOL *pChecked) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_HasSubmenu( 
-            /* [retval][out] */ VARIANT_BOOL *pHasSubmenu) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ShortCut(
+            /* [retval][out] */ BSTR * pShortCut) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Selected(
+            /* [retval][out] */ VARIANT_BOOL* pSelected) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Checked(
+            /* [retval][out] */ VARIANT_BOOL* pChecked) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_HasSubmenu(
+            /* [retval][out] */ VARIANT_BOOL* pHasSubmenu) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IMenuItemVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IMenuItem * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IMenuItem * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IMenuItem * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IMenuItem * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IMenuItem * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IMenuItem* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IMenuItem* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IMenuItem* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IMenuItem* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IMenuItem* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IMenuItem * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IMenuItem* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IMenuItem * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IMenuItem* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IMenuItem * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IMenuItem * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            IMenuItem * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            IMenuItem * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IMenuItem * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            IMenuItem * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            IMenuItem * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            IMenuItem * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            IMenuItem * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            IMenuItem * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IMenuItem * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            IMenuItem * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            IMenuItem * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            IMenuItem * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            IMenuItem * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            IMenuItem * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IMenuItem * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            IMenuItem * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ShortCut )( 
-            IMenuItem * This,
-            /* [retval][out] */ BSTR *pShortCut);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Selected )( 
-            IMenuItem * This,
-            /* [retval][out] */ VARIANT_BOOL *pSelected);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Checked )( 
-            IMenuItem * This,
-            /* [retval][out] */ VARIANT_BOOL *pChecked);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HasSubmenu )( 
-            IMenuItem * This,
-            /* [retval][out] */ VARIANT_BOOL *pHasSubmenu);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IMenuItem* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IMenuItem* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            IMenuItem* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            IMenuItem* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IMenuItem* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            IMenuItem* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            IMenuItem* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            IMenuItem* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            IMenuItem* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            IMenuItem* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IMenuItem* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            IMenuItem* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            IMenuItem* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            IMenuItem* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            IMenuItem* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            IMenuItem* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IMenuItem* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            IMenuItem* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ShortCut)(
+            IMenuItem* This,
+            /* [retval][out] */ BSTR* pShortCut);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Selected)(
+            IMenuItem* This,
+            /* [retval][out] */ VARIANT_BOOL* pSelected);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Checked)(
+            IMenuItem* This,
+            /* [retval][out] */ VARIANT_BOOL* pChecked);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HasSubmenu)(
+            IMenuItem* This,
+            /* [retval][out] */ VARIANT_BOOL* pHasSubmenu);
+
         END_INTERFACE
     } IMenuItemVtbl;
 
     interface IMenuItem
     {
-        CONST_VTBL struct IMenuItemVtbl *lpVtbl;
+        CONST_VTBL struct IMenuItemVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -15800,163 +15800,163 @@ EXTERN_C const IID IID_IMenuItem;
 #ifndef __IRadioButton_INTERFACE_DEFINED__
 #define __IRadioButton_INTERFACE_DEFINED__
 
-/* interface IRadioButton */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IRadioButton */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IRadioButton;
+    EXTERN_C const IID IID_IRadioButton;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("0680F1B0-823E-4953-A9FF-F52C407A59FD")
-    IRadioButton : public IWindowObject
+        IRadioButton : public IWindowObject
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Checked( 
-            /* [retval][out] */ VARIANT_BOOL *pChecked) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Checked(
+            /* [retval][out] */ VARIANT_BOOL * pChecked) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IRadioButtonVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IRadioButton * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IRadioButton * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IRadioButton * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IRadioButton * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IRadioButton * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IRadioButton* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IRadioButton* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IRadioButton* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IRadioButton* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IRadioButton* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IRadioButton * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IRadioButton* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IRadioButton * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IRadioButton* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IRadioButton * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IRadioButton * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            IRadioButton * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            IRadioButton * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IRadioButton * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            IRadioButton * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            IRadioButton * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            IRadioButton * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            IRadioButton * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            IRadioButton * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IRadioButton * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            IRadioButton * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            IRadioButton * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            IRadioButton * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            IRadioButton * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            IRadioButton * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IRadioButton * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            IRadioButton * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Checked )( 
-            IRadioButton * This,
-            /* [retval][out] */ VARIANT_BOOL *pChecked);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IRadioButton* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IRadioButton* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            IRadioButton* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            IRadioButton* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IRadioButton* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            IRadioButton* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            IRadioButton* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            IRadioButton* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            IRadioButton* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            IRadioButton* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IRadioButton* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            IRadioButton* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            IRadioButton* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            IRadioButton* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            IRadioButton* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            IRadioButton* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IRadioButton* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            IRadioButton* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Checked)(
+            IRadioButton* This,
+            /* [retval][out] */ VARIANT_BOOL* pChecked);
+
         END_INTERFACE
     } IRadioButtonVtbl;
 
     interface IRadioButton
     {
-        CONST_VTBL struct IRadioButtonVtbl *lpVtbl;
+        CONST_VTBL struct IRadioButtonVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -16056,170 +16056,170 @@ EXTERN_C const IID IID_IRadioButton;
 #ifndef __IScrollBar_INTERFACE_DEFINED__
 #define __IScrollBar_INTERFACE_DEFINED__
 
-/* interface IScrollBar */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IScrollBar */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IScrollBar;
+    EXTERN_C const IID IID_IScrollBar;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("3656A1FC-DFEA-4ACF-9C78-675BE5EA272D")
-    IScrollBar : public IWindowObject
+        IScrollBar : public IWindowObject
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Direction( 
-            /* [retval][out] */ BSTR *pDirection) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Percent( 
-            /* [retval][out] */ long *pPercent) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Direction(
+            /* [retval][out] */ BSTR * pDirection) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Percent(
+            /* [retval][out] */ long* pPercent) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IScrollBarVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IScrollBar * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IScrollBar * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IScrollBar * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IScrollBar * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IScrollBar * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IScrollBar* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IScrollBar* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IScrollBar* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IScrollBar* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IScrollBar* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IScrollBar * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IScrollBar* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IScrollBar * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IScrollBar* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IScrollBar * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IScrollBar * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            IScrollBar * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            IScrollBar * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IScrollBar * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            IScrollBar * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            IScrollBar * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            IScrollBar * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            IScrollBar * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            IScrollBar * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IScrollBar * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            IScrollBar * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            IScrollBar * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            IScrollBar * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            IScrollBar * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            IScrollBar * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IScrollBar * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            IScrollBar * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Direction )( 
-            IScrollBar * This,
-            /* [retval][out] */ BSTR *pDirection);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Percent )( 
-            IScrollBar * This,
-            /* [retval][out] */ long *pPercent);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IScrollBar* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IScrollBar* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            IScrollBar* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            IScrollBar* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IScrollBar* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            IScrollBar* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            IScrollBar* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            IScrollBar* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            IScrollBar* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            IScrollBar* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IScrollBar* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            IScrollBar* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            IScrollBar* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            IScrollBar* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            IScrollBar* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            IScrollBar* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IScrollBar* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            IScrollBar* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Direction)(
+            IScrollBar* This,
+            /* [retval][out] */ BSTR* pDirection);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Percent)(
+            IScrollBar* This,
+            /* [retval][out] */ long* pPercent);
+
         END_INTERFACE
     } IScrollBarVtbl;
 
     interface IScrollBar
     {
-        CONST_VTBL struct IScrollBarVtbl *lpVtbl;
+        CONST_VTBL struct IScrollBarVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -16322,163 +16322,163 @@ EXTERN_C const IID IID_IScrollBar;
 #ifndef __ITrackBar_INTERFACE_DEFINED__
 #define __ITrackBar_INTERFACE_DEFINED__
 
-/* interface ITrackBar */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ITrackBar */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ITrackBar;
+    EXTERN_C const IID IID_ITrackBar;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("68DD54E0-183D-41AE-BF86-4DA434814302")
-    ITrackBar : public IWindowObject
+        ITrackBar : public IWindowObject
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Position( 
-            /* [retval][out] */ long *pPosition) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Position(
+            /* [retval][out] */ long* pPosition) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ITrackBarVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ITrackBar * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ITrackBar * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ITrackBar * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ITrackBar * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ITrackBar * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ITrackBar* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ITrackBar* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ITrackBar* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ITrackBar* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ITrackBar* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ITrackBar * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ITrackBar* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ITrackBar * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ITrackBar* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            ITrackBar * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            ITrackBar * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            ITrackBar * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            ITrackBar * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            ITrackBar * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            ITrackBar * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            ITrackBar * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            ITrackBar * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            ITrackBar * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            ITrackBar * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            ITrackBar * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            ITrackBar * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            ITrackBar * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            ITrackBar * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            ITrackBar * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            ITrackBar * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            ITrackBar * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            ITrackBar * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Position )( 
-            ITrackBar * This,
-            /* [retval][out] */ long *pPosition);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            ITrackBar* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            ITrackBar* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            ITrackBar* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            ITrackBar* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            ITrackBar* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            ITrackBar* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            ITrackBar* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            ITrackBar* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            ITrackBar* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            ITrackBar* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            ITrackBar* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            ITrackBar* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            ITrackBar* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            ITrackBar* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            ITrackBar* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            ITrackBar* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            ITrackBar* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            ITrackBar* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Position)(
+            ITrackBar* This,
+            /* [retval][out] */ long* pPosition);
+
         END_INTERFACE
     } ITrackBarVtbl;
 
     interface ITrackBar
     {
-        CONST_VTBL struct ITrackBarVtbl *lpVtbl;
+        CONST_VTBL struct ITrackBarVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -16578,170 +16578,170 @@ EXTERN_C const IID IID_ITrackBar;
 #ifndef __ITreeView_INTERFACE_DEFINED__
 #define __ITreeView_INTERFACE_DEFINED__
 
-/* interface ITreeView */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ITreeView */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ITreeView;
+    EXTERN_C const IID IID_ITreeView;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("4F521C31-EE39-4CF7-A200-E9850A9C070C")
-    ITreeView : public IWindowObject
+        ITreeView : public IWindowObject
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SelectedItem( 
-            /* [retval][out] */ IItemObject **pListItem) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SelectedLevel( 
-            /* [retval][out] */ long *pSelectedLevel) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SelectedItem(
+            /* [retval][out] */ IItemObject * *pListItem) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SelectedLevel(
+            /* [retval][out] */ long* pSelectedLevel) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ITreeViewVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ITreeView * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ITreeView * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ITreeView * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ITreeView * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ITreeView * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ITreeView* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ITreeView* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ITreeView* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ITreeView* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ITreeView* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ITreeView * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ITreeView* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ITreeView * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ITreeView* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            ITreeView * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            ITreeView * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            ITreeView * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            ITreeView * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            ITreeView * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            ITreeView * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            ITreeView * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            ITreeView * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            ITreeView * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            ITreeView * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            ITreeView * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            ITreeView * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            ITreeView * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            ITreeView * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            ITreeView * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            ITreeView * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            ITreeView * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            ITreeView * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SelectedItem )( 
-            ITreeView * This,
-            /* [retval][out] */ IItemObject **pListItem);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SelectedLevel )( 
-            ITreeView * This,
-            /* [retval][out] */ long *pSelectedLevel);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            ITreeView* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            ITreeView* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            ITreeView* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            ITreeView* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            ITreeView* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            ITreeView* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            ITreeView* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            ITreeView* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            ITreeView* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            ITreeView* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            ITreeView* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            ITreeView* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            ITreeView* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            ITreeView* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            ITreeView* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            ITreeView* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            ITreeView* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            ITreeView* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_SelectedItem)(
+            ITreeView* This,
+            /* [retval][out] */ IItemObject** pListItem);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_SelectedLevel)(
+            ITreeView* This,
+            /* [retval][out] */ long* pSelectedLevel);
+
         END_INTERFACE
     } ITreeViewVtbl;
 
     interface ITreeView
     {
-        CONST_VTBL struct ITreeViewVtbl *lpVtbl;
+        CONST_VTBL struct ITreeViewVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -16844,134 +16844,134 @@ EXTERN_C const IID IID_ITreeView;
 #ifndef __ISpeechEventObject_INTERFACE_DEFINED__
 #define __ISpeechEventObject_INTERFACE_DEFINED__
 
-/* interface ISpeechEventObject */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ISpeechEventObject */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ISpeechEventObject;
+    EXTERN_C const IID IID_ISpeechEventObject;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("8511473E-8FDE-4327-BFAD-EC59F77FCB3F")
-    ISpeechEventObject : public IDispatch
+        ISpeechEventObject : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Client( 
-            /* [retval][out] */ BSTR *pbstrClient) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Client( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Client(
+            /* [retval][out] */ BSTR * pbstrClient) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Client(
             /* [in] */ BSTR pbstrClient) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Text( 
-            /* [retval][out] */ BSTR *pbstrText) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Text( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Text(
+            /* [retval][out] */ BSTR* pbstrText) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Text(
             /* [in] */ BSTR pbstrText) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Voice( 
-            /* [retval][out] */ IVoice **pVoice) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Flags( 
-            /* [retval][out] */ unsigned long *pdwFlags) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Flags( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Voice(
+            /* [retval][out] */ IVoice** pVoice) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Flags(
+            /* [retval][out] */ unsigned long* pdwFlags) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_Flags(
             /* [in] */ unsigned long pdwFlags) = 0;
-        
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ISpeechEventObjectVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ISpeechEventObject * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ISpeechEventObject * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ISpeechEventObject * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ISpeechEventObject * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ISpeechEventObject * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ISpeechEventObject* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ISpeechEventObject* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ISpeechEventObject* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ISpeechEventObject* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ISpeechEventObject* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ISpeechEventObject * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ISpeechEventObject* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ISpeechEventObject * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ISpeechEventObject* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Client )( 
-            ISpeechEventObject * This,
-            /* [retval][out] */ BSTR *pbstrClient);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Client )( 
-            ISpeechEventObject * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Client)(
+            ISpeechEventObject* This,
+            /* [retval][out] */ BSTR* pbstrClient);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Client)(
+            ISpeechEventObject* This,
             /* [in] */ BSTR pbstrClient);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            ISpeechEventObject * This,
-            /* [retval][out] */ BSTR *pbstrText);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Text )( 
-            ISpeechEventObject * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            ISpeechEventObject* This,
+            /* [retval][out] */ BSTR* pbstrText);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Text)(
+            ISpeechEventObject* This,
             /* [in] */ BSTR pbstrText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Voice )( 
-            ISpeechEventObject * This,
-            /* [retval][out] */ IVoice **pVoice);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Flags )( 
-            ISpeechEventObject * This,
-            /* [retval][out] */ unsigned long *pdwFlags);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Flags )( 
-            ISpeechEventObject * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Voice)(
+            ISpeechEventObject* This,
+            /* [retval][out] */ IVoice** pVoice);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Flags)(
+            ISpeechEventObject* This,
+            /* [retval][out] */ unsigned long* pdwFlags);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Flags)(
+            ISpeechEventObject* This,
             /* [in] */ unsigned long pdwFlags);
-        
+
         END_INTERFACE
     } ISpeechEventObjectVtbl;
 
     interface ISpeechEventObject
     {
-        CONST_VTBL struct ISpeechEventObjectVtbl *lpVtbl;
+        CONST_VTBL struct ISpeechEventObjectVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -17034,92 +17034,92 @@ EXTERN_C const IID IID_ISpeechEventObject;
 #ifndef __IEnvironment_INTERFACE_DEFINED__
 #define __IEnvironment_INTERFACE_DEFINED__
 
-/* interface IEnvironment */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IEnvironment */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IEnvironment;
+    EXTERN_C const IID IID_IEnvironment;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("C27BB1E7-6142-4A9D-8DB1-8571B09E4363")
-    IEnvironment : public IDispatch
+        IEnvironment : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_OperatingSystemVersion( 
-            /* [retval][out] */ long *pOpSysVer) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_OperatingSystemVersion(
+            /* [retval][out] */ long* pOpSysVer) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IEnvironmentVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IEnvironment * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IEnvironment * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IEnvironment * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IEnvironment * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IEnvironment * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IEnvironment* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IEnvironment* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IEnvironment* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IEnvironment* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IEnvironment* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IEnvironment * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IEnvironment* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IEnvironment * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IEnvironment* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_OperatingSystemVersion )( 
-            IEnvironment * This,
-            /* [retval][out] */ long *pOpSysVer);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_OperatingSystemVersion)(
+            IEnvironment* This,
+            /* [retval][out] */ long* pOpSysVer);
+
         END_INTERFACE
     } IEnvironmentVtbl;
 
     interface IEnvironment
     {
-        CONST_VTBL struct IEnvironmentVtbl *lpVtbl;
+        CONST_VTBL struct IEnvironmentVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -17164,187 +17164,187 @@ EXTERN_C const IID IID_IEnvironment;
 #ifndef __IWindowObject2_INTERFACE_DEFINED__
 #define __IWindowObject2_INTERFACE_DEFINED__
 
-/* interface IWindowObject2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IWindowObject2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IWindowObject2;
+    EXTERN_C const IID IID_IWindowObject2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("F71A5B7C-BB03-45AC-9703-DDFFF9A94807")
-    IWindowObject2 : public IWindowObject
+        IWindowObject2 : public IWindowObject
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ControlID( 
-            /* [retval][out] */ BSTR *pId) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE MakeVisible( void) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Options( 
-            /* [retval][out] */ IWindowObjectOption **ppOptions) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE SetFocus( void) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_TopMost( 
-            /* [retval][out] */ VARIANT_BOOL *pTopMost) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ControlID(
+            /* [retval][out] */ BSTR * pId) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE MakeVisible(void) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Options(
+            /* [retval][out] */ IWindowObjectOption** ppOptions) = 0;
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE SetFocus(void) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_TopMost(
+            /* [retval][out] */ VARIANT_BOOL* pTopMost) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IWindowObject2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IWindowObject2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IWindowObject2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IWindowObject2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IWindowObject2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IWindowObject2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IWindowObject2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IWindowObject2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IWindowObject2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IWindowObject2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IWindowObject2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IWindowObject2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IWindowObject2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IWindowObject2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IWindowObject2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IWindowObject2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ControlID )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ BSTR *pId);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *MakeVisible )( 
-            IWindowObject2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Options )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ IWindowObjectOption **ppOptions);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetFocus )( 
-            IWindowObject2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TopMost )( 
-            IWindowObject2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pTopMost);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IWindowObject2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IWindowObject2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            IWindowObject2* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            IWindowObject2* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IWindowObject2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            IWindowObject2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            IWindowObject2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            IWindowObject2* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            IWindowObject2* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            IWindowObject2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IWindowObject2* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            IWindowObject2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            IWindowObject2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            IWindowObject2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            IWindowObject2* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            IWindowObject2* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IWindowObject2* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            IWindowObject2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ControlID)(
+            IWindowObject2* This,
+            /* [retval][out] */ BSTR* pId);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* MakeVisible)(
+            IWindowObject2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Options)(
+            IWindowObject2* This,
+            /* [retval][out] */ IWindowObjectOption** ppOptions);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetFocus)(
+            IWindowObject2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TopMost)(
+            IWindowObject2* This,
+            /* [retval][out] */ VARIANT_BOOL* pTopMost);
+
         END_INTERFACE
     } IWindowObject2Vtbl;
 
     interface IWindowObject2
     {
-        CONST_VTBL struct IWindowObject2Vtbl *lpVtbl;
+        CONST_VTBL struct IWindowObject2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -17456,118 +17456,118 @@ EXTERN_C const IID IID_IWindowObject2;
 #ifndef __IWindowObjectOption_INTERFACE_DEFINED__
 #define __IWindowObjectOption_INTERFACE_DEFINED__
 
-/* interface IWindowObjectOption */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IWindowObjectOption */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IWindowObjectOption;
+    EXTERN_C const IID IID_IWindowObjectOption;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("D226D606-A89C-4277-A396-AB57F9D2C1BD")
-    IWindowObjectOption : public IDispatch
+        IWindowObjectOption : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_NavigateToNotVisible( 
-            /* [retval][out] */ VARIANT_BOOL *pBool) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_NavigateToNotVisible( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_NavigateToNotVisible(
+            /* [retval][out] */ VARIANT_BOOL * pBool) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_NavigateToNotVisible(
             /* [in] */ VARIANT_BOOL pBool) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_NavigateToUnnamed( 
-            /* [retval][out] */ VARIANT_BOOL *pBool) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_NavigateToUnnamed( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_NavigateToUnnamed(
+            /* [retval][out] */ VARIANT_BOOL* pBool) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_NavigateToUnnamed(
             /* [in] */ VARIANT_BOOL pBool) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Reset( void) = 0;
-        
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Reset(void) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IWindowObjectOptionVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IWindowObjectOption * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IWindowObjectOption * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IWindowObjectOption * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IWindowObjectOption * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IWindowObjectOption * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IWindowObjectOption* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IWindowObjectOption* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IWindowObjectOption* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IWindowObjectOption* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IWindowObjectOption* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IWindowObjectOption * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IWindowObjectOption* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IWindowObjectOption * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IWindowObjectOption* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NavigateToNotVisible )( 
-            IWindowObjectOption * This,
-            /* [retval][out] */ VARIANT_BOOL *pBool);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_NavigateToNotVisible )( 
-            IWindowObjectOption * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NavigateToNotVisible)(
+            IWindowObjectOption* This,
+            /* [retval][out] */ VARIANT_BOOL* pBool);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_NavigateToNotVisible)(
+            IWindowObjectOption* This,
             /* [in] */ VARIANT_BOOL pBool);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NavigateToUnnamed )( 
-            IWindowObjectOption * This,
-            /* [retval][out] */ VARIANT_BOOL *pBool);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_NavigateToUnnamed )( 
-            IWindowObjectOption * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NavigateToUnnamed)(
+            IWindowObjectOption* This,
+            /* [retval][out] */ VARIANT_BOOL* pBool);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_NavigateToUnnamed)(
+            IWindowObjectOption* This,
             /* [in] */ VARIANT_BOOL pBool);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Reset )( 
-            IWindowObjectOption * This);
-        
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Reset)(
+            IWindowObjectOption* This);
+
         END_INTERFACE
     } IWindowObjectOptionVtbl;
 
     interface IWindowObjectOption
     {
-        CONST_VTBL struct IWindowObjectOptionVtbl *lpVtbl;
+        CONST_VTBL struct IWindowObjectOptionVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -17624,181 +17624,181 @@ EXTERN_C const IID IID_IWindowObjectOption;
 #ifndef __IHeaderControl_INTERFACE_DEFINED__
 #define __IHeaderControl_INTERFACE_DEFINED__
 
-/* interface IHeaderControl */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IHeaderControl */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IHeaderControl;
+    EXTERN_C const IID IID_IHeaderControl;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("19E19AE5-D44B-4C67-BA8E-37BDF971BF90")
-    IHeaderControl : public IWindowObject2
+        IHeaderControl : public IWindowObject2
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Level( 
-            /* [retval][out] */ long *pLevel) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Level(
+            /* [retval][out] */ long* pLevel) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IHeaderControlVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IHeaderControl * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IHeaderControl * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IHeaderControl * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IHeaderControl * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IHeaderControl * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IHeaderControl* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IHeaderControl* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IHeaderControl* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IHeaderControl* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IHeaderControl* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IHeaderControl * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IHeaderControl* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IHeaderControl * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IHeaderControl* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IHeaderControl * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IHeaderControl * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            IHeaderControl * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            IHeaderControl * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IHeaderControl * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            IHeaderControl * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            IHeaderControl * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            IHeaderControl * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            IHeaderControl * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            IHeaderControl * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IHeaderControl * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            IHeaderControl * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            IHeaderControl * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            IHeaderControl * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            IHeaderControl * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            IHeaderControl * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IHeaderControl * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            IHeaderControl * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ControlID )( 
-            IHeaderControl * This,
-            /* [retval][out] */ BSTR *pId);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *MakeVisible )( 
-            IHeaderControl * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Options )( 
-            IHeaderControl * This,
-            /* [retval][out] */ IWindowObjectOption **ppOptions);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetFocus )( 
-            IHeaderControl * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TopMost )( 
-            IHeaderControl * This,
-            /* [retval][out] */ VARIANT_BOOL *pTopMost);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Level )( 
-            IHeaderControl * This,
-            /* [retval][out] */ long *pLevel);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IHeaderControl* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IHeaderControl* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            IHeaderControl* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            IHeaderControl* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IHeaderControl* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            IHeaderControl* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            IHeaderControl* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            IHeaderControl* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            IHeaderControl* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            IHeaderControl* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IHeaderControl* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            IHeaderControl* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            IHeaderControl* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            IHeaderControl* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            IHeaderControl* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            IHeaderControl* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IHeaderControl* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            IHeaderControl* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ControlID)(
+            IHeaderControl* This,
+            /* [retval][out] */ BSTR* pId);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* MakeVisible)(
+            IHeaderControl* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Options)(
+            IHeaderControl* This,
+            /* [retval][out] */ IWindowObjectOption** ppOptions);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetFocus)(
+            IHeaderControl* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TopMost)(
+            IHeaderControl* This,
+            /* [retval][out] */ VARIANT_BOOL* pTopMost);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Level)(
+            IHeaderControl* This,
+            /* [retval][out] */ long* pLevel);
+
         END_INTERFACE
     } IHeaderControlVtbl;
 
     interface IHeaderControl
     {
-        CONST_VTBL struct IHeaderControlVtbl *lpVtbl;
+        CONST_VTBL struct IHeaderControlVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -17914,181 +17914,181 @@ EXTERN_C const IID IID_IHeaderControl;
 #ifndef __ICheckBox2_INTERFACE_DEFINED__
 #define __ICheckBox2_INTERFACE_DEFINED__
 
-/* interface ICheckBox2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ICheckBox2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ICheckBox2;
+    EXTERN_C const IID IID_ICheckBox2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("4A9140B5-7C86-4A9C-8EA9-5C84755841E1")
-    ICheckBox2 : public IWindowObject2
+        ICheckBox2 : public IWindowObject2
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_CheckState( 
-            /* [retval][out] */ BSTR *pState) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_CheckState(
+            /* [retval][out] */ BSTR * pState) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ICheckBox2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ICheckBox2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ICheckBox2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ICheckBox2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ICheckBox2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ICheckBox2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ICheckBox2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ICheckBox2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ICheckBox2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ICheckBox2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ICheckBox2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ICheckBox2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ICheckBox2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ICheckBox2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ICheckBox2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            ICheckBox2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ControlID )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ BSTR *pId);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *MakeVisible )( 
-            ICheckBox2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Options )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ IWindowObjectOption **ppOptions);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetFocus )( 
-            ICheckBox2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TopMost )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pTopMost);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CheckState )( 
-            ICheckBox2 * This,
-            /* [retval][out] */ BSTR *pState);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            ICheckBox2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            ICheckBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            ICheckBox2* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            ICheckBox2* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            ICheckBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            ICheckBox2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            ICheckBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            ICheckBox2* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            ICheckBox2* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            ICheckBox2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            ICheckBox2* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            ICheckBox2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            ICheckBox2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            ICheckBox2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            ICheckBox2* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            ICheckBox2* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            ICheckBox2* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            ICheckBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ControlID)(
+            ICheckBox2* This,
+            /* [retval][out] */ BSTR* pId);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* MakeVisible)(
+            ICheckBox2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Options)(
+            ICheckBox2* This,
+            /* [retval][out] */ IWindowObjectOption** ppOptions);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetFocus)(
+            ICheckBox2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TopMost)(
+            ICheckBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pTopMost);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_CheckState)(
+            ICheckBox2* This,
+            /* [retval][out] */ BSTR* pState);
+
         END_INTERFACE
     } ICheckBox2Vtbl;
 
     interface ICheckBox2
     {
-        CONST_VTBL struct ICheckBox2Vtbl *lpVtbl;
+        CONST_VTBL struct ICheckBox2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -18204,202 +18204,202 @@ EXTERN_C const IID IID_ICheckBox2;
 #ifndef __IComboBox2_INTERFACE_DEFINED__
 #define __IComboBox2_INTERFACE_DEFINED__
 
-/* interface IComboBox2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IComboBox2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IComboBox2;
+    EXTERN_C const IID IID_IComboBox2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("A1CA3F99-86F1-4B78-9267-046AD32782C7")
-    IComboBox2 : public IWindowObject2
+        IComboBox2 : public IWindowObject2
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SelectedItem( 
-            /* [retval][out] */ IItemObject2 **pListItem) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_NumberOfItems( 
-            /* [retval][out] */ long *pNumber) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ReadOnly( 
-            /* [retval][out] */ VARIANT_BOOL *pReadOnly) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Open( 
-            /* [retval][out] */ VARIANT_BOOL *pOpen) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SelectedItem(
+            /* [retval][out] */ IItemObject2 * *pListItem) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_NumberOfItems(
+            /* [retval][out] */ long* pNumber) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ReadOnly(
+            /* [retval][out] */ VARIANT_BOOL* pReadOnly) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Open(
+            /* [retval][out] */ VARIANT_BOOL* pOpen) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IComboBox2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IComboBox2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IComboBox2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IComboBox2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IComboBox2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IComboBox2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IComboBox2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IComboBox2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IComboBox2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IComboBox2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IComboBox2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IComboBox2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IComboBox2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IComboBox2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IComboBox2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IComboBox2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IComboBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            IComboBox2 * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            IComboBox2 * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IComboBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            IComboBox2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            IComboBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            IComboBox2 * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            IComboBox2 * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            IComboBox2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IComboBox2 * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            IComboBox2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            IComboBox2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            IComboBox2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            IComboBox2 * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            IComboBox2 * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IComboBox2 * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            IComboBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ControlID )( 
-            IComboBox2 * This,
-            /* [retval][out] */ BSTR *pId);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *MakeVisible )( 
-            IComboBox2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Options )( 
-            IComboBox2 * This,
-            /* [retval][out] */ IWindowObjectOption **ppOptions);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetFocus )( 
-            IComboBox2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TopMost )( 
-            IComboBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pTopMost);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SelectedItem )( 
-            IComboBox2 * This,
-            /* [retval][out] */ IItemObject2 **pListItem);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NumberOfItems )( 
-            IComboBox2 * This,
-            /* [retval][out] */ long *pNumber);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReadOnly )( 
-            IComboBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pReadOnly);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Open )( 
-            IComboBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pOpen);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IComboBox2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IComboBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            IComboBox2* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            IComboBox2* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IComboBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            IComboBox2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            IComboBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            IComboBox2* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            IComboBox2* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            IComboBox2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IComboBox2* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            IComboBox2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            IComboBox2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            IComboBox2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            IComboBox2* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            IComboBox2* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IComboBox2* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            IComboBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ControlID)(
+            IComboBox2* This,
+            /* [retval][out] */ BSTR* pId);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* MakeVisible)(
+            IComboBox2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Options)(
+            IComboBox2* This,
+            /* [retval][out] */ IWindowObjectOption** ppOptions);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetFocus)(
+            IComboBox2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TopMost)(
+            IComboBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pTopMost);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_SelectedItem)(
+            IComboBox2* This,
+            /* [retval][out] */ IItemObject2** pListItem);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NumberOfItems)(
+            IComboBox2* This,
+            /* [retval][out] */ long* pNumber);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ReadOnly)(
+            IComboBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pReadOnly);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Open)(
+            IComboBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pOpen);
+
         END_INTERFACE
     } IComboBox2Vtbl;
 
     interface IComboBox2
     {
-        CONST_VTBL struct IComboBox2Vtbl *lpVtbl;
+        CONST_VTBL struct IComboBox2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -18524,181 +18524,181 @@ EXTERN_C const IID IID_IComboBox2;
 #ifndef __IItemObject2_INTERFACE_DEFINED__
 #define __IItemObject2_INTERFACE_DEFINED__
 
-/* interface IItemObject2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IItemObject2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IItemObject2;
+    EXTERN_C const IID IID_IItemObject2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("97787E6B-A70D-4A65-A74A-10A33C031B61")
-    IItemObject2 : public IWindowObject2
+        IItemObject2 : public IWindowObject2
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Selected( 
-            /* [retval][out] */ VARIANT_BOOL *pSelected) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Selected(
+            /* [retval][out] */ VARIANT_BOOL * pSelected) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IItemObject2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IItemObject2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IItemObject2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IItemObject2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IItemObject2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IItemObject2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IItemObject2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IItemObject2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IItemObject2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IItemObject2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IItemObject2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IItemObject2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IItemObject2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IItemObject2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IItemObject2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IItemObject2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IItemObject2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            IItemObject2 * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            IItemObject2 * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IItemObject2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            IItemObject2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            IItemObject2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            IItemObject2 * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            IItemObject2 * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            IItemObject2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IItemObject2 * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            IItemObject2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            IItemObject2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            IItemObject2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            IItemObject2 * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            IItemObject2 * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IItemObject2 * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            IItemObject2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ControlID )( 
-            IItemObject2 * This,
-            /* [retval][out] */ BSTR *pId);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *MakeVisible )( 
-            IItemObject2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Options )( 
-            IItemObject2 * This,
-            /* [retval][out] */ IWindowObjectOption **ppOptions);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetFocus )( 
-            IItemObject2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TopMost )( 
-            IItemObject2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pTopMost);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Selected )( 
-            IItemObject2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pSelected);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IItemObject2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IItemObject2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            IItemObject2* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            IItemObject2* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IItemObject2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            IItemObject2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            IItemObject2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            IItemObject2* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            IItemObject2* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            IItemObject2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IItemObject2* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            IItemObject2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            IItemObject2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            IItemObject2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            IItemObject2* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            IItemObject2* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IItemObject2* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            IItemObject2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ControlID)(
+            IItemObject2* This,
+            /* [retval][out] */ BSTR* pId);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* MakeVisible)(
+            IItemObject2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Options)(
+            IItemObject2* This,
+            /* [retval][out] */ IWindowObjectOption** ppOptions);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetFocus)(
+            IItemObject2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TopMost)(
+            IItemObject2* This,
+            /* [retval][out] */ VARIANT_BOOL* pTopMost);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Selected)(
+            IItemObject2* This,
+            /* [retval][out] */ VARIANT_BOOL* pSelected);
+
         END_INTERFACE
     } IItemObject2Vtbl;
 
     interface IItemObject2
     {
-        CONST_VTBL struct IItemObject2Vtbl *lpVtbl;
+        CONST_VTBL struct IItemObject2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -18814,202 +18814,202 @@ EXTERN_C const IID IID_IItemObject2;
 #ifndef __IEditBox2_INTERFACE_DEFINED__
 #define __IEditBox2_INTERFACE_DEFINED__
 
-/* interface IEditBox2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IEditBox2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IEditBox2;
+    EXTERN_C const IID IID_IEditBox2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("EF4FE0D9-8E73-4E99-9D98-4438A4C023B1")
-    IEditBox2 : public IWindowObject2
+        IEditBox2 : public IWindowObject2
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ReadOnly( 
-            /* [retval][out] */ VARIANT_BOOL *pReadOnly) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_MultiLine( 
-            /* [retval][out] */ VARIANT_BOOL *pMultiLine) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_RichText( 
-            /* [retval][out] */ VARIANT_BOOL *pRichText) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Password( 
-            /* [retval][out] */ VARIANT_BOOL *pPassword) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ReadOnly(
+            /* [retval][out] */ VARIANT_BOOL * pReadOnly) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_MultiLine(
+            /* [retval][out] */ VARIANT_BOOL* pMultiLine) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_RichText(
+            /* [retval][out] */ VARIANT_BOOL* pRichText) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Password(
+            /* [retval][out] */ VARIANT_BOOL* pPassword) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IEditBox2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IEditBox2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IEditBox2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IEditBox2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IEditBox2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IEditBox2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IEditBox2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IEditBox2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IEditBox2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IEditBox2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IEditBox2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IEditBox2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IEditBox2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IEditBox2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IEditBox2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IEditBox2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IEditBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            IEditBox2 * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            IEditBox2 * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IEditBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            IEditBox2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            IEditBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            IEditBox2 * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            IEditBox2 * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            IEditBox2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IEditBox2 * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            IEditBox2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            IEditBox2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            IEditBox2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            IEditBox2 * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            IEditBox2 * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IEditBox2 * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            IEditBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ControlID )( 
-            IEditBox2 * This,
-            /* [retval][out] */ BSTR *pId);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *MakeVisible )( 
-            IEditBox2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Options )( 
-            IEditBox2 * This,
-            /* [retval][out] */ IWindowObjectOption **ppOptions);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetFocus )( 
-            IEditBox2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TopMost )( 
-            IEditBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pTopMost);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReadOnly )( 
-            IEditBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pReadOnly);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MultiLine )( 
-            IEditBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pMultiLine);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RichText )( 
-            IEditBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pRichText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Password )( 
-            IEditBox2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pPassword);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IEditBox2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IEditBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            IEditBox2* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            IEditBox2* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IEditBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            IEditBox2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            IEditBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            IEditBox2* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            IEditBox2* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            IEditBox2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IEditBox2* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            IEditBox2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            IEditBox2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            IEditBox2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            IEditBox2* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            IEditBox2* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IEditBox2* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            IEditBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ControlID)(
+            IEditBox2* This,
+            /* [retval][out] */ BSTR* pId);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* MakeVisible)(
+            IEditBox2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Options)(
+            IEditBox2* This,
+            /* [retval][out] */ IWindowObjectOption** ppOptions);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetFocus)(
+            IEditBox2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TopMost)(
+            IEditBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pTopMost);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ReadOnly)(
+            IEditBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pReadOnly);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_MultiLine)(
+            IEditBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pMultiLine);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_RichText)(
+            IEditBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pRichText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Password)(
+            IEditBox2* This,
+            /* [retval][out] */ VARIANT_BOOL* pPassword);
+
         END_INTERFACE
     } IEditBox2Vtbl;
 
     interface IEditBox2
     {
-        CONST_VTBL struct IEditBox2Vtbl *lpVtbl;
+        CONST_VTBL struct IEditBox2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -19134,188 +19134,188 @@ EXTERN_C const IID IID_IEditBox2;
 #ifndef __ILink2_INTERFACE_DEFINED__
 #define __ILink2_INTERFACE_DEFINED__
 
-/* interface ILink2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ILink2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ILink2;
+    EXTERN_C const IID IID_ILink2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("F2A6D33C-F60B-4E89-98F2-C00B4413BEFE")
-    ILink2 : public IWindowObject2
+        ILink2 : public IWindowObject2
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Visited( 
-            /* [retval][out] */ VARIANT_BOOL *pVisited) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_URL( 
-            /* [retval][out] */ BSTR *pURL) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Visited(
+            /* [retval][out] */ VARIANT_BOOL * pVisited) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_URL(
+            /* [retval][out] */ BSTR* pURL) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ILink2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ILink2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ILink2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ILink2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ILink2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ILink2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ILink2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ILink2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ILink2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ILink2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ILink2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ILink2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ILink2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ILink2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ILink2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            ILink2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            ILink2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            ILink2 * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            ILink2 * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            ILink2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            ILink2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            ILink2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            ILink2 * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            ILink2 * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            ILink2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            ILink2 * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            ILink2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            ILink2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            ILink2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            ILink2 * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            ILink2 * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            ILink2 * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            ILink2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ControlID )( 
-            ILink2 * This,
-            /* [retval][out] */ BSTR *pId);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *MakeVisible )( 
-            ILink2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Options )( 
-            ILink2 * This,
-            /* [retval][out] */ IWindowObjectOption **ppOptions);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetFocus )( 
-            ILink2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TopMost )( 
-            ILink2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pTopMost);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visited )( 
-            ILink2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisited);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_URL )( 
-            ILink2 * This,
-            /* [retval][out] */ BSTR *pURL);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            ILink2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            ILink2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            ILink2* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            ILink2* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            ILink2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            ILink2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            ILink2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            ILink2* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            ILink2* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            ILink2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            ILink2* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            ILink2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            ILink2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            ILink2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            ILink2* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            ILink2* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            ILink2* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            ILink2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ControlID)(
+            ILink2* This,
+            /* [retval][out] */ BSTR* pId);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* MakeVisible)(
+            ILink2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Options)(
+            ILink2* This,
+            /* [retval][out] */ IWindowObjectOption** ppOptions);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetFocus)(
+            ILink2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TopMost)(
+            ILink2* This,
+            /* [retval][out] */ VARIANT_BOOL* pTopMost);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visited)(
+            ILink2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisited);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_URL)(
+            ILink2* This,
+            /* [retval][out] */ BSTR* pURL);
+
         END_INTERFACE
     } ILink2Vtbl;
 
     interface ILink2
     {
-        CONST_VTBL struct ILink2Vtbl *lpVtbl;
+        CONST_VTBL struct ILink2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -19434,202 +19434,202 @@ EXTERN_C const IID IID_ILink2;
 #ifndef __IListView2_INTERFACE_DEFINED__
 #define __IListView2_INTERFACE_DEFINED__
 
-/* interface IListView2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IListView2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IListView2;
+    EXTERN_C const IID IID_IListView2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("BA4119F3-7735-4C7F-980D-F92F20B103D3")
-    IListView2 : public IWindowObject2
+        IListView2 : public IWindowObject2
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SelectedItem( 
-            /* [retval][out] */ IItemObject2 **pListItem) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_NumberOfItems( 
-            /* [retval][out] */ long *pNumber) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_NumberOfColumns( 
-            /* [retval][out] */ long *pNumber) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ViewType( 
-            /* [retval][out] */ BSTR *pViewType) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SelectedItem(
+            /* [retval][out] */ IItemObject2 * *pListItem) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_NumberOfItems(
+            /* [retval][out] */ long* pNumber) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_NumberOfColumns(
+            /* [retval][out] */ long* pNumber) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ViewType(
+            /* [retval][out] */ BSTR* pViewType) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IListView2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IListView2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IListView2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IListView2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IListView2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IListView2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IListView2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IListView2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IListView2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IListView2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IListView2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IListView2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IListView2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IListView2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IListView2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IListView2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IListView2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            IListView2 * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            IListView2 * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IListView2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            IListView2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            IListView2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            IListView2 * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            IListView2 * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            IListView2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IListView2 * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            IListView2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            IListView2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            IListView2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            IListView2 * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            IListView2 * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IListView2 * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            IListView2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ControlID )( 
-            IListView2 * This,
-            /* [retval][out] */ BSTR *pId);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *MakeVisible )( 
-            IListView2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Options )( 
-            IListView2 * This,
-            /* [retval][out] */ IWindowObjectOption **ppOptions);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetFocus )( 
-            IListView2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TopMost )( 
-            IListView2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pTopMost);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SelectedItem )( 
-            IListView2 * This,
-            /* [retval][out] */ IItemObject2 **pListItem);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NumberOfItems )( 
-            IListView2 * This,
-            /* [retval][out] */ long *pNumber);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NumberOfColumns )( 
-            IListView2 * This,
-            /* [retval][out] */ long *pNumber);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ViewType )( 
-            IListView2 * This,
-            /* [retval][out] */ BSTR *pViewType);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IListView2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IListView2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            IListView2* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            IListView2* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IListView2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            IListView2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            IListView2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            IListView2* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            IListView2* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            IListView2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IListView2* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            IListView2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            IListView2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            IListView2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            IListView2* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            IListView2* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IListView2* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            IListView2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ControlID)(
+            IListView2* This,
+            /* [retval][out] */ BSTR* pId);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* MakeVisible)(
+            IListView2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Options)(
+            IListView2* This,
+            /* [retval][out] */ IWindowObjectOption** ppOptions);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetFocus)(
+            IListView2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TopMost)(
+            IListView2* This,
+            /* [retval][out] */ VARIANT_BOOL* pTopMost);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_SelectedItem)(
+            IListView2* This,
+            /* [retval][out] */ IItemObject2** pListItem);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NumberOfItems)(
+            IListView2* This,
+            /* [retval][out] */ long* pNumber);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NumberOfColumns)(
+            IListView2* This,
+            /* [retval][out] */ long* pNumber);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ViewType)(
+            IListView2* This,
+            /* [retval][out] */ BSTR* pViewType);
+
         END_INTERFACE
     } IListView2Vtbl;
 
     interface IListView2
     {
-        CONST_VTBL struct IListView2Vtbl *lpVtbl;
+        CONST_VTBL struct IListView2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -19754,202 +19754,202 @@ EXTERN_C const IID IID_IListView2;
 #ifndef __IMenuItem2_INTERFACE_DEFINED__
 #define __IMenuItem2_INTERFACE_DEFINED__
 
-/* interface IMenuItem2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IMenuItem2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IMenuItem2;
+    EXTERN_C const IID IID_IMenuItem2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("E11C2304-A3B0-4F17-8C36-1970D709156A")
-    IMenuItem2 : public IWindowObject2
+        IMenuItem2 : public IWindowObject2
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ShortCut( 
-            /* [retval][out] */ BSTR *pShortCut) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Selected( 
-            /* [retval][out] */ VARIANT_BOOL *pSelected) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Checked( 
-            /* [retval][out] */ VARIANT_BOOL *pChecked) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_HasSubmenu( 
-            /* [retval][out] */ VARIANT_BOOL *pHasSubmenu) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ShortCut(
+            /* [retval][out] */ BSTR * pShortCut) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Selected(
+            /* [retval][out] */ VARIANT_BOOL* pSelected) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Checked(
+            /* [retval][out] */ VARIANT_BOOL* pChecked) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_HasSubmenu(
+            /* [retval][out] */ VARIANT_BOOL* pHasSubmenu) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IMenuItem2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IMenuItem2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IMenuItem2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IMenuItem2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IMenuItem2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IMenuItem2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IMenuItem2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IMenuItem2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IMenuItem2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IMenuItem2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IMenuItem2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IMenuItem2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IMenuItem2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IMenuItem2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IMenuItem2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IMenuItem2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ControlID )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ BSTR *pId);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *MakeVisible )( 
-            IMenuItem2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Options )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ IWindowObjectOption **ppOptions);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetFocus )( 
-            IMenuItem2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TopMost )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pTopMost);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ShortCut )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ BSTR *pShortCut);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Selected )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pSelected);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Checked )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pChecked);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HasSubmenu )( 
-            IMenuItem2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pHasSubmenu);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IMenuItem2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IMenuItem2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            IMenuItem2* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            IMenuItem2* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IMenuItem2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            IMenuItem2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            IMenuItem2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            IMenuItem2* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            IMenuItem2* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            IMenuItem2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IMenuItem2* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            IMenuItem2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            IMenuItem2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            IMenuItem2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            IMenuItem2* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            IMenuItem2* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IMenuItem2* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            IMenuItem2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ControlID)(
+            IMenuItem2* This,
+            /* [retval][out] */ BSTR* pId);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* MakeVisible)(
+            IMenuItem2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Options)(
+            IMenuItem2* This,
+            /* [retval][out] */ IWindowObjectOption** ppOptions);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetFocus)(
+            IMenuItem2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TopMost)(
+            IMenuItem2* This,
+            /* [retval][out] */ VARIANT_BOOL* pTopMost);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ShortCut)(
+            IMenuItem2* This,
+            /* [retval][out] */ BSTR* pShortCut);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Selected)(
+            IMenuItem2* This,
+            /* [retval][out] */ VARIANT_BOOL* pSelected);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Checked)(
+            IMenuItem2* This,
+            /* [retval][out] */ VARIANT_BOOL* pChecked);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HasSubmenu)(
+            IMenuItem2* This,
+            /* [retval][out] */ VARIANT_BOOL* pHasSubmenu);
+
         END_INTERFACE
     } IMenuItem2Vtbl;
 
     interface IMenuItem2
     {
-        CONST_VTBL struct IMenuItem2Vtbl *lpVtbl;
+        CONST_VTBL struct IMenuItem2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -20074,110 +20074,110 @@ EXTERN_C const IID IID_IMenuItem2;
 #ifndef __IObjectStore_INTERFACE_DEFINED__
 #define __IObjectStore_INTERFACE_DEFINED__
 
-/* interface IObjectStore */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IObjectStore */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IObjectStore;
+    EXTERN_C const IID IID_IObjectStore;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("E81982EC-7A3A-4D15-B126-75CCC520BD81")
-    IObjectStore : public IDispatch
+        IObjectStore : public IDispatch
     {
     public:
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Add( 
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Add(
             /* [in] */ BSTR pName,
             /* [in] */ VARIANT varValue) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Delete( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Delete(
             /* [in] */ BSTR bstrName) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Get( 
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Get(
             /* [in] */ BSTR pName,
-            /* [retval][out] */ VARIANT *pvarValue) = 0;
-        
+            /* [retval][out] */ VARIANT* pvarValue) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IObjectStoreVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IObjectStore * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IObjectStore * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IObjectStore * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IObjectStore * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IObjectStore * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IObjectStore* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IObjectStore* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IObjectStore* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IObjectStore* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IObjectStore* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IObjectStore * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IObjectStore* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IObjectStore * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IObjectStore* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Add )( 
-            IObjectStore * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Add)(
+            IObjectStore* This,
             /* [in] */ BSTR pName,
             /* [in] */ VARIANT varValue);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Delete )( 
-            IObjectStore * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Delete)(
+            IObjectStore* This,
             /* [in] */ BSTR bstrName);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Get )( 
-            IObjectStore * This,
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Get)(
+            IObjectStore* This,
             /* [in] */ BSTR pName,
-            /* [retval][out] */ VARIANT *pvarValue);
-        
+            /* [retval][out] */ VARIANT* pvarValue);
+
         END_INTERFACE
     } IObjectStoreVtbl;
 
     interface IObjectStore
     {
-        CONST_VTBL struct IObjectStoreVtbl *lpVtbl;
+        CONST_VTBL struct IObjectStoreVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -20228,181 +20228,181 @@ EXTERN_C const IID IID_IObjectStore;
 #ifndef __IRadioButton2_INTERFACE_DEFINED__
 #define __IRadioButton2_INTERFACE_DEFINED__
 
-/* interface IRadioButton2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IRadioButton2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IRadioButton2;
+    EXTERN_C const IID IID_IRadioButton2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("93CEFB5D-E673-434A-AF70-93D4A6FEE9D8")
-    IRadioButton2 : public IWindowObject2
+        IRadioButton2 : public IWindowObject2
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Checked( 
-            /* [retval][out] */ VARIANT_BOOL *pChecked) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Checked(
+            /* [retval][out] */ VARIANT_BOOL * pChecked) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IRadioButton2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IRadioButton2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IRadioButton2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IRadioButton2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IRadioButton2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IRadioButton2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IRadioButton2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IRadioButton2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IRadioButton2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IRadioButton2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IRadioButton2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IRadioButton2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IRadioButton2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IRadioButton2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IRadioButton2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IRadioButton2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ControlID )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ BSTR *pId);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *MakeVisible )( 
-            IRadioButton2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Options )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ IWindowObjectOption **ppOptions);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetFocus )( 
-            IRadioButton2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TopMost )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pTopMost);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Checked )( 
-            IRadioButton2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pChecked);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IRadioButton2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IRadioButton2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            IRadioButton2* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            IRadioButton2* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IRadioButton2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            IRadioButton2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            IRadioButton2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            IRadioButton2* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            IRadioButton2* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            IRadioButton2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IRadioButton2* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            IRadioButton2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            IRadioButton2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            IRadioButton2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            IRadioButton2* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            IRadioButton2* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IRadioButton2* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            IRadioButton2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ControlID)(
+            IRadioButton2* This,
+            /* [retval][out] */ BSTR* pId);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* MakeVisible)(
+            IRadioButton2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Options)(
+            IRadioButton2* This,
+            /* [retval][out] */ IWindowObjectOption** ppOptions);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetFocus)(
+            IRadioButton2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TopMost)(
+            IRadioButton2* This,
+            /* [retval][out] */ VARIANT_BOOL* pTopMost);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Checked)(
+            IRadioButton2* This,
+            /* [retval][out] */ VARIANT_BOOL* pChecked);
+
         END_INTERFACE
     } IRadioButton2Vtbl;
 
     interface IRadioButton2
     {
-        CONST_VTBL struct IRadioButton2Vtbl *lpVtbl;
+        CONST_VTBL struct IRadioButton2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -20518,188 +20518,188 @@ EXTERN_C const IID IID_IRadioButton2;
 #ifndef __IScrollBar2_INTERFACE_DEFINED__
 #define __IScrollBar2_INTERFACE_DEFINED__
 
-/* interface IScrollBar2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IScrollBar2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IScrollBar2;
+    EXTERN_C const IID IID_IScrollBar2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("179608AF-19D4-4D94-83FC-315814B0C0A9")
-    IScrollBar2 : public IWindowObject2
+        IScrollBar2 : public IWindowObject2
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Direction( 
-            /* [retval][out] */ BSTR *pDirection) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Percent( 
-            /* [retval][out] */ long *pPercent) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Direction(
+            /* [retval][out] */ BSTR * pDirection) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Percent(
+            /* [retval][out] */ long* pPercent) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IScrollBar2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IScrollBar2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IScrollBar2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IScrollBar2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IScrollBar2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IScrollBar2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IScrollBar2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IScrollBar2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IScrollBar2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IScrollBar2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IScrollBar2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IScrollBar2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IScrollBar2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IScrollBar2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IScrollBar2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IScrollBar2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ControlID )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ BSTR *pId);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *MakeVisible )( 
-            IScrollBar2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Options )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ IWindowObjectOption **ppOptions);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetFocus )( 
-            IScrollBar2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TopMost )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pTopMost);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Direction )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ BSTR *pDirection);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Percent )( 
-            IScrollBar2 * This,
-            /* [retval][out] */ long *pPercent);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IScrollBar2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IScrollBar2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            IScrollBar2* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            IScrollBar2* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IScrollBar2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            IScrollBar2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            IScrollBar2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            IScrollBar2* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            IScrollBar2* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            IScrollBar2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IScrollBar2* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            IScrollBar2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            IScrollBar2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            IScrollBar2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            IScrollBar2* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            IScrollBar2* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IScrollBar2* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            IScrollBar2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ControlID)(
+            IScrollBar2* This,
+            /* [retval][out] */ BSTR* pId);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* MakeVisible)(
+            IScrollBar2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Options)(
+            IScrollBar2* This,
+            /* [retval][out] */ IWindowObjectOption** ppOptions);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetFocus)(
+            IScrollBar2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TopMost)(
+            IScrollBar2* This,
+            /* [retval][out] */ VARIANT_BOOL* pTopMost);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Direction)(
+            IScrollBar2* This,
+            /* [retval][out] */ BSTR* pDirection);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Percent)(
+            IScrollBar2* This,
+            /* [retval][out] */ long* pPercent);
+
         END_INTERFACE
     } IScrollBar2Vtbl;
 
     interface IScrollBar2
     {
-        CONST_VTBL struct IScrollBar2Vtbl *lpVtbl;
+        CONST_VTBL struct IScrollBar2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -20818,181 +20818,181 @@ EXTERN_C const IID IID_IScrollBar2;
 #ifndef __ITrackBar2_INTERFACE_DEFINED__
 #define __ITrackBar2_INTERFACE_DEFINED__
 
-/* interface ITrackBar2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ITrackBar2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ITrackBar2;
+    EXTERN_C const IID IID_ITrackBar2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("2F6B91FE-8DAD-40C6-8151-D3533585BADD")
-    ITrackBar2 : public IWindowObject2
+        ITrackBar2 : public IWindowObject2
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Position( 
-            /* [retval][out] */ long *pPosition) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Position(
+            /* [retval][out] */ long* pPosition) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ITrackBar2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ITrackBar2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ITrackBar2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ITrackBar2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ITrackBar2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ITrackBar2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ITrackBar2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ITrackBar2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ITrackBar2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ITrackBar2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ITrackBar2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ITrackBar2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ITrackBar2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ITrackBar2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ITrackBar2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            ITrackBar2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ControlID )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ BSTR *pId);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *MakeVisible )( 
-            ITrackBar2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Options )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ IWindowObjectOption **ppOptions);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetFocus )( 
-            ITrackBar2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TopMost )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pTopMost);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Position )( 
-            ITrackBar2 * This,
-            /* [retval][out] */ long *pPosition);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            ITrackBar2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            ITrackBar2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            ITrackBar2* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            ITrackBar2* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            ITrackBar2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            ITrackBar2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            ITrackBar2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            ITrackBar2* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            ITrackBar2* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            ITrackBar2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            ITrackBar2* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            ITrackBar2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            ITrackBar2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            ITrackBar2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            ITrackBar2* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            ITrackBar2* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            ITrackBar2* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            ITrackBar2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ControlID)(
+            ITrackBar2* This,
+            /* [retval][out] */ BSTR* pId);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* MakeVisible)(
+            ITrackBar2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Options)(
+            ITrackBar2* This,
+            /* [retval][out] */ IWindowObjectOption** ppOptions);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetFocus)(
+            ITrackBar2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TopMost)(
+            ITrackBar2* This,
+            /* [retval][out] */ VARIANT_BOOL* pTopMost);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Position)(
+            ITrackBar2* This,
+            /* [retval][out] */ long* pPosition);
+
         END_INTERFACE
     } ITrackBar2Vtbl;
 
     interface ITrackBar2
     {
-        CONST_VTBL struct ITrackBar2Vtbl *lpVtbl;
+        CONST_VTBL struct ITrackBar2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -21108,188 +21108,188 @@ EXTERN_C const IID IID_ITrackBar2;
 #ifndef __ITreeView2_INTERFACE_DEFINED__
 #define __ITreeView2_INTERFACE_DEFINED__
 
-/* interface ITreeView2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface ITreeView2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_ITreeView2;
+    EXTERN_C const IID IID_ITreeView2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("C8D6ADCF-E992-45EF-BB3F-A9572DC85752")
-    ITreeView2 : public IWindowObject2
+        ITreeView2 : public IWindowObject2
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SelectedItem( 
-            /* [retval][out] */ IItemObject2 **pListItem) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SelectedLevel( 
-            /* [retval][out] */ long *pSelectedLevel) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SelectedItem(
+            /* [retval][out] */ IItemObject2 * *pListItem) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_SelectedLevel(
+            /* [retval][out] */ long* pSelectedLevel) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct ITreeView2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            ITreeView2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            ITreeView2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            ITreeView2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            ITreeView2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            ITreeView2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                ITreeView2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            ITreeView2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            ITreeView2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            ITreeView2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            ITreeView2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            ITreeView2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            ITreeView2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            ITreeView2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            ITreeView2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            ITreeView2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            ITreeView2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            ITreeView2 * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            ITreeView2 * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            ITreeView2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            ITreeView2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            ITreeView2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            ITreeView2 * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            ITreeView2 * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            ITreeView2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            ITreeView2 * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            ITreeView2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            ITreeView2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            ITreeView2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            ITreeView2 * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            ITreeView2 * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            ITreeView2 * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            ITreeView2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ControlID )( 
-            ITreeView2 * This,
-            /* [retval][out] */ BSTR *pId);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *MakeVisible )( 
-            ITreeView2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Options )( 
-            ITreeView2 * This,
-            /* [retval][out] */ IWindowObjectOption **ppOptions);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetFocus )( 
-            ITreeView2 * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TopMost )( 
-            ITreeView2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pTopMost);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SelectedItem )( 
-            ITreeView2 * This,
-            /* [retval][out] */ IItemObject2 **pListItem);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SelectedLevel )( 
-            ITreeView2 * This,
-            /* [retval][out] */ long *pSelectedLevel);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            ITreeView2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            ITreeView2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            ITreeView2* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            ITreeView2* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            ITreeView2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            ITreeView2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            ITreeView2* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            ITreeView2* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            ITreeView2* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            ITreeView2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            ITreeView2* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            ITreeView2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            ITreeView2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            ITreeView2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            ITreeView2* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            ITreeView2* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            ITreeView2* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            ITreeView2* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ControlID)(
+            ITreeView2* This,
+            /* [retval][out] */ BSTR* pId);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* MakeVisible)(
+            ITreeView2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Options)(
+            ITreeView2* This,
+            /* [retval][out] */ IWindowObjectOption** ppOptions);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetFocus)(
+            ITreeView2* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TopMost)(
+            ITreeView2* This,
+            /* [retval][out] */ VARIANT_BOOL* pTopMost);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_SelectedItem)(
+            ITreeView2* This,
+            /* [retval][out] */ IItemObject2** pListItem);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_SelectedLevel)(
+            ITreeView2* This,
+            /* [retval][out] */ long* pSelectedLevel);
+
         END_INTERFACE
     } ITreeView2Vtbl;
 
     interface ITreeView2
     {
-        CONST_VTBL struct ITreeView2Vtbl *lpVtbl;
+        CONST_VTBL struct ITreeView2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -21408,107 +21408,107 @@ EXTERN_C const IID IID_ITreeView2;
 #ifndef __IWindowSearch2_INTERFACE_DEFINED__
 #define __IWindowSearch2_INTERFACE_DEFINED__
 
-/* interface IWindowSearch2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IWindowSearch2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IWindowSearch2;
+    EXTERN_C const IID IID_IWindowSearch2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("FFC01288-CB56-4C56-B082-EEDDD8C0E144")
-    IWindowSearch2 : public IWindowSearch
+        IWindowSearch2 : public IWindowSearch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Options( 
-            /* [retval][out] */ IWindowSearchOption **ppOptions) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Options(
+            /* [retval][out] */ IWindowSearchOption * *ppOptions) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IWindowSearch2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IWindowSearch2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IWindowSearch2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IWindowSearch2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IWindowSearch2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IWindowSearch2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IWindowSearch2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IWindowSearch2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IWindowSearch2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IWindowSearch2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IWindowSearch2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IWindowSearch2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IWindowSearch2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IWindowSearch2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IWindowSearch2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IWindowSearch2 * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *AtPoint )( 
-            IWindowSearch2 * This,
-            /* [in] */ IPoint *pPoint,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *FindWindowObject )( 
-            IWindowSearch2 * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IWindowSearch2* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* AtPoint)(
+            IWindowSearch2* This,
+            /* [in] */ IPoint* pPoint,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* FindWindowObject)(
+            IWindowSearch2* This,
             /* [in] */ BSTR bstrClassName,
             /* [in] */ BSTR bstrWindowTitle,
-            /* [retval][out] */ IObjectCollection **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Options )( 
-            IWindowSearch2 * This,
-            /* [retval][out] */ IWindowSearchOption **ppOptions);
-        
+            /* [retval][out] */ IObjectCollection** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Options)(
+            IWindowSearch2* This,
+            /* [retval][out] */ IWindowSearchOption** ppOptions);
+
         END_INTERFACE
     } IWindowSearch2Vtbl;
 
     interface IWindowSearch2
     {
-        CONST_VTBL struct IWindowSearch2Vtbl *lpVtbl;
+        CONST_VTBL struct IWindowSearch2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -21563,132 +21563,132 @@ EXTERN_C const IID IID_IWindowSearch2;
 #ifndef __IWindowSearchOption_INTERFACE_DEFINED__
 #define __IWindowSearchOption_INTERFACE_DEFINED__
 
-/* interface IWindowSearchOption */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IWindowSearchOption */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IWindowSearchOption;
+    EXTERN_C const IID IID_IWindowSearchOption;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("6F4C7C49-96A6-4C87-926A-79083A19D534")
-    IWindowSearchOption : public IDispatch
+        IWindowSearchOption : public IDispatch
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_PreferAHOI( 
-            /* [retval][out] */ VARIANT_BOOL *pBool) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_PreferAHOI( 
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_PreferAHOI(
+            /* [retval][out] */ VARIANT_BOOL * pBool) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_PreferAHOI(
             /* [in] */ VARIANT_BOOL pBool) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_PreferZSM( 
-            /* [retval][out] */ VARIANT_BOOL *pBool) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_PreferZSM( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_PreferZSM(
+            /* [retval][out] */ VARIANT_BOOL* pBool) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_PreferZSM(
             /* [in] */ VARIANT_BOOL pBool) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FindOnly( 
-            /* [retval][out] */ BSTR *pType) = 0;
-        
-        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_FindOnly( 
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_FindOnly(
+            /* [retval][out] */ BSTR* pType) = 0;
+
+        virtual /* [propput][id] */ HRESULT STDMETHODCALLTYPE put_FindOnly(
             /* [in] */ BSTR pType) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Reset( void) = 0;
-        
+
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE Reset(void) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IWindowSearchOptionVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IWindowSearchOption * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IWindowSearchOption * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IWindowSearchOption * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IWindowSearchOption * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IWindowSearchOption * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IWindowSearchOption* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IWindowSearchOption* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IWindowSearchOption* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IWindowSearchOption* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IWindowSearchOption* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IWindowSearchOption * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IWindowSearchOption* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IWindowSearchOption * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IWindowSearchOption* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreferAHOI )( 
-            IWindowSearchOption * This,
-            /* [retval][out] */ VARIANT_BOOL *pBool);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_PreferAHOI )( 
-            IWindowSearchOption * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreferAHOI)(
+            IWindowSearchOption* This,
+            /* [retval][out] */ VARIANT_BOOL* pBool);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_PreferAHOI)(
+            IWindowSearchOption* This,
             /* [in] */ VARIANT_BOOL pBool);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreferZSM )( 
-            IWindowSearchOption * This,
-            /* [retval][out] */ VARIANT_BOOL *pBool);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_PreferZSM )( 
-            IWindowSearchOption * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreferZSM)(
+            IWindowSearchOption* This,
+            /* [retval][out] */ VARIANT_BOOL* pBool);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_PreferZSM)(
+            IWindowSearchOption* This,
             /* [in] */ VARIANT_BOOL pBool);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FindOnly )( 
-            IWindowSearchOption * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_FindOnly )( 
-            IWindowSearchOption * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FindOnly)(
+            IWindowSearchOption* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_FindOnly)(
+            IWindowSearchOption* This,
             /* [in] */ BSTR pType);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Reset )( 
-            IWindowSearchOption * This);
-        
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Reset)(
+            IWindowSearchOption* This);
+
         END_INTERFACE
     } IWindowSearchOptionVtbl;
 
     interface IWindowSearchOption
     {
-        CONST_VTBL struct IWindowSearchOptionVtbl *lpVtbl;
+        CONST_VTBL struct IWindowSearchOptionVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -21751,181 +21751,181 @@ EXTERN_C const IID IID_IWindowSearchOption;
 #ifndef __IWebPage_INTERFACE_DEFINED__
 #define __IWebPage_INTERFACE_DEFINED__
 
-/* interface IWebPage */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IWebPage */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IWebPage;
+    EXTERN_C const IID IID_IWebPage;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("87908E23-DCFB-4A32-82C6-5E54C4870D4D")
-    IWebPage : public IWindowObject2
+        IWebPage : public IWindowObject2
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_URL( 
-            /* [retval][out] */ BSTR *pStr) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_URL(
+            /* [retval][out] */ BSTR * pStr) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IWebPageVtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IWebPage * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IWebPage * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IWebPage * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IWebPage * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IWebPage * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IWebPage* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IWebPage* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IWebPage* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IWebPage* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IWebPage* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IWebPage * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IWebPage* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IWebPage * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IWebPage* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
-            IWebPage * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Active )( 
-            IWebPage * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Application )( 
-            IWebPage * This,
-            /* [retval][out] */ IApplicationObject **ppApplication);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClassName )( 
-            IWebPage * This,
-            /* [retval][out] */ BSTR *pClassName);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IWebPage * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FirstChild )( 
-            IWebPage * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
-            IWebPage * This,
-            /* [retval][out] */ VARIANT_BOOL *pActive);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkey )( 
-            IWebPage * This,
-            /* [retval][out] */ BSTR *pHotkey);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HWnd )( 
-            IWebPage * This,
-            /* [retval][out] */ long *pHWnd);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastChild )( 
-            IWebPage * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Location )( 
-            IWebPage * This,
-            /* [retval][out] */ IRectangle **pRectangle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NextSibling )( 
-            IWebPage * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
-            IWebPage * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PreviousSibling )( 
-            IWebPage * This,
-            /* [retval][out] */ IDispatch **ppWindow);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Text )( 
-            IWebPage * This,
-            /* [retval][out] */ BSTR *pText);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
-            IWebPage * This,
-            /* [retval][out] */ BSTR *pTitle);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
-            IWebPage * This,
-            /* [retval][out] */ BSTR *pType);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Visible )( 
-            IWebPage * This,
-            /* [retval][out] */ VARIANT_BOOL *pVisible);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ControlID )( 
-            IWebPage * This,
-            /* [retval][out] */ BSTR *pId);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *MakeVisible )( 
-            IWebPage * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Options )( 
-            IWebPage * This,
-            /* [retval][out] */ IWindowObjectOption **ppOptions);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *SetFocus )( 
-            IWebPage * This);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TopMost )( 
-            IWebPage * This,
-            /* [retval][out] */ VARIANT_BOOL *pTopMost);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_URL )( 
-            IWebPage * This,
-            /* [retval][out] */ BSTR *pStr);
-        
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* Activate)(
+            IWebPage* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Active)(
+            IWebPage* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Application)(
+            IWebPage* This,
+            /* [retval][out] */ IApplicationObject** ppApplication);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ClassName)(
+            IWebPage* This,
+            /* [retval][out] */ BSTR* pClassName);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IWebPage* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_FirstChild)(
+            IWebPage* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Focus)(
+            IWebPage* This,
+            /* [retval][out] */ VARIANT_BOOL* pActive);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkey)(
+            IWebPage* This,
+            /* [retval][out] */ BSTR* pHotkey);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_HWnd)(
+            IWebPage* This,
+            /* [retval][out] */ long* pHWnd);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_LastChild)(
+            IWebPage* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Location)(
+            IWebPage* This,
+            /* [retval][out] */ IRectangle** pRectangle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_NextSibling)(
+            IWebPage* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Parent)(
+            IWebPage* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_PreviousSibling)(
+            IWebPage* This,
+            /* [retval][out] */ IDispatch** ppWindow);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Text)(
+            IWebPage* This,
+            /* [retval][out] */ BSTR* pText);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Title)(
+            IWebPage* This,
+            /* [retval][out] */ BSTR* pTitle);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Type)(
+            IWebPage* This,
+            /* [retval][out] */ BSTR* pType);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Visible)(
+            IWebPage* This,
+            /* [retval][out] */ VARIANT_BOOL* pVisible);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ControlID)(
+            IWebPage* This,
+            /* [retval][out] */ BSTR* pId);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* MakeVisible)(
+            IWebPage* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Options)(
+            IWebPage* This,
+            /* [retval][out] */ IWindowObjectOption** ppOptions);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* SetFocus)(
+            IWebPage* This);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_TopMost)(
+            IWebPage* This,
+            /* [retval][out] */ VARIANT_BOOL* pTopMost);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_URL)(
+            IWebPage* This,
+            /* [retval][out] */ BSTR* pStr);
+
         END_INTERFACE
     } IWebPageVtbl;
 
     interface IWebPage
     {
-        CONST_VTBL struct IWebPageVtbl *lpVtbl;
+        CONST_VTBL struct IWebPageVtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -22041,186 +22041,186 @@ EXTERN_C const IID IID_IWebPage;
 #ifndef __IZoomText2_INTERFACE_DEFINED__
 #define __IZoomText2_INTERFACE_DEFINED__
 
-/* interface IZoomText2 */
-/* [object][oleautomation][dual][helpstring][uuid] */ 
+    /* interface IZoomText2 */
+    /* [object][oleautomation][dual][helpstring][uuid] */
 
 
-EXTERN_C const IID IID_IZoomText2;
+    EXTERN_C const IID IID_IZoomText2;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
-    
+
     MIDL_INTERFACE("C954470B-98E8-4214-A011-B556DBDF26A6")
-    IZoomText2 : public IZoomText
+        IZoomText2 : public IZoomText
     {
     public:
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Environment( 
-            /* [retval][out] */ IEnvironment **ppObj) = 0;
-        
-        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ObjectStore( 
-            /* [retval][out] */ IObjectStore **ppObj) = 0;
-        
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_Environment(
+            /* [retval][out] */ IEnvironment * *ppObj) = 0;
+
+        virtual /* [propget][id] */ HRESULT STDMETHODCALLTYPE get_ObjectStore(
+            /* [retval][out] */ IObjectStore** ppObj) = 0;
+
     };
-    
-    
+
+
 #else 	/* C style interface */
 
     typedef struct IZoomText2Vtbl
     {
         BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IZoomText2 * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IZoomText2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IZoomText2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IZoomText2 * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IZoomText2 * This,
+
+            HRESULT(STDMETHODCALLTYPE* QueryInterface)(
+                IZoomText2* This,
+                /* [in] */ REFIID riid,
+                /* [annotation][iid_is][out] */
+                _COM_Outptr_  void** ppvObject);
+
+        ULONG(STDMETHODCALLTYPE* AddRef)(
+            IZoomText2* This);
+
+        ULONG(STDMETHODCALLTYPE* Release)(
+            IZoomText2* This);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfoCount)(
+            IZoomText2* This,
+            /* [out] */ UINT* pctinfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetTypeInfo)(
+            IZoomText2* This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IZoomText2 * This,
+            /* [out] */ ITypeInfo** ppTInfo);
+
+        HRESULT(STDMETHODCALLTYPE* GetIDsOfNames)(
+            IZoomText2* This,
             /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [size_is][in] */ LPOLESTR* rgszNames,
             /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IZoomText2 * This,
-            /* [annotation][in] */ 
+            /* [size_is][out] */ DISPID* rgDispId);
+
+        /* [local] */ HRESULT(STDMETHODCALLTYPE* Invoke)(
+            IZoomText2* This,
+            /* [annotation][in] */
             _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  REFIID riid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  LCID lcid,
-            /* [annotation][in] */ 
+            /* [annotation][in] */
             _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ActiveToolMode )( 
-            IZoomText2 * This,
-            /* [retval][out] */ BSTR *pstrToolMode);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AhoiManager )( 
-            IZoomText2 * This,
-            /* [retval][out] */ IAhoiManager2 **ppObj);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *CreateObject )( 
-            IZoomText2 * This,
+            /* [annotation][out][in] */
+            _In_  DISPPARAMS* pDispParams,
+            /* [annotation][out] */
+            _Out_opt_  VARIANT* pVarResult,
+            /* [annotation][out] */
+            _Out_opt_  EXCEPINFO* pExcepInfo,
+            /* [annotation][out] */
+            _Out_opt_  UINT* puArgErr);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ActiveToolMode)(
+            IZoomText2* This,
+            /* [retval][out] */ BSTR* pstrToolMode);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_AhoiManager)(
+            IZoomText2* This,
+            /* [retval][out] */ IAhoiManager2** ppObj);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* CreateObject)(
+            IZoomText2* This,
             /* [in] */ BSTR bstrObjName,
-            /* [retval][out] */ IUnknown **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
-            IZoomText2 * This,
-            /* [retval][out] */ VARIANT_BOOL *pEnabled);
-        
-        /* [propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
-            IZoomText2 * This,
+            /* [retval][out] */ IUnknown** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Enabled)(
+            IZoomText2* This,
+            /* [retval][out] */ VARIANT_BOOL* pEnabled);
+
+        /* [propput][id] */ HRESULT(STDMETHODCALLTYPE* put_Enabled)(
+            IZoomText2* This,
             /* [in] */ VARIANT_BOOL pEnabled);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EventManager )( 
-            IZoomText2 * This,
-            /* [retval][out] */ IEventManager2 **ppObj);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *GetEventData )( 
-            IZoomText2 * This,
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_EventManager)(
+            IZoomText2* This,
+            /* [retval][out] */ IEventManager2** ppObj);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* GetEventData)(
+            IZoomText2* This,
             /* [in] */ BSTR bstrDataHandle,
-            /* [retval][out] */ IUnknown **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Hotkeys )( 
-            IZoomText2 * This,
-            /* [retval][out] */ IHotkeys **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Keyboard )( 
-            IZoomText2 * This,
-            /* [retval][out] */ IKeyboard **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Magnification )( 
-            IZoomText2 * This,
-            /* [retval][out] */ IMagnification3 **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Mouse )( 
-            IZoomText2 * This,
-            /* [retval][out] */ IMouse **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Reader )( 
-            IZoomText2 * This,
-            /* [retval][out] */ IReader3 **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScriptConfiguration )( 
-            IZoomText2 * This,
-            /* [retval][out] */ IScriptConfiguration **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Settings )( 
-            IZoomText2 * This,
-            /* [retval][out] */ IZoomTextSettings4 **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Speech )( 
-            IZoomText2 * This,
-            /* [retval][out] */ ISpeech2 **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Version )( 
-            IZoomText2 * This,
-            /* [retval][out] */ BSTR *pVersion);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ZTCommand )( 
-            IZoomText2 * This,
-            /* [retval][out] */ IZTCommand **ppObj);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *CreateObjectFromAhoiId )( 
-            IZoomText2 * This,
+            /* [retval][out] */ IUnknown** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Hotkeys)(
+            IZoomText2* This,
+            /* [retval][out] */ IHotkeys** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Keyboard)(
+            IZoomText2* This,
+            /* [retval][out] */ IKeyboard** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Magnification)(
+            IZoomText2* This,
+            /* [retval][out] */ IMagnification3** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Mouse)(
+            IZoomText2* This,
+            /* [retval][out] */ IMouse** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Reader)(
+            IZoomText2* This,
+            /* [retval][out] */ IReader3** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ScriptConfiguration)(
+            IZoomText2* This,
+            /* [retval][out] */ IScriptConfiguration** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Settings)(
+            IZoomText2* This,
+            /* [retval][out] */ IZoomTextSettings4** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Speech)(
+            IZoomText2* This,
+            /* [retval][out] */ ISpeech2** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Version)(
+            IZoomText2* This,
+            /* [retval][out] */ BSTR* pVersion);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ZTCommand)(
+            IZoomText2* This,
+            /* [retval][out] */ IZTCommand** ppObj);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* CreateObjectFromAhoiId)(
+            IZoomText2* This,
             /* [in] */ BSTR bstrObjName,
             /* [in] */ tagAHOIOBJECTID AhoiId,
-            /* [retval][out] */ IUnknown **ppObj);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *CreateSpeechEventObject )( 
-            IZoomText2 * This,
+            /* [retval][out] */ IUnknown** ppObj);
+
+        /* [id] */ HRESULT(STDMETHODCALLTYPE* CreateSpeechEventObject)(
+            IZoomText2* This,
             /* [in] */ BSTR bstrClient,
             /* [in] */ BSTR bstrText,
             /* [in] */ unsigned long dwFlags,
-            /* [retval][out] */ IUnknown **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScriptManager )( 
-            IZoomText2 * This,
-            /* [retval][out] */ IScriptManager **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Environment )( 
-            IZoomText2 * This,
-            /* [retval][out] */ IEnvironment **ppObj);
-        
-        /* [propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ObjectStore )( 
-            IZoomText2 * This,
-            /* [retval][out] */ IObjectStore **ppObj);
-        
+            /* [retval][out] */ IUnknown** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ScriptManager)(
+            IZoomText2* This,
+            /* [retval][out] */ IScriptManager** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_Environment)(
+            IZoomText2* This,
+            /* [retval][out] */ IEnvironment** ppObj);
+
+        /* [propget][id] */ HRESULT(STDMETHODCALLTYPE* get_ObjectStore)(
+            IZoomText2* This,
+            /* [retval][out] */ IObjectStore** ppObj);
+
         END_INTERFACE
     } IZoomText2Vtbl;
 
     interface IZoomText2
     {
-        CONST_VTBL struct IZoomText2Vtbl *lpVtbl;
+        CONST_VTBL struct IZoomText2Vtbl* lpVtbl;
     };
 
-    
+
 
 #ifdef COBJMACROS
 
@@ -22326,23 +22326,21 @@ EXTERN_C const IID IID_IZoomText2;
 #endif 	/* __IZoomText2_INTERFACE_DEFINED__ */
 
 
-EXTERN_C const CLSID CLSID_ZoomText;
+    EXTERN_C const CLSID CLSID_ZoomText;
 
 #ifdef __cplusplus
 
-class DECLSPEC_UUID("30BB8BE8-4275-4042-90DA-5F9698744F19")
-ZoomText;
+    class DECLSPEC_UUID("30BB8BE8-4275-4042-90DA-5F9698744F19")
+        ZoomText;
 #endif
 #endif /* __AiSquared_LIBRARY_DEFINED__ */
 
-/* Additional Prototypes for ALL interfaces */
+    /* Additional Prototypes for ALL interfaces */
 
-/* end of Additional Prototypes */
+    /* end of Additional Prototypes */
 
 #ifdef __cplusplus
 }
 #endif
 
 #endif
-
-

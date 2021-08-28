@@ -7,16 +7,16 @@ Please refer to the readme file provided with the package for more information.
 #define _____SRAPI_PRIVATE____
 
 typedef struct {
-const void* name;
-int(*isAvailable)(void) ;
-int(*say)(const void*, int) ;
-int(*stop)(void);
-int(*braille)(const void*);
-int(*setValue)(int, int) ;
-int(*getValue)(int) ;
-int(*setString)(int, const void*);
-const void*(*getString)(int);
-int(*unload)(void);
+	const void* name;
+	int(*isAvailable)(void);
+	int(*say)(const void*, int);
+	int(*stop)(void);
+	int(*braille)(const void*);
+	int(*setValue)(int, int);
+	int(*getValue)(int);
+	int(*setString)(int, const void*);
+	const void* (*getString)(int);
+	int(*unload)(void);
 } engine;
 
-#endif
+#endif // _____SRAPI_PRIVATE____

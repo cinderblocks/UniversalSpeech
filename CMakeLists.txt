@@ -1,6 +1,7 @@
+project(UniversalSpeech 
+        DESCRIPTION "Universal Speech library"
+        LANGUAGES C)
 cmake_minimum_required(VERSION 3.10)
-
-project(UniversalSpeech DESCRIPTION "Universal Speech library")
 
 # OS info
 message("-------------------------------------------------------")
@@ -49,7 +50,7 @@ set(HEADER_FILES
     src/private.h
     )
 
-if(WINDOWS)
+if(WIN32)
     list(APPEND SOURCE_FILES
         src/windows/cobra.c
         src/windows/com-interface.c
@@ -64,7 +65,6 @@ if(WINDOWS)
         src/windows/nvda.c
         src/windows/processlist.c
         src/windows/sapi.c
-        src/windows/screenReaderAPICompat.c
         src/windows/systemaccess.c
         src/windows/windows-eyes.c
         src/windows/zoomtext.c
@@ -72,11 +72,13 @@ if(WINDOWS)
         )
     
     list(APPEND HEADER_FILES
+        CMakeLists.txt
+
         src/windows/disphelper.h
         src/windows/encoding-conversion.h
         src/windows/zoomtext.h
         )
-endif(WINDOWS)
+endif(WIN32)
 
 list(APPEND SOURCE_FILES ${HEADER_FILES})
 set_source_files_properties(${HEADER_FILES}
