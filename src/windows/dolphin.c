@@ -13,9 +13,9 @@ const wchar_t* composePath(const wchar_t* dll);
 BOOL __declspec(dllexport) FindProcess(const char* needle, char* buf, size_t bufsize);
 
 static HINSTANCE dolphin = NULL;
-static int(*__stdcall DolAccess_GetSystem)(void) = NULL;
-static void(*__stdcall DolAccess_Action)(int) = NULL;
-static void(*__stdcall DolAccess_Command)(const wchar_t*, int, int) = NULL;
+static int(*DolAccess_GetSystem)(void) = NULL;
+static void(*DolAccess_Action)(int) = NULL;
+static void(*DolAccess_Command)(const wchar_t*, int, int) = NULL;
 
 
 DLLEXPORT void dolUnload(void) {

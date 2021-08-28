@@ -15,10 +15,10 @@ BOOL __declspec(dllexport) FindProcess(const char* needle, char* buf, size_t buf
 BOOL GetProcessVersionInfo(const char* pfn, int mode, char* buf, int buflen);
 
 static HINSTANCE nvda = NULL;
-static int(*__stdcall nvdaController_speakText)(const wchar_t*) = NULL;
-static int(*__stdcall nvdaController_cancelSpeech)(void) = NULL;
-static int(*__stdcall nvdaController_testIfRunning)(void) = NULL;
-static int(*__stdcall nvdaController_brailleMessage)(const wchar_t*) = NULL;
+static int(* nvdaController_speakText)(const wchar_t*) = NULL;
+static int(* nvdaController_cancelSpeech)(void) = NULL;
+static int(*nvdaController_testIfRunning)(void) = NULL;
+static int(*nvdaController_brailleMessage)(const wchar_t*) = NULL;
 
 DLLEXPORT void nvdaUnload(void) {
 	nvdaController_cancelSpeech = NULL;

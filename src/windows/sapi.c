@@ -44,21 +44,21 @@ typedef struct {
 } ICBStream;
 
 struct ICBStreamVtbl {
-    HRESULT(*__stdcall QueryInterface)(ICBStream*, REFIID, void**);
-    HRESULT(*__stdcall AddRef)(ICBStream*);
-    HRESULT(*__stdcall Release)(ICBStream*);
-    HRESULT(*__stdcall Read)(ICBStream*, void*, ULONG, ULONG*);
-    HRESULT(*__stdcall Write)(ICBStream*, void*, ULONG, ULONG*);
-    HRESULT(*__stdcall Seek)(ICBStream*, LARGE_INTEGER, DWORD, ULARGE_INTEGER*);
-    HRESULT(*__stdcall SetSize)(ICBStream*, ULARGE_INTEGER);
-    HRESULT(*__stdcall CopyTo)(ICBStream*, IStream*, ULARGE_INTEGER, ULARGE_INTEGER*, ULARGE_INTEGER*);
-    HRESULT(*__stdcall Commit)(ICBStream*, DWORD);
-    HRESULT(*__stdcall Revert)(ICBStream*);
-    HRESULT(*__stdcall LockRegion)(ICBStream*, ULARGE_INTEGER, ULARGE_INTEGER, DWORD);
-    HRESULT(*__stdcall UnlockRegion)(ICBStream*, ULARGE_INTEGER, ULARGE_INTEGER, DWORD);
-    HRESULT(*__stdcall Stat)(ICBStream*, STATSTG*, DWORD);
-    HRESULT(*__stdcall Clone)(ICBStream*, void**);
-    HRESULT(*__stdcall GetFormat)(ICBStream*, GUID*, WAVEFORMATEX**);
+    HRESULT(*QueryInterface)(ICBStream*, REFIID, void**);
+    HRESULT(*AddRef)(ICBStream*);
+    HRESULT(*Release)(ICBStream*);
+    HRESULT(*Read)(ICBStream*, void*, ULONG, ULONG*);
+    HRESULT(*Write)(ICBStream*, void*, ULONG, ULONG*);
+    HRESULT(*Seek)(ICBStream*, LARGE_INTEGER, DWORD, ULARGE_INTEGER*);
+    HRESULT(*SetSize)(ICBStream*, ULARGE_INTEGER);
+    HRESULT(*CopyTo)(ICBStream*, IStream*, ULARGE_INTEGER, ULARGE_INTEGER*, ULARGE_INTEGER*);
+    HRESULT(*Commit)(ICBStream*, DWORD);
+    HRESULT(*Revert)(ICBStream*);
+    HRESULT(*LockRegion)(ICBStream*, ULARGE_INTEGER, ULARGE_INTEGER, DWORD);
+    HRESULT(*UnlockRegion)(ICBStream*, ULARGE_INTEGER, ULARGE_INTEGER, DWORD);
+    HRESULT(*Stat)(ICBStream*, STATSTG*, DWORD);
+    HRESULT(*Clone)(ICBStream*, void**);
+    HRESULT(*GetFormat)(ICBStream*, GUID*, WAVEFORMATEX**);
 };
 
 static IEnumSpObjectTokens* cpEnum = NULL;

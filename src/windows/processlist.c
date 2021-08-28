@@ -33,7 +33,7 @@ BOOL DriverPathToNormalPath(const char* path, char* buf, size_t buflen) {
 }
 
 HANDLE __declspec(dllexport) getProcessHandle(const char* needle, char* pfn, size_t pfnsz) {
-	static BOOL(*WINAPI LPQueryFullProcessImageNameA)(HANDLE, DWORD, LPSTR, PDWORD) = NULL;
+	static BOOL(* LPQueryFullProcessImageNameA)(HANDLE, DWORD, LPSTR, PDWORD) = NULL;
 	if (!LPQueryFullProcessImageNameA) {
 		HANDLE kernel32 = LoadLibrary("kernel32");
 		if (kernel32 == NULL) { return NULL; }
