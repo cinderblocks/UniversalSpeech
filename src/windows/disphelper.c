@@ -862,7 +862,7 @@ HRESULT ConvertVariantTimeToTimeT(DATE date, time_t* pTimeT)
 
 	* pTimeT = (time_t)(((date - VARIANT_TIMET_DAY0) * TIMET_ONE_DAY) + 0.5);
 
-	if ((ptm = gmtime(pTimeT)) == NULL || !(ptm->tm_isdst = -1) ||
+	if ((ptm = gmtime(pTimeT)) == NULL || !(ptm->tm_isdst == -1) ||
 		(*pTimeT = mktime(ptm)) == (time_t)-1) return E_FAIL;
 
 	return NOERROR;
