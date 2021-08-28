@@ -659,6 +659,7 @@ static BOOL registerDll(const char* filename) {
 		registerDllCleanup();
 		return FALSE;
 	}
+	return TRUE;
 }
 
 HRESULT __stdcall DllRegisterServer(void) {
