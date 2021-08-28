@@ -86,8 +86,9 @@ set_source_files_properties(${HEADER_FILES}
 
 add_library(UniversalSpeech ${SOURCE_FILES})
 
-set_target_properties(UniversalSpeech PROPERTIES PUBLIC_HEADER 
-	include/UniversalSpeech.h
+set_target_properties(UniversalSpeech PROPERTIES 
+    PUBLIC_HEADER include/UniversalSpeech.h
+    C_STANDARD 11
 	)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
