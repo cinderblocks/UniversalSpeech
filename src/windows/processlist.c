@@ -18,7 +18,7 @@ BOOL FileExists(const char* fn) {
 }
 
 BOOL DriverPathToNormalPath(const char* path, char* buf, size_t buflen) {
-	if (strnicmp(path, "\\Device\\HarddiskVolume", 22) != 0) {
+	if (_strnicmp(path, "\\Device\\HarddiskVolume", 22) != 0) {
 		strncpy(buf, path, buflen);
 		return FALSE;
 	}
@@ -45,18 +45,21 @@ HANDLE __declspec(dllexport) getProcessHandle(const char* needle, char* pfn, siz
 	DWORD nPids = 0, pids[1024] = { 0 };
 	EnumProcesses(pids, 1024 * sizeof(DWORD), &nPids);
 	nPids /= sizeof(DWORD);
-	DWORD i; for (i = 0; i < nPids; i++) {
+	for (DWORD i = 0; i < nPids; i++) {
 		HANDLE h = OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION, 0, pids[i]);
-		if (!h) continue;
+		if (!h) { continue; }
 		DWORD namelen = 512;
 		BOOL result = FALSE;
 		if (LPQueryFullProcessImageNameA) result = LPQueryFullProcessImageNameA(h, 0, name, &namelen);
 		else result = GetProcessImageFileName(h, name, 512);
-		if (!result) continue;
-		if (stristr(name, needle)) {
+		if (!result) { continue; }
+		if (strstr(name, needle)) {
 			if (pfn && pfnsz > 0) {
-				if (LPQueryFullProcessImageNameA) snprintf(pfn, pfnsz, "%s", name);
-				else DriverPathToNormalPath(name, pfn, pfnsz);
+				if (LPQueryFullProcessImageNameA) { 
+					snprintf(pfn, pfnsz, "%s", name);
+				} else {
+					DriverPathToNormalPath(name, pfn, pfnsz);
+				}
 			}
 			return h;
 		}
@@ -67,7 +70,7 @@ HANDLE __declspec(dllexport) getProcessHandle(const char* needle, char* pfn, siz
 
 BOOL __declspec(dllexport) FindProcess(const char* needle, char* buf, size_t bufsize) {
 	HANDLE h = getProcessHandle(needle, buf, bufsize);
-	if (h) CloseHandle(h);
+	if (h) { CloseHandle(h); }
 	return !!h;
 }
 
