@@ -6,10 +6,7 @@ Please refer to the readme file provided with the package for more information.
 #include "../include/UniversalSpeech.h"
 
 #include "private.h"
-
-#ifdef _WIN32
-#  include <Windows.h>
-#endif // _WIN32
+#include <time.h>
 
 char* toEncoding(const wchar_t* unicode, int targetEncoding);
 wchar_t* fromEncoding(const char* str, int encoding);
@@ -22,10 +19,10 @@ int nativeSpeechEnabled = 1;
 
 static void periodicRetry(void) {
 	if (!useDefault) return;
-	static long sapiLastSpeak = 0;
-	long l = GetTickCount();
-	if (l - sapiLastSpeak >= 10000) {
-		sapiLastSpeak = l;
+	static clock_t sapiLastSpeak = 0;
+	clock_t now = clock();
+	if (now - sapiLastSpeak >= 10000) {
+		sapiLastSpeak = now;
 		current = -1;
 	}
 }

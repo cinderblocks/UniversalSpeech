@@ -21,10 +21,11 @@ DLLEXPORT void cbrUnload() {
 }
 
 DLLEXPORT BOOL cbrIsAvailable(void) {
-	static int found = 0, last = 0;
-	int z = GetTickCount();
-	if (z - last < 60000) return found;
-	last = z;
+	static int found = 0;
+	static clock_t last = 0;
+	clock_t now = clock();
+	if (now - last < 60000) { return found; }
+	last = now;
 	found = FindProcess("cobra.exe", NULL, 0);
 	return found;
 }
