@@ -17,7 +17,7 @@ BOOL FileExists(const char* fn) {
 	return GetFileAttributes(fn) != INVALID_FILE_ATTRIBUTES;
 }
 
-BOOL DriverPathToNormalPath(const char* path, char* buf, int buflen) {
+BOOL DriverPathToNormalPath(const char* path, char* buf, size_t buflen) {
 	if (strnicmp(path, "\\Device\\HarddiskVolume", 22) != 0) {
 		strncpy(buf, path, buflen);
 		return FALSE;
@@ -80,11 +80,11 @@ BOOL VerGetField(LPVOID verbuf, const char* field, char** buf, int* buflen) {
 }
 
 BOOL GetProcessVersionInfo(const char* pfn, int mode, char* buf, int buflen) {
-	DWORD dwSize = GetFileVersionInfoSize(pfn, NULL);
+	DWORD dwSize = GetFileVersionInfoSize(pfn, 0);
 	if (dwSize <= 0) return FALSE;
 	char* verbuf = (char*)malloc(dwSize);
 	if (verbuf == NULL) return FALSE;
-	if (!GetFileVersionInfo(pfn, NULL, dwSize, verbuf)) return FALSE;
+	if (!GetFileVersionInfo(pfn, 0, dwSize, verbuf)) return FALSE;
 	switch (mode) {
 	case 0: 
 	case 1: {

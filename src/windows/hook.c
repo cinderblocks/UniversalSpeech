@@ -38,7 +38,7 @@ static LRESULT kbHook(int code, WPARAM wp, LPARAM lp) {
 DLLEXPORT BOOL installKeyboardHook(void) {
 	if (hook) uninstallKeyboardHook();
 	if (hook) return TRUE;
-	hook = SetWindowsHookEx(WH_KEYBOARD_LL, kbHook, GetModuleHandle(NULL), NULL);
+	hook = SetWindowsHookEx(WH_KEYBOARD_LL, kbHook, GetModuleHandle(NULL), 0);
 	return !!hook;
 }
 
