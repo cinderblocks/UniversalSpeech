@@ -155,7 +155,7 @@ DLLEXPORT BOOL sapiStopSpeech(void) {
 }
 
 DLLEXPORT BOOL sapiSayW(const WCHAR* str, BOOL interrupt) {
-    if ((!pVoice && !sapiLoad()) || !str) return FALSE;
+    if ((!pVoice && !sapiLoad()) || !pVoice || !str) return FALSE;
     DWORD flags = SPF_IS_NOT_XML | SPF_ASYNC | (interrupt ? SPF_PURGEBEFORESPEAK : 0);
     hr = pVoice->lpVtbl->Speak(pVoice, str, flags, NULL);
     if (SUCCEEDED(hr)) return TRUE;
@@ -163,7 +163,7 @@ DLLEXPORT BOOL sapiSayW(const WCHAR* str, BOOL interrupt) {
 }
 
 DLLEXPORT BOOL sapiSaySSMLW(const WCHAR* str, BOOL interrupt) {
-    if ((!pVoice && !sapiLoad()) || !str) return FALSE;
+    if ((!pVoice && !sapiLoad()) || !pVoice || !str) return FALSE;
     DWORD flags = SPF_PERSIST_XML | SPF_IS_XML | SPF_ASYNC | (interrupt ? SPF_PURGEBEFORESPEAK : 0);
     hr = pVoice->lpVtbl->Speak(pVoice, str, flags, NULL);
     if (SUCCEEDED(hr)) return TRUE;
@@ -185,7 +185,7 @@ DLLEXPORT BOOL sapiSaySSMLA(const char* str, BOOL interrupt) {
 }
 
 DLLEXPORT BOOL sapiSetRate(int rate) {
-    if (!pVoice && !sapiLoad()) return FALSE;
+    if (!pVoice && !sapiLoad() || !pVoice) return FALSE;
     rate = (rate / 5) - 10;
     if (rate > 10) rate = 10;
     else if (rate < -10) rate = -10;
@@ -196,7 +196,7 @@ DLLEXPORT BOOL sapiSetRate(int rate) {
 }
 
 DLLEXPORT int sapiGetRate(void) {
-    if (!pVoice && !sapiLoad()) return -1;
+    if (!pVoice && !sapiLoad() || !pVoice) return -1;
     LONG rate;
     hr = pVoice->lpVtbl->GetRate(pVoice, &rate);
     if (SUCCEEDED(hr)) return (rate + 10) * 5;
@@ -204,7 +204,7 @@ DLLEXPORT int sapiGetRate(void) {
 }
 
 DLLEXPORT BOOL sapiSetVolume(int volume) {
-    if (!pVoice && !sapiLoad()) return FALSE;
+    if (!pVoice && !sapiLoad() || !pVoice) return FALSE;
     if (volume > 100) volume = 100;
     else if (volume < 0) volume = 0;
     hr = pVoice->lpVtbl->SetVolume(pVoice, volume);
@@ -213,7 +213,7 @@ DLLEXPORT BOOL sapiSetVolume(int volume) {
 }
 
 DLLEXPORT int sapiGetVolume(void) {
-    if (!pVoice && !sapiLoad()) return -1;
+    if (!pVoice && !sapiLoad() || !pVoice) return -1;
     USHORT volume;
     hr = pVoice->lpVtbl->GetVolume(pVoice, &volume);
     if (SUCCEEDED(hr)) return volume;
