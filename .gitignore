@@ -8,5 +8,6 @@
 *.pyc
 *.pyo
 obj/*
+.vs/*
 test*
 out*
