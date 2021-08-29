@@ -284,6 +284,8 @@ HRESULT dhGetValueV(LPCWSTR szIdentifier, void* pResult, IDispatch* pDisp, LPCOL
 	VARTYPE returnType;
 	HRESULT hr;
 
+	VariantInit(&vtResult);
+
 	DH_ENTER(L"GetValueV");
 
 	if (!pResult || !szIdentifier) return DH_EXIT(E_INVALIDARG, szMember);
@@ -448,6 +450,8 @@ static HRESULT TraverseSubObjects(IDispatch** ppDisp, LPWSTR* lpszMember, va_lis
 	LPWSTR szSeperator, szTemp;
 	VARIANT vtObject;
 	HRESULT hr;
+
+	VariantInit(&vtObject);
 
 	DH_ENTER(L"TraverseSubObjects");
 
@@ -692,6 +696,8 @@ HRESULT dhEnumBeginV(IEnumVARIANT** ppEnum, IDispatch* pDisp, LPCOLESTR szMember
 	IDispatch* pDispObj;
 	HRESULT hr;
 
+	VariantInit(&vtResult);
+
 	DH_ENTER(L"EnumBeginV");
 
 	if (!ppEnum || !pDisp) return DH_EXIT(E_INVALIDARG, szMember);
@@ -738,6 +744,8 @@ HRESULT dhEnumNextObject(IEnumVARIANT* pEnum, IDispatch** ppDisp)
 {
 	VARIANT vtResult;
 	HRESULT hr;
+
+	VariantInit(&vtResult);
 
 	DH_ENTER(L"EnumNextObject");
 
