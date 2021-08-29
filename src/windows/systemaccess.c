@@ -35,13 +35,16 @@ DLLEXPORT void saUnload(void) {
 DLLEXPORT BOOL saLoad(void) {
 	saUnload();
 	systemaccess = LoadLibraryW(composePath(L"SAAPI32.DLL"));
-	if (!systemaccess) return FALSE;
-#define LOAD(f) { f = GetProcAddress(systemaccess,#f); if (!f) { saUnload(); return FALSE; }}
-	LOAD(SA_IsRunning) LOAD(SA_StopAudio)
-		LOAD(SA_SayW) LOAD(SA_SayA)
-		LOAD(SA_BrlShowTextW) LOAD(SA_BrlShowTextA)
-#undef LOAD
-		return TRUE;
+	if (!systemaccess) { return FALSE; }
+
+	SA_IsRunning = (BOOL(*)(void))GetProcAddress(systemaccess, "SA_IsRunning"); if (!SA_IsRunning) { saUnload(); return FALSE; }
+	SA_StopAudio = (void(*)(void))GetProcAddress(systemaccess, "SA_StopAudio"); if (!SA_StopAudio) { saUnload(); return FALSE; }
+	SA_SayW = (void(*)(const wchar_t*))GetProcAddress(systemaccess, "SA_SayW"); if (!SA_SayW) { saUnload(); return FALSE; }
+	SA_SayA = (void(*)(const char*))GetProcAddress(systemaccess, "SA_SayA"); if (!SA_SayA) { saUnload(); return FALSE; }
+	SA_BrlShowTextW = (void(*)(const wchar_t*))GetProcAddress(systemaccess, "SA_BrlShowTextW"); if (!SA_BrlShowTextW) { saUnload(); return FALSE; }
+	SA_BrlShowTextA = (void(*)(const char*))GetProcAddress(systemaccess, "SA_BrlShowTextA"); if (!SA_BrlShowTextA) { saUnload(); return FALSE; }
+
+	return TRUE;
 }
 
 DLLEXPORT BOOL saIsAvailable() {

@@ -321,38 +321,38 @@ DLLEXPORT const wchar_t* sapiGetString(int what) {
     return NULL;
 }
 
-static HRESULT __stdcall ICBCommit(ICBStream* this, DWORD flags) { return S_OK; }
-static HRESULT __stdcall ICBRevert(ICBStream* this) { return STG_E_INVALIDFUNCTION; }
-static HRESULT __stdcall ICBSetSize(ICBStream* this, ULARGE_INTEGER newsize) { return S_OK; }
-static HRESULT __stdcall ICBStat(ICBStream* this, STATSTG* x, DWORD flags) { return STG_E_INVALIDFUNCTION; }
-static HRESULT __stdcall ICBClone(ICBStream* this, void** out) { *out = this; return S_OK; }
-static HRESULT __stdcall ICBCopyTo(ICBStream* this, IStream* dest, ULARGE_INTEGER count, ULARGE_INTEGER* nRead, ULARGE_INTEGER* nWritten) { return STG_E_INVALIDFUNCTION; }
-static HRESULT __stdcall ICBLockRegion(ICBStream* this, ULARGE_INTEGER offset, ULARGE_INTEGER count, DWORD type) { return STG_E_INVALIDFUNCTION; }
-static HRESULT __stdcall ICBRead(ICBStream* this, void* buffer, ULONG count, ULONG* nRead) { if (nRead) *nRead = 0; return STG_E_INVALIDFUNCTION; }
-static HRESULT __stdcall ICBSeek(ICBStream* this, ULARGE_INTEGER pos, DWORD ance, ULARGE_INTEGER* newpos) { return S_OK; }
+static HRESULT ICBCommit(ICBStream* this, DWORD flags) { return S_OK; }
+static HRESULT ICBRevert(ICBStream* this) { return STG_E_INVALIDFUNCTION; }
+static HRESULT ICBSetSize(ICBStream* this, ULARGE_INTEGER newsize) { return S_OK; }
+static HRESULT ICBStat(ICBStream* this, STATSTG* x, DWORD flags) { return STG_E_INVALIDFUNCTION; }
+static HRESULT ICBClone(ICBStream* this, void** out) { *out = this; return S_OK; }
+static HRESULT ICBCopyTo(ICBStream* this, IStream* dest, ULARGE_INTEGER count, ULARGE_INTEGER* nRead, ULARGE_INTEGER* nWritten) { return STG_E_INVALIDFUNCTION; }
+static HRESULT ICBLockRegion(ICBStream* this, ULARGE_INTEGER offset, ULARGE_INTEGER count, DWORD type) { return STG_E_INVALIDFUNCTION; }
+static HRESULT ICBRead(ICBStream* this, void* buffer, ULONG count, ULONG* nRead) { if (nRead) *nRead = 0; return STG_E_INVALIDFUNCTION; }
+static HRESULT ICBSeek(ICBStream* this, ULARGE_INTEGER pos, DWORD ance, ULARGE_INTEGER* newpos) { return S_OK; }
 
-static HRESULT __stdcall ICBWrite(ICBStream* this, void* buffer, ULONG length, ULONG* nWritten) {
+static HRESULT ICBWrite(ICBStream* this, void* buffer, ULONG length, ULONG* nWritten) {
     int n = -1;
     if (this->callback) n = this->callback(this->udata, buffer, length);
     if (nWritten) *nWritten = n;
     return S_OK;
 }
 
-static HRESULT __stdcall ICBGetFormat(ICBStream* this, GUID* guid, WAVEFORMATEX** wf) {
+static HRESULT ICBGetFormat(ICBStream* this, GUID* guid, WAVEFORMATEX** wf) {
     *guid = *(GUID*)(&Z_SPDFID_WaveFormatEx);
     *wf = &(this->fmt);
     return S_OK;
 }
 
-static ULONG __stdcall ICBAddRef(ICBStream* this) { return ++(this->refcnt); }
+static ULONG ICBAddRef(ICBStream* this) { return ++(this->refcnt); }
 
-static ULONG __stdcall ICBRelease(ICBStream* this) {
+static ULONG ICBRelease(ICBStream* this) {
     //if (--(this->refcnt)<=0) { free(this); return 0; }
     //else  
     return this->refcnt;
 }
 
-static HRESULT __stdcall ICBQueryInterface(ICBStream* this, REFIID r, void** p) {
+static HRESULT ICBQueryInterface(ICBStream* this, REFIID r, void** p) {
     hr = E_NOINTERFACE;
     *p = 0;
     if (IsEqualIID(r, &IID_IUnknown) || IsEqualIID(r, &IID_IStream) || IsEqualIID(r, &Z_IID_ISpStreamFormat)) {

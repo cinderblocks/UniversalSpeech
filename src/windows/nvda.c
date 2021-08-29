@@ -32,13 +32,19 @@ DLLEXPORT void nvdaUnload(void) {
 DLLEXPORT BOOL nvdaLoad(void) {
 	nvdaUnload();
 	nvda = LoadLibraryW(composePath(L"nvdaControllerClient.dll"));
-	if (!nvda) nvda = LoadLibraryW(composePath(L"nvdaControllerClient32.dll"));
-	if (!nvda) return FALSE;
-#define LOAD(f) { f=GetProcAddress(nvda,#f); if (!f) { nvdaUnload(); return FALSE; }}
-	LOAD(nvdaController_testIfRunning) LOAD(nvdaController_speakText)
-		LOAD(nvdaController_cancelSpeech) LOAD(nvdaController_brailleMessage)
-#undef LOAD
-		return TRUE;
+	if (!nvda) { nvda = LoadLibraryW(composePath(L"nvdaControllerClient32.dll")); }
+	if (!nvda) { return FALSE; }
+
+	nvdaController_speakText = (int(*)(const wchar_t*))GetProcAddress(nvda, "nvdaController_speakText"); 
+	if (!nvdaController_speakText) { nvdaUnload(); return FALSE; }
+	nvdaController_cancelSpeech = (int(*)(void))GetProcAddress(nvda, "nvdaController_cancelSpeech"); 
+	if (!nvdaController_cancelSpeech) { nvdaUnload(); return FALSE; }
+	nvdaController_testIfRunning = (int(*)(void))GetProcAddress(nvda, "nvdaController_testIfRunning"); 
+	if (!nvdaController_testIfRunning) { nvdaUnload(); return FALSE; }
+	nvdaController_brailleMessage = (int(*)(const wchar_t*))GetProcAddress(nvda, "nvdaController_brailleMessage");
+	if (!nvdaController_brailleMessage) { nvdaUnload(); return FALSE; }
+
+	return TRUE;
 }
 
 DLLEXPORT BOOL nvdaIsAvailable(void) {

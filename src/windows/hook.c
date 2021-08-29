@@ -15,7 +15,7 @@ DLLEXPORT void uninstallKeyboardHook(void);
 
 static HHOOK hook = NULL;
 
-static LRESULT kbHook(int code, WPARAM wp, LPARAM lp) {
+static LRESULT WINAPI kbHook(int code, WPARAM wp, LPARAM lp) {
 	if (code == HC_ACTION) {
 		int k = ((KBDLLHOOKSTRUCT*)lp)->vkCode;
 		switch (k) {
