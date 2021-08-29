@@ -92,7 +92,7 @@ list(APPEND SOURCE_FILES ${HEADER_FILES})
 set_source_files_properties(${HEADER_FILES}
                             PROPERTIES HEADER_FILE_ONLY TRUE)
 
-add_library(UniversalSpeech ${SOURCE_FILES})
+add_library(UniversalSpeech SHARED ${SOURCE_FILES})
 
 set_target_properties(UniversalSpeech PROPERTIES 
     PUBLIC_HEADER include/UniversalSpeech.h
