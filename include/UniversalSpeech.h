@@ -1,12 +1,13 @@
 #ifndef ____UNIVERSAL_SPEECH_H__
 #define ____UNIVERSAL_SPEECH_H__
 
-#ifdef _WIN32
+#include <stddef.h>
+
+#if defined(_WIN32) && defined(UniversalSpeech_EXPORTS)
 #  define DLLEXPORT __declspec(dllexport) 
 #else
+#  define DLLEXPORT
 #endif
-
-#include <stddef.h>
 
 #ifdef __cplusplus
 extern "C" {

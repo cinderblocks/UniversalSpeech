@@ -5,6 +5,7 @@ Please refer to the readme file provided with the package for more information.
 */
 //Encoding conversion using windows routines
 
+#include "../../include/UniversalSpeech.h"
 #include "encoding-conversion.h"
 
 #include <Windows.h>

@@ -3,6 +3,9 @@ project(UniversalSpeech
         LANGUAGES C)
 cmake_minimum_required(VERSION 3.10)
 
+include(CPack)
+include(GenerateExportHeader)
+
 # OS info
 message("-------------------------------------------------------")
 message("-- CMAKE_SYSTEM_INFO_FILE: ${CMAKE_SYSTEM_INFO_FILE}")
@@ -99,6 +102,16 @@ set_target_properties(UniversalSpeech PROPERTIES
     C_STANDARD 11
 	)
 
+if(WIN32)
+    target_link_libraries(UniversalSpeech psapi version)
+endif(WIN32)
+
+generate_export_header(UniversalSpeech
+                       BASE_NAME UniversalSpeech
+                       EXPORT_MACRO_NAME UniversalSpeech_EXPORT
+                       EXPORT_FILE_NAME UniversalSpeech_Export.h
+                       STATIC_DEFINE UniversalSpeech_BUILT_AS_STATIC
+                       )
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-include(CPack)

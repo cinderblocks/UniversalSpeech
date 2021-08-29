@@ -23,7 +23,7 @@
   * need to add ole32, oleaut32 and uuid. To do this in Dev-CPP add
   * "-lole32 -loleaut32 -luuid" to the linker box under Project->Project Options->Parameters.
   */
-
+#include "../../include/UniversalSpeech.h"
 
 #define DISPHELPER_INTERNAL_BUILD
 #include "disphelper.h"

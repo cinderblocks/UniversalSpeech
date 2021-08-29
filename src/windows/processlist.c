@@ -6,6 +6,9 @@ Please refer to the readme file provided with the package for more information.
 // Process list - useful to find out which screen reader is running
 #define _WIN32_WINNT 0x0501
 #undef UNICODE
+
+#include "../../include/UniversalSpeech.h"
+
 #include <windows.h>
 #include <psapi.h>
 #include <tlhelp32.h>
