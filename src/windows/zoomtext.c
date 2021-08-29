@@ -56,7 +56,7 @@ DLLEXPORT BOOL ztIsActive(void) {
     return !!ztController;
 }
 
-DLLEXPORT BOOL ztSayW(const wchar_t* str, BOOL interrupt) {
+DLLEXPORT BOOL ztSayW(const wchar_t* str, int interrupt) {
     if (ztIsActive()) {
         const BSTR bstr = SysAllocString(str);
         IVoice* voice;

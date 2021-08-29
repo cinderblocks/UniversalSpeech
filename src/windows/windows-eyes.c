@@ -29,13 +29,13 @@ DLLEXPORT void weUnload() {
 	SAFE_RELEASE(we);
 }
 
-DLLEXPORT BOOL weSayA(const char* str) {
+DLLEXPORT BOOL weSayA(const char* str, int interupt) {
 	if (!we && !weLoad()) return FALSE;
 	dhCallMethod(we, L".SpeakString(%s)", str);
 	return TRUE;
 }
 
-DLLEXPORT BOOL weSayW(const wchar_t* str) {
+DLLEXPORT BOOL weSayW(const wchar_t* str, int interupt) {
 	if (!we && !weLoad()) return FALSE;
 	dhCallMethod(we, L".SpeakString(%S)", str);
 	return TRUE;

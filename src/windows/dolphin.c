@@ -45,7 +45,7 @@ DLLEXPORT BOOL dolIsAvailable(void) {
 	else return FALSE;
 }
 
-DLLEXPORT BOOL dolSay(const wchar_t* str) {
+DLLEXPORT BOOL dolSay(const wchar_t* str, int interupt) {
 	if (dolIsAvailable() && DolAccess_Command) {
 		DolAccess_Command(str, (wcslen(str) + 1) * sizeof(wchar_t), 1);
 		return TRUE;

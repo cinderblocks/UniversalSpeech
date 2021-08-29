@@ -154,7 +154,7 @@ DLLEXPORT BOOL sapiStopSpeech(void) {
     else return FALSE;
 }
 
-DLLEXPORT BOOL sapiSayW(const WCHAR* str, BOOL interrupt) {
+DLLEXPORT BOOL sapiSayW(const wchar_t* str, int interrupt) {
     if ((!pVoice && !sapiLoad()) || !pVoice || !str) return FALSE;
     DWORD flags = SPF_IS_NOT_XML | SPF_ASYNC | (interrupt ? SPF_PURGEBEFORESPEAK : 0);
     hr = pVoice->lpVtbl->Speak(pVoice, str, flags, NULL);

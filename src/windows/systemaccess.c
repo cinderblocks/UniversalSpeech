@@ -53,13 +53,13 @@ DLLEXPORT BOOL saIsAvailable() {
 	else return FALSE;
 }
 
-DLLEXPORT BOOL saSayA(const char* str) {
+DLLEXPORT BOOL saSayA(const char* str, int interupt) {
 	if (!SA_SayA && !saLoad()) return FALSE;
 	if (SA_SayA) SA_SayA(str);
 	return TRUE;
 }
 
-DLLEXPORT BOOL saSayW(const wchar_t* str) {
+DLLEXPORT BOOL saSayW(const wchar_t* str, int interupt) {
 	if (!SA_SayW && !saLoad()) return FALSE;
 	if (SA_SayW) SA_SayW(str);
 	return TRUE;

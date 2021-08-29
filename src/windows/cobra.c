@@ -53,13 +53,13 @@ DLLEXPORT BOOL cbrStopSpeech(void) {
 	return TRUE;
 }
 
-DLLEXPORT BOOL cbrSayA(const char* str) {
+DLLEXPORT BOOL cbrSayA(const char* str, int interupt) {
 	if (!cbr && !cbrLoad()) return FALSE;
 	dhCallMethod(cbr, L".speechout(%s)", str);
 	return TRUE;
 }
 
-DLLEXPORT BOOL cbrSayW(const wchar_t* str) {
+DLLEXPORT BOOL cbrSayW(const wchar_t* str, int interupt) {
 	if (!cbr && !cbrLoad()) return FALSE;
 	dhCallMethod(cbr, L".speechout(%S)", str);
 	return TRUE;

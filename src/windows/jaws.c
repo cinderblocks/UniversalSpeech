@@ -33,14 +33,14 @@ DLLEXPORT int jfwIsAvailable() {
 	return !!FindWindow("JFWUI2", NULL);
 }
 
-DLLEXPORT BOOL jfwSayA(const char* str, BOOL interrupt) {
+DLLEXPORT BOOL jfwSayA(const char* str, int interrupt) {
 	if (!jfw && !jfwLoad()) return FALSE;
 	BOOL result = FALSE;
 	dhGetValue(L"%b", &result, jfw, L".SayString(%s,%b)", str, interrupt);
 	return result;
 }
 
-DLLEXPORT BOOL jfwSayW(const wchar_t* str, BOOL interrupt) {
+DLLEXPORT BOOL jfwSayW(const wchar_t* str, int interrupt) {
 	if (!jfw && !jfwLoad()) return FALSE;
 	BOOL result = FALSE;
 	dhGetValue(L"%b", &result, jfw, L".SayString(%S,%b)", str, interrupt);
