@@ -30,9 +30,9 @@ DLLEXPORT BOOL dolLoad(void) {
 	dolUnload();
 	dolphin = LoadLibraryW(composePath(L"dolapi.dll"));
 	if (!dolphin) return FALSE;
-	DolAccess_GetSystem = GetProcAddress(dolphin, "_DolAccess_GetSystem@0");
-	DolAccess_Action = GetProcAddress(dolphin, "_DolAccess_Action@4");
-	DolAccess_Command = GetProcAddress(dolphin, "_DolAccess_Command@12");
+	DolAccess_GetSystem = (int(*)(void))GetProcAddress(dolphin, "_DolAccess_GetSystem@0");
+	DolAccess_Action = (void(*)(int))GetProcAddress(dolphin, "_DolAccess_Action@4");
+	DolAccess_Command = (void(*)(const wchar_t*, int, int))GetProcAddress(dolphin, "_DolAccess_Command@12");
 	return TRUE;
 }
 
