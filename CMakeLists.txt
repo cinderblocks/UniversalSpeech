@@ -6,6 +6,13 @@ cmake_minimum_required(VERSION 3.10)
 include(CPack)
 include(GenerateExportHeader)
 
+option(BUILD_EXAMPLES "Builds example programs" ON)
+
+# Select the release build type by default
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE "Release" CACHE STRING "" FORCE)
+endif(NOT CMAKE_BUILD_TYPE)
+
 # OS info
 message("-------------------------------------------------------")
 message("-- CMAKE_SYSTEM_INFO_FILE: ${CMAKE_SYSTEM_INFO_FILE}")
@@ -17,6 +24,9 @@ string (REGEX MATCH "\\.el[1-9]" os_version_suffix ${CMAKE_SYSTEM})
 message("-- os_version_suffix:      ${os_version_suffix}")
 message("-- Project: ${CMAKE_CURRENT_SOURCE_DIR}")
 message("-- Binaries: ${CMAKE_CURRENT_BINARY_DIR}")
+message("-------------------------------------------------------")
+message("-- CMAKE_BUILD_TYPE:       ${CMAKE_BUILD_TYPE}")
+message("-- Build examples:         ${BUILD_TESTS}")
 message("-------------------------------------------------------")
 
 # Version info
@@ -34,12 +44,6 @@ if(NOT ${CMAKE_GENERATOR} MATCHES "Visual Studio")
     endif()
 endif()
 
-# Select the release build type by default
-if(NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE "Release" CACHE STRING "" FORCE)
-    message("-- CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
-endif(NOT CMAKE_BUILD_TYPE)
-
 # setup compiler definitions
 if(WIN32)
   add_compile_definitions(_WIN32
@@ -50,6 +54,10 @@ if(MSVC)
   add_compile_definitions(_MSVC
                           _CRT_SECURE_NO_WARNINGS)
 endif(MSVC)
+
+if(BUILD_EXAMPLES)
+  add_subdirectory(examples)
+endif(BUILD_EXAMPLES)
 
 # Collect our source files
 set(SOURCE_FILES

@@ -9,5 +9,4 @@
 *.pyo
 obj/*
 .vs/*
-test*
 out*
