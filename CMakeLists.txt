@@ -36,12 +36,10 @@ set(VERSION_PATCH 0)
 set(VERSION_DATE 20210827)
 
 # set architecture
-if(NOT ${CMAKE_GENERATOR} MATCHES "Visual Studio")
-    if("${ARCH_TYPE}" STREQUAL "32")
-        set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m32")
-    elseif("${ARCH_TYPE}" STREQUAL "64")
-        set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m64")
-    endif()
+if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+    add_compile_definitions(_ARCH64)
+elseif(CMAKE_SIZEOF_VOID_P EQUAL 4)
+    add_compile_definitions(_ARCH32)
 endif()
 
 # setup compiler definitions
@@ -120,6 +118,15 @@ generate_export_header(UniversalSpeech
                        EXPORT_FILE_NAME UniversalSpeech_Export.h
                        STATIC_DEFINE UniversalSpeech_BUILT_AS_STATIC
                        )
+
+add_custom_command(TARGET UniversalSpeech POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+    ${PROJECT_SOURCE_DIR}/thirdparty/nvdaController/nvdacontrollerClient64.dll
+    ${PROJECT_SOURCE_DIR}/thirdparty/nvdaController/nvdacontrollerClient32.dll
+    ${PROJECT_SOURCE_DIR}/thirdparty/dolapi.dll
+    ${PROJECT_SOURCE_DIR}/thirdparty/jfwapi.dll
+    ${PROJECT_SOURCE_DIR}/thirdparty/SAAPI32.dll
+    $<TARGET_FILE_DIR:UniversalSpeech>)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

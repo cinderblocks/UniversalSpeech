@@ -31,8 +31,11 @@ DLLEXPORT void nvdaUnload(void) {
 
 DLLEXPORT BOOL nvdaLoad(void) {
 	nvdaUnload();
-	nvda = LoadLibraryW(composePath(L"nvdaControllerClient.dll"));
-	if (!nvda) { nvda = LoadLibraryW(composePath(L"nvdaControllerClient32.dll")); }
+#ifdef _ARCH64
+	nvda = LoadLibraryW(composePath(L"nvdaControllerClient64.dll"));
+#else 
+	nvda = LoadLibraryW(composePath(L"nvdaControllerClient32.dll"));
+#endif
 	if (!nvda) { return FALSE; }
 
 	nvdaController_speakText = (int(*)(const wchar_t*))GetProcAddress(nvda, "nvdaController_speakText"); 
